@@ -18,7 +18,7 @@ public struct HSB<Value: ColorCompontentValue>: ColorComponents {
     }
 }
 
-/// A HSBA (hue, saturation, brightness, alpha) color components representation.
+/// An HSBA (hue, saturation, brightness, alpha) color components representation.
 @frozen
 public struct HSBA<Value: ColorCompontentValue>: AlphaColorComponents {
     /// The HSB components.

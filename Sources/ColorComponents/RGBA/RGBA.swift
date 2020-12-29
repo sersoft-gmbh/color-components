@@ -18,7 +18,7 @@ public struct RGB<Value: ColorCompontentValue>: ColorComponents {
     }
 }
 
-/// An opaque RGBA (red, green, blue, alpha) color components representation.
+/// An RGBA (red, green, blue, alpha) color components representation.
 @frozen
 public struct RGBA<Value: ColorCompontentValue>: AlphaColorComponents {
     /// The RGB components.
