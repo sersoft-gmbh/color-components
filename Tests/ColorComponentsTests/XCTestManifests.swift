@@ -47,6 +47,7 @@ extension BWA_SwiftUITests {
     static let __allTests__BWA_SwiftUITests = [
         ("testColorCreation", testColorCreation),
         ("testCreationFromColor", testCreationFromColor),
+        ("testViewConformance", testViewConformance),
     ]
 }
 
@@ -129,6 +130,7 @@ extension HSBA_SwiftUITests {
     static let __allTests__HSBA_SwiftUITests = [
         ("testColorCreation", testColorCreation),
         ("testCreationFromColor", testCreationFromColor),
+        ("testViewConformance", testViewConformance),
     ]
 }
 
@@ -213,6 +215,7 @@ extension RGBA_SwiftUITests {
     static let __allTests__RGBA_SwiftUITests = [
         ("testColorCreation", testColorCreation),
         ("testCreationFromColor", testCreationFromColor),
+        ("testViewConformance", testViewConformance),
     ]
 }
 
