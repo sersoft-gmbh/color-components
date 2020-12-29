@@ -1,4 +1,4 @@
-# Swift Sysctl
+# Color Components
 
 [![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/color-components.svg?style=flat)](https://github.com/sersoft-gmbh/color-components/releases/latest)
 ![Tests](https://github.com/sersoft-gmbh/color-components/workflows/Tests/badge.svg)
