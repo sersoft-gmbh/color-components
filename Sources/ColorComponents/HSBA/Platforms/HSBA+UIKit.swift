@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(macOS, unavailable)
 extension UIColor {
     @inlinable
     convenience init<Value: BinaryFloatingPoint>(_ hsb: HSB<Value>, alpha: Value) {
@@ -28,6 +29,7 @@ extension UIColor {
     }
 }
 
+@available(macOS, unavailable)
 extension HSB where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ uiColor: UIColor) {
@@ -38,10 +40,11 @@ extension HSB where Value: BinaryFloatingPoint {
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()
         guard isExact else { return nil }
-        self.init(hsba.hsb)
+        self.init(exactly: hsba.hsb)
     }
 }
 
+@available(macOS, unavailable)
 extension HSBA where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ uiColor: UIColor) {
@@ -52,7 +55,7 @@ extension HSBA where Value: BinaryFloatingPoint {
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()
         guard isExact else { return nil }
-        self.init(hsba)
+        self.init(exactly: hsba)
     }
 }
 #endif

@@ -19,36 +19,17 @@ extension Color {
     }
 }
 
-@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension HSB where Value: BinaryFloatingPoint {
-    @inlinable
-    public var color: Color {
-        Color(hue: .init(hue), saturation: .init(saturation), brightness: .init(brightness), opacity: 1)
-    }
-}
-
-@available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension HSBA where Value: BinaryFloatingPoint {
-    @inlinable
-    public var color: Color {
-        Color(hue: .init(hsb.hue),
-              saturation: .init(hsb.saturation),
-              brightness: .init(hsb.brightness),
-              opacity: .init(alpha))
-    }
-}
-
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
 extension HSB where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ color: Color) {
-        self.init(PlatformColor(color))
+        self.init(_PlatformColor(color))
     }
 
     @inlinable
     public init?(exactly color: Color) {
-        self.init(exactly: PlatformColor(color))
+        self.init(exactly: _PlatformColor(color))
     }
 }
 
@@ -56,12 +37,12 @@ extension HSB where Value: BinaryFloatingPoint {
 extension HSBA where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ color: Color) {
-        self.init(PlatformColor(color))
+        self.init(_PlatformColor(color))
     }
 
     @inlinable
     public init?(exactly color: Color) {
-        self.init(exactly: PlatformColor(color))
+        self.init(exactly: _PlatformColor(color))
     }
 }
 #elseif canImport(CoreGraphics)

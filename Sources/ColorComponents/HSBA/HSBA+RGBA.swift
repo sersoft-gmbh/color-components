@@ -3,13 +3,17 @@ extension HSB where Value: BinaryFloatingPoint {
         let maxVal = max(rgb.red, rgb.green, rgb.blue)
         let delta = maxVal - min(rgb.red, rgb.green, rgb.blue)
         let hue: Value
-        switch maxVal {
-        case rgb.red: hue = (rgb.green - rgb.blue) / delta
-        case rgb.green: hue = 2 + (rgb.blue - rgb.red) / delta
-        case rgb.blue: hue = 4 + (rgb.red - rgb.green) / delta
-        default: fatalError("max should always be one of rgb!")
+        if delta.isZero {
+            hue = .zero
+        } else {
+            switch maxVal {
+            case rgb.red:   hue =     (rgb.green - rgb.blue)  / delta
+            case rgb.green: hue = 2 + (rgb.blue  - rgb.red)   / delta
+            case rgb.blue:  hue = 4 + (rgb.red   - rgb.green) / delta
+            default: fatalError("max(r, g, b) must be one of r, g, b!")
+            }
         }
-        self.init(hue: hue, saturation: delta.isZero ? 0 : delta / maxVal, brightness: maxVal)
+        self.init(hue: hue / 6, saturation: maxVal.isZero ? .zero : delta / maxVal, brightness: maxVal)
     }
 }
 

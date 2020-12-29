@@ -1,17 +1,7 @@
 extension RGB where Value: BinaryFloatingPoint {
     public init(hsb: HSB<Value>) {
         let chroma = hsb.brightness * hsb.saturation
-        let hueDeg: Value = {
-            var tmp = hsb.hue * 180 / .pi
-            if tmp < 0 {
-                tmp = abs(tmp)
-            }
-            if tmp > 360 {
-                tmp.formTruncatingRemainder(dividingBy: 360)
-            }
-            return tmp
-        }()
-        let hueSixty = hueDeg / 60
+        let hueSixty = max(0, min(hsb.hue, 1)) / (60 / 360)
         let x = chroma * (1 - abs(hueSixty.truncatingRemainder(dividingBy: 2) - 1))
 
         let (r, g, b): (Value, Value, Value)
@@ -25,7 +15,7 @@ extension RGB where Value: BinaryFloatingPoint {
         default: fatalError("Invalid value of hue / 60deg: \(hueSixty)")
         }
 
-        let match = hsb.saturation - chroma
+        let match = hsb.brightness - chroma
         self.init(red: r + match, green: g + match, blue: b + match)
     }
 }

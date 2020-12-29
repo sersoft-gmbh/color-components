@@ -1,8 +1,8 @@
 extension RGB where Value: BinaryInteger {
     public init(hex: Value) {
-        self.init(red:   (hex & 0x00FF0000) >> 16,
-                  green: (hex & 0x0000FF00) >> 8,
-                  blue:  (hex & 0x000000FF))
+        self.init(red:   (hex & 0xFF0000) >> 16,
+                  green: (hex & 0x00FF00) >> 8,
+                  blue:  (hex & 0x0000FF))
     }
 }
 
@@ -17,7 +17,7 @@ extension RGBA where Value: BinaryInteger {
 
 extension BinaryInteger {
     @usableFromInline
-    func hexString(uppercase: Bool) -> String {
+    func _hexString(uppercase: Bool) -> String {
         let str = String(self, radix: 16, uppercase: uppercase)
         return str.count == 2 ? str : "0" + str
     }
@@ -26,9 +26,9 @@ extension BinaryInteger {
 extension RGB where Value: BinaryInteger {
     @inlinable
     func _rgbHexString(uppercase: Bool) -> String {
-        red.hexString(uppercase: uppercase)
-            + green.hexString(uppercase: uppercase)
-            + blue.hexString(uppercase: uppercase)
+        red._hexString(uppercase: uppercase)
+            + green._hexString(uppercase: uppercase)
+            + blue._hexString(uppercase: uppercase)
     }
 
     @inlinable
@@ -40,7 +40,7 @@ extension RGB where Value: BinaryInteger {
 extension RGBA where Value: BinaryInteger {
     @inlinable
     func _rgbaHexString(uppercase: Bool) -> String {
-        rgb._rgbHexString(uppercase: uppercase) + alpha.hexString(uppercase: uppercase)
+        rgb._rgbHexString(uppercase: uppercase) + alpha._hexString(uppercase: uppercase)
     }
 
     @inlinable

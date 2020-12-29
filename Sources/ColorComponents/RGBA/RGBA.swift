@@ -165,9 +165,9 @@ extension RGB: FloatingPointColorComponents where Value: FloatingPoint, Value: E
 
     public mutating func changeBrightness(by percent: Value) {
         // TODO: Shouldn't the brightness be applied weighted the same as in `brightness` above?
-        apply(percent: percent, to: &red)
-        apply(percent: percent, to: &green)
-        apply(percent: percent, to: &blue)
+        _apply(percent: percent, to: &red)
+        _apply(percent: percent, to: &green)
+        _apply(percent: percent, to: &blue)
     }
 }
 

@@ -3,13 +3,13 @@
 #if canImport(UIKit)
 import class UIKit.UIColor
 @usableFromInline
-typealias PlatformColor = UIColor
+typealias _PlatformColor = UIColor
 #elseif (canImport(AppKit) && !targetEnvironment(macCatalyst))
 import class AppKit.NSColor
 @usableFromInline
-typealias PlatformColor = NSColor
+typealias _PlatformColor = NSColor
 #else
-#error("Unsupported platform")
+#error("Unsupported platform") // <- should be unreachable
 #endif
 #endif
 #endif

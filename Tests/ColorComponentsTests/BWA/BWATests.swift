@@ -54,7 +54,7 @@ final class BWATests: XCTestCase {
         let bw = BW<Float>(white: 0.5)
         let bwa = BWA<Float>(bw: bw, alpha: 1)
 
-        let bwInt = BW<Int>.init(bw)
+        let bwInt = BW<Int>(bw)
         let bwaInt = BWA<Int>(bwa)
 
         XCTAssertEqual(bwInt.white, .init(bw.white * 0xFF))
@@ -97,8 +97,8 @@ final class BWATests: XCTestCase {
         let bwExact = BW<Float>(exactly: bw)
         let bwaExact = BWA<Float>(exactly: bwa)
 
-        XCTAssertNil(BW<Float>(exactly: BW<Double>(white: bw.white + .ulpOfOne)))
-        XCTAssertNil(BWA<Float>(exactly: BWA<Double>(white: bw.white + .ulpOfOne, alpha: 1)))
+        XCTAssertNil(BW<InexactFloat>(exactly: bw))
+        XCTAssertNil(BWA<InexactFloat>(exactly: bwa))
         XCTAssertNotNil(bwExact)
         XCTAssertNotNil(bwaExact)
         XCTAssertEqual(bwExact?.white, .init(bw.white))
@@ -110,7 +110,7 @@ final class BWATests: XCTestCase {
         let bw = BW<UInt8>(white: 128)
         let bwa = BWA<UInt8>(bw: bw, alpha: 0xFF)
 
-        let bwInt = BW<Double>.init(bw)
+        let bwInt = BW<Double>(bw)
         let bwaInt = BWA<Double>(bwa)
 
         XCTAssertEqual(bwInt.white, .init(bw.white) / 0xFF)
@@ -125,8 +125,8 @@ final class BWATests: XCTestCase {
         let bwExact = BW<Double>(exactly: bw)
         let bwaExact = BWA<Double>(exactly: bwa)
 
-        XCTAssertNil(BW<Float>(exactly: BW<Int>(white: .max)))
-        XCTAssertNil(BWA<Float>(exactly: BWA<Int>(white: .max, alpha: 0xFF)))
+        XCTAssertNil(BW<InexactFloat>(exactly: bw))
+        XCTAssertNil(BWA<InexactFloat>(exactly: bwa))
         XCTAssertNotNil(bwExact)
         XCTAssertNotNil(bwaExact)
         XCTAssertEqual(bwExact?.white, .init(bw.white) / 0xFF)

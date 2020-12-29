@@ -138,7 +138,7 @@ extension BW: FloatingPointColorComponents where Value: FloatingPoint {
 
     @inlinable
     public mutating func changeBrightness(by percent: Value) {
-        apply(percent: percent, to: &white)
+        _apply(percent: percent, to: &white)
     }
 }
 

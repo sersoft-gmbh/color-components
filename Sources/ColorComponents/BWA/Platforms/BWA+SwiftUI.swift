@@ -24,12 +24,12 @@ extension Color {
 extension BW where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ color: Color) {
-        self.init(PlatformColor(color))
+        self.init(_PlatformColor(color))
     }
 
     @inlinable
     public init?(exactly color: Color) {
-        self.init(exactly: PlatformColor(color))
+        self.init(exactly: _PlatformColor(color))
     }
 }
 
@@ -37,12 +37,12 @@ extension BW where Value: BinaryFloatingPoint {
 extension BWA where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ color: Color) {
-        self.init(PlatformColor(color))
+        self.init(_PlatformColor(color))
     }
 
     @inlinable
     public init?(exactly color: Color) {
-        self.init(exactly: PlatformColor(color))
+        self.init(exactly: _PlatformColor(color))
     }
 }
 #elseif canImport(CoreGraphics)

@@ -1,6 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
+@available(macOS, unavailable)
 extension UIColor {
     @inlinable
     convenience init<Value: BinaryFloatingPoint>(_ bw: BW<Value>, alpha: Value) {
@@ -25,6 +26,7 @@ extension UIColor {
     }
 }
 
+@available(macOS, unavailable)
 extension BW where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ uiColor: UIColor) {
@@ -35,10 +37,11 @@ extension BW where Value: BinaryFloatingPoint {
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
         guard isExact else { return nil }
-        self.init(bwa.bw)
+        self.init(exactly: bwa.bw)
     }
 }
 
+@available(macOS, unavailable)
 extension BWA where Value: BinaryFloatingPoint {
     @inlinable
     public init(_ uiColor: UIColor) {
@@ -49,7 +52,7 @@ extension BWA where Value: BinaryFloatingPoint {
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
         guard isExact else { return nil }
-        self.init(bwa)
+        self.init(exactly: bwa)
     }
 }
 #endif

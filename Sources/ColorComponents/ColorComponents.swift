@@ -33,11 +33,14 @@ extension AlphaColorComponents {
 extension FloatingPointColorComponents where Value: ExpressibleByFloatLiteral {
     @inlinable
     public var isDarkColor: Bool { brightness < 0.5 }
+
+    @inlinable
+    public var isBrightColor: Bool { brightness >= 0.5 }
 }
 
 extension FloatingPointColorComponents where Value: Numeric {
     @inlinable
-    internal func apply(percent: Value, to value: inout Value) {
+    internal func _apply(percent: Value, to value: inout Value) {
         value = max(min(value + percent, 1), 0)
     }
 }

@@ -169,7 +169,7 @@ extension HSBA where Value: BinaryFloatingPoint {
 extension HSB: FloatingPointColorComponents where Value: FloatingPoint {
     @inlinable
     public mutating func changeBrightness(by percent: Value) {
-        apply(percent: percent, to: &brightness)
+        _apply(percent: percent, to: &brightness)
     }
 }
 
