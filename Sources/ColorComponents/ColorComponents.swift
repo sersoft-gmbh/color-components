@@ -9,7 +9,7 @@ public protocol ColorComponents: Hashable {
 
 /// Describes a type that represents color components with an alpha channel.
 public protocol AlphaColorComponents: ColorComponents {
-    /// The alpha value of these color components.
+    /// The alpha component.
     var alpha: Value { get }
 }
 

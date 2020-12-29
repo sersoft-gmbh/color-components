@@ -8,11 +8,15 @@ extension UIColor {
         self.init(white: .init(bw.white), alpha: .init(alpha))
     }
 
+    /// Creates a new color using the given black/white components.
+    /// - Parameter bw: The black/white components.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ bw: BW<Value>) {
         self.init(bw, alpha: 1)
     }
 
+    /// Creates a new color using the given black/white components with alpha channel.
+    /// - Parameter bwa: The black/white components with alpha channel.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ bwa: BWA<Value>) {
         self.init(bwa.bw, alpha: bwa.alpha)
@@ -28,11 +32,17 @@ extension UIColor {
 
 @available(macOS, unavailable)
 extension BW where Value: BinaryFloatingPoint {
+    /// Creates new black/white components from the given color.
+    /// - Parameter uiColor: The color to read the components from.
     @inlinable
     public init(_ uiColor: UIColor) {
         self.init(uiColor._extractBWA().0.bw)
     }
 
+    /// Tries to create new black/white components that exactly
+    /// match the components of the given color.
+    /// - Parameter uiColor: The color to read the components from.
+    /// - SeeAlso: `BW.init(exactly:)`
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
@@ -43,11 +53,17 @@ extension BW where Value: BinaryFloatingPoint {
 
 @available(macOS, unavailable)
 extension BWA where Value: BinaryFloatingPoint {
+    /// Creates new black/white components with alpha channel from the given color.
+    /// - Parameter uiColor: The color to read the components from.
     @inlinable
     public init(_ uiColor: UIColor) {
         self.init(uiColor._extractBWA().0)
     }
 
+    /// Tries to create new black/white components with alpha channel
+    /// that exactly match the components of the given color.
+    /// - Parameter uiColor: The color to read the components from.
+    /// - SeeAlso: `BWA.init(exactly:)`
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()

@@ -1,4 +1,6 @@
 extension RGB where Value: BinaryFloatingPoint {
+    /// Creates new RGB components using the given HSB components.
+    /// - Parameter hsb: The HSB components to convert to RGB.
     public init(hsb: HSB<Value>) {
         let chroma = hsb.brightness * hsb.saturation
         let hueSixty = max(0, min(hsb.hue, 1)) / (60 / 360)
@@ -21,6 +23,8 @@ extension RGB where Value: BinaryFloatingPoint {
 }
 
 extension RGBA where Value: BinaryFloatingPoint {
+    /// Creates new RGBA components using the given HSBA components.
+    /// - Parameter hsba: The HSBA components to convert to RGBA.
     @inlinable
     public init(hsba: HSBA<Value>) {
         self.init(rgb: RGB(hsb: hsba.hsb), alpha: hsba.alpha)

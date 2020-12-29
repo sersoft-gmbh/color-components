@@ -27,7 +27,7 @@ final class BWA_SwiftUITests: XCTestCase {
 
         let color = Color(white: 0.5, opacity: 0.25)
 
-        #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
+        #if (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)))
         let bw = BW<CGFloat>(color)
         let bwa = BWA<CGFloat>(color)
         #elseif canImport(CoreGraphics)
@@ -42,6 +42,21 @@ final class BWA_SwiftUITests: XCTestCase {
         XCTAssertEqual(bwa.alpha, 0.25)
         XCTAssertNil(BW<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(BWA<InexactFloat>(exactly: Color(white: 1)))
+        #else
+        try skipUnavailableAPI()
+        #endif
+    }
+
+    func testViewConformance() throws {
+        #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
+        guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
+        else { try skipUnavailableAPI() }
+
+        let bw = BW<Double>(white: 0.5)
+        let bwa = BWA(bw: bw, alpha: 0.25)
+
+        XCTAssertEqual(bw.body as? Color, Color(bw))
+        XCTAssertEqual(bwa.body as? Color, Color(bwa))
         #else
         try skipUnavailableAPI()
         #endif

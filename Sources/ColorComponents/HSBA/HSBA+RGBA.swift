@@ -1,4 +1,6 @@
 extension HSB where Value: BinaryFloatingPoint {
+    /// Creates new HSB components using the given RGB components.
+    /// - Parameter rgb: The RGB components to convert to HSB.
     public init(rgb: RGB<Value>) {
         let maxVal = max(rgb.red, rgb.green, rgb.blue)
         let delta = maxVal - min(rgb.red, rgb.green, rgb.blue)
@@ -18,6 +20,9 @@ extension HSB where Value: BinaryFloatingPoint {
 }
 
 extension HSBA where Value: BinaryFloatingPoint {
+    /// Creates new HSBA components using the given RGBA components.
+    /// - Parameter rgba: The RGBA components to convert to HSBA.
+    /// - SeeAlso: `HSB.init(rgb:)`
     @inlinable
     public init(rgba: RGBA<Value>) {
         self.init(hsb: HSB(rgb: rgba.rgb), alpha: rgba.alpha)
