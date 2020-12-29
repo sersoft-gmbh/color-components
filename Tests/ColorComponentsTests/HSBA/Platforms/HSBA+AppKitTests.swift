@@ -1,10 +1,12 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import XCTest
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
+#endif
 import ColorComponents
 
 final class HSBA_AppKitTests: XCTestCase {
-    func testNSColorCreation() {
+    func testNSColorCreation() throws {
+        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let hsb = HSB<CGFloat>(hue: 0.25, saturation: 0.5, brightness: 0.75)
         let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
@@ -19,9 +21,13 @@ final class HSBA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.saturationComponent, hsba.saturation)
         XCTAssertEqual(opaqueColor.brightnessComponent, hsb.brightness)
         XCTAssertEqual(alphaColor.brightnessComponent, hsba.brightness)
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
-    func testCreationFromNSColor() {
+    func testCreationFromNSColor() throws {
+        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color: NSColor
         if #available(macOS 10.12, *) {
             color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
@@ -41,6 +47,8 @@ final class HSBA_AppKitTests: XCTestCase {
         XCTAssertEqual(hsba.alpha, color.alphaComponent)
         XCTAssertNil(HSB<InexactFloat>(exactly: color))
         XCTAssertNil(HSBA<InexactFloat>(exactly: color))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif

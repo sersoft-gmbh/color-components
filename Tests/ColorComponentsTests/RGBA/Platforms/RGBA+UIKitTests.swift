@@ -1,10 +1,12 @@
-#if canImport(UIKit)
 import XCTest
+#if canImport(UIKit)
 import UIKit
+#endif
 import ColorComponents
 
 final class RGBA_UIKitTests: XCTestCase {
-    func testUIColorCreation() {
+    func testUIColorCreation() throws {
+        #if canImport(UIKit)
         let rgb = RGB<CGFloat>(red: 0.5, green: 0.25, blue: 0.75)
         let rgba = RGBA(rgb: rgb, alpha: 0.25)
 
@@ -23,9 +25,13 @@ final class RGBA_UIKitTests: XCTestCase {
         XCTAssertEqual(green, rgba.green)
         XCTAssertEqual(blue, rgba.blue)
         XCTAssertEqual(alpha, rgba.alpha)
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
-    func testCreationFromUIColor() {
+    func testCreationFromUIColor() throws {
+        #if canImport(UIKit)
         let red: CGFloat = 0.5
         let green: CGFloat = 0.25
         let blue: CGFloat = 0.75
@@ -46,6 +52,8 @@ final class RGBA_UIKitTests: XCTestCase {
         XCTAssertNil(RGB<InexactFloat>(exactly: NoCompsUIColor(red: red, green: green, blue: blue, alpha: alpha)))
         XCTAssertNil(RGB<InexactFloat>(exactly: color))
         XCTAssertNil(RGB<InexactFloat>(exactly: color))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif

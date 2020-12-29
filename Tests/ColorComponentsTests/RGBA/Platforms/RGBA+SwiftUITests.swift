@@ -1,21 +1,27 @@
-#if canImport(SwiftUI) && canImport(Combine)
 import XCTest
+#if canImport(SwiftUI) && canImport(Combine)
 import SwiftUI
+#endif
 import ColorComponents
 
 final class RGBA_SwiftUITests: XCTestCase {
     func testColorCreation() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
-        let rgb = RGB<CGFloat>(red: 0.5, green: 0.25, blue: 0.75)
+        let rgb = RGB<Double>(red: 0.5, green: 0.25, blue: 0.75)
         let rgba = RGBA(rgb: rgb, alpha: 0.25)
 
         XCTAssertEqual(Color(rgb), Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 1))
         XCTAssertEqual(Color(rgba), Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testCreationFromColor() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
@@ -40,6 +46,8 @@ final class RGBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(rgba.alpha, 0.25)
         XCTAssertNil(RGB<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(RGBA<InexactFloat>(exactly: Color(white: 1)))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif

@@ -1,21 +1,27 @@
-#if canImport(SwiftUI) && canImport(Combine)
 import XCTest
+#if canImport(SwiftUI) && canImport(Combine)
 import SwiftUI
+#endif
 import ColorComponents
 
 final class BWA_SwiftUITests: XCTestCase {
     func testColorCreation() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
-        let bw = BW<CGFloat>(white: 0.5)
+        let bw = BW<Double>(white: 0.5)
         let bwa = BWA(bw: bw, alpha: 0.25)
 
         XCTAssertEqual(Color(bw), Color(white: 0.5, opacity: 1))
         XCTAssertEqual(Color(bwa), Color(white: 0.5, opacity: 0.25))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testCreationFromColor() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
@@ -36,6 +42,8 @@ final class BWA_SwiftUITests: XCTestCase {
         XCTAssertEqual(bwa.alpha, 0.25)
         XCTAssertNil(BW<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(BWA<InexactFloat>(exactly: Color(white: 1)))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif

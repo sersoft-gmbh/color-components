@@ -13,11 +13,8 @@ final class ColorComponentsTests: XCTestCase {
         let hsb = HSB<Int>(hue: 0xFC, saturation: 0x5A, brightness: 0x3E)
         let hsba = HSBA<Int>(hsb: hsb, alpha: 0x23)
 
-        XCTAssertFalse(bw.isClearColor)
         XCTAssertTrue(bwa.isClearColor)
-        XCTAssertFalse(rgb.isClearColor)
         XCTAssertTrue(rgba.isClearColor)
-        XCTAssertFalse(hsb.isClearColor)
         XCTAssertFalse(hsba.isClearColor)
         XCTAssertFalse(rgba2.isClearColor)
     }

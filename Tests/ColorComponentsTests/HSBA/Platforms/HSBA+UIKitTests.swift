@@ -1,10 +1,12 @@
-#if canImport(UIKit)
 import XCTest
+#if canImport(UIKit)
 import UIKit
+#endif
 import ColorComponents
 
 final class HSBA_UIKitTests: XCTestCase {
-    func testUIColorCreation() {
+    func testUIColorCreation() throws {
+        #if canImport(UIKit)
         let hsb = HSB<CGFloat>(hue: 0.5, saturation: 0.25, brightness: 0.75)
         let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
@@ -23,9 +25,13 @@ final class HSBA_UIKitTests: XCTestCase {
         XCTAssertEqual(saturation, hsba.saturation)
         XCTAssertEqual(brightness, hsba.brightness)
         XCTAssertEqual(alpha, hsba.alpha)
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
-    func testCreationFromUIColor() {
+    func testCreationFromUIColor() throws {
+        #if canImport(UIKit)
         let hue: CGFloat = 0.5
         let saturation: CGFloat = 0.25
         let brightness: CGFloat = 0.75
@@ -46,6 +52,8 @@ final class HSBA_UIKitTests: XCTestCase {
         XCTAssertNil(HSB<InexactFloat>(exactly: NoCompsUIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)))
         XCTAssertNil(HSB<InexactFloat>(exactly: color))
         XCTAssertNil(HSB<InexactFloat>(exactly: color))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif

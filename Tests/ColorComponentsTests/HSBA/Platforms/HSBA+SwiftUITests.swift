@@ -1,21 +1,27 @@
-#if canImport(SwiftUI) && canImport(Combine)
 import XCTest
+#if canImport(SwiftUI) && canImport(Combine)
 import SwiftUI
+#endif
 import ColorComponents
 
 final class HSBA_SwiftUITests: XCTestCase {
     func testColorCreation() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
-        let hsb = HSB<CGFloat>(hue: 0.5, saturation: 0.25, brightness: 0.75)
+        let hsb = HSB<Double>(hue: 0.5, saturation: 0.25, brightness: 0.75)
         let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
         XCTAssertEqual(Color(hsb), Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 1))
         XCTAssertEqual(Color(hsba), Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testCreationFromColor() throws {
+        #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
@@ -40,6 +46,8 @@ final class HSBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(hsba.alpha, 0.25)
         XCTAssertNil(HSB<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(HSBA<InexactFloat>(exactly: Color(white: 1)))
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 }
-#endif
