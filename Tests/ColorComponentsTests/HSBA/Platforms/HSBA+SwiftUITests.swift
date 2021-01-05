@@ -1,4 +1,5 @@
 import XCTest
+import XCHelpers
 #if canImport(SwiftUI) && canImport(Combine)
 import SwiftUI
 #endif

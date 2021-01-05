@@ -1,4 +1,5 @@
 import XCTest
+import XCHelpers
 #if canImport(CoreGraphics)
 import CoreGraphics
 #endif

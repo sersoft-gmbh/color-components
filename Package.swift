@@ -10,13 +10,32 @@ let package = Package(
         .library(
             name: "ColorComponents",
             targets: ["ColorComponents"]),
+        .library(
+            name: "ColorCalculations",
+            targets: ["ColorCalculations"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "ColorComponents"),
+        .target(
+            name: "ColorCalculations",
+            dependencies: ["ColorComponents"]),
+        .target(name: "XCHelpers"),
         .testTarget(
             name: "ColorComponentsTests",
-            dependencies: ["ColorComponents"]),
+            dependencies: [
+                "ColorComponents",
+                "XCHelpers",
+            ]),
+        .testTarget(
+            name: "ColorCalculationsTests",
+            dependencies: [
+                "ColorCalculations",
+                "XCHelpers",
+            ],
+            resources: [
+                .copy("Resources"),
+            ]),
     ]
 )

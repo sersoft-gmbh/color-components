@@ -3,8 +3,8 @@ import ColorComponents
 
 final class RGBA_HexTests: XCTestCase {
     func testCreationFromHex() {
-        let rgb = RGB(hex: 0xFF8055)
-        let rgba = RGBA(hex: 0xFF8055FA)
+        let rgb = RGB<UInt64>(hex: 0xFF8055)
+        let rgba = RGBA<UInt64>(hex: 0xFF8055FA)
 
         XCTAssertEqual(rgb.red, 0xFF)
         XCTAssertEqual(rgb.green, 0x80)
