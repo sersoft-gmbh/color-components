@@ -35,7 +35,7 @@ let package = Package(
                 "XCHelpers",
             ],
             resources: [
-                .copy("Resources"),
+                .copy("TestImages"),
             ]),
     ]
 )

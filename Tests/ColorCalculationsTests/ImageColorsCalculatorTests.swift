@@ -18,13 +18,13 @@ import AppKit
 final class ImageColorsCalculatorTests: XCTestCase {
     private let img1URL = Bundle.module.url(forResource: "img1",
                                             withExtension: "jpg",
-                                            subdirectory: "Resources")!
+                                            subdirectory: "TestImages")!
     private let img2URL = Bundle.module.url(forResource: "img2",
                                             withExtension: "jpg",
-                                            subdirectory: "Resources")!
+                                            subdirectory: "TestImages")!
     private let img3URL = Bundle.module.url(forResource: "img3",
                                             withExtension: "jpg",
-                                            subdirectory: "Resources")!
+                                            subdirectory: "TestImages")!
 
     func testAverageColor() throws {
         #if !canImport(CoreImage)
