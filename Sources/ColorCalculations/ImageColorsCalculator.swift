@@ -8,6 +8,8 @@ public struct ImageColorsCalculator {
     /// The image of the calculator.
     public let image: CIImage
 
+    private let context = CIContext()
+
     /// Creates a new calculator using the given image.
     /// - Parameter image: The image to calculate colors for.
     public init(image: CIImage) {
@@ -20,7 +22,6 @@ public struct ImageColorsCalculator {
         filter.extent = area ?? image.extent
         let outputImg = filter.outputImage!
         assert(outputImg.extent.size == CGSize(width: 1, height: 1))
-        let context = CIContext()
         var rgba = Array<UInt8>(repeating: 0, count: 4)
         context.render(outputImg,
                        toBitmap: &rgba,
