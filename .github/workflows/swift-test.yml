@@ -84,7 +84,7 @@ jobs:
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
           spm-package: "./"
-          scheme: color-components
+          scheme: color-components-Package
           destination: ${{matrix.destination}}
           action: ${{matrix.action}}
           parallel-testing-enabled: true
