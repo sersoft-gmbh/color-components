@@ -47,7 +47,7 @@ extension FloatingPointColorComponents where Value: ExpressibleByFloatLiteral {
 }
 
 // MARK: - Helpers
-extension FloatingPointColorComponents where Value: Numeric {
+extension FloatingPointColorComponents {
     @inlinable
     func _apply(percent: Value, to value: inout Value) {
         value = max(min(value + percent, 1), 0)

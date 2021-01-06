@@ -41,8 +41,9 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let calculator3 = ImageColorsCalculator(image: img3)
 
         XCTAssertEqual(calculator1.averageColor(), RGBA(red: 91, green: 66, blue: 46, alpha: 0xFF))
-        XCTAssertEqual(calculator2.averageColor(in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1))),
-                       RGBA(red: 6, green: 4, blue: 8, alpha: 0xFF))
+        XCTAssertEqual(calculator2.averageColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
+                                                           size: CGSize(width: 1, height: 1))),
+                       RGBA(red: 3, green: 2, blue: 3, alpha: 0xFF))
         XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                            size: CGSize(width: 1, height: 1))),
                        RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))
@@ -64,8 +65,9 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let calculator3 = ImageColorsCalculator(image: img3)
 
         XCTAssertEqual(calculator1.maxComponentColor(), RGBA(red: 255, green: 255, blue: 255, alpha: 0xFF))
-        XCTAssertEqual(calculator2.maxComponentColor(in: CGRect(origin: .zero, size: CGSize(width: 1, height: 1))),
-                       RGBA(red: 6, green: 4, blue: 8, alpha: 0xFF))
+        XCTAssertEqual(calculator2.maxComponentColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
+                                                                size: CGSize(width: 1, height: 1))),
+                       RGBA(red: 3, green: 2, blue: 3, alpha: 0xFF))
         XCTAssertEqual(calculator3.maxComponentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                                 size: CGSize(width: 1, height: 1))),
                        RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))

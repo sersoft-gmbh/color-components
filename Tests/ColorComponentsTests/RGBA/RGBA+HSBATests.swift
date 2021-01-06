@@ -85,4 +85,18 @@ final class RGBA_HSBATests: XCTestCase {
         XCTAssertEqual(rgba.rgb, rgb)
         XCTAssertEqual(rgba.alpha, hsba.alpha)
     }
+
+    func testCreationFromHSBA_WithIntegers() {
+        let hsb = HSB<UInt8>(hue: 0xFA, saturation: 0x80, brightness: 0xB0)
+        let hsba = HSBA<UInt8>(hsb: hsb, alpha: 0xFA)
+
+        let rgb = RGB(hsb: hsb)
+        let rgba = RGBA(hsba: hsba)
+
+        XCTAssertEqual(rgb.red, 0xB0)
+        XCTAssertEqual(rgb.green, 0x57)
+        XCTAssertEqual(rgb.blue, 0x62)
+        XCTAssertEqual(rgba.rgb, rgb)
+        XCTAssertEqual(rgba.alpha, hsba.alpha)
+    }
 }

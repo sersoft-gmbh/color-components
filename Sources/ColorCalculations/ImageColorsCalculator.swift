@@ -49,7 +49,7 @@ public struct ImageColorsCalculator {
     }
 
 //    @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
-//    private func histogram(count: Int) -> [RGBA<Float>] {
+//    public func histogram(count: Int) -> [RGBA<Float>] {
 //        let filter = CIFilter.areaHistogram()
 //        filter.setDefaults()
 //        filter.inputImage = image
@@ -57,6 +57,11 @@ public struct ImageColorsCalculator {
 //        filter.count = count
 //        filter.scale = 1
 //        let outputImg = filter.outputImage!
+//
+////        let histFilter = CIFilter.histogramDisplay()
+////        histFilter.setDefaults()
+////        histFilter.inputImage = outputImg
+////        let histImage = histFilter.outputImage!
 //
 //        let context = CIContext()
 //        var rgba = Array<Float>(repeating: 0, count: count * 4)
@@ -73,7 +78,7 @@ public struct ImageColorsCalculator {
 //                        alpha: rgba[$0 + 3])
 //        }
 //    }
-
+//
 //    @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
 //    public func colors(rasterCount: Int) -> [RGBA<UInt8>] {
 //        let scaled = image.transformed(by: CGAffineTransform(scaleX: quality, y: quality))

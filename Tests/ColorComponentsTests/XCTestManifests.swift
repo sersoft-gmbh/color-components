@@ -25,8 +25,10 @@ extension BWA_AppKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__BWA_AppKitTests = [
-        ("testCreationFromNSColor", testCreationFromNSColor),
-        ("testNSColorCreation", testNSColorCreation),
+        ("testCreationFromNSColorWithFloatingPoint", testCreationFromNSColorWithFloatingPoint),
+        ("testCreationFromNSColorWithInteger", testCreationFromNSColorWithInteger),
+        ("testNSColorCreationWithFloatingPoint", testNSColorCreationWithFloatingPoint),
+        ("testNSColorCreationWithInteger", testNSColorCreationWithInteger),
     ]
 }
 
@@ -35,8 +37,10 @@ extension BWA_CoreGraphicsTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__BWA_CoreGraphicsTests = [
-        ("testCGColorCreation", testCGColorCreation),
-        ("testCreationFromCGColor", testCreationFromCGColor),
+        ("testCGColorCreationWithFloatingPoint", testCGColorCreationWithFloatingPoint),
+        ("testCGColorCreationWithInteger", testCGColorCreationWithInteger),
+        ("testCreationFromCGColorWithFloatingPoint", testCreationFromCGColorWithFloatingPoint),
+        ("testCreationFromCGColorWithInteger", testCreationFromCGColorWithInteger),
     ]
 }
 
@@ -45,8 +49,10 @@ extension BWA_SwiftUITests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__BWA_SwiftUITests = [
-        ("testColorCreation", testColorCreation),
-        ("testCreationFromColor", testCreationFromColor),
+        ("testColorCreationWithFloatingPoint", testColorCreationWithFloatingPoint),
+        ("testColorCreationWithInteger", testColorCreationWithInteger),
+        ("testCreationFromColorWithFloatingPoint", testCreationFromColorWithFloatingPoint),
+        ("testCreationFromColorWithInteger", testCreationFromColorWithInteger),
         ("testViewConformance", testViewConformance),
     ]
 }
@@ -56,8 +62,10 @@ extension BWA_UIKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__BWA_UIKitTests = [
-        ("testCreationFromUIColor", testCreationFromUIColor),
-        ("testUIColorCreation", testUIColorCreation),
+        ("testCreationFromUIColorWithFloatingPoint", testCreationFromUIColorWithFloatingPoint),
+        ("testCreationFromUIColorWithInteger", testCreationFromUIColorWithInteger),
+        ("testUIColorCreationWithFloatingPoint", testUIColorCreationWithFloatingPoint),
+        ("testUIColorCreationWithInteger", testUIColorCreationWithInteger),
     ]
 }
 
@@ -95,8 +103,10 @@ extension HSBA_AppKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__HSBA_AppKitTests = [
-        ("testCreationFromNSColor", testCreationFromNSColor),
-        ("testNSColorCreation", testNSColorCreation),
+        ("testCreationFromNSColorWithFloatingPoint", testCreationFromNSColorWithFloatingPoint),
+        ("testCreationFromNSColorWithInteger", testCreationFromNSColorWithInteger),
+        ("testNSColorCreationWithFloatingPoint", testNSColorCreationWithFloatingPoint),
+        ("testNSColorCreationWithInteger", testNSColorCreationWithInteger),
     ]
 }
 
@@ -105,8 +115,10 @@ extension HSBA_CoreGraphicsTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__HSBA_CoreGraphicsTests = [
-        ("testCGColorCreation", testCGColorCreation),
-        ("testCreationFromCGColor", testCreationFromCGColor),
+        ("testCGColorCreationWithFloatingPoint", testCGColorCreationWithFloatingPoint),
+        ("testCGColorCreationWithInteger", testCGColorCreationWithInteger),
+        ("testCreationFromCGColorWithFloatingPoint", testCreationFromCGColorWithFloatingPoint),
+        ("testCreationFromCGColorWithInteger", testCreationFromCGColorWithInteger),
     ]
 }
 
@@ -120,6 +132,7 @@ extension HSBA_RGBATests {
         ("testCreationFromRGBA_GreenMax", testCreationFromRGBA_GreenMax),
         ("testCreationFromRGBA_MaxZero", testCreationFromRGBA_MaxZero),
         ("testCreationFromRGBA_RedMax", testCreationFromRGBA_RedMax),
+        ("testCreationFromRGBAWithIntegers", testCreationFromRGBAWithIntegers),
     ]
 }
 
@@ -128,8 +141,10 @@ extension HSBA_SwiftUITests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__HSBA_SwiftUITests = [
-        ("testColorCreation", testColorCreation),
-        ("testCreationFromColor", testCreationFromColor),
+        ("testColorCreationWithFloatingPoint", testColorCreationWithFloatingPoint),
+        ("testColorCreationWithInteger", testColorCreationWithInteger),
+        ("testCreationFromColorWithFloatingPoint", testCreationFromColorWithFloatingPoint),
+        ("testCreationFromColorWithInteger", testCreationFromColorWithInteger),
         ("testViewConformance", testViewConformance),
     ]
 }
@@ -139,8 +154,10 @@ extension HSBA_UIKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__HSBA_UIKitTests = [
-        ("testCreationFromUIColor", testCreationFromUIColor),
-        ("testUIColorCreation", testUIColorCreation),
+        ("testCreationFromUIColorWithFloatingPoint", testCreationFromUIColorWithFloatingPoint),
+        ("testCreationFromUIColorWithInteger", testCreationFromUIColorWithInteger),
+        ("testUIColorCreationWithFloatingPoint", testUIColorCreationWithFloatingPoint),
+        ("testUIColorCreationWithInteger", testUIColorCreationWithInteger),
     ]
 }
 
@@ -168,8 +185,10 @@ extension RGBA_AppKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__RGBA_AppKitTests = [
-        ("testCreationFromNSColor", testCreationFromNSColor),
-        ("testNSColorCreation", testNSColorCreation),
+        ("testCreationFromNSColorWithFloatingPoint", testCreationFromNSColorWithFloatingPoint),
+        ("testCreationFromNSColorWithInteger", testCreationFromNSColorWithInteger),
+        ("testNSColorCreationWithFloatingPoint", testNSColorCreationWithFloatingPoint),
+        ("testNSColorCreationWithInteger", testNSColorCreationWithInteger),
     ]
 }
 
@@ -178,9 +197,11 @@ extension RGBA_CoreGraphicsTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__RGBA_CoreGraphicsTests = [
-        ("testCGColorCreation", testCGColorCreation),
-        ("testCreationFromCGColor", testCreationFromCGColor),
+        ("testCGColorCreationWithFloatingPoint", testCGColorCreationWithFloatingPoint),
+        ("testCGColorCreationWithInteger", testCGColorCreationWithInteger),
         ("testCreationFromCGColorConvertingColorSpaces", testCreationFromCGColorConvertingColorSpaces),
+        ("testCreationFromCGColorWithFloatingPoint", testCreationFromCGColorWithFloatingPoint),
+        ("testCreationFromCGColorWithInteger", testCreationFromCGColorWithInteger),
     ]
 }
 
@@ -195,6 +216,7 @@ extension RGBA_HSBATests {
         ("testCreationFromHSBA_SecondPart", testCreationFromHSBA_SecondPart),
         ("testCreationFromHSBA_SixthPart", testCreationFromHSBA_SixthPart),
         ("testCreationFromHSBA_ThirdPart", testCreationFromHSBA_ThirdPart),
+        ("testCreationFromHSBA_WithIntegers", testCreationFromHSBA_WithIntegers),
     ]
 }
 
@@ -204,6 +226,8 @@ extension RGBA_HexTests {
     // to regenerate.
     static let __allTests__RGBA_HexTests = [
         ("testCreationFromHex", testCreationFromHex),
+        ("testCreationFromHexOfDifferentSize", testCreationFromHexOfDifferentSize),
+        ("testCreationFromHexString", testCreationFromHexString),
         ("testHexString", testHexString),
     ]
 }
@@ -213,8 +237,10 @@ extension RGBA_SwiftUITests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__RGBA_SwiftUITests = [
-        ("testColorCreation", testColorCreation),
-        ("testCreationFromColor", testCreationFromColor),
+        ("testColorCreationWithFloatingPoint", testColorCreationWithFloatingPoint),
+        ("testColorCreationWithInteger", testColorCreationWithInteger),
+        ("testCreationFromColorWithFloatingPoint", testCreationFromColorWithFloatingPoint),
+        ("testCreationFromColorWithInteger", testCreationFromColorWithInteger),
         ("testViewConformance", testViewConformance),
     ]
 }
@@ -224,8 +250,10 @@ extension RGBA_UIKitTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__RGBA_UIKitTests = [
-        ("testCreationFromUIColor", testCreationFromUIColor),
-        ("testUIColorCreation", testUIColorCreation),
+        ("testCreationFromUIColorWithFloatingPoint", testCreationFromUIColorWithFloatingPoint),
+        ("testCreationFromUIColorWithInteger", testCreationFromUIColorWithInteger),
+        ("testUIColorCreationWithFloatingPoint", testUIColorCreationWithFloatingPoint),
+        ("testUIColorCreationWithInteger", testUIColorCreationWithInteger),
     ]
 }
 
