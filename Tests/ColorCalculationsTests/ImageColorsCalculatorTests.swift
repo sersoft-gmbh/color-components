@@ -127,16 +127,31 @@ final class ImageColorsCalculatorTests: XCTestCase {
         #if !canImport(UIKit)
         try skipUnavailableAPI()
         #else
+        final class NonBackingUIImage: UIImage {
+            override var ciImage: CIImage? { nil }
+            override var cgImage: CGImage? { nil }
+        }
+
+        final class NonCGUIImage: UIImage {
+            override var cgImage: CGImage? { nil }
+        }
+
         final class NonCIUIImage: UIImage {
             override var ciImage: CIImage? { nil }
         }
-        
-        let uiImage = UIImage(contentsOfFile: img1URL.path)!
+
+        let uiImage = try XCTUnwrap(UIImage(contentsOfFile: img1URL.path))
         let calculator = ImageColorsCalculator(uiImage: uiImage)
         XCTAssertNotNil(calculator)
-        let uiImage2 = NonCIUIImage(contentsOfFile: img2URL.path)!
+        let uiImage2 = try XCTUnwrap(NonCIUIImage(contentsOfFile: img2URL.path))
         let calculator2 = ImageColorsCalculator(uiImage: uiImage2)
         XCTAssertNotNil(calculator2)
+        let uiImage3 = try NonCGUIImage(ciImage: XCTUnwrap(CIImage(contentsOf: img1URL)))
+        let calculator3 = ImageColorsCalculator(uiImage: uiImage3)
+        XCTAssertNotNil(calculator3)
+        let uiImage4 = try XCTUnwrap(NonBackingUIImage(contentsOfFile: img1URL.path))
+        let calculator4 = ImageColorsCalculator(uiImage: uiImage4)
+        XCTAssertNil(calculator4)
         #endif
     }
 
