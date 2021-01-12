@@ -3,15 +3,31 @@ import CoreImage
 import ColorComponents
 
 extension ImageColorsCalculator {
+    /// Describes the mode that is used to calculate color distances.
+    public enum ColorDistanceMode {
+        /// Unweighted, linear sRGB calculation.
+        case linearSRGB
+        /// Weighted sRGB calculation. R, G and B values are weighted to approximate human perception.
+        case weightedSRGB
+    }
+
     /// Calculates the most prominent colors in the image, optionally restricting it to a given rect.
     /// - Parameters:
+    ///   - type: The floating point type in which the color components should be returned.
     ///   - rect: The rect to restrict the calculation to. If `nil`, the image's extent is used. Defaults to `nil`.
-    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `2048`.
+    ///   - colorDistance: The color distance calculation mode to use. Defaults to `.linearSRGB`.
+    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `1024`.
+    ///   - colorLimit: The maximum number of colors to consider (cluster size). This will be the maximum size of the returned array. Defaults to `8`.
     /// - Returns: An array of the most prominent colors in the image, ordered by prominence (highest to lowest).
-    func prominentColors<V>(as _: V.Type = V.self, in rect: CGRect? = nil, pixelLimit: Int = 2048) -> [RGB<V>]
+    public func prominentColors<V>(as type: V.Type = V.self,
+                                   in rect: CGRect? = nil,
+                                   distanceAs colorDistance: ColorDistanceMode = .linearSRGB,
+                                   pixelLimit: Int = 1024,
+                                   colorLimit: Int = 8) -> [RGB<V>]
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
         assert(pixelLimit > 0)
+        assert(colorLimit > 0)
         let img = (rect.map(image.cropped(to:)) ?? image).limitedTo(pixelCount: pixelLimit)
         var pixels = Array<UInt8>(repeating: 0, count: Int(floor(img.extent.width * img.extent.height)) * 4)
         context.render(img,
@@ -20,31 +36,48 @@ extension ImageColorsCalculator {
                        bounds: img.extent,
                        format: .RGBA8,
                        colorSpace: nil)
-        func pow2(_ base: V) -> V { base * base }
-        return (stride(from: pixels.startIndex, to: pixels.endIndex, by: 4)
-            .lazy
-            .filter { pixels[$0 + 3] == 0xFF } // only opaque colors are taken into account
-            .map {
-                SIMD3<V>(V(pixels[$0 + 0]) / 0xFF,
-                         V(pixels[$0 + 1]) / 0xFF,
-                         V(pixels[$0 + 2]) / 0xFF)
-            } as Array<SIMD3<V>>)
-            .kMeansClustered(atMost: pixelLimit / 64) { pow2($1.x - $0.x) + pow2($1.y - $0.y) + pow2($1.z - $0.z) }
-            .sorted { $0.size > $1.size }
-            .map { RGB<V>(red: $0.centroid.x, green: $0.centroid.y, blue: $0.centroid.z) }
+        let ignoreBrightness = pixels.count <= 128 * 4
+        var randomGen = SystemRandomNumberGenerator()
+        let distanceCalculation: (SIMD3<V>, SIMD3<V>) -> V
+        switch colorDistance {
+        case .linearSRGB: distanceCalculation = { ($1.x - $0.x).squared() + ($1.y - $0.y).squared() + ($1.z - $0.z).squared() }
+        case .weightedSRGB: distanceCalculation = { $0.sRGBColorDistance(to: $1) }
+        }
+        return (
+            stride(from: pixels.startIndex, to: pixels.endIndex, by: 4)
+                .lazy
+                .map { RGBA<UInt8>(red: pixels[$0], green: pixels[$0 + 1], blue: pixels[$0 + 2], alpha: pixels[$0 + 3]) }
+                .filter { $0.alpha == 0xFF } // only opaque colors are taken into account
+                .map { RGB<V>($0.rgb) }
+                .filter { ignoreBrightness || $0.brightness > 0.05 } // For large images, filter colors with a low brightness.
+                .map { SIMD3<V>($0.red, $0.green, $0.blue) } as Array<SIMD3<V>>
+        )
+        .kMeansClustered(atMost: colorLimit, using: &randomGen, distance: distanceCalculation)
+        .sorted { $0.size > $1.size }
+        .map { RGB<V>(red: $0.centroid.x, green: $0.centroid.y, blue: $0.centroid.z) }
     }
 
     /// Calculates the color that is most prominent in the image, optionally restricting it to a given rect.
     /// - Parameters:
+    ///   - type: The floating point type in which the color components should be returned.
     ///   - rect: The rect to restrict the calculation to. If `nil`, the image's extent is used. Defaults to `nil`.
-    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `2048`.
+    ///   - colorDistance: The color distance calculation mode to use. Defaults to `.linearSRGB`.
+    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `1024`.
+    ///   - colorLimit: The maximum number of colors to consider (cluster size). Defaults to `8`.
     /// - Returns: The most prominent color in the image.
-    public func mostProminentColor<V>(as _: V.Type = V.self,
+    public func mostProminentColor<V>(as type: V.Type = V.self,
                                       in rect: CGRect? = nil,
-                                      pixelLimit: Int = 2048) -> RGB<V>
+                                      distanceAs colorDistance: ColorDistanceMode = .linearSRGB,
+                                      pixelLimit: Int = 1024,
+                                      colorLimit: Int = 8) -> RGB<V>
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
-        prominentColors(in: rect, pixelLimit: pixelLimit).first ?? RGB<V>(red: 0, green: 0, blue: 0)
+        prominentColors(as: type,
+                        in: rect,
+                        distanceAs: colorDistance,
+                        pixelLimit: pixelLimit,
+                        colorLimit: colorLimit).first
+            ?? RGB<V>(red: 0, green: 0, blue: 0)
     }
 }
 
@@ -62,7 +95,34 @@ fileprivate extension CIImage {
     }
 }
 
-fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: FloatingPoint, Vec.Scalar: ExpressibleByFloatLiteral {
+fileprivate extension Numeric {
+    @inline(__always)
+    func squared() -> Self { self * self }
+}
+
+fileprivate extension RGB where Value: UnsignedInteger {
+    func sRGBColorDistance<D>(to other: Self, in _: D.Type = D.self) -> D
+    where D: BinaryFloatingPoint
+    {
+        let rM = D(red) + D(other.red) / 2
+        let pR = (2 + rM / 256) * D(abs(red.distance(to: other.red))).squared()
+        let pG = 4 * D(abs(green.distance(to: other.green))).squared()
+        let pB = (2 + (255 - rM) / 256) * D(abs(blue.distance(to: other.blue))).squared()
+        return (pR + pG + pB).squareRoot()
+    }
+}
+
+fileprivate extension SIMD3 where Scalar: BinaryFloatingPoint {
+    private func asRGB<V: BinaryInteger>(of _: V.Type = V.self) -> RGB<V> {
+        RGB<V>(RGB(red: x, green: y, blue: z))
+    }
+
+    func sRGBColorDistance(to other: Self) -> Scalar {
+        asRGB(of: UInt8.self).sRGBColorDistance(to: other.asRGB())
+    }
+}
+
+fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: BinaryFloatingPoint {
     var centroid: Vec
     var size: Vec.Scalar
 
@@ -70,21 +130,29 @@ fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: FloatingPoint, Vec.Scala
 }
 
 fileprivate extension RandomAccessCollection
-where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: FloatingPoint, Element.Scalar: ExpressibleByFloatLiteral
+where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoint
 {
     // See http://users.eecs.northwestern.edu/~wkliao/Kmeans/
-    func kMeansClustered(atMost maxK: Int, threshold: Element.Scalar = 0.001, distance: (Element, Element) -> Element.Scalar) -> [Cluster<Element>] {
-        var clusters = randomElements(count: Swift.min(maxK, count)).map { Cluster(centroid: $0, size: 0) }
+    func kMeansClustered<D, G>(atMost maxK: Int,
+                               using randomNumberGenerator: inout G,
+                               distance: (Element, Element) -> D) -> [Cluster<Element>]
+    where D: Comparable, G: RandomNumberGenerator
+    {
+        guard !isEmpty else { return [] }
+
+        var clusters = randomElements(count: Swift.min(maxK, count), using: &randomNumberGenerator)
+            .map { Cluster(centroid: $0, size: 0) }
         var memberships = Array<Int>(repeating: -1, count: count)
-        var (error, prevError): (Element.Scalar, Element.Scalar) = (0, 0)
+        var (errors, iters) = (0, 0)
         repeat {
-            error = 0
+            defer { iters += 1 }
+            errors = 0
             var newClusters = Array<Cluster<Element>>(repeating: .zero, count: clusters.count)
 
             enumerated().forEach {
                 let idx = clusters.nearestClusterIndex(for: $0.element, distance: distance)
                 if memberships[$0.offset] != idx {
-                    error += 1
+                    errors += 1
                     memberships[$0.offset] = idx
                 }
                 newClusters[idx].size += 1
@@ -96,16 +164,17 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: FloatingPoint, El
                     clusters[$0.offset].centroid = $0.element.centroid / $0.element.size
                 }
             }
-            prevError = error
-        } while abs(error - prevError) > threshold
-
+        } while errors > 0 && iters < 1024
+        if iters >= 1024 {
+            print("Exceeded iterations...")
+        }
         return clusters
     }
 }
 
 fileprivate extension RandomAccessCollection {
-    func nearestClusterIndex<Vec>(for point: Vec, distance: (Vec, Vec) -> Vec.Scalar) -> Index
-    where Element == Cluster<Vec>
+    func nearestClusterIndex<Vec, D>(for point: Vec, distance: (Vec, Vec) -> D) -> Index
+    where Element == Cluster<Vec>, D: Comparable
     {
         withoutActuallyEscaping(distance) { distance in
             indices
@@ -118,19 +187,24 @@ fileprivate extension RandomAccessCollection {
 }
 
 fileprivate extension RandomAccessCollection where Index: FixedWidthInteger {
-    func randomElements(count elemCount: Int) -> [Element] {
+    func randomElements<G>(count elemCount: Int, using randomGenerator: inout G) -> [Element]
+    where G: RandomNumberGenerator
+    {
         guard !isEmpty else { return [] }
         guard count > elemCount else { return Array(self) }
 
-        var indices = Set<Index>()
-        indices.reserveCapacity(elemCount)
+        var indices = Set<Index>(minimumCapacity: elemCount)
+        var elements = Array<Element>()
+        elements.reserveCapacity(elemCount)
         let indexRange = startIndex..<endIndex
-        var randomGen = SystemRandomNumberGenerator()
-        while indices.count < elemCount {
-            indices.insert(.random(in: indexRange, using: &randomGen))
+        while elements.count < elemCount {
+            let idx = Index.random(in: indexRange, using: &randomGenerator)
+            if indices.insert(idx).inserted {
+                elements.append(self[idx])
+            }
         }
 
-        return indices.map { self[$0] }
+        return elements
     }
 }
 #endif

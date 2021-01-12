@@ -25,6 +25,9 @@ final class ImageColorsCalculatorTests: XCTestCase {
     private let img3URL = Bundle.module.url(forResource: "img3",
                                             withExtension: "jpg",
                                             subdirectory: "TestImages")!
+    private let img4URL = Bundle.module.url(forResource: "img4",
+                                            withExtension: "jpg",
+                                            subdirectory: "TestImages")!
 
     func testAverageColor() throws {
         #if !canImport(CoreImage)
@@ -81,33 +84,61 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let img1 = try XCTUnwrap(CIImage(contentsOf: img1URL))
         let img2 = try XCTUnwrap(CIImage(contentsOf: img2URL))
         let img3 = try XCTUnwrap(CIImage(contentsOf: img3URL))
+        let img4 = try XCTUnwrap(CIImage(contentsOf: img4URL))
         let calculator1 = ImageColorsCalculator(image: img1)
         let calculator2 = ImageColorsCalculator(image: img2)
         let calculator3 = ImageColorsCalculator(image: img3)
+        let calculator4 = ImageColorsCalculator(image: img4)
 
-        let color1: RGB<Float> = calculator1.mostProminentColor()
-        XCTAssertEqual(color1.red, 95 / 0xFF, accuracy: 5)
-        XCTAssertEqual(color1.green, 5 / 0xFF, accuracy: 5)
-        XCTAssertEqual(color1.blue, 46 / 0xFF, accuracy: 5)
-        XCTAssertEqual(calculator2.mostProminentColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
-                                                                 size: CGSize(width: 1, height: 1))),
-                       RGB<Float>(red: 3 / 0xFF, green: 2 / 0xFF, blue: 3 / 0xFF))
+//        #if os(iOS)
+//        let c1 = UIColor(calculator1.mostProminentColor(as: Float.self))
+//        let c2 = UIColor(calculator2.mostProminentColor(as: Float.self))
+//        let c3 = UIColor(calculator3.mostProminentColor(as: Float.self))
+//        let c4 = UIColor(calculator4.mostProminentColor(as: Float.self))
+//        #endif
+
+//        let color1: RGB<Float> = calculator1.mostProminentColor()
+//        XCTAssertEqual(color1.red, 75 / 0xFF, accuracy: 15 / 0xFF)
+//        XCTAssertEqual(color1.green, 26 / 0xFF, accuracy: 7 / 0xFF)
+//        XCTAssertEqual(color1.blue, 15 / 0xFF, accuracy: 5 / 0xFF)
+        XCTAssertFalse(calculator1.prominentColors(as: Float.self).isEmpty)
+        XCTAssertFalse(calculator4.prominentColors(as: Float.self).isEmpty)
+        XCTAssertEqual(RGB<UInt8>(calculator2.mostProminentColor(as: Float.self,
+                                                                 in: CGRect(origin: CGPoint(x: 630, y: 200),
+                                                                            size: CGSize(width: 1, height: 1)))),
+                       RGB(red: 4, green: 1, blue: 3))
         XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                                  size: CGSize(width: 1, height: 1))),
                        RGB<Float>(red: 32 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
         #endif
     }
 
-    func testProminentColorsPerformance() throws {
+    func testProminentColorsPerformanceWithLinearSRGBDifference() throws {
         #if !canImport(CoreImage)
         try skipUnavailableAPI()
         #else
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
             throw XCTSkip("Performance measurments not present")
         }
-        let img = try XCTUnwrap(CIImage(contentsOf: img2URL))
+        let img = try XCTUnwrap(CIImage(contentsOf: img4URL))
         measure(metrics: [XCTMemoryMetric(), XCTClockMetric()]) {
-            _ = ImageColorsCalculator(image: img).mostProminentColor(as: Float.self)
+            _ = ImageColorsCalculator(image: img)
+                .mostProminentColor(as: Float.self, distanceAs: .linearSRGB)
+        }
+        #endif
+    }
+
+    func testProminentColorsPerformanceWithWeightedSRGBDifference() throws {
+        #if !canImport(CoreImage)
+        try skipUnavailableAPI()
+        #else
+        guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
+            throw XCTSkip("Performance measurments not present")
+        }
+        let img = try XCTUnwrap(CIImage(contentsOf: img4URL))
+        measure(metrics: [XCTMemoryMetric(), XCTClockMetric()]) {
+            _ = ImageColorsCalculator(image: img)
+                .mostProminentColor(as: Float.self, distanceAs: .weightedSRGB)
         }
         #endif
     }

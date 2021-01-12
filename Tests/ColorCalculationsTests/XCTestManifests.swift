@@ -11,7 +11,8 @@ extension ImageColorsCalculatorTests {
         ("testMaxComponentColor", testMaxComponentColor),
         ("testMostProminentColor", testMostProminentColor),
         ("testNSImageInitializer", testNSImageInitializer),
-        ("testProminentColorsPerformance", testProminentColorsPerformance),
+        ("testProminentColorsPerformanceWithLinearSRGBDifference", testProminentColorsPerformanceWithLinearSRGBDifference),
+        ("testProminentColorsPerformanceWithWeightedSRGBDifference", testProminentColorsPerformanceWithWeightedSRGBDifference),
         ("testUIImageInitializer", testUIImageInitializer),
     ]
 }
