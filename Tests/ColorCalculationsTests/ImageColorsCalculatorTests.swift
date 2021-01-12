@@ -74,6 +74,44 @@ final class ImageColorsCalculatorTests: XCTestCase {
         #endif
     }
 
+    func testMostProminentColor() throws {
+        #if !canImport(CoreImage)
+        try skipUnavailableAPI()
+        #else
+        let img1 = try XCTUnwrap(CIImage(contentsOf: img1URL))
+        let img2 = try XCTUnwrap(CIImage(contentsOf: img2URL))
+        let img3 = try XCTUnwrap(CIImage(contentsOf: img3URL))
+        let calculator1 = ImageColorsCalculator(image: img1)
+        let calculator2 = ImageColorsCalculator(image: img2)
+        let calculator3 = ImageColorsCalculator(image: img3)
+
+        let color1: RGB<Float> = calculator1.mostProminentColor()
+        XCTAssertEqual(color1.red, 95 / 0xFF, accuracy: 5)
+        XCTAssertEqual(color1.green, 5 / 0xFF, accuracy: 5)
+        XCTAssertEqual(color1.blue, 46 / 0xFF, accuracy: 5)
+        XCTAssertEqual(calculator2.mostProminentColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
+                                                                 size: CGSize(width: 1, height: 1))),
+                       RGB<Float>(red: 3 / 0xFF, green: 2 / 0xFF, blue: 3 / 0xFF))
+        XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
+                                                                 size: CGSize(width: 1, height: 1))),
+                       RGB<Float>(red: 32 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
+        #endif
+    }
+
+    func testProminentColorsPerformance() throws {
+        #if !canImport(CoreImage)
+        try skipUnavailableAPI()
+        #else
+        guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
+            throw XCTSkip("Performance measurments not present")
+        }
+        let img = try XCTUnwrap(CIImage(contentsOf: img2URL))
+        measure(metrics: [XCTMemoryMetric(), XCTClockMetric()]) {
+            _ = ImageColorsCalculator(image: img).mostProminentColor(as: Float.self)
+        }
+        #endif
+    }
+
     func testCGImageInitializer() throws {
         #if !canImport(CoreGraphics)
         try skipUnavailableAPI()

@@ -8,7 +8,7 @@ public struct ImageColorsCalculator {
     /// The image of the calculator.
     public let image: CIImage
 
-    private let context = CIContext()
+    let context = CIContext()
 
     /// Creates a new calculator using the given image.
     /// - Parameter image: The image to calculate colors for.
@@ -73,26 +73,6 @@ public struct ImageColorsCalculator {
 //                       colorSpace: nil)
 //        return stride(from: rgba.startIndex, to: rgba.endIndex, by: 4).map {
 //            RGBA<Float>(red: rgba[$0],
-//                        green: rgba[$0 + 1],
-//                        blue: rgba[$0 + 2],
-//                        alpha: rgba[$0 + 3])
-//        }
-//    }
-//
-//    @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
-//    public func colors(rasterCount: Int) -> [RGBA<UInt8>] {
-//        let scaled = image.transformed(by: CGAffineTransform(scaleX: quality, y: quality))
-//        let context = CIContext()
-//        let size = floor(scaled.extent.width * scaled.extent.height)
-//        var rgba = Array<UInt8>(repeating: 0, count: Int(size) * 4)
-//        context.render(scaled,
-//                       toBitmap: &rgba,
-//                       rowBytes: rgba.count,
-//                       bounds: scaled.extent,
-//                       format: .RGBA8,
-//                       colorSpace: nil)
-//        return stride(from: rgba.startIndex, to: rgba.endIndex, by: 4).map {
-//            RGBA<UInt8>(red: rgba[$0],
 //                        green: rgba[$0 + 1],
 //                        blue: rgba[$0 + 2],
 //                        alpha: rgba[$0 + 3])

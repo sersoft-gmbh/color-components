@@ -1,5 +1,5 @@
 /// The type of values that can be used with color components.
-public typealias ColorCompontentValue = Hashable & Comparable & AdditiveArithmetic
+public typealias ColorCompontentValue = Hashable & Comparable & Numeric
 
 /// Describes a type that represents (opaque) color components without an alpha channel.
 public protocol ColorComponents: Hashable {
@@ -45,6 +45,15 @@ extension FloatingPointColorComponents where Value: ExpressibleByFloatLiteral {
     @inlinable
     public var isBrightColor: Bool { brightness >= 0.5 }
 }
+
+//extension ColorComponents where Self: CustomPlaygroundDisplayConvertible {
+//    /// See `CustomPlaygroundDisplayConvertible.playgroundDescription`.
+//    public var playgroundDescription: Any {
+//        (self as? _BinaryIntegerColorComponentsPlaygroundSupport)?._playgroundColor
+//            ?? (self as? _FloatingPointColorComponentsPlaygroundSupport)?._playgroundColor
+//            ?? String(describing: self)
+//    }
+//}
 
 // MARK: - Helpers
 extension FloatingPointColorComponents {

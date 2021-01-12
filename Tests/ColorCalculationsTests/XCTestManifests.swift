@@ -9,7 +9,9 @@ extension ImageColorsCalculatorTests {
         ("testAverageColor", testAverageColor),
         ("testCGImageInitializer", testCGImageInitializer),
         ("testMaxComponentColor", testMaxComponentColor),
+        ("testMostProminentColor", testMostProminentColor),
         ("testNSImageInitializer", testNSImageInitializer),
+        ("testProminentColorsPerformance", testProminentColorsPerformance),
         ("testUIImageInitializer", testUIImageInitializer),
     ]
 }

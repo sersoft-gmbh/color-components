@@ -284,3 +284,6 @@ extension HSB: Encodable where Value: Encodable {}
 extension HSBA: Encodable where Value: Encodable {}
 extension HSB: Decodable where Value: Decodable {}
 extension HSBA: Decodable where Value: Decodable {}
+
+//extension HSB: CustomPlaygroundDisplayConvertible {}
+//extension HSBA: CustomPlaygroundDisplayConvertible {}
