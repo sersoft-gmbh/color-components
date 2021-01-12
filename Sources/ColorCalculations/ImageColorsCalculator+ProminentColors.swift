@@ -1,3 +1,4 @@
+#if canImport(CoreImage)
 import CoreImage
 import ColorComponents
 
@@ -132,3 +133,4 @@ fileprivate extension RandomAccessCollection where Index: FixedWidthInteger {
         return indices.map { self[$0] }
     }
 }
+#endif

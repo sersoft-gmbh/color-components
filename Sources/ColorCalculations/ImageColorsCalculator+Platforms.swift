@@ -1,3 +1,4 @@
+#if canImport(CoreImage)
 #if canImport(CoreGraphics)
 import CoreGraphics
 
@@ -41,4 +42,5 @@ extension ImageColorsCalculator {
         self.init(cgImage: cgImage)
     }
 }
+#endif
 #endif
