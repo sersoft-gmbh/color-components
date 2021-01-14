@@ -228,7 +228,13 @@ extension RGBA_HexTests {
         ("testCreationFromHex", testCreationFromHex),
         ("testCreationFromHexOfDifferentSize", testCreationFromHexOfDifferentSize),
         ("testCreationFromHexString", testCreationFromHexString),
+        ("testCreationFromHexStringWithFloatingPoint", testCreationFromHexStringWithFloatingPoint),
+        ("testCreationFromHexUsingFloatingPoint", testCreationFromHexUsingFloatingPoint),
         ("testHexString", testHexString),
+        ("testHexStringWithFloatingPoint", testHexStringWithFloatingPoint),
+        ("testHexValue", testHexValue),
+        ("testHexValueWithDifferentSize", testHexValueWithDifferentSize),
+        ("testHexValueWithFloatingPoint", testHexValueWithFloatingPoint),
     ]
 }
 
