@@ -36,13 +36,17 @@ extension ImageColorsCalculator {
                        bounds: img.extent,
                        format: .RGBA8,
                        colorSpace: nil)
+        // FIXME: This check is currently a bit over-simplified. We should probably be more clever about this
+        //        and only do it if there are no colors above the brightness limit...
         let ignoreBrightness = pixels.count <= 128 * 4
-        var randomGen = SystemRandomNumberGenerator()
+        // FIXME: There is room for improvement by not having to convert the colors during the distance calculation
+        //        but doing so beforehand.
         let distanceCalculation: (SIMD3<V>, SIMD3<V>) -> V
         switch colorDistance {
         case .linearSRGB: distanceCalculation = { ($1.x - $0.x).squared() + ($1.y - $0.y).squared() + ($1.z - $0.z).squared() }
         case .weightedSRGB: distanceCalculation = { $0.sRGBColorDistance(to: $1) }
         }
+        var randomGen = SystemRandomNumberGenerator()
         return (
             stride(from: pixels.startIndex, to: pixels.endIndex, by: 4)
                 .lazy
@@ -132,7 +136,11 @@ fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: BinaryFloatingPoint {
 fileprivate extension RandomAccessCollection
 where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoint
 {
-    // See http://users.eecs.northwestern.edu/~wkliao/Kmeans/
+    // The algorithm is described here: http://users.eecs.northwestern.edu/~wkliao/Kmeans/
+    // We made a few adjustments, though:
+    // - We have an iteration limit of 1024 iterations
+    // - We stop after the first iteration that didn't have any errors (thus saving us the treshold).
+    // - We dynamically lower `k` if the count is less than the desired `k`.
     func kMeansClustered<D, G>(atMost maxK: Int,
                                using randomNumberGenerator: inout G,
                                distance: (Element, Element) -> D) -> [Cluster<Element>]
@@ -165,9 +173,11 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
                 }
             }
         } while errors > 0 && iters < 1024
+        #if DEBUG
         if iters >= 1024 {
-            print("Exceeded iterations...")
+            print("[ColorCalculator.prominentColors]: Exceeded clustering iteration limit...")
         }
+        #endif
         return clusters
     }
 }
@@ -193,6 +203,7 @@ fileprivate extension RandomAccessCollection where Index: FixedWidthInteger {
         guard !isEmpty else { return [] }
         guard count > elemCount else { return Array(self) }
 
+        // We collect the indices in a set, but the elements in an array to keep the random ordering.
         var indices = Set<Index>(minimumCapacity: elemCount)
         var elements = Array<Element>()
         elements.reserveCapacity(elemCount)
