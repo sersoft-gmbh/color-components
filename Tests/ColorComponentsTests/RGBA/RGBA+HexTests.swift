@@ -4,7 +4,7 @@ import ColorComponents
 final class RGBA_HexTests: XCTestCase {
     func testCreationFromHex() {
         let rgb = RGB<UInt64>(hex: 0xFF8055)
-        let rgba = RGBA<UInt64>(hex: 0xFF8055FA)
+        let rgba = RGBA<UInt64>(hex: 0xFF8055FA as UInt64)
 
         XCTAssertEqual(rgb.red, 0xFF)
         XCTAssertEqual(rgb.green, 0x80)
@@ -15,7 +15,7 @@ final class RGBA_HexTests: XCTestCase {
 
     func testCreationFromHexOfDifferentSize() {
         let rgb = RGB<UInt8>(hex: 0xFF8055)
-        let rgba = RGBA<UInt8>(hex: 0xFF8055FA)
+        let rgba = RGBA<UInt8>(hex: 0xFF8055FA as UInt64)
 
         XCTAssertEqual(rgb.red, 0xFF)
         XCTAssertEqual(rgb.green, 0x80)
@@ -26,7 +26,7 @@ final class RGBA_HexTests: XCTestCase {
 
     func testCreationFromHexUsingFloatingPoint() {
         let rgb = RGB<Float>(hex: 0xFF8055)
-        let rgba = RGBA<Float>(hex: 0xFF8055FA)
+        let rgba = RGBA<Float>(hex: 0xFF8055FA as UInt64)
 
         XCTAssertEqual(rgb.red, 1, accuracy: .ulpOfOne)
         XCTAssertEqual(rgb.green, 0x80 / 0xFF, accuracy: .ulpOfOne)
@@ -106,7 +106,7 @@ final class RGBA_HexTests: XCTestCase {
         let rgba = RGBA<UInt64>(rgb: rgb, alpha: 0xFA)
 
         XCTAssertEqual(rgb.hexValue(), 0xFF0855)
-        XCTAssertEqual(rgba.hexValue(), 0xFF0855FA)
+        XCTAssertEqual(rgba.hexValue(), 0xFF0855FA as UInt64)
     }
 
     func testHexValueWithDifferentSize() {
