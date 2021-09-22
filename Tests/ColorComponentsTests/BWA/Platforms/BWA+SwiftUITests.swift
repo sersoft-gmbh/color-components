@@ -1,12 +1,15 @@
 import XCTest
 import XCHelpers
+#if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine)
 import SwiftUI
+#endif
 #endif
 import ColorComponents
 
 final class BWA_SwiftUITests: XCTestCase {
     func testColorCreationWithFloatingPoint() throws {
+        #if arch(arm64) || arch(x86_64)
         #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
@@ -19,9 +22,13 @@ final class BWA_SwiftUITests: XCTestCase {
         #else
         try skipUnavailableAPI()
         #endif
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testCreationFromColorWithFloatingPoint() throws {
+        #if arch(arm64) || arch(x86_64)
         #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
@@ -46,9 +53,13 @@ final class BWA_SwiftUITests: XCTestCase {
         #else
         try skipUnavailableAPI()
         #endif
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testColorCreationWithInteger() throws {
+        #if arch(arm64) || arch(x86_64)
         #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
@@ -61,9 +72,13 @@ final class BWA_SwiftUITests: XCTestCase {
         #else
         try skipUnavailableAPI()
         #endif
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testCreationFromColorWithInteger() throws {
+        #if arch(arm64) || arch(x86_64)
         #if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
@@ -88,9 +103,13 @@ final class BWA_SwiftUITests: XCTestCase {
         #else
         try skipUnavailableAPI()
         #endif
+        #else
+        try skipUnavailableAPI()
+        #endif
     }
 
     func testViewConformance() throws {
+        #if arch(arm64) || arch(x86_64)
         #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
@@ -100,6 +119,9 @@ final class BWA_SwiftUITests: XCTestCase {
 
         XCTAssertEqual(bw.body as? Color, Color(bw))
         XCTAssertEqual(bwa.body as? Color, Color(bwa))
+        #else
+        try skipUnavailableAPI()
+        #endif
         #else
         try skipUnavailableAPI()
         #endif

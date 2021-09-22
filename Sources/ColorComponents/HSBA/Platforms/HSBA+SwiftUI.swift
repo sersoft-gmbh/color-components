@@ -1,3 +1,4 @@
+#if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) // Combine check seems to be necessary
 import SwiftUI
 
@@ -240,5 +241,6 @@ extension HSBA where Value: BinaryInteger {
         self.init(exactly: cgColor)
     }
 }
+#endif
 #endif
 #endif
