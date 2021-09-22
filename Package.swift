@@ -21,7 +21,11 @@ let package = Package(
         .target(
             name: "ColorCalculations",
             dependencies: ["ColorComponents"]),
-        .target(name: "XCHelpers"),
+        .target(
+            name: "XCHelpers",
+            linkerSettings: [
+                .linkedFramework("XCTest"),
+            ]),
         .testTarget(
             name: "ColorComponentsTests",
             dependencies: [
