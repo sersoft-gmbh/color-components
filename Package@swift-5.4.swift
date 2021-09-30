@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "XCHelpers",
             linkerSettings: [
-                .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .macCatalyst, .tvOS, .watchOS])),
+                .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .tvOS, .watchOS])),
             ]),
         .testTarget(
             name: "ColorComponentsTests",
