@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -24,7 +24,7 @@ let package = Package(
         .target(
             name: "XCHelpers",
             linkerSettings: [
-                .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .tvOS, .watchOS])),
+                .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .macCatalyst, .tvOS, .watchOS])),
             ]),
         .testTarget(
             name: "ColorComponentsTests",

@@ -11,19 +11,11 @@ extension ImageColorsCalculator {
         case weightedSRGB
     }
 
-    /// Calculates the most prominent colors in the image, optionally restricting it to a given rect.
-    /// - Parameters:
-    ///   - type: The floating point type in which the color components should be returned.
-    ///   - rect: The rect to restrict the calculation to. If `nil`, the image's extent is used. Defaults to `nil`.
-    ///   - colorDistance: The color distance calculation mode to use. Defaults to `.linearSRGB`.
-    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `1024`.
-    ///   - colorLimit: The maximum number of colors to consider (cluster size). This will be the maximum size of the returned array. Defaults to `8`.
-    /// - Returns: An array of the most prominent colors in the image, ordered by prominence (highest to lowest).
-    public func prominentColors<V>(as type: V.Type = V.self,
-                                   in rect: CGRect? = nil,
-                                   distanceAs colorDistance: ColorDistanceMode = .linearSRGB,
-                                   pixelLimit: Int = 1024,
-                                   colorLimit: Int = 8) -> [RGB<V>]
+    private func _prominentColorClusters<V>(as type: V.Type,
+                                            in rect: CGRect?,
+                                            distanceAs colorDistance: ColorDistanceMode,
+                                            pixelLimit: Int,
+                                            colorLimit: Int) -> [Cluster<SIMD3<V>>]
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
         assert(pixelLimit > 0)
@@ -57,8 +49,26 @@ extension ImageColorsCalculator {
                 .map { SIMD3<V>($0.red, $0.green, $0.blue) } as Array<SIMD3<V>>
         )
         .kMeansClustered(atMost: colorLimit, using: &randomGen, distance: distanceCalculation)
-        .sorted { $0.size > $1.size }
-        .map { RGB<V>(red: $0.centroid.x, green: $0.centroid.y, blue: $0.centroid.z) }
+    }
+
+    /// Calculates the most prominent colors in the image, optionally restricting it to a given rect.
+    /// - Parameters:
+    ///   - type: The floating point type in which the color components should be returned.
+    ///   - rect: The rect to restrict the calculation to. If `nil`, the image's extent is used. Defaults to `nil`.
+    ///   - colorDistance: The color distance calculation mode to use. Defaults to `.linearSRGB`.
+    ///   - pixelLimit: The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to `1024`.
+    ///   - colorLimit: The maximum number of colors to consider (cluster size). This will be the maximum size of the returned array. Defaults to `8`.
+    /// - Returns: An array of the most prominent colors in the image, ordered by prominence (highest to lowest).
+    public func prominentColors<V>(as type: V.Type = V.self,
+                                   in rect: CGRect? = nil,
+                                   distanceAs colorDistance: ColorDistanceMode = .linearSRGB,
+                                   pixelLimit: Int = 1024,
+                                   colorLimit: Int = 8) -> [RGB<V>]
+    where V: SIMDScalar, V: BinaryFloatingPoint
+    {
+        _prominentColorClusters(as: type, in: rect, distanceAs: colorDistance, pixelLimit: pixelLimit, colorLimit: colorLimit)
+            .sorted { $0.size > $1.size }
+            .map { $0.centroid.asRGB() }
     }
 
     /// Calculates the color that is most prominent in the image, optionally restricting it to a given rect.
@@ -76,12 +86,10 @@ extension ImageColorsCalculator {
                                       colorLimit: Int = 8) -> RGB<V>
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
-        prominentColors(as: type,
-                        in: rect,
-                        distanceAs: colorDistance,
-                        pixelLimit: pixelLimit,
-                        colorLimit: colorLimit).first
-            ?? RGB<V>(red: 0, green: 0, blue: 0)
+        _prominentColorClusters(as: type, in: rect, distanceAs: colorDistance, pixelLimit: pixelLimit, colorLimit: colorLimit)
+            .max { $0.size < $1.size }
+            .map { $0.centroid.asRGB() }
+        ?? RGB<V>(red: .zero, green: .zero, blue: .zero)
     }
 }
 
@@ -117,8 +125,10 @@ fileprivate extension RGB where Value: UnsignedInteger {
 }
 
 fileprivate extension SIMD3 where Scalar: BinaryFloatingPoint {
-    private func asRGB<V: BinaryInteger>(of _: V.Type = V.self) -> RGB<V> {
-        RGB<V>(RGB(red: x, green: y, blue: z))
+    func asRGB() -> RGB<Scalar> { .init(red: x, green: y, blue: z) }
+
+    private func asRGB<I: BinaryInteger>(of _: I.Type = I.self) -> RGB<I> {
+        RGB<I>(asRGB())
     }
 
     func sRGBColorDistance(to other: Self) -> Scalar {
@@ -130,7 +140,7 @@ fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: BinaryFloatingPoint {
     var centroid: Vec
     var size: Vec.Scalar
 
-    static var zero: Cluster { .init(centroid: .zero, size: 0) }
+    static var zero: Cluster { .init(centroid: .zero, size: .zero) }
 }
 
 fileprivate extension RandomAccessCollection
@@ -149,7 +159,7 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
         guard !isEmpty else { return [] }
 
         var clusters = randomElements(count: Swift.min(maxK, count), using: &randomNumberGenerator)
-            .map { Cluster(centroid: $0, size: 0) }
+            .map { Cluster(centroid: $0, size: .zero) }
         var memberships = Array<Int>(repeating: -1, count: count)
         var (errors, iters) = (0, 0)
         repeat {

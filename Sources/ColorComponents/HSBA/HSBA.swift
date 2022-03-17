@@ -285,5 +285,10 @@ extension HSBA: Encodable where Value: Encodable {}
 extension HSB: Decodable where Value: Decodable {}
 extension HSBA: Decodable where Value: Decodable {}
 
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension HSB: Sendable where Value: Sendable {}
+extension HSBA: Sendable where Value: Sendable {}
+#endif
+
 //extension HSB: CustomPlaygroundDisplayConvertible {}
 //extension HSBA: CustomPlaygroundDisplayConvertible {}

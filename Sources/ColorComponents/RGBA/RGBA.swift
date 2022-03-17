@@ -290,5 +290,10 @@ extension RGBA: Encodable where Value: Encodable {}
 extension RGB: Decodable where Value: Decodable {}
 extension RGBA: Decodable where Value: Decodable {}
 
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension RGB: Sendable where Value: Sendable {}
+extension RGBA: Sendable where Value: Sendable {}
+#endif
+
 //extension RGB: CustomPlaygroundDisplayConvertible {}
 //extension RGBA: CustomPlaygroundDisplayConvertible {}

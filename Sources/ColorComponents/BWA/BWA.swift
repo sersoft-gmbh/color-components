@@ -248,5 +248,10 @@ extension BWA: Encodable where Value: Encodable {}
 extension BW: Decodable where Value: Decodable {}
 extension BWA: Decodable where Value: Decodable {}
 
+#if compiler(>=5.5.2) && canImport(_Concurrency)
+extension BW: Sendable where Value: Sendable {}
+extension BWA: Sendable where Value: Sendable {}
+#endif
+
 //extension BW: CustomPlaygroundDisplayConvertible {}
 //extension BWA: CustomPlaygroundDisplayConvertible {}
