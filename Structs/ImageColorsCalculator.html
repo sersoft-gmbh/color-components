@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ImageColorsCalculator Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/ImageColorsCalculator" class="dashAnchor"></a>
+
+    <a title="ImageColorsCalculator Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          ColorComponents 1.7.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/sersoft-gmbh/color-components">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">ColorComponents Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      ImageColorsCalculator Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColor.html">NSColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColorSpace.html">NSColorSpace</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AlphaColorComponents.html">AlphaColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ColorComponents.html">ColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FloatingPointColorComponents.html">FloatingPointColorComponents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BW.html">BW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BWA.html">BWA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSB.html">HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSBA.html">HSBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator/ColorDistanceMode.html">– ColorDistanceMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGB.html">RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGBA.html">RGBA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents018AlphaFloatingPointaB0a">AlphaFloatingPointColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents0A15CompontentValuea">ColorCompontentValue</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>ImageColorsCalculator</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ImageColorsCalculator</span></code></pre>
+
+                </div>
+              </div>
+            <p>A calculator that calculates various colors for a given image.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV5imageSo7CIImageCvp"></a>
+                    <a name="//apple_ref/swift/Property/image" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV5imageSo7CIImageCvp">image</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The image of the calculator.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">CIImage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV5imageACSo7CIImageC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(image:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV5imageACSo7CIImageC_tcfc">init(image:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new calculator using the given image.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">CIImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to calculate colors for.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV07averageA02in0A10Components4RGBAVys5UInt8VGSo6CGRectVSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/averageColor(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV07averageA02in0A10Components4RGBAVys5UInt8VGSo6CGRectVSg_tF">averageColor(in:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the average color for the image, optionally restricting it to a given rect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">averageColor</span><span class="p">(</span><span class="k">in</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/RGBA.html">RGBA</a></span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rect to restrict the calculation to. If <code>nil</code>, the image&rsquo;s extent is used. Defaults to <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The average color of the image.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV012maxComponentA02in0A10Components4RGBAVys5UInt8VGSo6CGRectVSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/maxComponentColor(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV012maxComponentA02in0A10Components4RGBAVys5UInt8VGSo6CGRectVSg_tF">maxComponentColor(in:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the color with the maximum component values for the image, optionally restricting it to a given rect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">maxComponentColor</span><span class="p">(</span><span class="k">in</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/RGBA.html">RGBA</a></span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rect to restrict the calculation to. If <code>nil</code>, the image&rsquo;s extent is used. Defaults to <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The color with the maximum component values.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV02cgC0ACSo10CGImageRefa_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cgImage:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV02cgC0ACSo10CGImageRefa_tcfc">init(cgImage:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a calculator using the given <code>CGImage</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cgImage</span><span class="p">:</span> <span class="kt">CGImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cgImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>CGImage</code> to convert to a <code>CIImage</code> for calculations.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV02nsC0ACSgSo7NSImageC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(nsImage:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV02nsC0ACSgSo7NSImageC_tcfc">init(nsImage:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a calculator using the given <code>NSImage</code>. Returns <code>nil</code> if the <code>NSImage</code> could not be converted to a <code>CIImage</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="kt">NSImage</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nsImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>NSImage</code> to convert to a <code>CIImage</code> for calculations.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV0A12DistanceModeO"></a>
+                    <a name="//apple_ref/swift/Enum/ColorDistanceMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV0A12DistanceModeO">ColorDistanceMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the mode that is used to calculate color distances.</p>
+
+                        <a href="../Structs/ImageColorsCalculator/ColorDistanceMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ColorDistanceMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV09prominentD02as2in10distanceAs10pixelLimit05colorL0Say0A10Components3RGBVyxGGxm_So6CGRectVSgAC0A12DistanceModeOS2itSBRzs10SIMDScalarRzlF"></a>
+                    <a name="//apple_ref/swift/Method/prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV09prominentD02as2in10distanceAs10pixelLimit05colorL0Say0A10Components3RGBVyxGGxm_So6CGRectVSgAC0A12DistanceModeOS2itSBRzs10SIMDScalarRzlF">prominentColors(as:<wbr>in:<wbr>distanceAs:<wbr>pixelLimit:<wbr>colorLimit:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the most prominent colors in the image, optionally restricting it to a given rect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">prominentColors</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">V</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">V</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+                               <span class="k">in</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                               <span class="n">distanceAs</span> <span class="nv">colorDistance</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageColorsCalculator/ColorDistanceMode.html">ColorDistanceMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">linearSRGB</span><span class="p">,</span>
+                               <span class="nv">pixelLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+                               <span class="nv">colorLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Structs/RGB.html">RGB</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="k">where</span> <span class="kt">V</span><span class="p">:</span> <span class="kt">SIMDScalar</span><span class="p">,</span> <span class="kt">V</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floating point type in which the color components should be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rect to restrict the calculation to. If <code>nil</code>, the image&rsquo;s extent is used. Defaults to <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorDistance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color distance calculation mode to use. Defaults to <code>.linearSRGB</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pixelLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to <code>1024</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of colors to consider (cluster size). This will be the maximum size of the returned array. Defaults to <code>8</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of the most prominent colors in the image, ordered by prominence (highest to lowest).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17ColorCalculations21ImageColorsCalculatorV013mostProminentA02as2in10distanceAs10pixelLimit05colorM00A10Components3RGBVyxGxm_So6CGRectVSgAC0A12DistanceModeOS2itSBRzs10SIMDScalarRzlF"></a>
+                    <a name="//apple_ref/swift/Method/mostProminentColor(as:in:distanceAs:pixelLimit:colorLimit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17ColorCalculations21ImageColorsCalculatorV013mostProminentA02as2in10distanceAs10pixelLimit05colorM00A10Components3RGBVyxGxm_So6CGRectVSgAC0A12DistanceModeOS2itSBRzs10SIMDScalarRzlF">mostProminentColor(as:<wbr>in:<wbr>distanceAs:<wbr>pixelLimit:<wbr>colorLimit:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates the color that is most prominent in the image, optionally restricting it to a given rect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mostProminentColor</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">V</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">V</span><span class="o">.</span><span class="k">self</span><span class="p">,</span>
+                                  <span class="k">in</span> <span class="nv">rect</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                  <span class="n">distanceAs</span> <span class="nv">colorDistance</span><span class="p">:</span> <span class="kt"><a href="../Structs/ImageColorsCalculator/ColorDistanceMode.html">ColorDistanceMode</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">linearSRGB</span><span class="p">,</span>
+                                  <span class="nv">pixelLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+                                  <span class="nv">colorLimit</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/RGB.html">RGB</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span>
+<span class="k">where</span> <span class="kt">V</span><span class="p">:</span> <span class="kt">SIMDScalar</span><span class="p">,</span> <span class="kt">V</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The floating point type in which the color components should be returned.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rect</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The rect to restrict the calculation to. If <code>nil</code>, the image&rsquo;s extent is used. Defaults to <code>nil</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorDistance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color distance calculation mode to use. Defaults to <code>.linearSRGB</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pixelLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The limit of pixels to process. Increasing this limit will also increase the computation time. Defaults to <code>1024</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum number of colors to consider (cluster size). Defaults to <code>8</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The most prominent color in the image.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://sersoft.de" target="_blank" rel="external noopener">ser.soft GmbH</a>. All rights reserved. (Last updated: 2022-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

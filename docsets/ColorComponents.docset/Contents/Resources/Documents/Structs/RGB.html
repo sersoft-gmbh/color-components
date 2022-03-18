@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RGB Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Struct/RGB" class="dashAnchor"></a>
+
+    <a title="RGB Structure Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          ColorComponents 1.7.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/sersoft-gmbh/color-components">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">ColorComponents Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      RGB Structure Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColor.html">NSColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColorSpace.html">NSColorSpace</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AlphaColorComponents.html">AlphaColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ColorComponents.html">ColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FloatingPointColorComponents.html">FloatingPointColorComponents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BW.html">BW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BWA.html">BWA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSB.html">HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSBA.html">HSBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator/ColorDistanceMode.html">– ColorDistanceMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGB.html">RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGBA.html">RGBA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents018AlphaFloatingPointaB0a">AlphaFloatingPointColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents0A15CompontentValuea">ColorCompontentValue</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>RGB</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@frozen</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ColorComponents.html">ColorComponents</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">Numeric</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RGB</span><span class="p">:</span> <span class="kt">View</span> <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RGB</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FloatingPointColorComponents.html">FloatingPointColorComponents</a></span> <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">FloatingPoint</span><span class="p">,</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">ExpressibleByFloatLiteral</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RGB</span><span class="p">:</span> <span class="kt">Encodable</span> <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RGB</span><span class="p">:</span> <span class="kt">Decodable</span> <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">RGB</span><span class="p">:</span> <span class="kt">Sendable</span> <span class="k">where</span> <span class="kt">Value</span><span class="p">:</span> <span class="kt">Sendable</span></code></pre>
+
+                </div>
+              </div>
+            <p>An opaque RGB (red, green, blue) color components representation.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBV3redxvp"></a>
+                    <a name="//apple_ref/swift/Property/red" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBV3redxvp">red</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The red component.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">red</span><span class="p">:</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBV5greenxvp"></a>
+                    <a name="//apple_ref/swift/Property/green" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBV5greenxvp">green</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The green component.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBV4bluexvp"></a>
+                    <a name="//apple_ref/swift/Property/blue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBV4bluexvp">blue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The blue component.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBV3red5green4blueACyxGx_xxtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(red:green:blue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBV3red5green4blueACyxGx_xxtcfc">init(red:<wbr>green:<wbr>blue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components with the given values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="kt">Value</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="kt">Value</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>red</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The red component.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>green</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The green component.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>blue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The blue component.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlEyACyxGSo7NSColorCcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlEyACyxGSo7NSColorCcfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>
+    if it is not in a known RGB color space.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">nsColor</span><span class="p">:</span> <span class="kt">NSColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nsColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>
+    if it is not in a known RGB color space.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>RGB.init(exactly:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">nsColor</span><span class="p">:</span> <span class="kt">NSColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nsColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlEyACyxGSo7NSColorCcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlEyACyxGSo7NSColorCcfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>
+    if it is not in a known RGB color space.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">nsColor</span><span class="p">:</span> <span class="kt">NSColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nsColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgSo7NSColorC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>
+    if it is not in a known RGB color space.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">RGB.init(exactly:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">nsColor</span><span class="p">:</span> <span class="kt">NSColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nsColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%602"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%602"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE02cgA0So10CGColorRefavp"></a>
+                    <a name="//apple_ref/swift/Property/cgColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE02cgA0So10CGColorRefavp">cgColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>CGColor</code> that corresponds to these color components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlEyACyxGSo10CGColorRefacfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlEyACyxGSo10CGColorRefacfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to the <code>kCGColorSpaceGenericRGB</code> color space if necessary.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cgColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo10CGColorRefa_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo10CGColorRefa_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly
+match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to the <code>kCGColorSpaceGenericRGB</code> color space if necessary.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">RGB.init(exactly:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cgColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%602"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%602"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE02cgA0So10CGColorRefavp"></a>
+                    <a name="//apple_ref/swift/Property/cgColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE02cgA0So10CGColorRefavp">cgColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>CGColor</code> that corresponds to these color components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlEyACyxGSo10CGColorRefacfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlEyACyxGSo10CGColorRefacfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to the <code>kCGColorSpaceGenericRGB</code> color space if necessary.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cgColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgSo10CGColorRefa_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgSo10CGColorRefa_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly
+match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the color to the <code>kCGColorSpaceGenericRGB</code> color space if necessary.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">RGB.init(exactly:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)</span>
+<span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">cgColor</span><span class="p">:</span> <span class="kt">CGColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cgColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%603"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%603"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE4bodyQrvp"></a>
+                    <a name="//apple_ref/swift/Property/body" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE4bodyQrvp">body</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>View.body</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="kt">View</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlEyACyxG7SwiftUI0A0Vcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlEyACyxG7SwiftUI0A0Vcfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This currently goes through the platform native color (<code>NSColor</code> or <code>UIColor</code>)
+    due to the lack of component accessors on <code>SwiftUI.Color</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSg7SwiftUI0A0V_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSg7SwiftUI0A0V_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This currently goes through the platform native color (<code>NSColor</code> or <code>UIColor</code>)
+    due to the lack of component accessors on <code>SwiftUI.Color</code>.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">RGB.init(exactly:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%603"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%603"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlEyACyxG7SwiftUI0A0Vcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlEyACyxG7SwiftUI0A0Vcfc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This currently goes through the platform native color (<code>NSColor</code> or <code>UIColor</code>)
+    due to the lack of component accessors on <code>SwiftUI.Color</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSg7SwiftUI0A0V_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSg7SwiftUI0A0V_tcfc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the components of the given color.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This currently goes through the platform native color (<code>NSColor</code> or <code>UIColor</code>)
+    due to the lack of component accessors on <code>SwiftUI.Color</code>.
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgSo7NSColorC_tcfc">RGB.init(exactly:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">exactly</span> <span class="nv">color</span><span class="p">:</span> <span class="kt">Color</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>color</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color to read the components from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%604"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%604"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE3hsbACyxGAA3HSBVyxG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(hsb:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE3hsbACyxGAA3HSBVyxG_tcfc">init(hsb:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components using the given HSB components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">hsb</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSB.html">HSB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSB components to convert to RGB.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%604"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%604"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE3hsbACyxGAA3HSBVyxG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(hsb:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE3hsbACyxGAA3HSBVyxG_tcfc">init(hsb:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components using the given HSB components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">hsb</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSB.html">HSB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSB components to convert to RGB.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE3hexACyxGx_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(hex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE3hexACyxGx_tcfc">init(hex:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components by splitting the combined hex value into RGB components.
+E.g. <code>RGB&lt;UInt64&gt;(hex: 0x3D4A7C)</code> becomes <code>RGB&lt;UInt64&gt;(red: 0x3D, green: 0x4A, blue: 0x7C)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">hex</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The combined RGB hex value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE3hexACyxGqd___tcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(hex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE3hexACyxGqd___tcSzRd__lufc">init(hex:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components by splitting the combined hex value into RGB components.
+E.g. <code>RGB&lt;UInt8&gt;(hex: 0x3D4A7C)</code> becomes <code>RGB&lt;UInt8&gt;(red: 0x3D, green: 0x4A, blue: 0x7C)</code>.
+This overload exists so that e.g. <code>RGB&lt;UInt8&gt;</code> can be created from <code>0xFFECDA</code> which would overflow <code>UInt8</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Hex</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">hex</span><span class="p">:</span> <span class="kt">Hex</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Hex</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The combined RGB hex value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE9hexStringACyxGSgqd___tcSyRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(hexString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE9hexStringACyxGSgqd___tcSyRd__lufc">init(hexString:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components by parsing a given hex string into RGB components.
+If the string has <code>0x</code> or <code>#</code> as prefix, it is automatically removed.
+Returns nil if the string is no valid hex string.
+E.g. <code>RGB&lt;UInt8&gt;(hexString: &quot;0x3D4A7C&quot;)</code> becomes <code>RGB&lt;UInt8&gt;(red: 0x3D, green: 0x4A, blue: 0x7C)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">hexString</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hexString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string containing hex RGB values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE8hexValuexyF"></a>
+                    <a name="//apple_ref/swift/Method/hexValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE8hexValuexyF">hexValue()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the combined hex value for this RGB components.
+E.g. for <code>RGB&lt;UInt64&gt;(red: 0x3D, green: 0x4A, blue: 0x7C)</code> this returns <code>0x3D4A7C</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the <code>Value</code> of this RGB components is too small to hold the entire hex value, this method will trap.
+    Use <code><a href="../Structs/RGB.html#/s:15ColorComponents3RGBVAASzRzrlE8hexValue2asqd__qd__m_tSzRd__lF">hexValue(as:)</a></code> to perform the convesion using a larger type.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Value</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The combined hex value for this RGB type.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE8hexValue2asqd__qd__m_tSzRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/hexValue(as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE8hexValue2asqd__qd__m_tSzRd__lF">hexValue(as:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the combined hex value for this RGB components using a given integer type.
+E.g. for <code>RGB&lt;UInt8&gt;(red: 0x3D, green: 0x4A, blue: 0x7C)</code> using <code>UInt64</code> as type, this returns <code>0x3D4A7C</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">hexValue</span><span class="o">&lt;</span><span class="kt">I</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">I</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">I</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">I</span> <span class="k">where</span> <span class="kt">I</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The combined hex value for this RGB type.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%605"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%605"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE3hexACyxGqd___tcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(hex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE3hexACyxGqd___tcSzRd__lufc">init(hex:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components by splitting the combined hex value into RGB components.
+E.g. <code>RGB&lt;Float&gt;(hex: 0x3D4A7C)</code> becomes <code>RGB&lt;Float&gt;(red: 0.24, green: 0.3, blue: 0.486)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Hex</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">hex</span><span class="p">:</span> <span class="kt">Hex</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Hex</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The combined RGB hex value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE9hexStringACyxGSgqd___tcSyRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(hexString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE9hexStringACyxGSgqd___tcSyRd__lufc">init(hexString:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components by parsing a given hex string into RGB components.
+If the string has <code>0x</code> or <code>#</code> as prefix, it is automatically removed.
+Returns nil if the string is no valid hex string.
+E.g. <code>RGB&lt;Float&gt;(hexString: &quot;0x3D4A7C&quot;)</code> becomes <code>RGB&lt;Float&gt;(red: 0.24, green: 0.3, blue: 0.486)</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">hexString</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">StringProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hexString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string containing hex RGB values.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE8hexValue2asqd__qd__m_tSzRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/hexValue(as:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE8hexValue2asqd__qd__m_tSzRd__lF">hexValue(as:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Computes the combined hex value for this RGB components using a given integer type.
+E.g. for <code>RGB&lt;Float&gt;(red: 0.5, green: 0.25, blue: 0.75)</code> this returns <code>0x7F3FBF</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">hexValue</span><span class="o">&lt;</span><span class="kt">I</span><span class="o">&gt;</span><span class="p">(</span><span class="k">as</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">I</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">I</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">I</span> <span class="k">where</span> <span class="kt">I</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The combined hex value for this RGB type.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%605"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%605"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE9hexString6prefix7postfix9uppercaseS2S_SSSbtF"></a>
+                    <a name="//apple_ref/swift/Method/hexString(prefix:postfix:uppercase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE9hexString6prefix7postfix9uppercaseS2S_SSSbtF">hexString(prefix:<wbr>postfix:<wbr>uppercase:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an RGB hex string representing these components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexString</span><span class="p">(</span><span class="nv">prefix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">postfix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">uppercase</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>prefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A prefix to prepend to the hex string. Defaults to an empty string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postfix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A postfix to append to the hex string. Defaults to an empty string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uppercase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not letter should be uppercase. Defaults to <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A hex string of these RGB components.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%606"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%606"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE9hexString6prefix7postfix9uppercaseS2S_SSSbtF"></a>
+                    <a name="//apple_ref/swift/Method/hexString(prefix:postfix:uppercase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE9hexString6prefix7postfix9uppercaseS2S_SSSbtF">hexString(prefix:<wbr>postfix:<wbr>uppercase:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an RGB hex string representing these components.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">hexString</span><span class="p">(</span><span class="nv">prefix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">postfix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">uppercase</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>prefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A prefix to prepend to the hex string. Defaults to an empty string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postfix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A postfix to append to the hex string. Defaults to an empty string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uppercase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether or not letter should be uppercase. Defaults to <code>false</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A hex string of these RGB components.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryInteger%606"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryInteger`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryInteger%606"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryInteger</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlEyACyxGACyqd__GcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlEyACyxGACyqd__GcSzRd__lufc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from another RGB color components object with integer values.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryInteger.init(_:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgACyqd__G_tcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgACyqd__G_tcSzRd__lufc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the values
+from another RGB color components object with integer values.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryInteger.init(exactly:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">exactly</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlEyACyxGACyqd__GcSBRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlEyACyxGACyqd__GcSBRd__lufc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from another RGB color components object with floating point values.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryInteger.init(_:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgACyqd__G_tcSBRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASzRzrlE7exactlyACyxGSgACyqd__G_tcSBRd__lufc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the values
+from another RGB color components object with floating point values.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryInteger.init(exactly:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">exactly</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%607"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `BinaryFloatingPoint`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60BinaryFloatingPoint%607"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>BinaryFloatingPoint</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlEyACyxGACyqd__GcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlEyACyxGACyqd__GcSzRd__lufc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from another RGB color components object with integer values.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryFloatingPoint.init(_:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgACyqd__G_tcSzRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgACyqd__G_tcSzRd__lufc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the values
+from another RGB color components object with integer values.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryFloatingPoint.init(exactly:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">exactly</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlEyACyxGACyqd__GcSBRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlEyACyxGACyqd__GcSBRd__lufc">init(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates new RGB components from another RGB color components object with floating point values.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryFloatingPoint.init(_:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgACyqd__G_tcSBRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(exactly:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAASBRzrlE7exactlyACyxGSgACyqd__G_tcSBRd__lufc">init(exactly:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tries to create new RGB components that exactly match the values
+from another RGB color components object with floating point values.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>BinaryFloatingPoint.init(exactly:)</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="p">?</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">(</span><span class="n">exactly</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">RGB</span><span class="o">&lt;</span><span class="kt">OtherValue</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">where</span> <span class="kt">OtherValue</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The other RGB color components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Value%60%3A%20%60FloatingPoint%60%2C%20%60Value%60%3A%20%60ExpressibleByFloatLiteral%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Value`: `FloatingPoint`, `Value`: `ExpressibleByFloatLiteral`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Value%60%3A%20%60FloatingPoint%60%2C%20%60Value%60%3A%20%60ExpressibleByFloatLiteral%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Value</code>: <code>FloatingPoint</code>, <code>Value</code>: <code>ExpressibleByFloatLiteral</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAAs25ExpressibleByFloatLiteralRzSFRzrlE10brightnessxvp"></a>
+                    <a name="//apple_ref/swift/Property/brightness" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAAs25ExpressibleByFloatLiteralRzSFRzrlE10brightnessxvp">brightness</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The brightness of these color components. The red, green and blue components are weighted in this.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">brightness</span><span class="p">:</span> <span class="kt">Value</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:15ColorComponents3RGBVAAs25ExpressibleByFloatLiteralRzSFRzrlE16changeBrightness2byyx_tF"></a>
+                    <a name="//apple_ref/swift/Method/changeBrightness(by:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15ColorComponents3RGBVAAs25ExpressibleByFloatLiteralRzSFRzrlE16changeBrightness2byyx_tF">changeBrightness(by:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Changes the brightness by the given percent value.
+Pass 0.1 to increase brightness by 10%.
+Pass -0.1 to decrease brightness by 10%.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">changeBrightness</span><span class="p">(</span><span class="n">by</span> <span class="nv">percent</span><span class="p">:</span> <span class="kt">Value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>percent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The percentage amount to change the brightness.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://sersoft.de" target="_blank" rel="external noopener">ser.soft GmbH</a>. All rights reserved. (Last updated: 2022-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

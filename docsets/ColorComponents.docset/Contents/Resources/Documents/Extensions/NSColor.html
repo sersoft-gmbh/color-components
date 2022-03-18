@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NSColor Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Extension/NSColor" class="dashAnchor"></a>
+
+    <a title="NSColor Extension Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          ColorComponents 1.7.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/sersoft-gmbh/color-components">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">ColorComponents Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NSColor Extension Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Color.html">Color</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColor.html">NSColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/NSColorSpace.html">NSColorSpace</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/AlphaColorComponents.html">AlphaColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ColorComponents.html">ColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/FloatingPointColorComponents.html">FloatingPointColorComponents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BW.html">BW</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/BWA.html">BWA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSB.html">HSB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HSBA.html">HSBA</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator.html">ImageColorsCalculator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageColorsCalculator/ColorDistanceMode.html">– ColorDistanceMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGB.html">RGB</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RGBA.html">RGBA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents018AlphaFloatingPointaB0a">AlphaFloatingPointColorComponents</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:15ColorComponents0A15CompontentValuea">ColorCompontentValue</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NSColor</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NSColor</span></code></pre>
+
+                </div>
+              </div>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC2BWVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC2BWVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given black/white components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">bw</span><span class="p">:</span> <span class="kt"><a href="../Structs/BW.html">BW</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultGray</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bw</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The black/white components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD11DefaultGrayABvpZ">NSColorSpace.colorComponentsDefaultGray</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3BWAVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3BWAVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given black/white components with alpha channel and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">bwa</span><span class="p">:</span> <span class="kt"><a href="../Structs/BWA.html">BWA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultGray</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bwa</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The black/white components with alpha channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD11DefaultGrayABvpZ">NSColorSpace.colorComponentsDefaultGray</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC2BWVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC2BWVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given black/white components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">bw</span><span class="p">:</span> <span class="kt"><a href="../Structs/BW.html">BW</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultGray</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bw</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The black/white components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD11DefaultGrayABvpZ">NSColorSpace.colorComponentsDefaultGray</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3BWAVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3BWAVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given black/white components with alpha channel and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">bwa</span><span class="p">:</span> <span class="kt"><a href="../Structs/BWA.html">BWA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultGray</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bwa</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The black/white components with alpha channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD11DefaultGrayABvpZ">NSColorSpace.colorComponentsDefaultGray</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3HSBVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3HSBVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given HSB components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">hsb</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSB.html">HSB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                                    <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultHSB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSB components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultHSBABvpZ">NSColorSpace.colorComponentsDefaultHSB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4HSBAVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4HSBAVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given HSBA components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">hsba</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSBA.html">HSBA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                                    <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultHSB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsba</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSBA components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultHSBABvpZ">NSColorSpace.colorComponentsDefaultHSB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3HSBVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3HSBVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given HSB components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">hsb</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSB.html">HSB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                              <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultHSB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSB components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultHSBABvpZ">NSColorSpace.colorComponentsDefaultHSB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4HSBAVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4HSBAVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given HSBA components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">hsba</span><span class="p">:</span> <span class="kt"><a href="../Structs/HSBA.html">HSBA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                              <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultHSB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsba</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HSBA components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultHSBABvpZ">NSColorSpace.colorComponentsDefaultHSB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3RGBVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3RGBVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given RGB components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">rgb</span><span class="p">:</span> <span class="kt"><a href="../Structs/RGB.html">RGB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                                    <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultRGB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rgb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RGB components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4RGBAVyxG_So0aE0CtcSBRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4RGBAVyxG_So0aE0CtcSBRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given RGBA components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">rgba</span><span class="p">:</span> <span class="kt"><a href="../Structs/RGBA.html">RGBA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                                    <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultRGB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsba</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RGBA components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3RGBVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC3RGBVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given RGB components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">rgb</span><span class="p">:</span> <span class="kt"><a href="../Structs/RGB.html">RGB</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                              <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultRGB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rgb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RGB components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4RGBAVyxG_So0aE0CtcSzRzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:colorSpace:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So7NSColorC15ColorComponentsE_10colorSpaceAbC4RGBAVyxG_So0aE0CtcSzRzlufc">init(_:<wbr>colorSpace:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new color using the given RGBA components and color space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="n">convenience</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">rgba</span><span class="p">:</span> <span class="kt"><a href="../Structs/RGBA.html">RGBA</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+                                              <span class="nv">colorSpace</span><span class="p">:</span> <span class="kt">NSColorSpace</span> <span class="o">=</span> <span class="o">.</span><span class="n">colorComponentsDefaultRGB</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hsba</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The RGBA components.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>colorSpace</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The color space to use. Defaults to <code><a href="../Extensions/NSColorSpace.html#/s:So12NSColorSpaceC15ColorComponentsE05colorD10DefaultRGBABvpZ">NSColorSpace.colorComponentsDefaultRGB</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://sersoft.de" target="_blank" rel="external noopener">ser.soft GmbH</a>. All rights reserved. (Last updated: 2022-03-18)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
