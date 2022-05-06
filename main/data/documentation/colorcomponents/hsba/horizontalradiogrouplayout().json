@@ -1,0 +1,406 @@
+{
+  "abstract" : [
+    {
+      "text" : "Sets the style for radio group style pickers within this view to be",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "horizontally positioned with the radio buttons inside the layout.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/horizontalRadioGroupLayout()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUI",
+    "externalID" : "s:7SwiftUI4ViewPAAE26horizontalRadioGroupLayoutQryF::SYNTHESIZED::s:15ColorComponents4HSBAV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "horizontalRadioGroupLayout"
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "10.15",
+        "name" : "macOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "horizontalRadioGroupLayout()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "horizontalRadioGroupLayout"
+            },
+            {
+              "kind" : "text",
+              "text" : "() -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use ",
+              "type" : "text"
+            },
+            {
+              "code" : "horizontalRadioGroupLayout()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to configure the visual layout of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "radio buttons in a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Picker",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " so that the radio buttons are arranged",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "horizontally in the view.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The example below shows two ",
+              "type" : "text"
+            },
+            {
+              "code" : "Picker",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " controls configured as radio",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "button groups; the first group shows the default vertical layout; the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "second group shows the effect of ",
+              "type" : "text"
+            },
+            {
+              "code" : "horizontalRadioGroupLayout()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " which",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "renders the radio buttons horizontally.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct HorizontalRadioGroupLayout: View {",
+            "    @State private var selected = 1",
+            "    var body: some View {",
+            "        VStack(spacing: 20) {",
+            "            Picker(selection: $selected, label: Text(\"Favorite Color\")) {",
+            "                Text(\"Red\").tag(1)",
+            "                Text(\"Green\").tag(2)",
+            "                Text(\"Blue\").tag(3)",
+            "                Text(\"Other\").tag(4)",
+            "            }",
+            "            .pickerStyle(.radioGroup)",
+            "",
+            "            Picker(selection: $selected, label: Text(\"Favorite Color\")) {",
+            "                Text(\"Red\").tag(1)",
+            "                Text(\"Green\").tag(2)",
+            "                Text(\"Blue\").tag(3)",
+            "                Text(\"Other\").tag(4)",
+            "            }",
+            "            .pickerStyle(.radioGroup)",
+            "            .horizontalRadioGroupLayout()",
+            "        }",
+            "        .padding(20)",
+            "        .border(Color.gray)",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "SwiftUI-view-horizontalRadioGroupLayout.png",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 2,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/hsba\/horizontalradiogrouplayout()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSBA": {
+  "abstract" : [
+    {
+      "text" : "An HSBA (hue, saturation, brightness, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSBA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSBA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSBA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "View Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba\/view-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSBA/horizontalRadioGroupLayout()": {
+  "abstract" : [
+    {
+      "text" : "Sets the style for radio group style pickers within this view to be",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "horizontally positioned with the radio buttons inside the layout.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "horizontalRadioGroupLayout"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/horizontalRadioGroupLayout()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "horizontalRadioGroupLayout()",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsba\/horizontalradiogrouplayout()"
+}
+}
+}
