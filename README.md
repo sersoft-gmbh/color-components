@@ -40,8 +40,8 @@ While not yet integrated, the following features might provide added value and c
 
 The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an online version available for you:
 
--   [ColorComponents](https://sersoft-gmbh.github.io/color-components/latest/documentation/colorcomponents)
--   [ColorCalculations](https://sersoft-gmbh.github.io/color-components/latest/documentation/colorcalculations)
+-   [ColorComponents](https://sersoft-gmbh.github.io/color-components/main/documentation/colorcomponents)
+-   [ColorCalculations](https://sersoft-gmbh.github.io/color-components/main/documentation/colorcalculations)
 
 ## Contributing
 
