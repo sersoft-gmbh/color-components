@@ -4,7 +4,7 @@
 ![Tests](https://github.com/sersoft-gmbh/color-components/workflows/Tests/badge.svg)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/cbb50391eb724c6ca5f4b251ff360c57)](https://www.codacy.com/gh/sersoft-gmbh/color-components/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/color-components&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/color-components/branch/main/graph/badge.svg?token=bCJR4QKdqc)](https://codecov.io/gh/sersoft-gmbh/color-components)
-[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/color-components/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/color-components)
+[![Docs](https://img.shields.io/badge/-documentation-informational)](https://sersoft-gmbh.github.io/color-components)
 
 A color component calculation library written in Swift.
 
@@ -38,7 +38,10 @@ While not yet integrated, the following features might provide added value and c
 
 ## Documentation
 
-The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/color-components) available for you.
+The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an online version available for you:
+
+-   [ColorComponents](https://sersoft-gmbh.github.io/color-components/latest/documentation/colorcomponents)
+-   [ColorCalculations](https://sersoft-gmbh.github.io/color-components/latest/documentation/colorcalculations)
 
 ## Contributing
 
