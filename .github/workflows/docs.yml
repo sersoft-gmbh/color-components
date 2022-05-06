@@ -147,7 +147,7 @@ jobs:
             if [ -d "${TARGET_DOCS_DIR}/${target}" ]; then
               single_target_name="${target}"
               target_count=$((target_count+1))
-              target_list="${target_list}\n<li><a href=\"${BASE_URL}/${target}\"><pre>${target}</pre> Documentation</a></li>"
+              target_list="${target_list}<li><a href=\"${BASE_URL}/${target}\"><code>${target}</code> Documentation</a></li>"
             fi
           done
           if [ ${target_count} -gt 1 ]; then
