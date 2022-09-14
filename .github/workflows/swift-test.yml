@@ -10,13 +10,10 @@ jobs:
   test-spm:
     strategy:
       matrix:
-        os: []
-        swift-version: []
-        xcode-version: []
+        os: [ macos-11 ]
+        swift-version: [ '' ]
+        xcode-version: [ '^13.0' ]
         include:
-          - os: macos-11
-            swift-version: ''
-            xcode-version: '^13.0'
           - os: macos-12
             swift-version: ''
             xcode-version: '^14.0'
