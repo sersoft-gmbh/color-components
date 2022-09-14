@@ -36,7 +36,7 @@ extension CGColor {
 //    }
 
     @usableFromInline
-    func _requireCompontens<R: RangeExpression>(in range: R, file: StaticString = #file, line: UInt = #line) -> [CGFloat]
+    func _requireCompontens<R: RangeExpression>(in range: R, file: StaticString = #file, line: UInt = #line) -> Array<CGFloat>
     where R.Bound == Int
     {
         guard range.contains(numberOfComponents), let components = components else {

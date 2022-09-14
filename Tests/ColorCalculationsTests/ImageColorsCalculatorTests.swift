@@ -118,7 +118,7 @@ final class ImageColorsCalculatorTests: XCTestCase {
         try skipUnavailableAPI()
         #else
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
-            throw XCTSkip("Performance measurments not present")
+            throw XCTSkip("Performance measurements not present")
         }
         let img = try XCTUnwrap(CIImage(contentsOf: img4URL))
         measure(metrics: [XCTMemoryMetric(), XCTClockMetric()]) {
@@ -133,7 +133,7 @@ final class ImageColorsCalculatorTests: XCTestCase {
         try skipUnavailableAPI()
         #else
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
-            throw XCTSkip("Performance measurments not present")
+            throw XCTSkip("Performance measurements not present")
         }
         let img = try XCTUnwrap(CIImage(contentsOf: img4URL))
         measure(metrics: [XCTMemoryMetric(), XCTClockMetric()]) {

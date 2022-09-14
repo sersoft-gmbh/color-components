@@ -59,7 +59,6 @@ extension BW where Value: BinaryInteger {
         BW<CGFloat>(self).cgColor
     }
 
-
     /// Creates new black/white components from the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericGray` color space if necessary.
@@ -89,7 +88,6 @@ extension BWA where Value: BinaryFloatingPoint {
         CGColor(gray: .init(bw.white), alpha: .init(alpha))
     }
 
-
     /// Creates new black/white components with alpha channel from the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericGray` color space if necessary.
@@ -118,7 +116,6 @@ extension BWA where Value: BinaryInteger {
     public var cgColor: CGColor {
         BWA<CGFloat>(self).cgColor
     }
-
 
     /// Creates new black/white components with alpha channel from the given color.
     /// - Parameter cgColor: The color to read the components from.
