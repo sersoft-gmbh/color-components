@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Pads this view using the edges and padding amount you specify.",
+      "text" : "Adds a different padding amount to each edge of this view.",
       "type" : "text"
     }
   ],
@@ -187,15 +187,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that pads this view using the specified edge insets",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with specified amount of padding.",
+              "text" : "A view that’s padded by different amounts on each edge.",
               "type" : "text"
             }
           ],
@@ -212,7 +204,23 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The edges and amounts to inset.",
+                  "text" : "An ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "EdgeInsets",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " instance that contains",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "padding amounts for each edge.",
                   "type" : "text"
                 }
               ],
@@ -234,15 +242,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "padding(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to add a specified amount of padding to one or more",
+              "text" : "Use this modifier to add a different amount of padding on each edge",
               "type" : "text"
             },
             {
@@ -250,15 +250,7 @@
               "type" : "text"
             },
             {
-              "text" : "edges of the view. For example, you can add padding of specific amounts",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to specified edges of a view:",
+              "text" : "of a view:",
               "type" : "text"
             }
           ],
@@ -267,11 +259,11 @@
         {
           "code" : [
             "VStack {",
-            "    Text(\"20 point padding on the left and bottom edges.\")",
-            "        .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 0))",
-            "        .border(Color.gray)",
-            "    Text(\"Unpadded text\")",
-            "        .border(Color.yellow)",
+            "    Text(\"Text padded by different amounts on each edge.\")",
+            "        .padding(EdgeInsets(top: 10, leading: 20, bottom: 40, trailing: 0))",
+            "        .border(.gray)",
+            "    Text(\"Unpadded text for comparison.\")",
+            "        .border(.yellow)",
             "}"
           ],
           "syntax" : null,
@@ -280,7 +272,32 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-padding-insets.png",
+              "text" : "The order in which you apply modifiers matters. The example above",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "applies the padding before applying the border to ensure that the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "border encompasses the padded region:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-padding-3-iOS",
               "type" : "image"
             }
           ],
@@ -289,11 +306,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "To pad selected outside edges of a view with an amount you specify, see",
+              "text" : "To pad a view on specific edges with equal padding for all padded",
               "type" : "text"
             },
             {
               "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "edges, use ",
               "type" : "text"
             },
             {
@@ -301,7 +322,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ". To pad all outside edges of a view with an",
+              "text" : ". To pad all edges of a view",
               "type" : "text"
             },
             {
@@ -309,7 +330,7 @@
               "type" : "text"
             },
             {
-              "text" : "amount you specify, see ",
+              "text" : "equally, use ",
               "type" : "text"
             },
             {
@@ -329,7 +350,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -408,7 +429,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSBA/padding(_:)-87hif": {
   "abstract" : [
     {
-      "text" : "Pads this view using the edges and padding amount you specify.",
+      "text" : "Adds a different padding amount to each edge of this view.",
       "type" : "text"
     }
   ],

@@ -201,6 +201,26 @@
       "kind" : "declarations"
     },
     {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view with a new refresh action in its environment.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -208,7 +228,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "An async action that SwiftUI executes when the user performs",
+                  "text" : "An asynchronous handler that SwiftUI executes when the",
                   "type" : "text"
                 },
                 {
@@ -216,7 +236,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "a standard gesture.",
+                  "text" : "user requests a refresh. Use this handler to initiate",
                   "type" : "text"
                 },
                 {
@@ -224,15 +244,11 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "Use this action to initiate an update of model data that the",
+                  "text" : "an update of model data displayed in the modified view. Use",
                   "type" : "text"
                 },
                 {
                   "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "modified view displays. Use an ",
                   "type" : "text"
                 },
                 {
@@ -240,23 +256,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " expression",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "inside the action. SwiftUI shows a refresh indicator, which stays",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "visible for the duration of the awaited operation.",
+                  "text" : " in front of any asynchronous calls inside the handler.",
                   "type" : "text"
                 }
               ],
@@ -278,11 +278,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "When you apply this modifier to a view, you set the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
+              "text" : "Apply this modifier to a view to set the ",
               "type" : "text"
             },
             {
@@ -290,7 +286,19 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " value in the view’s environment to the",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "value in the view’s environment to a ",
+              "type" : "text"
+            },
+            {
+              "code" : "RefreshAction",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " instance that",
               "type" : "text"
             },
             {
@@ -298,7 +306,7 @@
               "type" : "text"
             },
             {
-              "text" : "specified ",
+              "text" : "uses the specified ",
               "type" : "text"
             },
             {
@@ -306,7 +314,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ".",
+              "text" : " as its handler. Views that detect the",
               "type" : "text"
             },
             {
@@ -314,7 +322,7 @@
               "type" : "text"
             },
             {
-              "text" : "Controls that detect this action can change their appearance and provide",
+              "text" : "presence of the instance can change their appearance to provide a",
               "type" : "text"
             },
             {
@@ -322,7 +330,7 @@
               "type" : "text"
             },
             {
-              "text" : "a way for the user to execute a refresh.",
+              "text" : "way for the user to execute the handler.",
               "type" : "text"
             }
           ],
@@ -331,7 +339,11 @@
         {
           "inlineContent" : [
             {
-              "text" : "When you apply this modifier on iOS and iPadOS to a ",
+              "text" : "For example, when you apply this modifier on iOS and iPadOS to a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
               "type" : "text"
             },
             {
@@ -339,7 +351,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ", the list",
+              "text" : ", the list enables a standard pull-to-refresh gesture that",
               "type" : "text"
             },
             {
@@ -347,7 +359,7 @@
               "type" : "text"
             },
             {
-              "text" : "provides a standard way for the user to refresh the content.",
+              "text" : "refreshes the list contents. When the user drags the top of the",
               "type" : "text"
             },
             {
@@ -355,7 +367,7 @@
               "type" : "text"
             },
             {
-              "text" : "When the user drags the top of the scrollable",
+              "text" : "scrollable area downward, the view reveals a progress indicator",
               "type" : "text"
             },
             {
@@ -363,7 +375,7 @@
               "type" : "text"
             },
             {
-              "text" : "content area downward, the view reveals a refresh control and executes",
+              "text" : "and executes the specified handler. The indicator remains visible",
               "type" : "text"
             },
             {
@@ -371,31 +383,7 @@
               "type" : "text"
             },
             {
-              "text" : "the provided action. Use an ",
-              "type" : "text"
-            },
-            {
-              "code" : "await",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " expression inside the action to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "refresh your data. The refresh indicator remains visible for the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "duration of the awaited operation.",
+              "text" : "for the duration of the refresh, which runs asynchronously:",
               "type" : "text"
             }
           ],
@@ -403,8 +391,8 @@
         },
         {
           "code" : [
-            "List(mailbox.conversations) {",
-            "    ConversationCell($0)",
+            "List(mailbox.conversations) { conversation in",
+            "    ConversationCell(conversation)",
             "}",
             ".refreshable {",
             "    await mailbox.fetch()",
@@ -412,6 +400,31 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can add refresh capability to your own views as well. For",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information on how to do that, see ",
+              "type" : "text"
+            },
+            {
+              "code" : "RefreshAction",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
         }
       ],
       "kind" : "content"
@@ -419,7 +432,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

@@ -251,15 +251,11 @@
                   "type" : "text"
                 },
                 {
-                  "text" : " value",
-                  "type" : "text"
-                },
-                {
                   "text" : " ",
                   "type" : "text"
                 },
                 {
-                  "text" : "to use as the view’s tag.",
+                  "text" : "value to use as the view’s tag.",
                   "type" : "text"
                 }
               ],
@@ -281,15 +277,31 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
+              "text" : "Use this modifier to differentiate among certain selectable views,",
               "type" : "text"
             },
             {
-              "code" : "tag(_:)",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "like the possible values of a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Picker",
               "type" : "codeVoice"
             },
             {
-              "text" : " to differentiate between a number of views for the purpose",
+              "text" : " or the tabs of a ",
+              "type" : "text"
+            },
+            {
+              "code" : "TabView",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             },
             {
@@ -297,15 +309,11 @@
               "type" : "text"
             },
             {
-              "text" : "of selecting controls like pickers and lists. Tag values can be of any",
+              "text" : "Tag values can be of any type that conforms to the",
               "type" : "text"
             },
             {
               "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "type that conforms to the ",
               "type" : "text"
             },
             {
@@ -313,11 +321,7 @@
               "type" : "text"
             },
             {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "protocol.",
+              "text" : " protocol.",
               "type" : "text"
             }
           ],
@@ -358,7 +362,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " enumeration. It extracts the text raw",
+              "text" : " enumeration. It extracts the string",
               "type" : "text"
             },
             {
@@ -366,7 +370,7 @@
               "type" : "text"
             },
             {
-              "text" : "value of each enumeration element for use as the row item label and uses",
+              "text" : "value of each enumeration element for use in constructing the row",
               "type" : "text"
             },
             {
@@ -374,7 +378,15 @@
               "type" : "text"
             },
             {
-              "text" : "the enumeration item itself as input to the ",
+              "text" : "label, and uses the enumeration value, cast as an optional, as input",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to the ",
               "type" : "text"
             },
             {
@@ -382,7 +394,15 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " modifier.",
+              "text" : " modifier. The ",
+              "type" : "text"
+            },
+            {
+              "code" : "Picker",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " requires the tags to have a",
               "type" : "text"
             },
             {
@@ -390,7 +410,7 @@
               "type" : "text"
             },
             {
-              "text" : "The tag identifier can be any value that conforms to the",
+              "text" : "type that exactly matches the selection type, which in this case is an",
               "type" : "text"
             },
             {
@@ -398,11 +418,15 @@
               "type" : "text"
             },
             {
-              "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/Hashable",
+              "text" : "optional ",
               "type" : "text"
             },
             {
-              "text" : " protocol:",
+              "code" : "Flavor",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             }
           ],
@@ -412,15 +436,16 @@
           "code" : [
             "struct FlavorPicker: View {",
             "    enum Flavor: String, CaseIterable, Identifiable {",
-            "        var id: String { self.rawValue }",
-            "        case vanilla, chocolate, strawberry",
+            "        case chocolate, vanilla, strawberry",
+            "        var id: Self { self }",
             "    }",
             "",
             "    @State private var selectedFlavor: Flavor? = nil",
+            "",
             "    var body: some View {",
             "        Picker(\"Flavor\", selection: $selectedFlavor) {",
-            "            ForEach(Flavor.allCases) {",
-            "                Text($0.rawValue).tag($0)",
+            "            ForEach(Flavor.allCases) { flavor in",
+            "                Text(flavor.rawValue).tag(Optional(flavor))",
             "            }",
             "        }",
             "    }",
@@ -428,6 +453,124 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you change ",
+              "type" : "text"
+            },
+            {
+              "code" : "selectedFlavor",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to be non-optional, you need to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "remove the ",
+              "type" : "text"
+            },
+            {
+              "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/Optional",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "cast from the tag input to match.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A ",
+              "type" : "text"
+            },
+            {
+              "code" : "ForEach",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " automatically applies a default tag to each enumerated",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "view using the ",
+              "type" : "text"
+            },
+            {
+              "code" : "id",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter of the corresponding element. If",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the element’s ",
+              "type" : "text"
+            },
+            {
+              "code" : "id",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter and the picker’s ",
+              "type" : "text"
+            },
+            {
+              "code" : "selection",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " input",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "have exactly the same type, you can omit the explicit tag modifier.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "To see examples that don’t require an explicit tag, see ",
+              "type" : "text"
+            },
+            {
+              "code" : "Picker",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
         }
       ],
       "kind" : "content"
@@ -435,7 +578,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

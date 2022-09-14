@@ -187,7 +187,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that wraps this view and sets the color scheme.",
+              "text" : "A view that sets the color scheme.",
               "type" : "text"
             }
           ],
@@ -204,7 +204,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The color scheme for this view.",
+                  "text" : "The preferred color scheme for this view.",
                   "type" : "text"
                 }
               ],
@@ -226,27 +226,156 @@
         {
           "inlineContent" : [
             {
-              "text" : "The color scheme applies to the nearest enclosing presentation, such as",
+              "text" : "Use one of the values in ",
               "type" : "text"
             },
             {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a popover or window. Views may read the color scheme using the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "colorScheme",
+              "code" : "ColorScheme",
               "type" : "codeVoice"
             },
             {
-              "text" : " environment value.",
+              "text" : " with this modifier to set a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "preferred color scheme for the nearest enclosing presentation, like a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "popover, a sheet, or a window. The value that you set overrides the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "user’s Dark Mode selection for that presentation. In the example below,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Toggle",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " controls an ",
+              "type" : "text"
+            },
+            {
+              "code" : "isDarkMode",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " state variable, which in turn",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "controls the color scheme of the sheet that contains the toggle:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@State private var isPresented = false",
+            "@State private var isDarkMode = true",
+            "",
+            "var body: some View {",
+            "    Button(\"Show Sheet\") {",
+            "        isPresented = true",
+            "    }",
+            "    .sheet(isPresented: $isPresented) {",
+            "        List {",
+            "            Toggle(\"Dark Mode\", isOn: $isDarkMode)",
+            "        }",
+            "        .preferredColorScheme(isDarkMode ? .dark : .light)",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you apply the modifier to any of the views in the sheet — which in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "this case are a ",
+              "type" : "text"
+            },
+            {
+              "code" : "List",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Toggle",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " — the value that you set",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "propagates up through the view hierarchy to the enclosing",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "presentation, or until another color scheme modifier higher in the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "hierarchy overrides it. The value you set also flows down to all child",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "views of the enclosing presentation.",
               "type" : "text"
             }
           ],
@@ -255,15 +384,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "In the example below the presentation containing the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " has its",
+              "text" : "A common use for this modifier is to create side-by-side previews of the",
               "type" : "text"
             },
             {
@@ -271,15 +392,7 @@
               "type" : "text"
             },
             {
-              "text" : "color scheme set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "ColorScheme\/dark",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
+              "text" : "same view with light and dark appearances:",
               "type" : "text"
             }
           ],
@@ -287,15 +400,48 @@
         },
         {
           "code" : [
-            "VStack {",
-            "    Button(action: {}) {",
-            "        Text(\" Button\")",
+            "struct MyView_Previews: PreviewProvider {",
+            "    static var previews: some View {",
+            "        MyView().preferredColorScheme(.light)",
+            "        MyView().preferredColorScheme(.dark)",
             "    }",
-            "    HStack {",
-            "        Text(\" Slider\").tint(.green)",
-            "        Slider(value: $sliderValue, in: -100...100, step: 0.1)",
-            "    }",
-            "}.preferredColorScheme(.dark)"
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you need to detect the color scheme that currently applies to a view,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "read the ",
+              "type" : "text"
+            },
+            {
+              "code" : "EnvironmentValues\/colorScheme",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " environment value:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@Environment(\\.colorScheme) private var colorScheme",
+            "",
+            "var body: some View {",
+            "    Text(colorScheme == .dark ? \"Dark\" : \"Light\")",
+            "}"
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -306,7 +452,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

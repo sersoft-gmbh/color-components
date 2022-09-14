@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "A view that pads this view inside the specified edge insets with a",
+      "text" : "Adds padding to the specified edges of this view using an amount that’s",
       "type" : "text"
     },
     {
@@ -9,15 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "system-calculated amount of padding relative to the application’s",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scene.",
+      "text" : "appropriate for the current scene.",
       "type" : "text"
     }
   ],
@@ -221,7 +213,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that pads this view using the specified edge insets.",
+              "text" : "A view that’s padded on specified edges by a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "scene-appropriate amount.",
               "type" : "text"
             }
           ],
@@ -238,15 +238,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The set of edges along which to pad this view; by",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "default the system-calculated amount is applied to all edges.",
+                  "text" : "The set of edges along which to pad this view.",
                   "type" : "text"
                 }
               ],
@@ -268,31 +260,23 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
+              "text" : "Use this modifier to add a scene-appropriate amount of padding to a",
               "type" : "text"
             },
             {
-              "code" : "scenePadding(_:)",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "view. Specify either a single edge value from ",
+              "type" : "text"
+            },
+            {
+              "code" : "Edge\/Set",
               "type" : "codeVoice"
             },
             {
-              "text" : " to add an amount of padding, measured from the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "scene of the application, inside one or more of the view’s edges by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "passing either a single edge name, or an",
+              "text" : ", or an",
               "type" : "text"
             },
             {
@@ -304,7 +288,7 @@
               "type" : "text"
             },
             {
-              "text" : " describing",
+              "text" : " that",
               "type" : "text"
             },
             {
@@ -312,7 +296,7 @@
               "type" : "text"
             },
             {
-              "text" : "which edges should be padded.",
+              "text" : "describes the edges to pad.",
               "type" : "text"
             }
           ],
@@ -321,7 +305,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "For example, on watchOS you can add padding to the horizontal edges",
+              "text" : "In macOS, use scene padding to produce the recommended spacing around",
               "type" : "text"
             },
             {
@@ -329,7 +313,43 @@
               "type" : "text"
             },
             {
-              "text" : "of a text view.",
+              "text" : "the root view of a window. In watchOS, use scene padding to align",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "elements of your user interface with top level elements, like the title",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of a navigation view. For example, compare the effects of different",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "kinds of padding on text views presented inside a ",
+              "type" : "text"
+            },
+            {
+              "code" : "NavigationView",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in watchOS:",
               "type" : "text"
             }
           ],
@@ -337,16 +357,164 @@
         },
         {
           "code" : [
-            "VStack {",
-            "    Text(\"Text padded on the horizontal edges.\")",
+            "VStack(alignment: .leading, spacing: 10) {",
+            "    Text(\"Scene padding\")",
             "        .scenePadding(.horizontal)",
-            "        .border(Color.gray)",
-            "    Button(\"Unpadded Button\") { }",
-            "        .border(Color.yellow)",
-            "}"
+            "        .border(.red) \/\/ Border added for reference.",
+            "    Text(\"Regular padding\")",
+            "        .padding(.horizontal)",
+            "        .border(.green)",
+            "    Text(\"Text with no padding\")",
+            "        .border(.blue)",
+            "    Button(\"Button\") { }",
+            "}",
+            ".navigationTitle(\"Hello World\")"
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The text with scene padding automatically aligns with the title,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "unlike the text that uses the default padding or the text without",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "padding:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-scenePadding-1-watchOS",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Scene padding in watchOS also ensures that your content avoids the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "curved edges of a device like Apple Watch Series 7.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "In other platforms, scene padding produces the same default padding that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "you get from the ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/padding(_:_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifier.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Scene padding doesn’t pad the top and bottom edges of a",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "view in watchOS, even if you specify those edges as part of the input.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "For example, if you specify ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Edge\/Set\/vertical",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " instead of",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Edge\/Set\/horizontal",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " in the example above, the modifier would have",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "no effect in watchOS. It does, however, apply to all the edges that you",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "specify in other platforms.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -354,7 +522,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -433,7 +601,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGBA/scenePadding(_:)": {
   "abstract" : [
     {
-      "text" : "A view that pads this view inside the specified edge insets with a",
+      "text" : "Adds padding to the specified edges of this view using an amount that’s",
       "type" : "text"
     },
     {
@@ -441,15 +609,7 @@
       "type" : "text"
     },
     {
-      "text" : "system-calculated amount of padding relative to the application’s",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scene.",
+      "text" : "appropriate for the current scene.",
       "type" : "text"
     }
   ],

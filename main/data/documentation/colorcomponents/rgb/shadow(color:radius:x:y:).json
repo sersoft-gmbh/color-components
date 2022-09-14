@@ -320,7 +320,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The shadow’s size.",
+                  "text" : "A measure of how much to blur the shadow. Larger values",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "result in more blur.",
                   "type" : "text"
                 }
               ],
@@ -334,15 +342,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A horizontal offset you use to position the shadow relative to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "this view.",
+                  "text" : "An amount to offset the shadow horizontally from the view.",
                   "type" : "text"
                 }
               ],
@@ -356,15 +356,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A vertical offset you use to position the shadow relative to this",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "view.",
+                  "text" : "An amount to offset the shadow vertically from the view.",
                   "type" : "text"
                 }
               ],
@@ -386,7 +378,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The example below a series shows of boxes with increasing degrees of",
+              "text" : "Use this modifier to add a shadow of a specified color behind a view.",
               "type" : "text"
             },
             {
@@ -394,7 +386,7 @@
               "type" : "text"
             },
             {
-              "text" : "shadow ranging from 0 (no shadow) to 5 points of shadow, offset down and",
+              "text" : "You can offset the shadow from its view independently in the horizontal",
               "type" : "text"
             },
             {
@@ -402,7 +394,72 @@
               "type" : "text"
             },
             {
-              "text" : "to the right of the views:",
+              "text" : "and vertical dimensions using the ",
+              "type" : "text"
+            },
+            {
+              "code" : "x",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "y",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameters. You can also",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "blur the edges of the shadow using the ",
+              "type" : "text"
+            },
+            {
+              "code" : "radius",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameter. Use a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "radius of zero to create a sharp shadow. Larger radius values produce",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "softer shadows.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The example below creates a grid of boxes with varying offsets and blur.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Each box displays its radius and offset values for reference.",
               "type" : "text"
             }
           ],
@@ -411,16 +468,26 @@
         {
           "code" : [
             "struct Shadow: View {",
+            "    let steps = [0, 5, 10]",
+            "",
             "    var body: some View {",
-            "        HStack {",
-            "            ForEach(0..<6) {",
-            "                Color.red.frame(width: 60, height: 60, alignment: .center)",
-            "                    .overlay(Text(\"\\($0)\"),",
-            "                             alignment: .bottom)",
-            "                    .shadow(color: Color.gray,",
-            "                            radius: 1.0,",
-            "                            x: CGFloat($0),",
-            "                            y: CGFloat($0))",
+            "        VStack(spacing: 50) {",
+            "            ForEach(steps, id: \\.self) { offset in",
+            "                HStack(spacing: 50) {",
+            "                    ForEach(steps, id: \\.self) { radius in",
+            "                        Color.blue",
+            "                            .shadow(",
+            "                                color: .primary,",
+            "                                radius: CGFloat(radius),",
+            "                                x: CGFloat(offset), y: CGFloat(offset))",
+            "                            .overlay {",
+            "                                VStack {",
+            "                                    Text(\"\\(radius)\")",
+            "                                    Text(\"(\\(offset), \\(offset))\")",
+            "                                }",
+            "                            }",
+            "                    }",
+            "                }",
             "            }",
             "        }",
             "    }",
@@ -432,8 +499,65 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-shadow.png",
+              "identifier" : "View-shadow-1-iOS",
               "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The example above uses ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color\/primary",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " as the color to make the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "shadow easy to see for the purpose of illustration. In practice,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "you might prefer something more subtle, like ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color\/gray-8j2b",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "If you don’t specify a color, the method uses a semi-transparent",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "black.",
+              "type" : "text"
             }
           ],
           "type" : "paragraph"
@@ -444,7 +568,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

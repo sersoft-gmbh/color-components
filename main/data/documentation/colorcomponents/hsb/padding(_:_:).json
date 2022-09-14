@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "A view that pads this view inside the specified edge insets with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "system-calculated amount of padding.",
+      "text" : "Adds an equal padding amount to specific edges of this view.",
       "type" : "text"
     }
   ],
@@ -247,7 +239,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that pads this view using the specified edge insets",
+              "text" : "A view that’s padded by the specified amount on the",
               "type" : "text"
             },
             {
@@ -255,7 +247,7 @@
               "type" : "text"
             },
             {
-              "text" : "with specified amount of padding.",
+              "text" : "specified edges.",
               "type" : "text"
             }
           ],
@@ -272,7 +264,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The set of edges along which to pad this view. The default",
+                  "text" : "The set of edges to pad for this view. The default",
                   "type" : "text"
                 },
                 {
@@ -302,7 +294,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The amount to inset this view on the specified edges. If",
+                  "text" : "An amount, given in points, to pad this view on the",
                   "type" : "text"
                 },
                 {
@@ -310,7 +302,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "you set the value to ",
+                  "text" : "specified edges. If you set the value to ",
                   "type" : "text"
                 },
                 {
@@ -318,7 +310,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : ", SwiftUI uses the system-default amount.",
+                  "text" : ", SwiftUI uses",
                   "type" : "text"
                 },
                 {
@@ -326,7 +318,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "The default is ",
+                  "text" : "a platform-specific default amount. The default value of this",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "parameter is ",
                   "type" : "text"
                 },
                 {
@@ -356,15 +356,31 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
+              "text" : "Use this modifier to add a specified amount of padding to one or more",
               "type" : "text"
             },
             {
-              "code" : "padding(_:)",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "edges of the view. Indicate the edges to pad by naming either a single",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "value from ",
+              "type" : "text"
+            },
+            {
+              "code" : "Edge\/Set",
               "type" : "codeVoice"
             },
             {
-              "text" : " to add a system-calculated amount of padding inside",
+              "text" : ", or by specifying an",
               "type" : "text"
             },
             {
@@ -372,7 +388,7 @@
               "type" : "text"
             },
             {
-              "text" : "one or more of the view’s edges by passing either a single edge name, or",
+              "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/OptionSet",
               "type" : "text"
             },
             {
@@ -380,23 +396,7 @@
               "type" : "text"
             },
             {
-              "text" : "an ",
-              "type" : "text"
-            },
-            {
-              "code" : "OptionSet",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " describing which edges should be padded. For example you",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "can add padding to the bottom of a text view:",
+              "text" : "that contains edge values:",
               "type" : "text"
             }
           ],
@@ -405,11 +405,11 @@
         {
           "code" : [
             "VStack {",
-            "    Text(\"Text padded on the bottom edge.\")",
-            "        .padding(.bottom)",
-            "        .border(Color.gray)",
-            "    Text(\"Unpadded text\")",
-            "        .border(Color.yellow)",
+            "    Text(\"Text padded by 20 points on the bottom and trailing edges.\")",
+            "        .padding([.bottom, .trailing], 20)",
+            "        .border(.gray)",
+            "    Text(\"Unpadded text for comparison.\")",
+            "        .border(.yellow)",
             "}"
           ],
           "syntax" : null,
@@ -418,7 +418,32 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-padding-2.png",
+              "text" : "The order in which you apply modifiers matters. The example above",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "applies the padding before applying the border to ensure that the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "border encompasses the padded region:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-padding-2-iOS",
               "type" : "image"
             }
           ],
@@ -427,24 +452,107 @@
         {
           "inlineContent" : [
             {
-              "text" : "To pad the view’s insets, which affects the amount of padding ",
+              "text" : "You can omit either or both of the parameters. If you omit the ",
               "type" : "text"
             },
             {
-              "inlineContent" : [
-                {
-                  "text" : "inside",
-                  "type" : "text"
-                }
-              ],
-              "type" : "emphasis"
+              "code" : "length",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ",",
+              "type" : "text"
             },
             {
               "text" : " ",
               "type" : "text"
             },
             {
-              "text" : "the edges of the view, see ",
+              "text" : "SwiftUI uses a default amount of padding. If you",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "omit the ",
+              "type" : "text"
+            },
+            {
+              "code" : "edges",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", SwiftUI applies the padding to all edges. Omit both",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to add a default padding all the way around a view. SwiftUI chooses a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "default amount of padding that’s appropriate for the platform and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the presentation context.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "VStack {",
+            "    Text(\"Text with default padding.\")",
+            "        .padding()",
+            "        .border(.gray)",
+            "    Text(\"Unpadded text for comparison.\")",
+            "        .border(.yellow)",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The example above looks like this in iOS under typical conditions:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-padding-2a-iOS",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To control the amount of padding independently for each edge, use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
               "type" : "text"
             },
             {
@@ -452,7 +560,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ". To pad all",
+              "text" : ". To pad all outside edges of a view by a",
               "type" : "text"
             },
             {
@@ -460,11 +568,7 @@
               "type" : "text"
             },
             {
-              "text" : "outside edges of a view with an amount you specify, see",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
+              "text" : "specified amount, use ",
               "type" : "text"
             },
             {
@@ -484,7 +588,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -563,15 +667,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/padding(_:_:)": {
   "abstract" : [
     {
-      "text" : "A view that pads this view inside the specified edge insets with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "system-calculated amount of padding.",
+      "text" : "Adds an equal padding amount to specific edges of this view.",
       "type" : "text"
     }
   ],

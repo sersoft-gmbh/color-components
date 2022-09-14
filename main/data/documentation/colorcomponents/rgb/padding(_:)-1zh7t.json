@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Pads the view along all edges by the specified amount.",
+      "text" : "Adds a specific padding amount to each edge of this view.",
       "type" : "text"
     }
   ],
@@ -187,7 +187,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that pads this view by the amount you specify.",
+              "text" : "A view that’s padded by the amount you specify.",
               "type" : "text"
             }
           ],
@@ -204,7 +204,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The amount to pad this view on each edge.",
+                  "text" : "The amount, given in points, to pad this view on all",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "edges.",
                   "type" : "text"
                 }
               ],
@@ -226,23 +234,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "padding(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to add a specific amount of padding around all edges",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the view.",
+              "text" : "Use this modifier to add padding all the way around a view.",
               "type" : "text"
             }
           ],
@@ -252,10 +244,10 @@
           "code" : [
             "VStack {",
             "    Text(\"Text padded by 10 points on each edge.\")",
-            "        .padding(10.0)",
-            "        .border(Color.gray)",
-            "    Text(\"Unpadded text\")",
-            "        .border(Color.yellow)",
+            "        .padding(10)",
+            "        .border(.gray)",
+            "    Text(\"Unpadded text for comparison.\")",
+            "        .border(.yellow)",
             "}"
           ],
           "syntax" : null,
@@ -264,8 +256,70 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-padding-1.png",
+              "text" : "The order in which you apply modifiers matters. The example above",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "applies the padding before applying the border to ensure that the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "border encompasses the padded region:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-padding-1-iOS",
               "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To independently control the amount of padding for each edge, use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/padding(_:)-6pgqq",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". To pad a select set of edges by the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "same amount, use ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/padding(_:_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
             }
           ],
           "type" : "paragraph"
@@ -276,7 +330,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -355,7 +409,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/padding(_:)-1zh7t": {
   "abstract" : [
     {
-      "text" : "Pads the view along all edges by the specified amount.",
+      "text" : "Adds a specific padding amount to each edge of this view.",
       "type" : "text"
     }
   ],

@@ -153,7 +153,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that applies a luminance to alpha effect to this view.",
+              "text" : "A view with the luminance to alpha effect applied.",
               "type" : "text"
             }
           ],
@@ -173,15 +173,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "luminanceToAlpha()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier creates a semitransparent mask out of",
+              "text" : "Use this modifier to create a semitransparent mask, with the opacity of",
               "type" : "text"
             },
             {
@@ -189,7 +181,7 @@
               "type" : "text"
             },
             {
-              "text" : "the view to which you you apply. The dark regions in a view become",
+              "text" : "each part of the modified view controlled by the luminance of the",
               "type" : "text"
             },
             {
@@ -197,7 +189,7 @@
               "type" : "text"
             },
             {
-              "text" : "transparent, and the bright regions become opaque black. Medium",
+              "text" : "corresponding part of the original view. Regions of lower luminance",
               "type" : "text"
             },
             {
@@ -205,7 +197,15 @@
               "type" : "text"
             },
             {
-              "text" : "brightness regions become a partially opaque gray color.",
+              "text" : "become more transparent, while higher luminance yields greater",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "opacity.",
               "type" : "text"
             }
           ],
@@ -214,7 +214,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The example below shows two views: the first is a red square with an",
+              "text" : "In particular, the modifier maps the red, green, and blue components of",
               "type" : "text"
             },
             {
@@ -222,7 +222,7 @@
               "type" : "text"
             },
             {
-              "text" : "overlaid green circle; the second is a copy of the first view with where",
+              "text" : "each input pixel’s color to a grayscale value, and that value becomes",
               "type" : "text"
             },
             {
@@ -230,15 +230,35 @@
               "type" : "text"
             },
             {
-              "text" : "the ",
+              "text" : "the alpha component of a black pixel in the output. This modifier",
               "type" : "text"
             },
             {
-              "code" : "luminanceToAlpha()",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "produces an effect that’s equivalent to using the ",
+              "type" : "text"
+            },
+            {
+              "code" : "feColorMatrix",
               "type" : "codeVoice"
             },
             {
-              "text" : " modifier’s masking operation transforms the",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "filter primitive with the ",
+              "type" : "text"
+            },
+            {
+              "code" : "luminanceToAlpha",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " type attribute, as defined",
               "type" : "text"
             },
             {
@@ -246,7 +266,37 @@
               "type" : "text"
             },
             {
-              "text" : "view’s brightness levels into an equivalent grayscale version of the",
+              "text" : "by the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/www.w3.org\/TR\/SVG2\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "specification.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The example below defines a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Palette",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view as a series of rectangles,",
               "type" : "text"
             },
             {
@@ -254,7 +304,23 @@
               "type" : "text"
             },
             {
-              "text" : "first view:",
+              "text" : "each composed as a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " with a particular white value,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and then displays two versions of the palette over a blue background:",
               "type" : "text"
             }
           ],
@@ -262,25 +328,27 @@
         },
         {
           "code" : [
-            "struct LuminanceCircleView: View {",
+            "struct Palette: View {",
             "    var body: some View {",
-            "        Circle()",
-            "            .fill(Color.green)",
-            "            .frame(width: 40, height: 40, alignment: .center)",
+            "        HStack(spacing: 0) {",
+            "            ForEach(0..<10) { index in",
+            "                Color(white: Double(index) \/ Double(9))",
+            "                    .frame(width: 20, height: 40)",
+            "            }",
+            "        }",
             "    }",
             "}",
             "",
-            "struct LuminanceToAlpha: View {",
+            "struct LuminanceToAlphaExample: View {",
             "    var body: some View {",
-            "        HStack {",
-            "            Color.red.frame(width: 60, height: 60, alignment: .center)",
-            "                .overlay(LuminanceCircleView(), alignment: .center)",
-            "                .padding()",
+            "        VStack(spacing: 20) {",
+            "            Palette()",
             "",
-            "            Color.red.frame(width: 60, height: 60, alignment: .center)",
-            "                .overlay(LuminanceCircleView(), alignment: .center)",
+            "            Palette()",
             "                .luminanceToAlpha()",
             "        }",
+            "        .padding()",
+            "        .background(.blue)",
             "    }",
             "}"
           ],
@@ -290,7 +358,52 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-luminanceToAlpha.png",
+              "text" : "The unmodified version of the palette contains rectangles that range",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "from solid black to solid white, thus with increasing luminance. The",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "second version of the palette, which has the ",
+              "type" : "text"
+            },
+            {
+              "code" : "luminanceToAlpha()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier applied, allows the background to show through in an amount",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "that corresponds inversely to the luminance of the input.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-luminanceToAlpha-1-iOS",
               "type" : "image"
             }
           ],
@@ -302,7 +415,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
@@ -422,6 +535,18 @@
   "title" : "luminanceToAlpha()",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw\/luminancetoalpha()"
+},
+"https://www.w3.org/TR/SVG2/": {
+  "identifier" : "https:\/\/www.w3.org\/TR\/SVG2\/",
+  "title" : "Scalable Vector Graphics (SVG) 2",
+  "titleInlineContent" : [
+    {
+      "text" : "Scalable Vector Graphics (SVG) 2",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/www.w3.org\/TR\/SVG2\/"
 }
 }
 }

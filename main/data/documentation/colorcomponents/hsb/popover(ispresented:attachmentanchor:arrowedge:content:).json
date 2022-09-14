@@ -529,22 +529,17 @@
         },
         {
           "code" : [
-            "struct PopoverView: View {",
+            "struct PopoverExample: View {",
             "    @State private var isShowingPopover = false",
-            "    var body: some View {",
-            "        Button(\"Show Popover\", action: {",
-            "            self.isShowingPopover = true",
-            "        })",
-            "        .popover(isPresented: $isShowingPopover) {",
-            "            PopoverView()",
-            "        }",
-            "    }",
-            "}",
             "",
-            "struct PopoverView: View {",
             "    var body: some View {",
-            "        Text(\"Popover Content\")",
-            "            .padding()",
+            "        Button(\"Show Popover\") {",
+            "            self.isShowingPopover = true",
+            "        }",
+            "        .popover(isPresented: $isShowingPopover) {",
+            "            Text(\"Popover Content\")",
+            "                .padding()",
+            "        }",
             "    }",
             "}"
           ],
@@ -554,7 +549,7 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-PopverIspresentedContent.png",
+              "identifier" : "View-popover-1",
               "type" : "image"
             }
           ],
@@ -566,7 +561,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [

@@ -580,7 +580,7 @@
               "type" : "text"
             },
             {
-              "text" : "from a custom data source. The two examples below use data in",
+              "text" : "from a custom data source. The example below uses data in",
               "type" : "text"
             },
             {
@@ -596,7 +596,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " structures to populate the views in the ",
+              "text" : " structure to populate the view in the ",
               "type" : "text"
             },
             {
@@ -608,7 +608,7 @@
               "type" : "text"
             },
             {
-              "text" : "closures that the popovers display to the user:",
+              "text" : "closure that the popover displays to the user:",
               "type" : "text"
             }
           ],
@@ -616,31 +616,23 @@
         },
         {
           "code" : [
-            "struct PopoverDemo: View {",
+            "struct PopoverExample: View {",
             "    @State var popover: PopoverModel?",
             "",
             "    var body: some View {",
-            "        VStack(spacing: 150) {",
-            "            Button(\"First Popover\", action: {",
-            "                popover = PopoverModel(body: \"Custom message #1.\")",
-            "            })",
-            "            .popover(item: $popover) { detail in",
-            "                Text(\"\\(detail.body)\")",
-            "            }",
-            "",
-            "            Button(\"Second Popover\", action: {",
-            "                popover = PopoverModel(body: \"Custom message #2.\")",
-            "            })",
-            "            .popover(item: $popover) { detail in",
-            "                Text(\"\\(detail.body)\")",
-            "            }",
+            "        Button(\"Show Popover\") {",
+            "            popover = PopoverModel(message: \"Custom Message\")",
+            "        }",
+            "        .popover(item: $popover) { detail in",
+            "            Text(\"\\(detail.message)\")",
+            "                .padding()",
             "        }",
             "    }",
+            "}",
             "",
-            "    struct PopoverModel: Identifiable {",
-            "        var id: String { body }",
-            "        let body: String",
-            "    }",
+            "struct PopoverModel: Identifiable {",
+            "    var id: String { message }",
+            "    let message: String",
             "}"
           ],
           "syntax" : null,
@@ -649,7 +641,7 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-PopoverItemContent.png",
+              "identifier" : "View-popover-2",
               "type" : "image"
             }
           ],
@@ -661,7 +653,7 @@
   ],
   "schemaVersion" : {
     "major" : 0,
-    "minor" : 2,
+    "minor" : 3,
     "patch" : 0
   },
   "sections" : [
