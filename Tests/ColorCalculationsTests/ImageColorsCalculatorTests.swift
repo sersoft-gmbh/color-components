@@ -30,9 +30,9 @@ final class ImageColorsCalculatorTests: XCTestCase {
                                             subdirectory: "TestImages")!
 
     func testAverageColor() throws {
-        #if !canImport(CoreImage)
+#if !canImport(CoreImage)
         try skipUnavailableAPI()
-        #else
+#else
         guard #available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *) else {
             try skipUnavailableAPI()
         }
@@ -50,13 +50,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
         XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                            size: CGSize(width: 1, height: 1))),
                        RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))
-        #endif
+#endif
     }
 
     func testMaxComponentColor() throws {
-        #if !canImport(CoreImage)
+#if !canImport(CoreImage)
         try skipUnavailableAPI()
-        #else
+#else
         guard #available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *) else {
             try skipUnavailableAPI()
         }
@@ -74,13 +74,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
         XCTAssertEqual(calculator3.maxComponentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                                 size: CGSize(width: 1, height: 1))),
                        RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))
-        #endif
+#endif
     }
 
     func testMostProminentColor() throws {
-        #if !canImport(CoreImage)
+#if !canImport(CoreImage)
         try skipUnavailableAPI()
-        #else
+#else
         let img1 = try XCTUnwrap(CIImage(contentsOf: img1URL))
         let img2 = try XCTUnwrap(CIImage(contentsOf: img2URL))
         let img3 = try XCTUnwrap(CIImage(contentsOf: img3URL))
@@ -90,17 +90,17 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let calculator3 = ImageColorsCalculator(image: img3)
         let calculator4 = ImageColorsCalculator(image: img4)
 
-//        #if os(iOS)
-//        let c1 = UIColor(calculator1.mostProminentColor(as: Float.self))
-//        let c2 = UIColor(calculator2.mostProminentColor(as: Float.self))
-//        let c3 = UIColor(calculator3.mostProminentColor(as: Float.self))
-//        let c4 = UIColor(calculator4.mostProminentColor(as: Float.self))
-//        #endif
+        //        #if os(iOS)
+        //        let c1 = UIColor(calculator1.mostProminentColor(as: Float.self))
+        //        let c2 = UIColor(calculator2.mostProminentColor(as: Float.self))
+        //        let c3 = UIColor(calculator3.mostProminentColor(as: Float.self))
+        //        let c4 = UIColor(calculator4.mostProminentColor(as: Float.self))
+        //        #endif
 
-//        let color1: RGB<Float> = calculator1.mostProminentColor()
-//        XCTAssertEqual(color1.red, 75 / 0xFF, accuracy: 15 / 0xFF)
-//        XCTAssertEqual(color1.green, 26 / 0xFF, accuracy: 7 / 0xFF)
-//        XCTAssertEqual(color1.blue, 15 / 0xFF, accuracy: 5 / 0xFF)
+        //        let color1: RGB<Float> = calculator1.mostProminentColor()
+        //        XCTAssertEqual(color1.red, 75 / 0xFF, accuracy: 15 / 0xFF)
+        //        XCTAssertEqual(color1.green, 26 / 0xFF, accuracy: 7 / 0xFF)
+        //        XCTAssertEqual(color1.blue, 15 / 0xFF, accuracy: 5 / 0xFF)
         XCTAssertFalse(calculator1.prominentColors(as: Float.self).isEmpty)
         XCTAssertFalse(calculator4.prominentColors(as: Float.self).isEmpty)
         XCTAssertEqual(RGB<UInt8>(calculator2.mostProminentColor(as: Float.self,
@@ -110,13 +110,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
         XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                                  size: CGSize(width: 1, height: 1))),
                        RGB<Float>(red: 32 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
-        #endif
+#endif
     }
 
     func testProminentColorsPerformanceWithLinearSRGBDifference() throws {
-        #if !canImport(CoreImage)
+#if !canImport(CoreImage)
         try skipUnavailableAPI()
-        #else
+#else
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
             throw XCTSkip("Performance measurements not present")
         }
@@ -125,13 +125,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
             _ = ImageColorsCalculator(image: img)
                 .mostProminentColor(as: Float.self, distanceAs: .linearSRGB)
         }
-        #endif
+#endif
     }
 
     func testProminentColorsPerformanceWithWeightedSRGBDifference() throws {
-        #if !canImport(CoreImage)
+#if !canImport(CoreImage)
         try skipUnavailableAPI()
-        #else
+#else
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
             throw XCTSkip("Performance measurements not present")
         }
@@ -140,24 +140,24 @@ final class ImageColorsCalculatorTests: XCTestCase {
             _ = ImageColorsCalculator(image: img)
                 .mostProminentColor(as: Float.self, distanceAs: .weightedSRGB)
         }
-        #endif
+#endif
     }
 
     func testCGImageInitializer() throws {
-        #if !canImport(CoreGraphics)
+#if !canImport(CoreImage) || !canImport(CoreGraphics)
         try skipUnavailableAPI()
-        #else
+#else
         let cgImage = CGImage(jpegDataProviderSource: img1URL.path.withCString { CGDataProvider(filename: $0)! },
                               decode: nil, shouldInterpolate: false, intent: .defaultIntent)!
         let calculator = ImageColorsCalculator(cgImage: cgImage)
         XCTAssertNotNil(calculator)
-        #endif
+#endif
     }
 
     func testUIImageInitializer() throws {
-        #if !canImport(UIKit)
+#if !canImport(CoreImage) || !canImport(UIKit)
         try skipUnavailableAPI()
-        #else
+#else
         final class NonBackingUIImage: UIImage {
             override var ciImage: CIImage? { nil }
             override var cgImage: CGImage? { nil }
@@ -183,16 +183,16 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let uiImage4 = try XCTUnwrap(NonBackingUIImage(contentsOfFile: img1URL.path))
         let calculator4 = ImageColorsCalculator(uiImage: uiImage4)
         XCTAssertNil(calculator4)
-        #endif
+#endif
     }
 
     func testNSImageInitializer() throws {
-        #if !canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if !canImport(AppKit) && !targetEnvironment(macCatalyst)
         try skipUnavailableAPI()
-        #else
+#else
         let nsImage = NSImage(contentsOf: img3URL)!
         let calculator = ImageColorsCalculator(nsImage: nsImage)
         XCTAssertNotNil(calculator)
-        #endif
+#endif
     }
 }
