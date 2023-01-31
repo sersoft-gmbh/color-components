@@ -1,4 +1,34 @@
 {
+  "abstract" : [
+    {
+      "text" : "Sets a value for the specified preference key, the value is a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "function of a geometry value tied to the current coordinate",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "space, allowing readers of the value to convert the geometry to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "their local coordinates.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -390,6 +420,73 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "a new version of the view that writes the preference.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "the preference key type.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "key"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "the geometry value in the current coordinate space.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "value"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "the function to produce the preference value.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "transform"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -472,7 +569,34 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/anchorPreference(key:value:transform:)": {
   "abstract" : [
-
+    {
+      "text" : "Sets a value for the specified preference key, the value is a",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "function of a geometry value tied to the current coordinate",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "space, allowing readers of the value to convert the geometry to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "their local coordinates.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

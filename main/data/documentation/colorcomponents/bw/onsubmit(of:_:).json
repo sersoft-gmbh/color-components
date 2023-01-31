@@ -385,7 +385,7 @@
             "    TextField(\"Tags\", text: $viewModel.tags)",
             "        .submitScope()",
             "}",
-            ".onSubmit(of: .form) {",
+            ".onSubmit {",
             "    guard viewModel.validate() else { return }",
             "    viewModel.login()",
             "}"

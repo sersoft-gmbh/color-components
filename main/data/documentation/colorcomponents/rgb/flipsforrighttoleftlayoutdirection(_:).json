@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Sets whether this view flips its contents horizontally when the layout",
+      "text" : "Sets whether this view mirrors its contents horizontally when the layout",
       "type" : "text"
     },
     {
@@ -195,7 +195,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that conditionally flips its contents horizontally",
+              "text" : "A view that conditionally mirrors its contents",
               "type" : "text"
             },
             {
@@ -203,7 +203,7 @@
               "type" : "text"
             },
             {
-              "text" : "when the layout direction is right-to-left.",
+              "text" : "horizontally when the layout direction is right-to-left.",
               "type" : "text"
             }
           ],
@@ -228,7 +228,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "flips its content horizontally when the layout direction is",
+                  "text" : "should have its content flipped horizontally when the layout",
                   "type" : "text"
                 },
                 {
@@ -236,7 +236,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "right-to-left.",
+                  "text" : "direction is right-to-left. By default, views will adjust their layouts",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "automatically in a right-to-left context and do not need to be mirrored.",
                   "type" : "text"
                 }
               ],
@@ -274,7 +282,7 @@
               "type" : "text"
             },
             {
-              "text" : "horizontally flip the contents of the view to support right-to-left",
+              "text" : "horizontally mirror the contents of the view when presented in",
               "type" : "text"
             },
             {
@@ -282,7 +290,7 @@
               "type" : "text"
             },
             {
-              "text" : "layout.",
+              "text" : "a right-to-left layout.",
               "type" : "text"
             }
           ],
@@ -291,7 +299,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "In the example below, the text flips horizontally when the layout system",
+              "text" : "To override the layout direction for a specific view, use the",
               "type" : "text"
             },
             {
@@ -299,19 +307,39 @@
               "type" : "text"
             },
             {
-              "text" : "is right-to-left:",
+              "code" : "View\/environment(_:_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view modifier to explicitly override",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ",
+              "type" : "text"
+            },
+            {
+              "code" : "EnvironmentValues\/layoutDirection",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " environment value for",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the view.",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Text(\"שָׁלוֹם\")",
-            "   .flipsForRightToLeftLayoutDirection(true)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
         }
       ],
       "kind" : "content"
@@ -398,7 +426,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/flipsForRightToLeftLayoutDirection(_:)": {
   "abstract" : [
     {
-      "text" : "Sets whether this view flips its contents horizontally when the layout",
+      "text" : "Sets whether this view mirrors its contents horizontally when the layout",
       "type" : "text"
     },
     {

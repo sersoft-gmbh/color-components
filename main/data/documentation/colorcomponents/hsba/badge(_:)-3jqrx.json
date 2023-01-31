@@ -247,15 +247,6 @@
         {
           "inlineContent" : [
             {
-              "text" : "Badges are only displayed in list rows and tab bars.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
               "text" : "Use a badge to convey optional, supplementary information about a",
               "type" : "text"
             },
@@ -264,7 +255,15 @@
               "type" : "text"
             },
             {
-              "text" : "view. Keep the contents of the badge as short as possible.",
+              "text" : "view. Keep the contents of the badge as short as possible. Badges only",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "appear in list rows and tab bars.",
               "type" : "text"
             }
           ],
@@ -297,8 +296,38 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ".",
+              "text" : ". The following",
               "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "example shows a list with a “Default” badge on one of its rows.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "NavigationView {",
+            "    List(servers) { server in",
+            "        Text(server.name)",
+            "            .badge(server.defaultString())",
+            "    }",
+            "    .navigationTitle(\"Servers\")",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-badge-3",
+              "type" : "image"
             }
           ],
           "type" : "paragraph"

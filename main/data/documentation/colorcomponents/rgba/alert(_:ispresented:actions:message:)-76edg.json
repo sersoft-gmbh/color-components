@@ -517,7 +517,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "In the example below, a button conditionally presents an alert depending",
+              "text" : "In the example below, a login form conditionally presents an alert by",
               "type" : "text"
             },
             {
@@ -525,7 +525,15 @@
               "type" : "text"
             },
             {
-              "text" : "upon the value of a bound Boolean variable. When the Boolean value is",
+              "text" : "setting the ",
+              "type" : "text"
+            },
+            {
+              "code" : "didFail",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " state variable. When the form sets the value to",
               "type" : "text"
             },
             {
@@ -533,7 +541,7 @@
               "type" : "text"
             },
             {
-              "text" : "set to ",
+              "text" : "to ",
               "type" : "text"
             },
             {
@@ -549,17 +557,21 @@
         },
         {
           "code" : [
-            "struct LoginView: View {",
-            "    @Binding var didFail: Bool",
-            "    var title: String",
+            "struct Login: View {",
+            "    @State private var didFail = false",
+            "    let alertTitle: String = \"Login failed.\"",
+            "",
             "    var body: some View {",
             "        LoginForm(didFail: $didFail)",
-            "            .alert(title, isPresented: $didFail) {",
+            "            .alert(",
+            "                alertTitle,",
+            "                isPresented: $didFail",
+            "            ) {",
             "                Button(\"OK\") {",
-            "                    \/\/ Handle acknowledgement.",
+            "                    \/\/ Handle the acknowledgement.",
             "                }",
             "            } message: {",
-            "                Text(\"Please ensure your credentials are correct.\")",
+            "                Text(\"Please check your credentials and try again.\")",
             "            }",
             "    }",
             "}"

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Attaches a context menu and its children to the view.",
+      "text" : "Adds a context menu to the view.",
       "type" : "text"
     }
   ],
@@ -253,7 +253,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that adds a contextual menu to this view.",
+              "text" : "A view that can show a context menu.",
               "type" : "text"
             }
           ],
@@ -278,7 +278,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "present as menu items in a contextual menu.",
+                  "text" : "present as menu items in a context menu.",
                   "type" : "text"
                 }
               ],
@@ -300,15 +300,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "contextMenu(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to attach a contextual menu struct and its",
+              "text" : "Use this method to attach a specified context menu to a view.",
               "type" : "text"
             },
             {
@@ -316,15 +308,7 @@
               "type" : "text"
             },
             {
-              "text" : "children to the view. This modifier allows for the contextual menu to be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "conditionally available by passing ",
+              "text" : "You can make the context menu unavailable by conditionally passing ",
               "type" : "text"
             },
             {
@@ -332,7 +316,11 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " as the value for ",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "as the value for the ",
               "type" : "text"
             },
             {
@@ -349,7 +337,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "In the example below a ",
+              "text" : "The example below creates a ",
               "type" : "text"
             },
             {
@@ -357,7 +345,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " that contains four menu items is",
+              "text" : " that contains two items and",
               "type" : "text"
             },
             {
@@ -365,27 +353,7 @@
               "type" : "text"
             },
             {
-              "text" : "created and is passed into the ",
-              "type" : "text"
-            },
-            {
-              "code" : "contextMenu(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "attachment of context menu is controlled by the Boolean value",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
+              "text" : "passes them into the modifier. The Boolean value ",
               "type" : "text"
             },
             {
@@ -393,7 +361,15 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " which is ",
+              "text" : ",",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "which defaults to ",
               "type" : "text"
             },
             {
@@ -401,32 +377,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ", enabling the contextual menu.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Note that the actions invoked by the menu selection could be coded",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "directly inside the button closures or, as shown below, invoked via",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "function references.",
+              "text" : ", controls the context menu availability:",
               "type" : "text"
             }
           ],
@@ -434,28 +385,25 @@
         },
         {
           "code" : [
-            "func selectHearts() {",
-            "    \/\/ Act on hearts selection.",
+            "private let menuItems = ContextMenu {",
+            "    Button {",
+            "        \/\/ Add this item to a list of favorites.",
+            "    } label: {",
+            "        Label(\"Add to Favorites\", systemImage: \"heart\")",
+            "    }",
+            "    Button {",
+            "        \/\/ Open Maps and center it on this item.",
+            "    } label: {",
+            "        Label(\"Show in Maps\", systemImage: \"mappin\")",
+            "    }",
             "}",
-            "func selectClubs() { ... }",
-            "func selectSpades() { ... }",
-            "func selectDiamonds() { ... }",
             "",
-            "let menuItems = ContextMenu {",
-            "    Button(\"♥️ - Hearts\", action: selectHearts)",
-            "    Button(\"♣️ - Clubs\", action: selectClubs)",
-            "    Button(\"♠️ - Spades\", action: selectSpades)",
-            "    Button(\"♦️ - Diamonds\", action: selectDiamonds)",
-            "}",
+            "private struct ContextMenuMenuItems: View {",
+            "    @State private var shouldShowMenu = true",
             "",
-            "struct ContextMenuMenuItems: View {",
-            "    private var shouldShowMenu = true",
             "    var body: some View {",
-            "        VStack {",
-            "            Text(\"Favorite Card Suit\")",
-            "                .padding()",
-            "                .contextMenu(shouldShowMenu ? menuItems : nil)",
-            "        }",
+            "        Text(\"Turtle Rock\")",
+            "            .contextMenu(shouldShowMenu ? menuItems : nil)",
             "    }",
             "}"
           ],
@@ -465,7 +413,7 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-contextMenu.png",
+              "identifier" : "View-contextMenu-1-iOS",
               "type" : "image"
             }
           ],
@@ -556,7 +504,7 @@
 "doc://ColorComponents/documentation/ColorComponents/BWA/contextMenu(_:)": {
   "abstract" : [
     {
-      "text" : "Attaches a context menu and its children to the view.",
+      "text" : "Adds a context menu to the view.",
       "type" : "text"
     }
   ],

@@ -208,15 +208,6 @@
         {
           "inlineContent" : [
             {
-              "text" : "Badges are only displayed in list rows and tab bars.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
               "text" : "Use a badge to convey optional, supplementary information about a",
               "type" : "text"
             },
@@ -225,7 +216,15 @@
               "type" : "text"
             },
             {
-              "text" : "view. Keep the contents of the badge as short as possible.",
+              "text" : "view. Keep the contents of the badge as short as possible. Badges",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "appear only in list rows and tab bars.",
               "type" : "text"
             }
           ],
@@ -258,7 +257,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ". See",
+              "text" : ". For",
               "type" : "text"
             },
             {
@@ -266,12 +265,46 @@
               "type" : "text"
             },
             {
+              "text" : "more information about localizing strings, see ",
+              "type" : "text"
+            },
+            {
               "code" : "Text",
               "type" : "codeVoice"
             },
             {
-              "text" : " for more information about localizing strings.",
+              "text" : ". The following",
               "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "example shows a list with a “Default” badge on one of its rows.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "NavigationView {",
+            "    List(servers) { server in",
+            "        Text(server.name)",
+            "            .badge(server.isDefault ? \"Default\" : nil)",
+            "    }",
+            "    .navigationTitle(\"Servers\")",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-badge-3",
+              "type" : "image"
             }
           ],
           "type" : "paragraph"

@@ -1,0 +1,752 @@
+{
+  "abstract" : [
+    {
+      "text" : "Associates a destination view with a presented data type for use within",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "a navigation stack.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/navigationDestination(for:destination:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUI",
+    "externalID" : "s:7SwiftUI4ViewPAAE21navigationDestination3for11destinationQrqd__m_qd_0_qd__ctSHRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3BWAV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "navigationDestination"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "D"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "C"
+      },
+      {
+        "kind" : "text",
+        "text" : ">("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "for"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "D"
+      },
+      {
+        "kind" : "text",
+        "text" : ".Type, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "destination"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "D"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "C"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "9.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "navigationDestination(for:destination:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "navigationDestination"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "D"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "C"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "for"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "data"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "D"
+            },
+            {
+              "kind" : "text",
+              "text" : ".Type, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "destination"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "@escaping"
+            },
+            {
+              "kind" : "text",
+              "text" : " ("
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "D"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "C"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "D"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SH",
+              "text" : "Hashable"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "C"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The type of data that this destination matches.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "data"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A view builder that defines a view to display",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "when the stack’s navigation state contains a value of",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "type ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "data",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ". The closure takes one argument, which is the value",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "of the data to present.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "destination"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add this view modifer to a view inside a ",
+              "type" : "text"
+            },
+            {
+              "code" : "NavigationStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "describe the view that the stack displays when presenting",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a particular kind of data. Use a ",
+              "type" : "text"
+            },
+            {
+              "code" : "NavigationLink",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to present",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the data. For example, you can present a ",
+              "type" : "text"
+            },
+            {
+              "code" : "ColorDetail",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view for",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "each presentation of a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " instance:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "NavigationStack {",
+            "    List {",
+            "        NavigationLink(\"Mint\", value: Color.mint)",
+            "        NavigationLink(\"Pink\", value: Color.pink)",
+            "        NavigationLink(\"Teal\", value: Color.teal)",
+            "    }",
+            "    .navigationDestination(for: Color.self) { color in",
+            "        ColorDetail(color: color)",
+            "    }",
+            "    .navigationTitle(\"Colors\")",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can add more than one navigation destination modifier to the stack",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "if it needs to present more than one kind of data.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Do not put a navigation destination modifier inside a “lazy” container,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "like ",
+              "type" : "text"
+            },
+            {
+              "code" : "List",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or ",
+              "type" : "text"
+            },
+            {
+              "code" : "LazyVStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". These containers create child views",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "only when needed to render on screen. Add the navigation destination",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier outside these containers so that the navigation stack can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "always see the destination.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/bwa\/navigationdestination(for:destination:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA": {
+  "abstract" : [
+    {
+      "text" : "A black\/white color components representation with an alpha channel.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BWA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BWA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BWA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "View Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA/navigationDestination(for:destination:)": {
+  "abstract" : [
+    {
+      "text" : "Associates a destination view with a presented data type for use within",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "a navigation stack.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "navigationDestination"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "D"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "C"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "D"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "destination"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "D"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "C"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/navigationDestination(for:destination:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "navigationDestination(for:destination:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa\/navigationdestination(for:destination:)"
+}
+}
+}

@@ -216,15 +216,6 @@
         {
           "inlineContent" : [
             {
-              "text" : "Badges are only displayed in list rows and tab bars.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
               "text" : "Use a badge to convey optional, supplementary information about a",
               "type" : "text"
             },
@@ -233,7 +224,124 @@
               "type" : "text"
             },
             {
-              "text" : "view. Keep the contents of the badge as short as possible.",
+              "text" : "view. Keep the contents of the badge as short as possible. Badges",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "appear only in list rows and tab bars.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this initializer when you want to style a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view for use as a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "badge. The following example customizes the badge with the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text\/monospacedDigit()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text\/foregroundColor(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text\/bold()",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifiers.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "var body: some View {",
+            "    let badgeView = Text(\"\\(recentItems.count)\")",
+            "        .monospacedDigit()",
+            "        .foregroundColor(.red)",
+            "        .bold()",
+            "",
+            "    List {",
+            "        Text(\"Recents\")",
+            "            .badge(badgeView)",
+            "        Text(\"Favorites\")",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-badge-2",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Styling the text view has no effect when the badge appears in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a ",
+              "type" : "text"
+            },
+            {
+              "code" : "TabView",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             }
           ],

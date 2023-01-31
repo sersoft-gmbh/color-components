@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Adds a task to perform when this view appears or when a specified",
+      "text" : "Adds a task to perform before this view appears or when a specified",
       "type" : "text"
     },
     {
@@ -334,7 +334,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that runs the specified action asynchronously when",
+              "text" : "A view that runs the specified action asynchronously before",
               "type" : "text"
             },
             {
@@ -443,7 +443,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "when the view appears. SwiftUI automatically cancels the task",
+                  "text" : "before the view appears. SwiftUI can automatically cancel the task",
                   "type" : "text"
                 },
                 {
@@ -451,7 +451,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "if the view disappears before the action completes. If the",
+                  "text" : "after the view disappears before the action completes. If the",
                   "type" : "text"
                 },
                 {
@@ -880,7 +880,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSBA/task(id:priority:_:)": {
   "abstract" : [
     {
-      "text" : "Adds a task to perform when this view appears or when a specified",
+      "text" : "Adds a task to perform before this view appears or when a specified",
       "type" : "text"
     },
     {

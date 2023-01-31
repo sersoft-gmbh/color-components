@@ -380,72 +380,22 @@
           "type" : "paragraph"
         },
         {
-          "inlineContent" : [
-            {
-              "text" : "struct MyChartDescriptorRepresentable:",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "AXChartDescriptorRepresentable {",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "func makeChartDescriptor() -> AXChartDescriptor {",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "\/\/ build and return your ",
-              "type" : "text"
-            },
-            {
-              "code" : "AXChartDescriptor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " here",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "}",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
           "code" : [
-            "   func updateChartDescriptor(_ descriptor: AXChartDescriptor) {",
-            "      \/\/ Update your chart descriptor with any new values, or",
-            "      \/\/ don't override if your chart doesn't have changing values.",
-            "   }"
+            "struct MyChartDescriptorRepresentable:",
+            "AXChartDescriptorRepresentable {",
+            "    func makeChartDescriptor() -> AXChartDescriptor {",
+            "        \/\/ Build and return your `AXChartDescriptor` here.",
+            "    }",
+            "",
+            "    func updateChartDescriptor(_ descriptor: AXChartDescriptor) {",
+            "        \/\/ Update your chart descriptor with any new values, or",
+            "        \/\/ don't override if your chart doesn't have changing",
+            "        \/\/ values.",
+            "    }",
+            "}"
           ],
           "syntax" : null,
           "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "}",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
         },
         {
           "inlineContent" : [
@@ -489,21 +439,12 @@
           "type" : "paragraph"
         },
         {
-          "inlineContent" : [
-            {
-              "text" : "SomeChartView()",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : ".accessibilityChartDescriptor(MyChartDescriptorRepresentable())",
-              "type" : "text"
-            }
+          "code" : [
+            "SomeChartView()",
+            "    .accessibilityChartDescriptor(MyChartDescriptorRepresentable())"
           ],
-          "type" : "paragraph"
+          "syntax" : null,
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"

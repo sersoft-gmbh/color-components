@@ -325,7 +325,7 @@
               "type" : "text"
             },
             {
-              "text" : "supplying a collection views with each view wrapped in a",
+              "text" : "supplying a collection of views with each view wrapped in a",
               "type" : "text"
             },
             {
@@ -334,18 +334,6 @@
             },
             {
               "code" : "ToolbarItem",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", or by providing a collection of views as a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ToolbarItemGroup",
               "type" : "codeVoice"
             },
             {
@@ -360,7 +348,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "You can write a single toolbar that displays in both",
+                  "text" : "Customizable toolbars will be displayed on both macOS and iOS,",
                   "type" : "text"
                 },
                 {
@@ -368,7 +356,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "macOS and iOS, but only macOS apps support toolbar customization.",
+                  "text" : "but only apps running on iPadOS 16.0 and later will support",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "user customization.",
                   "type" : "text"
                 }
               ],
@@ -417,43 +413,47 @@
             "    @State private var fontSize = 12.0",
             "",
             "    var displayFont: Font {",
-            "        let font = Font.system(size: CGFloat(fontSize),",
-            "                               weight: bold == true ? .bold : .regular)",
+            "        let font = Font.system(",
+            "           size: CGFloat(fontSize),",
+            "             weight: bold == true ? .bold : .regular)",
             "        return italic == true ? font.italic() : font",
             "    }",
             "",
             "    var body: some View {",
-            "        VStack {",
-            "            TextEditor(text: $text)",
-            "                .font(displayFont)",
-            "                .toolbar(id: \"editingtools\") {",
-            "                    ToolbarItem(id: \"sizeSelector\") {",
-            "                        Slider(",
-            "                            value: $fontSize,",
-            "                            in: 8...120,",
-            "                            minimumValueLabel:",
-            "                                Text(\"A\").font(.system(size: 8)),",
-            "                            maximumValueLabel:",
-            "                                Text(\"A\").font(.system(size: 16))",
-            "                        ) {",
-            "                            Text(\"Font Size (\\(Int(fontSize)))\")",
-            "                        }",
-            "                        .frame(width: 150)",
+            "        TextEditor(text: $text)",
+            "            .font(displayFont)",
+            "            .toolbar(id: \"editingtools\") {",
+            "                ToolbarItem(",
+            "                    id: \"sizeSelector\", placement: .secondaryAction",
+            "                ) {",
+            "                    Slider(",
+            "                        value: $fontSize,",
+            "                        in: 8...120,",
+            "                        minimumValueLabel:",
+            "                            Text(\"A\").font(.system(size: 8)),",
+            "                        maximumValueLabel:",
+            "                            Text(\"A\").font(.system(size: 16))",
+            "                    ) {",
+            "                        Text(\"Font Size (\\(Int(fontSize)))\")",
             "                    }",
-            "                    ToolbarItem(id: \"bold\") {",
-            "                        Toggle(isOn: $bold) {",
-            "                            Image(systemName: \"bold\")",
-            "                        }",
-            "                    }",
-            "                    ToolbarItem(id: \"italic\") {",
-            "                        Toggle(isOn: $italic) {",
-            "                            Image(systemName: \"italic\")",
-            "                        }",
-            "                    }",
-            "",
+            "                    .frame(width: 150)",
             "                }",
-            "        }",
-            "        .navigationTitle(\"My Note\")",
+            "                ToolbarItem(",
+            "                    id: \"bold\", placement: .secondaryAction",
+            "                ) {",
+            "                    Toggle(isOn: $bold) {",
+            "                        Image(systemName: \"bold\")",
+            "                    }",
+            "                }",
+            "                ToolbarItem(",
+            "                    id: \"italic\", placement: .secondaryAction",
+            "                ) {",
+            "                    Toggle(isOn: $italic) {",
+            "                        Image(systemName: \"italic\")",
+            "                    }",
+            "                }",
+            "            }",
+            "            .navigationTitle(\"My Note\")",
             "    }",
             "}"
           ],
@@ -468,6 +468,46 @@
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Only ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ToolbarItemPlacement\/secondaryAction",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " items support",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "customization in iPadOS. Other items follow the normal",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "placement rules and can’t be customized by the user.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         },
         {
           "inlineContent" : [
@@ -527,7 +567,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "When you add the toolbar commands, the system adds a menu command to",
+              "text" : "When you add the toolbar commands, the system adds a menu item to",
               "type" : "text"
             },
             {
@@ -535,7 +575,7 @@
               "type" : "text"
             },
             {
-              "text" : "your app’s top level menu to provide toolbar customization support.",
+              "text" : "your app’s main menu to provide toolbar customization support.",
               "type" : "text"
             },
             {

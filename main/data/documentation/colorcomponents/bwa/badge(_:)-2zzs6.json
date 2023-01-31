@@ -200,7 +200,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "This modifier automatically formats the integer with a formatter",
+              "text" : "Use a badge to convey optional, supplementary information about a",
               "type" : "text"
             },
             {
@@ -208,33 +208,44 @@
               "type" : "text"
             },
             {
-              "text" : "appropriate for the current ",
+              "text" : "view. Keep the contents of the badge as short as possible. Badges",
               "type" : "text"
             },
             {
-              "code" : "Environment",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "appear only in list rows and tab bars.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example shows a ",
+              "type" : "text"
+            },
+            {
+              "code" : "List",
               "type" : "codeVoice"
             },
             {
-              "text" : ".",
+              "text" : " with the value of ",
               "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
+            },
             {
-              "text" : "Badges are only displayed in list rows and iOS tab bars.",
+              "code" : "recentItems.count",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
               "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
+            },
             {
-              "text" : "The following example shows a List with a badge on one of the rows:",
+              "text" : "represented by a badge on one of the rows:",
               "type" : "text"
             }
           ],
@@ -244,12 +255,21 @@
           "code" : [
             "List {",
             "    Text(\"Recents\")",
-            "        .badge(10)",
+            "        .badge(recentItems.count)",
             "    Text(\"Favorites\")",
             "}"
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "identifier" : "View-badge-1",
+              "type" : "image"
+            }
+          ],
+          "type" : "paragraph"
         }
       ],
       "kind" : "content"

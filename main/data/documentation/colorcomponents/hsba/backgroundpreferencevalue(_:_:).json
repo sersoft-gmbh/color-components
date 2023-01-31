@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Uses the specified preference value from the view to produce another",
+      "text" : "Reads the specified preference value from the view, using it to",
       "type" : "text"
     },
     {
@@ -9,7 +9,15 @@
       "type" : "text"
     },
     {
-      "text" : "view as a background to the first view.",
+      "text" : "produce a second view that is applied as the background of the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "original view.",
       "type" : "text"
     }
   ],
@@ -327,6 +335,67 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that layers a second view behind the view.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The preference key type whose value is to be read.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "key"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A function that produces the background view from",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the preference value read from the original view.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "transform"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -410,7 +479,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSBA/backgroundPreferenceValue(_:_:)": {
   "abstract" : [
     {
-      "text" : "Uses the specified preference value from the view to produce another",
+      "text" : "Reads the specified preference value from the view, using it to",
       "type" : "text"
     },
     {
@@ -418,7 +487,15 @@
       "type" : "text"
     },
     {
-      "text" : "view as a background to the first view.",
+      "text" : "produce a second view that is applied as the background of the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "original view.",
       "type" : "text"
     }
   ],

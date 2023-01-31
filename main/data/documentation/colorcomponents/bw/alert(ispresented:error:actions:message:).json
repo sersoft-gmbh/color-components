@@ -565,7 +565,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "In the example below, a button conditionally presents an alert depending",
+              "text" : "In the example below, a form conditionally presents an alert depending",
               "type" : "text"
             },
             {
@@ -614,19 +614,18 @@
         },
         {
           "code" : [
-            "struct TicketPurchaseView: View {",
-            "    @Binding var error: TicketPurchaseError?",
-            "    @State var showAlert = false",
+            "struct TicketPurchase: View {",
+            "    @State private var error: TicketPurchaseError? = nil",
+            "    @State private var showAlert = false",
+            "",
             "    var body: some View {",
-            "        TicketForm(error: $error)",
-            "            .alert(isPresented: $showAlert, error: error) {",
+            "        TicketForm(showAlert: $showAlert, error: $error)",
+            "            .alert(isPresented: $showAlert, error: error) { _ in",
             "                Button(\"OK\") {",
             "                    \/\/ Handle acknowledgement.",
             "                }",
             "            } message: { error in",
-            "                \/\/ Here, recommendation is a property of the",
-            "                \/\/ TicketPurchaseError type.",
-            "                Text(error.recommendation)",
+            "                Text(error.recoverySuggestion ?? \"Try again later.\")",
             "            }",
             "    }",
             "}"

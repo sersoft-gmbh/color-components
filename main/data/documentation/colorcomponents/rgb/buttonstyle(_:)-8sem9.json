@@ -258,6 +258,110 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can also use this modifier to set the style for controls with a button",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "style through composition:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "VStack {",
+            "    Menu(\"Terms and Conditions\") {",
+            "        Button(\"Open in Preview\", action: openInPreview)",
+            "        Button(\"Save as PDF\", action: saveAsPDF)",
+            "    }",
+            "    Toggle(\"Remember Password\", isOn: $isToggleOn)",
+            "    Toggle(\"Flag\", isOn: $flagged)",
+            "    Button(\"Sign In\", action: signIn)",
+            "}",
+            ".menuStyle(.button)",
+            ".toggleStyle(.button)",
+            ".buttonStyle(.bordered)"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In this example, ",
+              "type" : "text"
+            },
+            {
+              "code" : ".menuStyle(.button)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " says that the Terms and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Conditions menu renders as a button, while",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : ".toggleStyle(.button)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " says that the two toggles also render as",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "buttons. Finally, ",
+              "type" : "text"
+            },
+            {
+              "code" : ".buttonStyle(.bordered)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " says that the menu,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "both toggles, and the Sign In button all render with the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "bordered button style.```",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
         }
       ],
       "kind" : "content"

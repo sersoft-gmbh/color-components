@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Adds an action to perform when this view appears.",
+      "text" : "Adds an action to perform before this view appears.",
       "type" : "text"
     }
   ],
@@ -203,7 +203,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " when this view appears.",
+              "text" : " before it appears.",
               "type" : "text"
             }
           ],
@@ -254,6 +254,58 @@
           "name" : "action"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The exact moment that SwiftUI calls this method",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "depends on the specific view type that you apply it to, but",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ",
+              "type" : "text"
+            },
+            {
+              "code" : "action",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " closure completes before the first",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "rendered frame appears.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -337,7 +389,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGBA/onAppear(perform:)": {
   "abstract" : [
     {
-      "text" : "Adds an action to perform when this view appears.",
+      "text" : "Adds an action to perform before this view appears.",
       "type" : "text"
     }
   ],
