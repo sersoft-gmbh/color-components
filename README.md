@@ -21,7 +21,8 @@ Or add it via Xcode (as of Xcode 11).
 
 There are currently three color component implementations included in `ColorComponents`:
 -   `BW` & `BWA`
--   `HSB` & `HSBA`
+-   `HSB` & `HSBA` (with aliases for `HSV` & `HSVA`)
+-   `HSL` & `HSLA`
 -   `RGB` & `RGBA`
 
 Each implementation is generic and supports both integer values (0 - 255) and floating point values (0.0 - 1.0). Also, each implementation allows converting between them.
@@ -33,6 +34,7 @@ If available, each implementation also provides conversion options from and to t
 While not yet integrated, the following features might provide added value and could make it into this package in the future:
 
 -   CMYK color components.
+-   LAB color components.
 -   Color space support.
 -   More ways of converting between the components.
 
