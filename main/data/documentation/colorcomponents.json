@@ -46,6 +46,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
       ],
@@ -54,7 +56,9 @@
     {
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaFloatingPointColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorCompontentValue",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSV",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSVA"
       ],
       "title" : "Type Aliases"
     }
@@ -389,6 +393,142 @@
   "title" : "HSBA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSL": {
+  "abstract" : [
+    {
+      "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSL",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsl"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+  "abstract" : [
+    {
+      "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSLA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsla"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSV": {
+  "abstract" : [
+    {
+      "text" : "HSV is just an alias for HSB.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSV"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSV",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSV"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSV",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsv"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSVA": {
+  "abstract" : [
+    {
+      "text" : "HSVA is just an alias for HSBA.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSVA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSVA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSVA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSVA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsva"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB": {
   "abstract" : [

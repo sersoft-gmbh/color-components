@@ -201,6 +201,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(exactly:)-79kdy",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(exactly:)-8drkn",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(exactly:)-8jrgf",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(hsl:)-1nxl1",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(hsl:)-33wi1",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(hue:saturation:brightness:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(rgb:)-2cs9x",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(rgb:)-38k9p"
@@ -2241,6 +2243,168 @@
   "title" : "init(exactly:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsb\/init(exactly:)-8jrgf"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSB/init(hsl:)-1nxl1": {
+  "abstract" : [
+    {
+      "text" : "Creates new HSB components using the given HSL components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3HSLV",
+      "text" : "HSL"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(hsl:)-1nxl1",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsl:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsb\/init(hsl:)-1nxl1"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSB/init(hsl:)-33wi1": {
+  "abstract" : [
+    {
+      "text" : "Creates new HSB components using the given HSL components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3HSLV",
+      "text" : "HSL"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB\/init(hsl:)-33wi1",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsl:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsb\/init(hsl:)-33wi1"
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/init(hue:saturation:brightness:)": {
   "abstract" : [

@@ -208,6 +208,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hexString:)-41ds5",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsb:)-5rnn4",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsb:)-7spsu",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsl:)-5na93",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsl:)-8mj40",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(red:green:blue:)"
       ],
       "title" : "Initializers"
@@ -3606,6 +3608,168 @@
   "title" : "init(hsb:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/init(hsb:)-7spsu"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/init(hsl:)-5na93": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGB components using the given HSL components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3HSLV",
+      "text" : "HSL"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsl:)-5na93",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsl:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/init(hsl:)-5na93"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/init(hsl:)-8mj40": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGB components using the given HSL components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3HSLV",
+      "text" : "HSL"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(hsl:)-8mj40",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsl:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/init(hsl:)-8mj40"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/init(red:green:blue:)": {
   "abstract" : [
