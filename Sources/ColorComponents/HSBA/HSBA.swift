@@ -18,6 +18,9 @@ public struct HSB<Value: ColorCompontentValue>: ColorComponents {
     }
 }
 
+/// HSV is just an alias for HSB.
+public typealias HSV = HSB
+
 /// An HSBA (hue, saturation, brightness, alpha) color components representation.
 @frozen
 public struct HSBA<Value: ColorCompontentValue>: AlphaColorComponents {
@@ -69,6 +72,9 @@ public struct HSBA<Value: ColorCompontentValue>: AlphaColorComponents {
         self.init(hsb: .init(hue: hue, saturation: saturation, brightness: brightness), alpha: alpha)
     }
 }
+
+/// HSVA is just an alias for HSBA.
+public typealias HSVA = HSBA
 
 extension HSB where Value: BinaryInteger {
     /// Creates new HSB components from another HSB color components object with integer values.
@@ -278,6 +284,10 @@ extension HSBA: FloatingPointColorComponents where Value: FloatingPoint {
     public mutating func changeBrightness(by percent: Value) {
         hsb.changeBrightness(by: percent)
     }
+}
+
+extension HSB where Value: FloatingPoint {
+    var luminance: Value { brightness * (1 - saturation / 2) }
 }
 
 extension HSB: Sendable where Value: Sendable {}

@@ -41,7 +41,7 @@ final class RGBA_SwiftUITests: XCTestCase {
         let rgb = try XCTUnwrap(RGB<CGFloat>(color))
         let rgba = try XCTUnwrap(RGBA<CGFloat>(color))
         #else
-        try apiUnavailable()
+        try skipUnavailableAPI()
         #endif
 
         XCTAssertEqual(rgb.red, 0.5, accuracy: .ulpOfOne)
@@ -103,7 +103,7 @@ final class RGBA_SwiftUITests: XCTestCase {
         let rgb = try XCTUnwrap(RGB<UInt8>(color))
         let rgba = try XCTUnwrap(RGBA<UInt8>(color))
         #else
-        try apiUnavailable()
+        try skipUnavailableAPI()
         #endif
 
         XCTAssertEqual(rgb.red, .init(0.5 * 0xFF))

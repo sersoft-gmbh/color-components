@@ -5,7 +5,8 @@ import AppKit
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension NSColorSpace {
-    /// The default color space used by `HSB` and `HSBA` to create `NSColor`s when no color space was specified. This is currently equivalent to `NSColorSpace.colorComponentsDefaultRGB`.
+    /// The default color space used by `HSB` and `HSBA` to create `NSColor`s when no color space was specified.
+    /// This is currently equivalent to `NSColorSpace.colorComponentsDefaultRGB`.
     public static var colorComponentsDefaultHSB: NSColorSpace { .colorComponentsDefaultRGB }
 }
 

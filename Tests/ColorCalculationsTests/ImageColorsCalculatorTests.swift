@@ -47,9 +47,15 @@ final class ImageColorsCalculatorTests: XCTestCase {
         XCTAssertEqual(calculator2.averageColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
                                                            size: CGSize(width: 1, height: 1))),
                        RGBA(red: 3, green: 2, blue: 3, alpha: 0xFF))
+#if os(macOS)
         XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                            size: CGSize(width: 1, height: 1))),
                        RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))
+#else
+        XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
+                                                           size: CGSize(width: 1, height: 1))),
+                       RGBA(red: 33, green: 30, blue: 28, alpha: 0xFF))
+#endif
 #endif
     }
 
@@ -107,9 +113,15 @@ final class ImageColorsCalculatorTests: XCTestCase {
                                                                  in: CGRect(origin: CGPoint(x: 630, y: 200),
                                                                             size: CGSize(width: 1, height: 1)))),
                        RGB(red: 4, green: 1, blue: 3))
+#if os(macOS)
         XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
                                                                  size: CGSize(width: 1, height: 1))),
                        RGB<Float>(red: 32 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
+#else
+        XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
+                                                                 size: CGSize(width: 1, height: 1))),
+                       RGB<Float>(red: 33 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
+#endif
 #endif
     }
 

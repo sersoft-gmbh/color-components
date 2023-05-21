@@ -42,7 +42,7 @@ final class BWA_SwiftUITests: XCTestCase {
         let bw = try XCTUnwrap(BW<CGFloat>(color))
         let bwa = try XCTUnwrap(BWA<CGFloat>(color))
         #else
-        try apiUnavailable()
+        try skipUnavailableAPI()
         #endif
 
         XCTAssertEqual(bw.white, 0.5, accuracy: 0.00001)
@@ -92,7 +92,7 @@ final class BWA_SwiftUITests: XCTestCase {
         let bw = try XCTUnwrap(BW<UInt8>(color))
         let bwa = try XCTUnwrap(BWA<UInt8>(color))
         #else
-        try apiUnavailable()
+        try skipUnavailableAPI()
         #endif
 
         XCTAssertEqual(bw.white, 0xBF)
