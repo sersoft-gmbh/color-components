@@ -47,15 +47,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
         XCTAssertEqual(calculator2.averageColor(in: CGRect(origin: CGPoint(x: 2, y: 2),
                                                            size: CGSize(width: 1, height: 1))),
                        RGBA(red: 3, green: 2, blue: 3, alpha: 0xFF))
-#if os(macOS)
-        XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
-                                                           size: CGSize(width: 1, height: 1))),
-                       RGBA(red: 32, green: 30, blue: 28, alpha: 0xFF))
-#else
-        XCTAssertEqual(calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
-                                                           size: CGSize(width: 1, height: 1))),
-                       RGBA(red: 33, green: 30, blue: 28, alpha: 0xFF))
-#endif
+
+        let avgColor50_50 = calculator3.averageColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
+                                                                size: CGSize(width: 1, height: 1)))
+        XCTAssertEqual(avgColor50_50.red, 32, accuracy: 1)
+        XCTAssertEqual(avgColor50_50.green, 30)
+        XCTAssertEqual(avgColor50_50.blue, 28)
+        XCTAssertEqual(avgColor50_50.alpha, 0xFF)
 #endif
     }
 
@@ -113,15 +111,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
                                                                  in: CGRect(origin: CGPoint(x: 630, y: 200),
                                                                             size: CGSize(width: 1, height: 1)))),
                        RGB(red: 4, green: 1, blue: 3))
-#if os(macOS)
-        XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
-                                                                 size: CGSize(width: 1, height: 1))),
-                       RGB<Float>(red: 32 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
-#else
-        XCTAssertEqual(calculator3.mostProminentColor(in: CGRect(origin: CGPoint(x: 50, y: 50),
-                                                                 size: CGSize(width: 1, height: 1))),
-                       RGB<Float>(red: 33 / 0xFF, green: 30 / 0xFF, blue: 28 / 0xFF))
-#endif
+
+        let mostPromColor50_50 = calculator3.mostProminentColor(as: Float.self,
+                                                                in: CGRect(origin: CGPoint(x: 50, y: 50),
+                                                                           size: CGSize(width: 1, height: 1)))
+        XCTAssertEqual(mostPromColor50_50.red * 0xFF, 32, accuracy: 1)
+        XCTAssertEqual(mostPromColor50_50.green, 30 / 0xFF)
+        XCTAssertEqual(mostPromColor50_50.blue, 28 / 0xFF)
 #endif
     }
 
