@@ -1,0 +1,578 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new view that exposes the provided object to other views whose",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "whose state depends on the active scene.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/focusedSceneObject(_:)-3utkt"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUI",
+    "externalID" : "s:7SwiftUI4ViewPAAE18focusedSceneObjectyQrqd__Sg7Combine010ObservableF0Rd__lF::SYNTHESIZED::s:15ColorComponents3HSLV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "focusedSceneObject"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : ">("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "T"
+      },
+      {
+        "kind" : "text",
+        "text" : "?) -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "9.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "focusedSceneObject(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "focusedSceneObject"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "object"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : "?) -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7Combine16ObservableObjectP",
+              "text" : "ObservableObject"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that supplies an observable object while the scene",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "is active.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The observable object to associate with the scene, or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "if no object is currently available.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "object"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this method instead of ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/focusedObject(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " for observable",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "objects that must be visible regardless of where focus is located in the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "active scene. This is sometimes needed for things like main menu and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "discoverability HUD commands that observe and update data from the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "active scene but aren’t concerned with what the user is actually focused",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "on. The scene’s root view can supply the scene’s state object:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct RootView: View {",
+            "    @StateObject private var sceneData = SceneData()",
+            "",
+            "    var body: some View {",
+            "        NavigationSplitView {",
+            "            ...",
+            "        }",
+            "        .focusedSceneObject(sceneData)",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Interested views can then use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "FocusedObject",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " property wrapper to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "observe and update the active scene’s state object. In this example, an",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "app command updates the active scene’s data, and is enabled as long as",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "any scene is active.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct MessageCommands: Commands {",
+            "    @FocusedObject private var sceneData: SceneData?",
+            "",
+            "    var body: some Commands {",
+            "        CommandGroup(after: .newItem) {",
+            "            Button(\"New Message\") {",
+            "                sceneData?.addMessage()",
+            "            }",
+            "            .keyboardShortcut(\"n\", modifiers: [.option, .command])",
+            "            .disabled(sceneData == nil)",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/hsl\/focusedsceneobject(_:)-3utkt"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSL": {
+  "abstract" : [
+    {
+      "text" : "An opaque HSL (hue, saturation, luminance) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSL",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsl"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSL/View-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/View-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "View Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsl\/view-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSL/focusedSceneObject(_:)-3utkt": {
+  "abstract" : [
+    {
+      "text" : "Creates a new view that exposes the provided object to other views whose",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "whose state depends on the active scene.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "focusedSceneObject"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL\/focusedSceneObject(_:)-3utkt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "focusedSceneObject(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsl\/focusedsceneobject(_:)-3utkt"
+}
+}
+}

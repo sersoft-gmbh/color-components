@@ -1,0 +1,665 @@
+{
+  "abstract" : [
+    {
+      "text" : "Associates a destination view with a binding that can be used to push",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the view onto a ",
+      "type" : "text"
+    },
+    {
+      "code" : "NavigationStack",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/navigationDestination(isPresented:destination:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUI",
+    "externalID" : "s:7SwiftUI4ViewPAAE21navigationDestination11isPresented11destinationQrAA7BindingVySbG_qd__yXEtAaBRd__lF::SYNTHESIZED::s:15ColorComponents3BWAV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "navigationDestination"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "V"
+      },
+      {
+        "kind" : "text",
+        "text" : ">("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isPresented"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI7BindingV",
+        "text" : "Binding"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "destination"
+      },
+      {
+        "kind" : "text",
+        "text" : ": () -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "V"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "9.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "navigationDestination(isPresented:destination:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "navigationDestination"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "V"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "isPresented"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI7BindingV",
+              "text" : "Binding"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : ">, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "destination"
+            },
+            {
+              "kind" : "text",
+              "text" : ": () -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "V"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "V"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A binding to a Boolean value that indicates whether",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "destination",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " is currently presented.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "isPresented"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A view to present.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "destination"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In general, favor binding a path to a navigation stack for programmatic",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "navigation. Add this view modifer to a view inside a ",
+              "type" : "text"
+            },
+            {
+              "code" : "NavigationStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to programmatically push a single view onto the stack. This is useful",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for building components that can push an associated view. For example,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "you can present a ",
+              "type" : "text"
+            },
+            {
+              "code" : "ColorDetail",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view for a particular color:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@State private var showDetails = false",
+            "var favoriteColor: Color",
+            "",
+            "NavigationStack {",
+            "    VStack {",
+            "        Circle()",
+            "            .fill(favoriteColor)",
+            "        Button(\"Show details\") {",
+            "            showDetails = true",
+            "        }",
+            "    }",
+            "    .navigationDestination(isPresented: $showDetails) {",
+            "        ColorDetail(color: favoriteColor)",
+            "    }",
+            "    .navigationTitle(\"My Favorite Color\")",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Do not put a navigation destination modifier inside a “lazy” container,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "like ",
+              "type" : "text"
+            },
+            {
+              "code" : "List",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or ",
+              "type" : "text"
+            },
+            {
+              "code" : "LazyVStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". These containers create child views",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "only when needed to render on screen. Add the navigation destination",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier outside these containers so that the navigation stack can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "always see the destination.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/bwa\/navigationdestination(ispresented:destination:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA": {
+  "abstract" : [
+    {
+      "text" : "A black\/white color components representation with an alpha channel.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BWA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BWA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BWA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA/View-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/View-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "View Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/BWA/navigationDestination(isPresented:destination:)": {
+  "abstract" : [
+    {
+      "text" : "Associates a destination view with a binding that can be used to push",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the view onto a ",
+      "type" : "text"
+    },
+    {
+      "code" : "NavigationStack",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "navigationDestination"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "isPresented"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI7BindingV",
+      "text" : "Binding"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "destination"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/navigationDestination(isPresented:destination:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "navigationDestination(isPresented:destination:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa\/navigationdestination(ispresented:destination:)"
+}
+}
+}

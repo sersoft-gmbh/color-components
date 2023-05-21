@@ -1,0 +1,354 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates new RGBA components using the given HSLA components.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Value",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "BinaryFloatingPoint",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "ColorComponents",
+    "externalID" : "s:15ColorComponents4RGBAVAASBRzrlE4hslaACyxGAA4HSLAVyxG_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "hsla"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:15ColorComponents4HSLAV",
+        "text" : "HSLA"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Value"
+      },
+      {
+        "kind" : "text",
+        "text" : ">)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(hsla:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "hsla"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:15ColorComponents4HSLAV",
+              "text" : "HSLA"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Value"
+            },
+            {
+              "kind" : "text",
+              "text" : ">)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The HSLA components to convert to RGBA.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "hsla"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/rgba\/init(hsla:)-8iqcf"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/HSLA": {
+  "abstract" : [
+    {
+      "text" : "An HSLA (hue, saturation, luminance, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HSLA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "HSLA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/hsla"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGBA": {
+  "abstract" : [
+    {
+      "text" : "An RGBA (red, green, blue, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RGBA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RGBA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RGBA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgba"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGBA/init(hsla:)-8iqcf": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGBA components using the given HSLA components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hsla"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4HSLAV",
+      "text" : "HSLA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(hsla:)-8iqcf",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(hsla:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgba\/init(hsla:)-8iqcf"
+}
+}
+}

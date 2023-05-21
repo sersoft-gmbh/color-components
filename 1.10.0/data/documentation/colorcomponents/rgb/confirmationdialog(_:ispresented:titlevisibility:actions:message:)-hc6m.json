@@ -1,0 +1,1056 @@
+{
+  "abstract" : [
+    {
+      "text" : "Presents a confirmation dialog with a message when a given condition is",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "true, using a localized string key for the title.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/confirmationDialog(_:isPresented:titleVisibility:actions:message:)-hc6m"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUI",
+    "externalID" : "s:7SwiftUI4ViewPAAE18confirmationDialog_11isPresented15titleVisibility7actions7messageQrAA18LocalizedStringKeyV_AA7BindingVySbGAA0I0Oqd__yXEqd_0_yXEtAaBRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3RGBV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "confirmationDialog"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "A"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "genericParameter",
+        "text" : "M"
+      },
+      {
+        "kind" : "text",
+        "text" : ">("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI18LocalizedStringKeyV",
+        "text" : "LocalizedStringKey"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "isPresented"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI7BindingV",
+        "text" : "Binding"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ">, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "titleVisibility"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI10VisibilityO",
+        "text" : "Visibility"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "actions"
+      },
+      {
+        "kind" : "text",
+        "text" : ": () -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "A"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "message"
+      },
+      {
+        "kind" : "text",
+        "text" : ": () -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "M"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents"
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "12.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "tvOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "8.0",
+        "name" : "watchOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "confirmationDialog(_:isPresented:titleVisibility:actions:message:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "confirmationDialog"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "A"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "genericParameter",
+              "text" : "M"
+            },
+            {
+              "kind" : "text",
+              "text" : ">("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "titleKey"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI18LocalizedStringKeyV",
+              "text" : "LocalizedStringKey"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "isPresented"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI7BindingV",
+              "text" : "Binding"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : ">, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "titleVisibility"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI10VisibilityO",
+              "text" : "Visibility"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .automatic, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "actions"
+            },
+            {
+              "kind" : "text",
+              "text" : ": () -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "A"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "message"
+            },
+            {
+              "kind" : "text",
+              "text" : ": () -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "M"
+            },
+            {
+              "kind" : "text",
+              "text" : ") -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "where"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "A"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "M"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The key for the localized string that describes the title",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "of the dialog.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "titleKey"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A binding to a Boolean value that determines whether to",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "present the dialog. When the user presses or taps the dialog’s",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "default action button, the system sets this value to ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "false",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ",",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "dismissing the dialog.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "isPresented"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The visibility of the dialog’s title. The default",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "value is ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Visibility\/automatic",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "titleVisibility"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A view builder returning the dialog’s actions.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "actions"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A view builder returning the message for the dialog.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "message"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In the example below, a button conditionally presents a confirmation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "dialog depending upon the value of a bound Boolean variable. When the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Boolean value is set to ",
+              "type" : "text"
+            },
+            {
+              "code" : "true",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", the system displays a confirmation",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "dialog with a cancel action and a destructive action.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct ConfirmEraseItems: View {",
+            "    @State private var isShowingDialog = false",
+            "    var body: some View {",
+            "        Button(\"Empty Trash\") {",
+            "            isShowingDialog = true",
+            "        }",
+            "        .confirmationDialog(",
+            "            \"Permanently erase the items in the Trash?\",",
+            "            isPresented: $isShowingDialog",
+            "        ) {",
+            "            Button(\"Empty Trash\", role: .destructive) {",
+            "                \/\/ Handle empty trash action.",
+            "            }",
+            "        } message: {",
+            "            Text(\"You cannot undo this action.\")",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "All actions in a confirmation dialog will dismiss the dialog after the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "action runs. The default button will be shown with greater prominence.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "You can influence the default button by assigning it the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "KeyboardShortcut\/defaultAction",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " keyboard shortcut.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The system may reorder the buttons based on their role and prominence.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Dialogs include a standard dismiss action by default. If you provide a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "button with a role of ",
+              "type" : "text"
+            },
+            {
+              "code" : "ButtonRole\/cancel",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", that button takes the place",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of the default dismiss action. You don’t have to dismiss the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "presentation with the cancel button’s action.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "In regular size classes in iOS, the system renders confirmation",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "dialogs as a popover that the user dismisses by tapping anywhere outside",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the popover, rather than displaying the standard dismiss action.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "On iOS, tvOS, and watchOS, confirmation dialogs only support controls",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with labels that are ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". Passing any other type of view results in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the content being omitted.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This modifier creates a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view for the title on your behalf, and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "treats the localized key similar to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text\/init(_:tableName:bundle:comment:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". See ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " for more",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information about localizing strings.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/rgb\/confirmationdialog(_:ispresented:titlevisibility:actions:message:)-hc6m"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB": {
+  "abstract" : [
+    {
+      "text" : "An opaque RGB (red, green, blue) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RGB"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RGB"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RGB",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/View-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "View Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/view-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/confirmationDialog(_:isPresented:titleVisibility:actions:message:)-hc6m": {
+  "abstract" : [
+    {
+      "text" : "Presents a confirmation dialog with a message when a given condition is",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "true, using a localized string key for the title.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "confirmationDialog"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "A"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "M"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI18LocalizedStringKeyV",
+      "text" : "LocalizedStringKey"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "isPresented"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI7BindingV",
+      "text" : "Binding"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ">, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "titleVisibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI10VisibilityO",
+      "text" : "Visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "actions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "A"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "M"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/confirmationDialog(_:isPresented:titleVisibility:actions:message:)-hc6m",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "confirmationDialog(_:isPresented:titleVisibility:actions:message:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/confirmationdialog(_:ispresented:titlevisibility:actions:message:)-hc6m"
+}
+}
+}
