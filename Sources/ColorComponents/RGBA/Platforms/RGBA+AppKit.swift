@@ -5,7 +5,7 @@ import AppKit
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension NSColorSpace {
-    /// The default color space used by `HSB` and `HSBA` to create `NSColor`s when no color space was specified.
+    /// The default color space used by `RGB` and `RGBA` to create `NSColor`s when no color space was specified.
     /// This is currently equivalent to `NSColorSpace.deviceRGB`.
     public static var colorComponentsDefaultRGB: NSColorSpace { .deviceRGB }
 }
@@ -36,7 +36,7 @@ extension NSColor {
 
     /// Creates a new color using the given RGBA components and color space.
     /// - Parameters:
-    ///   - hsba: The RGBA components.
+    ///   - rgba: The RGBA components.
     ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ rgba: RGBA<Value>,
@@ -56,7 +56,7 @@ extension NSColor {
 
     /// Creates a new color using the given RGBA components and color space.
     /// - Parameters:
-    ///   - hsba: The RGBA components.
+    ///   - rgba: The RGBA components.
     ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ rgba: RGBA<Value>,

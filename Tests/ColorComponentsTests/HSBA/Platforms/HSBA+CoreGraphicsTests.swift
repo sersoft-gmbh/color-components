@@ -6,7 +6,7 @@ import ColorComponents
 
 final class HSBA_CoreGraphicsTests: XCTestCase {
     func testCGColorCreationWithFloatingPoint() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -22,13 +22,13 @@ final class HSBA_CoreGraphicsTests: XCTestCase {
         XCTAssertEqual(alphaColor.components, [0.5625, 0.75, 0.375, 0.25])
         XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
         XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromCGColorWithFloatingPoint() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         else { try skipUnavailableAPI() }
 
@@ -49,13 +49,13 @@ final class HSBA_CoreGraphicsTests: XCTestCase {
         XCTAssertNotNil(HSB<CGFloat>(exactly: cgColor))
         XCTAssertNil(HSB<InexactFloat>(exactly: cgColor))
         XCTAssertNil(HSBA<InexactFloat>(exactly: cgColor))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCGColorCreationWithInteger() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -71,13 +71,13 @@ final class HSBA_CoreGraphicsTests: XCTestCase {
         XCTAssertEqual(alphaColor.components, HSBA<CGFloat>(hsba).cgColor.components)
         XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
         XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromCGColorWithInteger() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         else { try skipUnavailableAPI() }
 
@@ -98,8 +98,8 @@ final class HSBA_CoreGraphicsTests: XCTestCase {
         XCTAssertNotNil(try HSBA<UInt8>(exactly: XCTUnwrap(CGColor(colorSpace: colorSpace, components: [1, 1, 1, 1]))))
         XCTAssertNil(HSB<Int8>(exactly: cgColor))
         XCTAssertNil(HSBA<Int8>(exactly: cgColor))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

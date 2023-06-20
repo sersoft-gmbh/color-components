@@ -16,7 +16,7 @@ final class RGBA_HSLATests: XCTestCase {
         XCTAssertEqual(rgba.alpha, hsla.alpha)
     }
 
-    func testCreationFromRGBA_WithIntegers() {
+    func testCreationFromHSLA_WithIntegers() {
         let hsl = HSL<UInt8>(hue: 0xFA, saturation: 0x80, luminance: 0xB0)
         let hsla = HSLA<UInt8>(hsl: hsl, alpha: 0xFA)
 

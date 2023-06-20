@@ -6,7 +6,7 @@ import ColorComponents
 
 final class BWA_AppKitTests: XCTestCase {
     func testNSColorCreationWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let bw = BW<CGFloat>(white: 0.5)
         let bwa = BWA(bw: bw, alpha: 0.25)
 
@@ -17,13 +17,13 @@ final class BWA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.alphaComponent, 0.25)
         XCTAssertEqual(opaqueColor.whiteComponent, 0.5)
         XCTAssertEqual(alphaColor.whiteComponent, 0.5)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color = NSColor(colorSpace: .genericGray, components: [0.5, 0.25], count: 2)
 
         let bw = BW<CGFloat>(color)
@@ -34,13 +34,13 @@ final class BWA_AppKitTests: XCTestCase {
         XCTAssertEqual(bwa.alpha, color.alphaComponent)
         XCTAssertNil(BW<InexactFloat>(exactly: color))
         XCTAssertNil(BWA<InexactFloat>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testNSColorCreationWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let bw = BW<UInt8>(white: 128)
         let bwa = BWA(bw: bw, alpha: 64)
 
@@ -51,13 +51,13 @@ final class BWA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.alphaComponent, 64 / 0xFF)
         XCTAssertEqual(opaqueColor.whiteComponent, 128 / 0xFF)
         XCTAssertEqual(alphaColor.whiteComponent, 128 / 0xFF)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color = NSColor(colorSpace: .genericGray, components: [0.75, 0.25], count: 2)
 
         let bw = BW<UInt8>(color)
@@ -68,8 +68,8 @@ final class BWA_AppKitTests: XCTestCase {
         XCTAssertEqual(bwa.alpha, .init(0.25 * 0xFF))
         XCTAssertNil(BW<Int8>(exactly: color))
         XCTAssertNil(BWA<Int8>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

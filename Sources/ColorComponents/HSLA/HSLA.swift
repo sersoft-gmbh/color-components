@@ -298,5 +298,5 @@ extension HSLA: Encodable where Value: Encodable {}
 extension HSL: Decodable where Value: Decodable {}
 extension HSLA: Decodable where Value: Decodable {}
 
-//extension HSL: CustomPlaygroundDisplayConvertible {}
-//extension HSLA: CustomPlaygroundDisplayConvertible {}
+extension HSL: CustomPlaygroundDisplayConvertible {}
+extension HSLA: CustomPlaygroundDisplayConvertible {}

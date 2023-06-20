@@ -179,8 +179,8 @@ extension RGB where Value: BinaryInteger {
     @inlinable
     func _rgbHexString(uppercase: Bool) -> String {
         red._hexString(uppercase: uppercase)
-            + green._hexString(uppercase: uppercase)
-            + blue._hexString(uppercase: uppercase)
+        + green._hexString(uppercase: uppercase)
+        + blue._hexString(uppercase: uppercase)
     }
 
     /// Returns an RGB hex string representing these components.

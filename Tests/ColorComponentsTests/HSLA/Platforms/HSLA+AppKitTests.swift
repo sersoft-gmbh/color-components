@@ -6,7 +6,7 @@ import ColorComponents
 
 final class HSLA_AppKitTests: XCTestCase {
     func testNSColorCreationWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let hsl = HSL<CGFloat>(hue: 0.25, saturation: 0.5, luminance: 0.75)
         let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
@@ -21,13 +21,13 @@ final class HSLA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.saturationComponent, HSBA(hsla: hsla).saturation, accuracy: .ulpOfOne)
         XCTAssertEqual(opaqueColor.brightnessComponent, hsl.brightness)
         XCTAssertEqual(alphaColor.brightnessComponent, hsla.brightness)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color: NSColor
         if #available(macOS 10.12, *) {
             color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
@@ -47,13 +47,13 @@ final class HSLA_AppKitTests: XCTestCase {
         XCTAssertEqual(hsla.alpha, color.alphaComponent)
         XCTAssertNil(HSL<InexactFloat>(exactly: color))
         XCTAssertNil(HSLA<InexactFloat>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testNSColorCreationWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let hsl = HSL<UInt8>(hue: 0x40, saturation: 0x80, luminance: 0xB0)
         let hsla = HSLA(hsl: hsl, alpha: 0x40)
 
@@ -68,13 +68,13 @@ final class HSLA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.saturationComponent, HSBA(alphaColor).saturation, accuracy: .ulpOfOne)
         XCTAssertEqual(opaqueColor.brightnessComponent, HSB(opaqueColor).brightness, accuracy: .ulpOfOne)
         XCTAssertEqual(alphaColor.brightnessComponent, HSBA(alphaColor).brightness, accuracy: .ulpOfOne)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color: NSColor
         if #available(macOS 10.12, *) {
             color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
@@ -94,8 +94,8 @@ final class HSLA_AppKitTests: XCTestCase {
         XCTAssertEqual(hsla.alpha, .init(color.alphaComponent * 0xFF))
         XCTAssertNil(HSL<Int8>(exactly: color))
         XCTAssertNil(HSLA<Int8>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

@@ -26,7 +26,7 @@ extension NSColor {
 
     /// Creates a new color using the given HSLA components and color space.
     /// - Parameters:
-    ///   - hsba: The HSLA components.
+    ///   - hsla: The HSLA components.
     ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSL`.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ hsla: HSLA<Value>,
@@ -46,7 +46,7 @@ extension NSColor {
 
     /// Creates a new color using the given HSLA components and color space.
     /// - Parameters:
-    ///   - hsba: The HSLA components.
+    ///   - hsla: The HSLA components.
     ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSL`.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ hsla: HSLA<Value>,

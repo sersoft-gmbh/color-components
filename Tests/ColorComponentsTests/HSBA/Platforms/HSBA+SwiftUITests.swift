@@ -9,8 +9,8 @@ import ColorComponents
 
 final class HSBA_SwiftUITests: XCTestCase {
     func testColorCreationWithFloatingPoint() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -19,31 +19,31 @@ final class HSBA_SwiftUITests: XCTestCase {
 
         XCTAssertEqual(Color(hsb), Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 1))
         XCTAssertEqual(Color(hsba), Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromColorWithFloatingPoint() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
         let color = Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25)
 
-        #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
+#if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
         let hsb = HSB<CGFloat>(color)
         let hsba = HSBA<CGFloat>(color)
-        #elseif canImport(CoreGraphics)
+#elseif canImport(CoreGraphics)
         let hsb = try XCTUnwrap(HSB<CGFloat>(color))
         let hsba = try XCTUnwrap(HSBA<CGFloat>(color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
 
         XCTAssertEqual(hsb.hue, 0.5, accuracy: .ulpOfOne)
         XCTAssertEqual(hsba.hue, 0.5, accuracy: .ulpOfOne)
@@ -54,17 +54,17 @@ final class HSBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(hsba.alpha, 0.25)
         XCTAssertNil(HSB<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(HSBA<InexactFloat>(exactly: Color(white: 1)))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testColorCreationWithInteger() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -81,31 +81,31 @@ final class HSBA_SwiftUITests: XCTestCase {
                              saturation: .init(hsba.saturation) / 0xFF,
                              brightness: .init(hsba.brightness) / 0xFF,
                              opacity: .init(hsba.alpha) / 0xFF))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromColorWithInteger() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
         let color = Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25)
 
-        #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
+#if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
         let hsb = HSB<UInt8>(color)
         let hsba = HSBA<UInt8>(color)
-        #elseif canImport(CoreGraphics)
+#elseif canImport(CoreGraphics)
         let hsb = try XCTUnwrap(HSB<UInt8>(color))
         let hsba = try XCTUnwrap(HSBA<UInt8>(color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
 
         XCTAssertEqual(hsb.hue, .init(0.5 * 0xFF))
         XCTAssertEqual(hsba.hue, .init(0.5 * 0xFF))
@@ -116,17 +116,17 @@ final class HSBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(hsba.alpha, .init(0.25 * 0xFF))
         XCTAssertNil(HSB<Int8>(exactly: color))
         XCTAssertNil(HSBA<Int8>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testViewConformance() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -135,11 +135,11 @@ final class HSBA_SwiftUITests: XCTestCase {
 
         XCTAssertEqual(hsb.body as? Color, Color(hsb))
         XCTAssertEqual(hsba.body as? Color, Color(hsba))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

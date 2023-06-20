@@ -293,5 +293,5 @@ extension RGBA: Encodable where Value: Encodable {}
 extension RGB: Decodable where Value: Decodable {}
 extension RGBA: Decodable where Value: Decodable {}
 
-//extension RGB: CustomPlaygroundDisplayConvertible {}
-//extension RGBA: CustomPlaygroundDisplayConvertible {}
+extension RGB: CustomPlaygroundDisplayConvertible {}
+extension RGBA: CustomPlaygroundDisplayConvertible {}

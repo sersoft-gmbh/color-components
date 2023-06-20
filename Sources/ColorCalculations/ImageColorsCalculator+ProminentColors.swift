@@ -15,7 +15,7 @@ extension ImageColorsCalculator {
                                             in rect: CGRect?,
                                             distanceAs colorDistance: ColorDistanceMode,
                                             pixelLimit: Int,
-                                            colorLimit: Int) -> [Cluster<SIMD3<V>>]
+                                            colorLimit: Int) -> Array<Cluster<SIMD3<V>>>
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
         assert(pixelLimit > 0)
@@ -63,7 +63,7 @@ extension ImageColorsCalculator {
                                    in rect: CGRect? = nil,
                                    distanceAs colorDistance: ColorDistanceMode = .linearSRGB,
                                    pixelLimit: Int = 1024,
-                                   colorLimit: Int = 8) -> [RGB<V>]
+                                   colorLimit: Int = 8) -> Array<RGB<V>>
     where V: SIMDScalar, V: BinaryFloatingPoint
     {
         _prominentColorClusters(as: type, in: rect, distanceAs: colorDistance, pixelLimit: pixelLimit, colorLimit: colorLimit)
@@ -153,7 +153,7 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
     // - We dynamically lower `k` if the count is less than the desired `k`.
     func kMeansClustered<D, G>(atMost maxK: Int,
                                using randomNumberGenerator: inout G,
-                               distance: (Element, Element) -> D) -> [Cluster<Element>]
+                               distance: (Element, Element) -> D) -> Array<Cluster<Element>>
     where D: Comparable, G: RandomNumberGenerator
     {
         guard !isEmpty else { return [] }
@@ -183,11 +183,11 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
                 }
             }
         } while errors > 0 && iters < 1024
-        #if DEBUG
+#if DEBUG
         if iters >= 1024 {
             print("[ColorCalculator.prominentColors]: Exceeded clustering iteration limit...")
         }
-        #endif
+#endif
         return clusters
     }
 }
@@ -207,10 +207,10 @@ fileprivate extension RandomAccessCollection {
 }
 
 fileprivate extension RandomAccessCollection where Index: FixedWidthInteger {
-    func randomElements<G>(count elemCount: Int, using randomGenerator: inout G) -> [Element]
+    func randomElements<G>(count elemCount: Int, using randomGenerator: inout G) -> Array<Element>
     where G: RandomNumberGenerator
     {
-        guard !isEmpty else { return [] }
+        guard !isEmpty else { return .init() }
         guard count > elemCount else { return Array(self) }
 
         // We collect the indices in a set, but the elements in an array to keep the random ordering.

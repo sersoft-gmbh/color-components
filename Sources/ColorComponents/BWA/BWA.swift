@@ -251,5 +251,5 @@ extension BWA: Encodable where Value: Encodable {}
 extension BW: Decodable where Value: Decodable {}
 extension BWA: Decodable where Value: Decodable {}
 
-//extension BW: CustomPlaygroundDisplayConvertible {}
-//extension BWA: CustomPlaygroundDisplayConvertible {}
+extension BW: CustomPlaygroundDisplayConvertible {}
+extension BWA: CustomPlaygroundDisplayConvertible {}

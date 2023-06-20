@@ -5,48 +5,48 @@ import SwiftUI
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Color {
     @inlinable
-    init<Value: BinaryFloatingPoint>(_ rgb: RGB<Value>, opacity: Value) {
-        self.init(red: .init(rgb.red), green: .init(rgb.green), blue: .init(rgb.blue), opacity: .init(opacity))
+    init<Value: BinaryFloatingPoint>(_ cieXYZ: CIE.XYZ<Value>, opacity: Value) {
+        self.init(RGB<Value>(cieXYZ: cieXYZ), opacity: opacity)
     }
 
-    /// Creates a new color using the given RGB components.
-    /// - Parameter rgb: The RGB components.
+    /// Creates a new color using the given CIE.XYZ components.
+    /// - Parameter cieXYZ: The CIE.XYZ components.
     @inlinable
-    public init<Value: BinaryFloatingPoint>(_ rgb: RGB<Value>) {
-        self.init(rgb, opacity: 1)
+    public init<Value: BinaryFloatingPoint>(_ cieXYZ: CIE.XYZ<Value>) {
+        self.init(cieXYZ, opacity: 1)
     }
 
-    /// Creates a new color using the given RGBA components.
-    /// - Parameter rgba: The RGBA components.
+    /// Creates a new color using the given CIE.XYZA components.
+    /// - Parameter cieXYZA: The CIE.XYZA components.
     @inlinable
-    public init<Value: BinaryFloatingPoint>(_ rgba: RGBA<Value>) {
-        self.init(rgba.rgb, opacity: rgba.alpha)
+    public init<Value: BinaryFloatingPoint>(_ cieXYZA: CIE.XYZA<Value>) {
+        self.init(cieXYZA.xyz, opacity: cieXYZA.alpha)
     }
 
-    /// Creates a new color using the given RGB components.
-    /// - Parameter rgb: The RGB components.
+    /// Creates a new color using the given CIE.XYZ components.
+    /// - Parameter cieXYZ: The CIE.XYZ components.
     @inlinable
-    public init<Value: BinaryInteger>(_ rgb: RGB<Value>) {
-        self.init(RGB<Double>(rgb))
+    public init<Value: BinaryInteger>(_ cieXYZ: CIE.XYZ<Value>) {
+        self.init(CIE.XYZ<Double>(cieXYZ))
     }
 
-    /// Creates a new color using the given RGBA components.
-    /// - Parameter rgba: The RGBA components.
+    /// Creates a new color using the given CIE.XYZA components.
+    /// - Parameter cieXYZA: The CIE.XYZA components.
     @inlinable
-    public init<Value: BinaryInteger>(_ rgba: RGBA<Value>) {
-        self.init(RGBA<Double>(rgba))
+    public init<Value: BinaryInteger>(_ cieXYZA: CIE.XYZA<Value>) {
+        self.init(CIE.XYZA<Double>(cieXYZA))
     }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension RGB: View where Value: BinaryFloatingPoint {
+extension CIE.XYZ: View where Value: BinaryFloatingPoint {
     /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
-extension RGBA: View where Value: BinaryFloatingPoint {
+extension CIE.XYZA: View where Value: BinaryFloatingPoint {
     /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
@@ -54,8 +54,8 @@ extension RGBA: View where Value: BinaryFloatingPoint {
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGB where Value: BinaryFloatingPoint {
-    /// Creates new RGB components from the given color.
+extension CIE.XYZ where Value: BinaryFloatingPoint {
+    /// Creates new CIE.XYZ components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
@@ -64,11 +64,11 @@ extension RGB where Value: BinaryFloatingPoint {
         self.init(_PlatformColor(color))
     }
 
-    /// Tries to create new RGB components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -76,8 +76,8 @@ extension RGB where Value: BinaryFloatingPoint {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGB where Value: BinaryInteger {
-    /// Creates new RGB components from the given color.
+extension CIE.XYZ where Value: BinaryInteger {
+    /// Creates new CIE.XYZ components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
@@ -86,11 +86,11 @@ extension RGB where Value: BinaryInteger {
         self.init(_PlatformColor(color))
     }
 
-    /// Tries to create new RGB components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -98,8 +98,8 @@ extension RGB where Value: BinaryInteger {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGBA where Value: BinaryFloatingPoint {
-    /// Creates new RGBA components from the given color.
+extension CIE.XYZA where Value: BinaryFloatingPoint {
+    /// Creates new CIE.XYZA components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
@@ -108,11 +108,11 @@ extension RGBA where Value: BinaryFloatingPoint {
         self.init(_PlatformColor(color))
     }
 
-    /// Tries to create new RGBA components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -120,8 +120,8 @@ extension RGBA where Value: BinaryFloatingPoint {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGBA where Value: BinaryInteger {
-    /// Creates new RGBA components from the given color.
+extension CIE.XYZA where Value: BinaryInteger {
+    /// Creates new CIE.XYZA components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
@@ -130,11 +130,11 @@ extension RGBA where Value: BinaryInteger {
         self.init(_PlatformColor(color))
     }
 
-    /// Tries to create new RGBA components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -144,8 +144,8 @@ extension RGBA where Value: BinaryInteger {
 import class CoreGraphics.CGColor
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGB where Value: BinaryFloatingPoint {
-    /// Creates new RGB components from the given color.
+extension CIE.XYZ where Value: BinaryFloatingPoint {
+    /// Creates new CIE.XYZ components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This only returns `nil` if `cgColor` on `color` is `nil`.
@@ -155,11 +155,11 @@ extension RGB where Value: BinaryFloatingPoint {
         self.init(cgColor)
     }
 
-    /// Tries to create new RGB components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -168,8 +168,8 @@ extension RGB where Value: BinaryFloatingPoint {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGB where Value: BinaryInteger {
-    /// Creates new RGB components from the given color.
+extension CIE.XYZ where Value: BinaryInteger {
+    /// Creates new CIE.XYZ components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This only returns `nil` if `cgColor` on `color` is `nil`.
@@ -179,11 +179,11 @@ extension RGB where Value: BinaryInteger {
         self.init(cgColor)
     }
 
-    /// Tries to create new RGB components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -192,8 +192,8 @@ extension RGB where Value: BinaryInteger {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGBA where Value: BinaryFloatingPoint {
-    /// Creates new RGBA components from the given color.
+extension CIE.XYZA where Value: BinaryFloatingPoint {
+    /// Creates new CIE.XYZA components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This only returns `nil` if `cgColor` on `color` is `nil`.
@@ -203,11 +203,11 @@ extension RGBA where Value: BinaryFloatingPoint {
         self.init(cgColor)
     }
 
-    /// Tries to create new RGBA components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -216,8 +216,8 @@ extension RGBA where Value: BinaryFloatingPoint {
 }
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
-extension RGBA where Value: BinaryInteger {
-    /// Creates new RGBA components from the given color.
+extension CIE.XYZA where Value: BinaryInteger {
+    /// Creates new CIE.XYZA components from the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This only returns `nil` if `cgColor` on `color` is `nil`.
@@ -227,11 +227,11 @@ extension RGBA where Value: BinaryInteger {
         self.init(cgColor)
     }
 
-    /// Tries to create new RGBA components that exactly match the components of the given color.
+    /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }

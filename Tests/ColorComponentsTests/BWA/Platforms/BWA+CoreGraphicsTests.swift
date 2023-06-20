@@ -6,7 +6,7 @@ import ColorComponents
 
 final class BWA_CoreGraphicsTests: XCTestCase {
     func testCGColorCreationWithFloatingPoint() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -22,13 +22,13 @@ final class BWA_CoreGraphicsTests: XCTestCase {
         XCTAssertEqual(alphaColor.components, [0.5, 0.25])
         XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
         XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromCGColorWithFloatingPoint() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         else { try skipUnavailableAPI() }
 
@@ -45,13 +45,13 @@ final class BWA_CoreGraphicsTests: XCTestCase {
         XCTAssertNotNil(BW<CGFloat>(exactly: cgColor))
         XCTAssertNil(BW<InexactFloat>(exactly: cgColor))
         XCTAssertNil(BWA<InexactFloat>(exactly: cgColor))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCGColorCreationWithInteger() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -67,13 +67,13 @@ final class BWA_CoreGraphicsTests: XCTestCase {
         XCTAssertEqual(alphaColor.components, [0x80 / 0xFF as CGFloat, 0x40 / 0xFF as CGFloat])
         XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
         XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromCGColorWithInteger() throws {
-        #if canImport(CoreGraphics)
+#if canImport(CoreGraphics)
         guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         else { try skipUnavailableAPI() }
 
@@ -88,8 +88,8 @@ final class BWA_CoreGraphicsTests: XCTestCase {
         XCTAssertEqual(bwa.alpha, 0x7F)
         XCTAssertNil(BW<Int8>(exactly: cgColor))
         XCTAssertNil(BWA<Int8>(exactly: cgColor))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

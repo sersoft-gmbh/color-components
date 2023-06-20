@@ -6,7 +6,7 @@ import ColorComponents
 
 final class HSLA_UIKitTests: XCTestCase {
     func testUIColorCreationWithFloatingPoint() throws {
-        #if canImport(UIKit)
+#if canImport(UIKit)
         let hsl = HSL<CGFloat>(hue: 0.5, saturation: 0.25, luminance: 0.75)
         let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
@@ -25,13 +25,13 @@ final class HSLA_UIKitTests: XCTestCase {
         XCTAssertEqual(saturation, HSBA(hsla: hsla).saturation, accuracy: .ulpOfOne)
         XCTAssertEqual(brightness, HSBA(hsla: hsla).brightness)
         XCTAssertEqual(alpha, hsla.alpha)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromUIColorWithFloatingPoint() throws {
-        #if canImport(UIKit)
+#if canImport(UIKit)
         let hue: CGFloat = 0.5
         let saturation: CGFloat = 0.25
         let brightness: CGFloat = 0.75
@@ -52,13 +52,13 @@ final class HSLA_UIKitTests: XCTestCase {
         XCTAssertNil(HSL<InexactFloat>(exactly: NoCompsUIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)))
         XCTAssertNil(HSL<InexactFloat>(exactly: color))
         XCTAssertNil(HSL<InexactFloat>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testUIColorCreationWithInteger() throws {
-        #if canImport(UIKit)
+#if canImport(UIKit)
         let hsl = HSL<UInt8>(hue: 0x80, saturation: 0x40, luminance: 0xB0)
         let hsla = HSLA(hsl: hsl, alpha: 0x40)
 
@@ -77,13 +77,13 @@ final class HSLA_UIKitTests: XCTestCase {
         XCTAssertEqual(saturation, HSBA(hsla: HSLA(hsla)).saturation, accuracy: .ulpOfOne)
         XCTAssertEqual(brightness, HSBA(hsla: HSLA(hsla)).brightness, accuracy: .ulpOfOne)
         XCTAssertEqual(alpha, .init(hsla.alpha) / 0xFF, accuracy: .ulpOfOne)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromUIColorWithInteger() throws {
-        #if canImport(UIKit)
+#if canImport(UIKit)
         let hue: CGFloat = 0.5
         let saturation: CGFloat = 0.25
         let brightness: CGFloat = 0.75
@@ -104,8 +104,8 @@ final class HSLA_UIKitTests: XCTestCase {
         XCTAssertNil(HSL<Int8>(exactly: NoCompsUIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)))
         XCTAssertNil(HSL<Int8>(exactly: color))
         XCTAssertNil(HSL<Int8>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }
