@@ -27,8 +27,8 @@ extension NSColor {
 
     @inlinable
     func _requireColorSpace(in targetColorSpaces: Set<NSColorSpace>,
-                           convertingTo targetColorSpace: NSColorSpace,
-                           file: StaticString = #file, line: UInt = #line) -> NSColor {
+                            convertingTo targetColorSpace: NSColorSpace,
+                            file: StaticString = #file, line: UInt = #line) -> NSColor {
         guard !targetColorSpaces.contains(colorSpace) else { return self }
         return _requireConverted(to: targetColorSpace, file: file, line: line)
     }

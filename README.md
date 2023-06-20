@@ -19,13 +19,14 @@ Or add it via Xcode (as of Xcode 11).
 
 ## Usage
 
-There are currently three color component implementations included in `ColorComponents`:
+These color component implementations are currently included in `ColorComponents`:
 -   `BW` & `BWA`
 -   `HSB` & `HSBA` (with aliases for `HSV` & `HSVA`)
 -   `HSL` & `HSLA`
 -   `RGB` & `RGBA`
+-   `CIE.XYZ` & `CIE.XYZA`
 
-Each implementation is generic and supports both integer values (0 - 255) and floating point values (0.0 - 1.0). Also, each implementation allows converting between them.
+Each implementation is generic and supports both integer values (0 - 255) and floating point values (0.0 - 1.0). Also, conversions between components have been implemented. Some conversions have to go through other components, though.
 
 If available, each implementation also provides conversion options from and to the platform native colors (e.g. `UIColor` on iOS, tvOS & watchOS and `NSColor` on macOS). `SwiftUI.Color` is also supported as of macOS 11, iOS 14, tvOS 14 and watchOS 7. Due to the lack of direct component accessors, `SwiftUI.Color` support goes through the aforementioned platform colors.
 
@@ -36,7 +37,7 @@ While not yet integrated, the following features might provide added value and c
 -   CMYK color components.
 -   LAB color components.
 -   Color space support.
--   More ways of converting between the components.
+-   More ways of converting between components, by implementing conversion paths.
 
 ## Documentation
 

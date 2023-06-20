@@ -8,8 +8,8 @@ import ColorComponents
 
 final class RGBA_SwiftUITests: XCTestCase {
     func testColorCreationWithFloatingPoint() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -18,31 +18,31 @@ final class RGBA_SwiftUITests: XCTestCase {
 
         XCTAssertEqual(Color(rgb), Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 1))
         XCTAssertEqual(Color(rgba), Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromColorWithFloatingPoint() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
         let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
 
-        #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
+#if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
         let rgb = RGB<CGFloat>(color)
         let rgba = RGBA<CGFloat>(color)
-        #elseif canImport(CoreGraphics)
+#elseif canImport(CoreGraphics)
         let rgb = try XCTUnwrap(RGB<CGFloat>(color))
         let rgba = try XCTUnwrap(RGBA<CGFloat>(color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
 
         XCTAssertEqual(rgb.red, 0.5, accuracy: .ulpOfOne)
         XCTAssertEqual(rgba.red, 0.5, accuracy: .ulpOfOne)
@@ -53,17 +53,17 @@ final class RGBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(rgba.alpha, 0.25)
         XCTAssertNil(RGB<InexactFloat>(exactly: Color(white: 1)))
         XCTAssertNil(RGBA<InexactFloat>(exactly: Color(white: 1)))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testColorCreationWithInteger() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -80,31 +80,31 @@ final class RGBA_SwiftUITests: XCTestCase {
                              green: .init(rgba.green) / 0xFF,
                              blue: .init(rgba.blue) / 0xFF,
                              opacity: .init(rgba.alpha) / 0xFF))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromColorWithInteger() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine)
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
         let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
 
-        #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
+#if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
         let rgb = RGB<UInt8>(color)
         let rgba = RGBA<UInt8>(color)
-        #elseif canImport(CoreGraphics)
+#elseif canImport(CoreGraphics)
         let rgb = try XCTUnwrap(RGB<UInt8>(color))
         let rgba = try XCTUnwrap(RGBA<UInt8>(color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
 
         XCTAssertEqual(rgb.red, .init(0.5 * 0xFF))
         XCTAssertEqual(rgba.red, .init(0.5 * 0xFF))
@@ -115,17 +115,17 @@ final class RGBA_SwiftUITests: XCTestCase {
         XCTAssertEqual(rgba.alpha, .init(0.25 * 0xFF))
         XCTAssertNil(RGB<Int8>(exactly: Color(white: 1)))
         XCTAssertNil(RGBA<Int8>(exactly: Color(white: 1)))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testViewConformance() throws {
-        #if arch(arm64) || arch(x86_64)
-        #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
+#if arch(arm64) || arch(x86_64)
+#if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -134,11 +134,11 @@ final class RGBA_SwiftUITests: XCTestCase {
 
         XCTAssertEqual(rgb.body as? Color, Color(rgb))
         XCTAssertEqual(rgba.body as? Color, Color(rgba))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
-        #else
+#endif
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }

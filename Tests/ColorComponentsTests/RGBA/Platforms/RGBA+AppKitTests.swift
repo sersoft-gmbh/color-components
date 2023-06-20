@@ -6,7 +6,7 @@ import ColorComponents
 
 final class RGBA_AppKitTests: XCTestCase {
     func testNSColorCreationWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let rgb = RGB<CGFloat>(red: 0.25, green: 0.5, blue: 0.75)
         let rgba = RGBA(rgb: rgb, alpha: 0.25)
 
@@ -21,15 +21,15 @@ final class RGBA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.greenComponent, rgba.green)
         XCTAssertEqual(opaqueColor.blueComponent, rgb.blue)
         XCTAssertEqual(alphaColor.blueComponent, rgba.blue)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithFloatingPoint() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color = NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
-        
+
         let rgb = RGB<CGFloat>(color)
         let rgba = RGBA<CGFloat>(color)
 
@@ -42,13 +42,13 @@ final class RGBA_AppKitTests: XCTestCase {
         XCTAssertEqual(rgba.alpha, color.alphaComponent)
         XCTAssertNil(RGB<InexactFloat>(exactly: color))
         XCTAssertNil(RGBA<InexactFloat>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testNSColorCreationWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let rgb = RGB<UInt8>(red: 0x40, green: 0x80, blue: 0xB0)
         let rgba = RGBA(rgb: rgb, alpha: 0x40)
 
@@ -63,13 +63,13 @@ final class RGBA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.greenComponent, .init(rgba.green) / 0xFF)
         XCTAssertEqual(opaqueColor.blueComponent, .init(rgb.blue) / 0xFF)
         XCTAssertEqual(alphaColor.blueComponent, .init(rgba.blue) / 0xFF)
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 
     func testCreationFromNSColorWithInteger() throws {
-        #if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let color = NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
 
         let rgb = RGB<UInt8>(color)
@@ -84,8 +84,8 @@ final class RGBA_AppKitTests: XCTestCase {
         XCTAssertEqual(rgba.alpha, .init(color.alphaComponent * 0xFF))
         XCTAssertNil(RGB<Int8>(exactly: color))
         XCTAssertNil(RGBA<Int8>(exactly: color))
-        #else
+#else
         try skipUnavailableAPI()
-        #endif
+#endif
     }
 }
