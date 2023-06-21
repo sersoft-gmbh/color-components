@@ -159,6 +159,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/AlphaColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
         "doc:\/\/ColorComponents\/Se",
         "doc:\/\/ColorComponents\/SE",
         "doc:\/\/ColorComponents\/SQ",
@@ -192,6 +193,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-82gmc",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-fwmp",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(_:)-sii8",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-2b0ni",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-3t1ar",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(exactly:)-5bin3",
@@ -242,6 +245,7 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/AlphaColorComponents-Implementations",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Decodable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/Equatable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/FloatingPointColorComponents-Implementations",
@@ -486,6 +490,17 @@
   "title" : "AlphaColorComponents Implementations",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/alphacolorcomponents-implementations"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGBA/ColorComponents-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/ColorComponents-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ColorComponents Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgba\/colorcomponents-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/Decodable-Implementations": {
   "abstract" : [
@@ -2080,6 +2095,186 @@
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/init(_:)-sii8"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-4lwm7": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGBA components using the given CIE.XYZA components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cieXYZA"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO",
+      "text" : "CIE"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO4XYZAV",
+      "text" : "XYZA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-4lwm7",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(cieXYZA:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgba\/init(ciexyza:)-4lwm7"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGBA/init(cieXYZA:)-7oeiu": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGBA components using the given CIE.XYZA components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cieXYZA"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO",
+      "text" : "CIE"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO4XYZAV",
+      "text" : "XYZA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/init(cieXYZA:)-7oeiu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(cieXYZA:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgba\/init(ciexyza:)-7oeiu"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/init(exactly:)-2b0ni": {
   "abstract" : [
@@ -4078,6 +4273,11 @@
   "title" : "rgb",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba\/rgb"
+},
+"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+  "title" : "Swift.CustomPlaygroundDisplayConvertible",
+  "type" : "unresolvable"
 },
 "doc://ColorComponents/s8SendableP": {
   "identifier" : "doc:\/\/ColorComponents\/s8SendableP",

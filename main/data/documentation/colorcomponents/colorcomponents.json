@@ -118,6 +118,8 @@
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
@@ -144,6 +146,14 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/Value"
       ],
       "title" : "Associated Types"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep"
+      ],
+      "title" : "Instance Properties"
     }
   ],
   "variants" : [
@@ -283,6 +293,74 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa"
 },
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+  "abstract" : [
+    {
+      "text" : "An opaque XYZ color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZ",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+  "abstract" : [
+    {
+      "text" : "An XYZA (x, y, z, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyza"
+},
 "doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [
     {
@@ -372,6 +450,233 @@
   "title" : "Value",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/colorcomponents\/value"
+},
+"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-4z5s8": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomPlaygroundDisplayConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "playgroundDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "Any"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-4z5s8",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "playgroundDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-4z5s8"
+},
+"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-6qj63": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomPlaygroundDisplayConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "playgroundDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "Any"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-6qj63",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "playgroundDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-6qj63"
+},
+"doc://ColorComponents/documentation/ColorComponents/ColorComponents/playgroundDescription-86oep": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomPlaygroundDisplayConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "playgroundDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "Any"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents\/playgroundDescription-86oep",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "playgroundDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/colorcomponents\/playgrounddescription-86oep"
 },
 "doc://ColorComponents/documentation/ColorComponents/FloatingPointColorComponents": {
   "abstract" : [

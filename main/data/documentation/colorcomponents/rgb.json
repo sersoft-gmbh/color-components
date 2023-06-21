@@ -158,6 +158,7 @@
       "identifiers" : [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/FloatingPointColorComponents",
+        "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
         "doc:\/\/ColorComponents\/Se",
         "doc:\/\/ColorComponents\/SE",
         "doc:\/\/ColorComponents\/SQ",
@@ -191,6 +192,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(_:)-8z3rk",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(_:)-9oc5a",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(_:)-l7ag",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-l9iu",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(exactly:)-26eot",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(exactly:)-4pwxq",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(exactly:)-5v20q",
@@ -237,6 +240,7 @@
     {
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/ColorComponents-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/Decodable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/Equatable-Implementations",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/FloatingPointColorComponents-Implementations",
@@ -436,6 +440,17 @@
   "title" : "RGB",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/ColorComponents-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/ColorComponents-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "ColorComponents Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/colorcomponents-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/Decodable-Implementations": {
   "abstract" : [
@@ -1994,6 +2009,186 @@
   "title" : "init(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/init(_:)-l7ag"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/init(cieXYZ:)-153ri": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGB components using the given CIE.XYZ components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryInteger",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cieXYZ"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO",
+      "text" : "CIE"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO3XYZV",
+      "text" : "XYZ"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-153ri",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(cieXYZ:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/init(ciexyz:)-153ri"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/init(cieXYZ:)-l9iu": {
+  "abstract" : [
+    {
+      "text" : "Creates new RGB components using the given CIE.XYZ components.",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Value",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "BinaryFloatingPoint",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cieXYZ"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO",
+      "text" : "CIE"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3CIEO3XYZV",
+      "text" : "XYZ"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Value"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/init(cieXYZ:)-l9iu",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(cieXYZ:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/init(ciexyz:)-l9iu"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/init(exactly:)-26eot": {
   "abstract" : [
@@ -3878,6 +4073,11 @@
   "title" : "red",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/red"
+},
+"doc://ColorComponents/s34CustomPlaygroundDisplayConvertibleP": {
+  "identifier" : "doc:\/\/ColorComponents\/s34CustomPlaygroundDisplayConvertibleP",
+  "title" : "Swift.CustomPlaygroundDisplayConvertible",
+  "type" : "unresolvable"
 },
 "doc://ColorComponents/s8SendableP": {
   "identifier" : "doc:\/\/ColorComponents\/s8SendableP",
