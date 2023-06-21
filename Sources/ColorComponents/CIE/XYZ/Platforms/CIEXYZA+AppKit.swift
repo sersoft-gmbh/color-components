@@ -59,10 +59,6 @@ extension NSColor {
         self.init(CIE.XYZA<CGFloat>(cieXYZA), colorSpace: colorSpace)
     }
 
-    func _convertedToCIEXYZ() -> NSColor {
-        _convertedToRGB()
-    }
-
     @usableFromInline
     func _extractCIEXYZA() -> CIE.XYZA<CGFloat> {
         .init(rgba: _extractRGBA())
