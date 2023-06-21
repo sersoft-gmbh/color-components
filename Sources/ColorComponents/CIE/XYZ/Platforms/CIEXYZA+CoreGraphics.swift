@@ -19,7 +19,9 @@ extension CGColor {
         let xyz = _extractCIEXYZ(alpha: &alpha)
         return .init(xyz: xyz, alpha: alpha)
     }
+}
 
+extension CGColor {
     @usableFromInline
     static func _makeXYZA(x: CGFloat, y: CGFloat, z: CGFloat, alpha: CGFloat = 1) -> CGColor {
         ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
