@@ -187,5 +187,7 @@ final class CIEXYZATests: XCTestCase {
 
         XCTAssertEqual(cieXYZ.y, 0.35)
         XCTAssertEqual(cieXYZA.y, 0.35)
+        XCTAssertEqual(cieXYZ.y, cieXYZ.brightness)
+        XCTAssertEqual(cieXYZA.y, cieXYZA.brightness)
     }
 }
