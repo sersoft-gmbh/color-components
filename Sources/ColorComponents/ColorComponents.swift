@@ -77,10 +77,34 @@ extension FloatingPointColorComponents where Value: ExpressibleByFloatLiteral {
     public var isBrightColor: Bool { brightness >= 0.5 }
 }
 
+fileprivate extension ColorComponents {
+    var _floatingPointPlaygroundSupport: _FloatingPointColorComponentsPlaygroundSupport? {
+        self as? _FloatingPointColorComponentsPlaygroundSupport
+    }
+}
+
+fileprivate extension ColorComponents {
+    var _binaryIntegerPlaygroundSupport: _BinaryIntegerColorComponentsPlaygroundSupport? {
+        self as? _BinaryIntegerColorComponentsPlaygroundSupport
+    }
+}
+
+extension ColorComponents where Self: CustomPlaygroundDisplayConvertible, Value: BinaryFloatingPoint {
+    public var playgroundDescription: Any {
+        _floatingPointPlaygroundSupport?._playgroundColor ?? String(describing: self)
+    }
+}
+
+extension ColorComponents where Self: CustomPlaygroundDisplayConvertible, Value: BinaryInteger {
+    public var playgroundDescription: Any {
+        _binaryIntegerPlaygroundSupport?._playgroundColor ?? String(describing: self)
+    }
+}
+
 extension ColorComponents where Self: CustomPlaygroundDisplayConvertible {
     public var playgroundDescription: Any {
-        (self as? _BinaryIntegerColorComponentsPlaygroundSupport)?._playgroundColor
-        ?? (self as? _FloatingPointColorComponentsPlaygroundSupport)?._playgroundColor
+        _binaryIntegerPlaygroundSupport?._playgroundColor
+        ?? _floatingPointPlaygroundSupport?._playgroundColor
         ?? String(describing: self)
     }
 }
