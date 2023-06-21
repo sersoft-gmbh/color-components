@@ -9,14 +9,12 @@ extension CGColorSpace {
 
 extension CGColorSpace {
     static func _require(named colorSpaceName: CFString, file: StaticString = #file, line: UInt = #line) -> CGColorSpace {
-        guard let colorSpace = CGColorSpace(name: colorSpaceName) else {
-            fatalError("Could not create color space named \(colorSpaceName)", file: file, line: line)
-        }
+        guard let colorSpace = CGColorSpace(name: colorSpaceName)
+        else { fatalError("Could not create color space named \(colorSpaceName)", file: file, line: line) }
         return colorSpace
     }
 }
 
-@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
 extension CGColor {
     @usableFromInline
     static func _makeRequired(in colorSpaceName: CFString, components: UnsafePointer<CGFloat>,
@@ -28,11 +26,22 @@ extension CGColor {
     }
 
     @usableFromInline
+    func _requireCompontens<R: RangeExpression>(in range: R, file: StaticString = #file, line: UInt = #line) -> Array<CGFloat>
+    where R.Bound == Int
+    {
+        guard range.contains(numberOfComponents), let components = components
+        else { fatalError("CGColor has no or an invalid number of components: \(self)", file: file, line: line) }
+        return components
+    }
+}
+
+@available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
+extension CGColor {
+    @usableFromInline
     func _requireConverted(to colorSpaceName: CFString, file: StaticString = #file, line: UInt = #line) -> CGColor {
         let colorSpace = CGColorSpace._require(named: colorSpaceName, file: file, line: line)
-        guard let color = converted(to: colorSpace, intent: .defaultIntent, options: nil) else {
-            fatalError("Could not convert CGColor \(self) to \(colorSpace) (\(colorSpaceName))", file: file, line: line)
-        }
+        guard let color = converted(to: colorSpace, intent: .defaultIntent, options: nil)
+        else { fatalError("Could not convert CGColor \(self) to \(colorSpace) (\(colorSpaceName))", file: file, line: line) }
         return color
     }
 
@@ -50,15 +59,5 @@ extension CGColor {
 //        guard colorSpace?.name.map(colorSpaceNames.contains) != true else { return self }
 //        return _requireConverted(to: colorSpaceName, file: file, line: line)
 //    }
-
-    @usableFromInline
-    func _requireCompontens<R: RangeExpression>(in range: R, file: StaticString = #file, line: UInt = #line) -> Array<CGFloat>
-    where R.Bound == Int
-    {
-        guard range.contains(numberOfComponents), let components = components else {
-            fatalError("CGColor has no or an invalid number of components: \(self)", file: file, line: line)
-        }
-        return components
-    }
 }
 #endif

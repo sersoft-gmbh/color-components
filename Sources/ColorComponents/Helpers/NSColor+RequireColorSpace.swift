@@ -6,15 +6,14 @@ import AppKit
 @available(watchOS, unavailable)
 extension NSColor {
     @inlinable
-    convenience init(colorSpace: NSColorSpace, components: [CGFloat]) {
+    convenience init(colorSpace: NSColorSpace, components: Array<CGFloat>) {
         self.init(colorSpace: colorSpace, components: components, count: components.count)
     }
 
     @usableFromInline
     func _requireConverted(to targetColorSpace: NSColorSpace, file: StaticString = #file, line: UInt = #line) -> NSColor {
-        guard let converted = usingColorSpace(targetColorSpace) else {
-            fatalError("Could not convert NSColor \(self) to \(targetColorSpace)", file: file, line: line)
-        }
+        guard let converted = usingColorSpace(targetColorSpace)
+        else { fatalError("Could not convert NSColor \(self) to \(targetColorSpace)", file: file, line: line) }
         return converted
     }
 
