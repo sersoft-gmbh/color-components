@@ -21,10 +21,15 @@ extension CGColor {
     }
 }
 
+@available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
 extension CGColor {
     @usableFromInline
     static func _makeXYZA(x: CGFloat, y: CGFloat, z: CGFloat, alpha: CGFloat = 1) -> CGColor {
-        ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
+        if #available(macOS 11, *) {
+            return ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
+        } else {
+            return RGBA(cieXYZA: .init(x: x, y: y, z: z, alpha: alpha)).cgColor
+        }
     }
 }
 
