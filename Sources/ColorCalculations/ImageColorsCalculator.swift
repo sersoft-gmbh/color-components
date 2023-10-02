@@ -16,7 +16,7 @@ public struct ImageColorsCalculator {
         self.image = image
     }
 
-    private func rgba(for filter: CIFilter & CIAreaReductionFilter, in area: CGRect?) -> RGBA<UInt8> {
+    private func rgba(for filter: some CIFilter & CIAreaReductionFilter, in area: CGRect?) -> RGBA<UInt8> {
         filter.setDefaults()
         filter.inputImage = image
         filter.extent = area ?? image.extent

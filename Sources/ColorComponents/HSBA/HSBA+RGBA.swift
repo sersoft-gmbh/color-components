@@ -12,7 +12,7 @@ extension HSB where Value: BinaryFloatingPoint {
 extension HSBA where Value: BinaryFloatingPoint {
     /// Creates new HSBA components using the given RGBA components.
     /// - Parameter rgba: The RGBA components to convert to HSBA.
-    /// - SeeAlso: `HSB.init(rgb:)`
+    /// - SeeAlso: ``HSB/init(rgb:)``
     @inlinable
     public init(rgba: RGBA<Value>) {
         self.init(hsb: HSB(rgb: rgba.rgb), alpha: rgba.alpha)
@@ -31,7 +31,7 @@ extension HSB where Value: BinaryInteger {
 extension HSBA where Value: BinaryInteger {
     /// Creates new HSBA components using the given RGBA components.
     /// - Parameter rgba: The RGBA components to convert to HSBA.
-    /// - SeeAlso: `HSB.init(rgb:)`
+    /// - SeeAlso: ``HSB/init(rgb:)``
     @inlinable
     public init(rgba: RGBA<Value>) {
         self.init(hsb: HSB(rgb: rgba.rgb), alpha: rgba.alpha)

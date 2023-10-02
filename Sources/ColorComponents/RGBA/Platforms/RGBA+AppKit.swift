@@ -5,7 +5,7 @@ import AppKit
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension NSColorSpace {
-    /// The default color space used by `RGB` and `RGBA` to create `NSColor`s when no color space was specified.
+    /// The default color space used by ``RGB`` and ``RGBA`` to create `NSColor`s when no color space was specified.
     /// This is currently equivalent to `NSColorSpace.deviceRGB`.
     public static var colorComponentsDefaultRGB: NSColorSpace { .deviceRGB }
 }
@@ -27,7 +27,7 @@ extension NSColor {
     /// Creates a new color using the given RGB components and color space.
     /// - Parameters:
     ///   - rgb: The RGB components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultRGB``.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ rgb: RGB<Value>,
                                                         colorSpace: NSColorSpace = .colorComponentsDefaultRGB) {
@@ -37,7 +37,7 @@ extension NSColor {
     /// Creates a new color using the given RGBA components and color space.
     /// - Parameters:
     ///   - rgba: The RGBA components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultRGB``.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ rgba: RGBA<Value>,
                                                         colorSpace: NSColorSpace = .colorComponentsDefaultRGB) {
@@ -47,7 +47,7 @@ extension NSColor {
     /// Creates a new color using the given RGB components and color space.
     /// - Parameters:
     ///   - rgb: The RGB components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultRGB``.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ rgb: RGB<Value>,
                                                   colorSpace: NSColorSpace = .colorComponentsDefaultRGB) {
@@ -57,7 +57,7 @@ extension NSColor {
     /// Creates a new color using the given RGBA components and color space.
     /// - Parameters:
     ///   - rgba: The RGBA components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultRGB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultRGB``.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ rgba: RGBA<Value>,
                                                   colorSpace: NSColorSpace = .colorComponentsDefaultRGB) {
@@ -89,7 +89,7 @@ extension NSColor {
 extension RGB where Value: BinaryFloatingPoint {
     /// Creates new RGB components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -98,9 +98,9 @@ extension RGB where Value: BinaryFloatingPoint {
 
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractRGBA().rgb)
@@ -113,7 +113,7 @@ extension RGB where Value: BinaryFloatingPoint {
 extension RGB where Value: BinaryInteger {
     /// Creates new RGB components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -122,9 +122,9 @@ extension RGB where Value: BinaryInteger {
 
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractRGBA().rgb)
@@ -137,7 +137,7 @@ extension RGB where Value: BinaryInteger {
 extension RGBA where Value: BinaryFloatingPoint {
     /// Creates new RGBA components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -146,9 +146,9 @@ extension RGBA where Value: BinaryFloatingPoint {
 
     /// Tries to create new RGBA components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractRGBA())
@@ -161,7 +161,7 @@ extension RGBA where Value: BinaryFloatingPoint {
 extension RGBA where Value: BinaryInteger {
     /// Creates new RGBA components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -170,9 +170,9 @@ extension RGBA where Value: BinaryInteger {
 
     /// Tries to create new RGBA components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultRGB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultRGB``
     ///         if it is not in a known RGB color space.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractRGBA())

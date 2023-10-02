@@ -49,7 +49,7 @@ extension HSL where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSL components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSL.init(exactly:)`
+    /// - SeeAlso: ``HSL/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsla, isExact) = uiColor._extractHSLA()
@@ -69,7 +69,7 @@ extension HSL where Value: BinaryInteger {
 
     /// Tries to create new HSL components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSL.init(exactly:)`
+    /// - SeeAlso: ``HSL/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsla, isExact) = uiColor._extractHSLA()
@@ -89,7 +89,7 @@ extension HSLA where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSLA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSLA.init(exactly:)`
+    /// - SeeAlso: ``HSLA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsla, isExact) = uiColor._extractHSLA()
@@ -109,7 +109,7 @@ extension HSLA where Value: BinaryInteger {
 
     /// Tries to create new HSLA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSLA.init(exactly:)`
+    /// - SeeAlso: ``HSLA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsla, isExact) = uiColor._extractHSLA()

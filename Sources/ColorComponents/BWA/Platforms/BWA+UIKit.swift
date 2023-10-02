@@ -56,7 +56,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// Tries to create new black/white components that exactly
     /// match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
@@ -77,7 +77,7 @@ extension BW where Value: BinaryInteger {
     /// Tries to create new black/white components that exactly
     /// match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
@@ -98,7 +98,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// Tries to create new black/white components with alpha channel
     /// that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()
@@ -119,7 +119,7 @@ extension BWA where Value: BinaryInteger {
     /// Tries to create new black/white components with alpha channel
     /// that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (bwa, isExact) = uiColor._extractBWA()

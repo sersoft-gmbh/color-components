@@ -94,12 +94,12 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let calculator3 = ImageColorsCalculator(image: img3)
         let calculator4 = ImageColorsCalculator(image: img4)
 
-        //        #if os(iOS)
+        //#if os(iOS)
         //        let c1 = UIColor(calculator1.mostProminentColor(as: Float.self))
         //        let c2 = UIColor(calculator2.mostProminentColor(as: Float.self))
         //        let c3 = UIColor(calculator3.mostProminentColor(as: Float.self))
         //        let c4 = UIColor(calculator4.mostProminentColor(as: Float.self))
-        //        #endif
+        //#endif
 
         //        let color1: RGB<Float> = calculator1.mostProminentColor()
         //        XCTAssertEqual(color1.red, 75 / 0xFF, accuracy: 15 / 0xFF)

@@ -26,9 +26,9 @@ extension CGColor {
     }
 
     @usableFromInline
-    func _requireCompontens<R: RangeExpression>(in range: R, file: StaticString = #file, line: UInt = #line) -> Array<CGFloat>
-    where R.Bound == Int
-    {
+    func _requireCompontens(in range: some RangeExpression<Int>,
+                            file: StaticString = #file,
+                            line: UInt = #line) -> Array<CGFloat> {
         guard range.contains(numberOfComponents), let components = components
         else { fatalError("CGColor has no or an invalid number of components: \(self)", file: file, line: line) }
         return components

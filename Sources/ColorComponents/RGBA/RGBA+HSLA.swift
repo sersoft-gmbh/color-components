@@ -10,7 +10,7 @@ extension RGB where Value: BinaryFloatingPoint {
 extension RGBA where Value: BinaryFloatingPoint {
     /// Creates new RGBA components using the given HSLA components.
     /// - Parameter hsla: The HSLA components to convert to RGBA.
-    /// - SeeAlso: `RGB.init(hsl:)`
+    /// - SeeAlso: ``RGB/init(hsl:)``
     @inlinable
     public init(hsla: HSLA<Value>) {
         self.init(rgb: RGB(hsl: hsla.hsl), alpha: hsla.alpha)
@@ -29,7 +29,7 @@ extension RGB where Value: BinaryInteger {
 extension RGBA where Value: BinaryInteger {
     /// Creates new RGBA components using the given HSLA components.
     /// - Parameter hsla: The HSLA components to convert to RGBA.
-    /// - SeeAlso: `RGB.init(hsl:)`
+    /// - SeeAlso: ``RGB/init(hsl:)``
     @inlinable
     public init(hsla: HSLA<Value>) {
         self.init(rgb: RGB(hsl: hsla.hsl), alpha: hsla.alpha)

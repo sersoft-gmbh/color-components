@@ -28,7 +28,7 @@ extension CIE {
         public var alpha: Value
 
         /// The x component.
-        /// - SeeAlso: `XYZ.x`
+        /// - SeeAlso: ``XYZ/x``
         @inlinable
         public var x: Value {
             get { xyz.x }
@@ -36,7 +36,7 @@ extension CIE {
         }
 
         /// The y component.
-        /// - SeeAlso: `XYZ.y`
+        /// - SeeAlso: ``XYZ/y``
         @inlinable
         public var y: Value {
             get { xyz.y }
@@ -44,7 +44,7 @@ extension CIE {
         }
 
         /// The y component.
-        /// - SeeAlso: `XYZ.y`
+        /// - SeeAlso: ``XYZ/y``
         @inlinable
         public var z: Value {
             get { xyz.z }
@@ -75,7 +75,7 @@ extension CIE {
 extension CIE.XYZ where Value: BinaryInteger {
     /// Creates new XYZ components from another XYZ color components object with integer values.
     /// - Parameter other: The other XYZ color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: CIE.XYZ<OtherValue>) {
         self.init(x: .init(other.x), y: .init(other.y), z: .init(other.z))
@@ -84,7 +84,7 @@ extension CIE.XYZ where Value: BinaryInteger {
     /// Tries to create new XYZ components that exactly match the values
     /// from another XYZ color components object with integer values.
     /// - Parameter other: The other XYZ color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: CIE.XYZ<OtherValue>) {
         guard let x = Value(exactly: other.x),
@@ -97,7 +97,7 @@ extension CIE.XYZ where Value: BinaryInteger {
     /// Creates new XYZ components from another XYZ color components object with floating point values.
     /// - Parameter other: The other XYZ color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: CIE.XYZ<OtherValue>) {
         self.init(x: .init(colorConverting: other.x),
@@ -109,7 +109,7 @@ extension CIE.XYZ where Value: BinaryInteger {
     /// from another XYZ color components object with floating point values.
     /// - Parameter other: The other XYZ color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: CIE.XYZ<OtherValue>) {
         guard let x = Value(colorConvertingExactly: other.x),
@@ -124,7 +124,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
     /// Creates new XYZ components from another XYZ color components object with integer values.
     /// - Parameter other: The other XYZ color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: CIE.XYZ<OtherValue>) {
         self.init(x: .init(colorConverting: other.x),
@@ -136,7 +136,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
     /// from another XYZ color components object with integer values.
     /// - Parameter other: The other XYZ color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: CIE.XYZ<OtherValue>) {
         guard let x = Value(colorConvertingExactly: other.x),
@@ -148,7 +148,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
 
     /// Creates new XYZ components from another XYZ color components object with floating point values.
     /// - Parameter other: The other XYZ color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: CIE.XYZ<OtherValue>) {
         self.init(x: .init(other.x), y: .init(other.y), z: .init(other.z))
@@ -157,7 +157,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
     /// Tries to create new XYZ components that exactly match the values
     /// from another XYZ color components object with floating point values.
     /// - Parameter other: The other XYZ color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: CIE.XYZ<OtherValue>) {
         guard let x = Value(exactly: other.x),
@@ -171,7 +171,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
 extension CIE.XYZA where Value: BinaryInteger {
     /// Creates new XYZA components from another XYZA color components object with integer values.
     /// - Parameter other: The other XYZA color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: CIE.XYZA<OtherValue>) {
         self.init(xyz: .init(other.xyz), alpha: .init(other.alpha))
@@ -180,7 +180,7 @@ extension CIE.XYZA where Value: BinaryInteger {
     /// Tries to create new XYZA components that exactly match the values
     /// from another XYZA color components object with integer values.
     /// - Parameter other: The other XYZA color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: CIE.XYZA<OtherValue>) {
         guard let xyz = CIE.XYZ<Value>(exactly: other.xyz),
@@ -192,7 +192,7 @@ extension CIE.XYZA where Value: BinaryInteger {
     /// Creates new XYZA components from another XYZA color components object with floating point values.
     /// - Parameter other: The other XYZA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: CIE.XYZA<OtherValue>) {
         self.init(xyz: .init(other.xyz), alpha: .init(colorConverting: other.alpha))
@@ -202,7 +202,7 @@ extension CIE.XYZA where Value: BinaryInteger {
     /// from another XYZA color components object with floating point values.
     /// - Parameter other: The other XYZA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: CIE.XYZA<OtherValue>) {
         guard let xyz = CIE.XYZ<Value>(exactly: other.xyz),
@@ -216,7 +216,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
     /// Creates new XYZA components from another XYZA color components object with integer values.
     /// - Parameter other: The other XYZA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: CIE.XYZA<OtherValue>) {
         self.init(xyz: .init(other.xyz), alpha: .init(colorConverting: other.alpha))
@@ -226,7 +226,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
     /// from another XYZA color components object with integer values.
     /// - Parameter other: The other XYZA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: CIE.XYZA<OtherValue>) {
         guard let xyz = CIE.XYZ<Value>(exactly: other.xyz),
@@ -237,7 +237,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
 
     /// Creates new XYZA components from another XYZA color components object with floating point values.
     /// - Parameter other: The other XYZA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: CIE.XYZA<OtherValue>) {
         self.init(xyz: .init(other.xyz), alpha: .init(other.alpha))
@@ -246,7 +246,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
     /// Tries to create new XYZA components that exactly match the values
     /// from another XYZA color components object with floating point values.
     /// - Parameter other: The other XYZA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: CIE.XYZA<OtherValue>) {
         guard let xyz = CIE.XYZ<Value>(exactly: other.xyz),

@@ -42,7 +42,7 @@ extension RGB where Value: BinaryFloatingPoint {
     /// match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericRGB` color space if necessary.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -71,7 +71,7 @@ extension RGB where Value: BinaryInteger {
     /// match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericRGB` color space if necessary.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -99,7 +99,7 @@ extension RGBA where Value: BinaryFloatingPoint {
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericRGB` color space if necessary.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -127,7 +127,7 @@ extension RGBA where Value: BinaryInteger {
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericRGB` color space if necessary.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {

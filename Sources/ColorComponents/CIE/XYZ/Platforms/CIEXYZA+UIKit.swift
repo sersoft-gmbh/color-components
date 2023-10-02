@@ -54,7 +54,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
 
     /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZ/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (cieXYZA, isExact) = uiColor._extractCIEXYZA()
@@ -74,7 +74,7 @@ extension CIE.XYZ where Value: BinaryInteger {
 
     /// Tries to create new CIE.XYZ components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZ/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (cieXYZA, isExact) = uiColor._extractCIEXYZA()
@@ -94,7 +94,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
 
     /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (cieXYZA, isExact) = uiColor._extractCIEXYZA()
@@ -114,7 +114,7 @@ extension CIE.XYZA where Value: BinaryInteger {
 
     /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (cieXYZA, isExact) = uiColor._extractCIEXYZA()

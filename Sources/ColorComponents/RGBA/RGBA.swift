@@ -27,7 +27,7 @@ public struct RGBA<Value: ColorCompontentValue>: AlphaColorComponents {
     public var alpha: Value
 
     /// The red component.
-    /// - SeeAlso: `RGB.red`
+    /// - SeeAlso: ``RGB/red``
     @inlinable
     public var red: Value {
         get { rgb.red }
@@ -35,7 +35,7 @@ public struct RGBA<Value: ColorCompontentValue>: AlphaColorComponents {
     }
 
     /// The green component.
-    /// - SeeAlso: `RGB.green`
+    /// - SeeAlso: ``RGB/green``
     @inlinable
     public var green: Value {
         get { rgb.green }
@@ -43,7 +43,7 @@ public struct RGBA<Value: ColorCompontentValue>: AlphaColorComponents {
     }
 
     /// The green component.
-    /// - SeeAlso: `RGB.green`
+    /// - SeeAlso: ``RGB/green``
     @inlinable
     public var blue: Value {
         get { rgb.blue }
@@ -73,7 +73,7 @@ public struct RGBA<Value: ColorCompontentValue>: AlphaColorComponents {
 extension RGB where Value: BinaryInteger {
     /// Creates new RGB components from another RGB color components object with integer values.
     /// - Parameter other: The other RGB color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: RGB<OtherValue>) {
         self.init(red: .init(other.red), green: .init(other.green), blue: .init(other.blue))
@@ -82,7 +82,7 @@ extension RGB where Value: BinaryInteger {
     /// Tries to create new RGB components that exactly match the values
     /// from another RGB color components object with integer values.
     /// - Parameter other: The other RGB color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: RGB<OtherValue>) {
         guard let red = Value(exactly: other.red),
@@ -95,7 +95,7 @@ extension RGB where Value: BinaryInteger {
     /// Creates new RGB components from another RGB color components object with floating point values.
     /// - Parameter other: The other RGB color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: RGB<OtherValue>) {
         self.init(red: .init(colorConverting: other.red),
@@ -107,7 +107,7 @@ extension RGB where Value: BinaryInteger {
     /// from another RGB color components object with floating point values.
     /// - Parameter other: The other RGB color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: RGB<OtherValue>) {
         guard let red = Value(colorConvertingExactly: other.red),
@@ -122,7 +122,7 @@ extension RGB where Value: BinaryFloatingPoint {
     /// Creates new RGB components from another RGB color components object with integer values.
     /// - Parameter other: The other RGB color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: RGB<OtherValue>) {
         self.init(red: .init(colorConverting: other.red),
@@ -134,7 +134,7 @@ extension RGB where Value: BinaryFloatingPoint {
     /// from another RGB color components object with integer values.
     /// - Parameter other: The other RGB color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: RGB<OtherValue>) {
         guard let red = Value(colorConvertingExactly: other.red),
@@ -146,7 +146,7 @@ extension RGB where Value: BinaryFloatingPoint {
 
     /// Creates new RGB components from another RGB color components object with floating point values.
     /// - Parameter other: The other RGB color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: RGB<OtherValue>) {
         self.init(red: .init(other.red), green: .init(other.green), blue: .init(other.blue))
@@ -155,7 +155,7 @@ extension RGB where Value: BinaryFloatingPoint {
     /// Tries to create new RGB components that exactly match the values
     /// from another RGB color components object with floating point values.
     /// - Parameter other: The other RGB color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: RGB<OtherValue>) {
         guard let red = Value(exactly: other.red),
@@ -169,7 +169,7 @@ extension RGB where Value: BinaryFloatingPoint {
 extension RGBA where Value: BinaryInteger {
     /// Creates new RGBA components from another RGBA color components object with integer values.
     /// - Parameter other: The other RGBA color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: RGBA<OtherValue>) {
         self.init(rgb: .init(other.rgb), alpha: .init(other.alpha))
@@ -178,7 +178,7 @@ extension RGBA where Value: BinaryInteger {
     /// Tries to create new RGBA components that exactly match the values
     /// from another RGBA color components object with integer values.
     /// - Parameter other: The other RGBA color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: RGBA<OtherValue>) {
         guard let rgb = RGB<Value>(exactly: other.rgb),
@@ -190,7 +190,7 @@ extension RGBA where Value: BinaryInteger {
     /// Creates new RGBA components from another RGBA color components object with floating point values.
     /// - Parameter other: The other RGBA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: RGBA<OtherValue>) {
         self.init(rgb: .init(other.rgb), alpha: .init(colorConverting: other.alpha))
@@ -200,7 +200,7 @@ extension RGBA where Value: BinaryInteger {
     /// from another RGBA color components object with floating point values.
     /// - Parameter other: The other RGBA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: RGBA<OtherValue>) {
         guard let rgb = RGB<Value>(exactly: other.rgb),
@@ -214,7 +214,7 @@ extension RGBA where Value: BinaryFloatingPoint {
     /// Creates new RGBA components from another RGBA color components object with integer values.
     /// - Parameter other: The other RGBA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: RGBA<OtherValue>) {
         self.init(rgb: .init(other.rgb), alpha: .init(colorConverting: other.alpha))
@@ -224,7 +224,7 @@ extension RGBA where Value: BinaryFloatingPoint {
     /// from another RGBA color components object with integer values.
     /// - Parameter other: The other RGBA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: RGBA<OtherValue>) {
         guard let rgb = RGB<Value>(exactly: other.rgb),
@@ -235,7 +235,7 @@ extension RGBA where Value: BinaryFloatingPoint {
 
     /// Creates new RGBA components from another RGBA color components object with floating point values.
     /// - Parameter other: The other RGBA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: RGBA<OtherValue>) {
         self.init(rgb: .init(other.rgb), alpha: .init(other.alpha))
@@ -244,7 +244,7 @@ extension RGBA where Value: BinaryFloatingPoint {
     /// Tries to create new RGBA components that exactly match the values
     /// from another RGBA color components object with floating point values.
     /// - Parameter other: The other RGBA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: RGBA<OtherValue>) {
         guard let rgb = RGB<Value>(exactly: other.rgb),

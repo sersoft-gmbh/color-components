@@ -40,14 +40,12 @@ extension Color {
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension BW: View where Value: BinaryFloatingPoint {
-    /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension BWA: View where Value: BinaryFloatingPoint {
-    /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
 }
@@ -69,7 +67,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -92,7 +90,7 @@ extension BW where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -115,7 +113,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -138,7 +136,7 @@ extension BWA where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -164,7 +162,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -189,7 +187,7 @@ extension BW where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `BW.init(exactly:)`
+    /// - SeeAlso: ``BW/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -214,7 +212,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -239,7 +237,7 @@ extension BWA where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `BWA.init(exactly:)`
+    /// - SeeAlso: ``BWA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }

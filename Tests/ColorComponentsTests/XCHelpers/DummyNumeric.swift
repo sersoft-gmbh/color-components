@@ -10,7 +10,7 @@ struct DummyNumeric: Sendable, Hashable, Comparable, Numeric {
         self.value = value
     }
 
-    init?<T>(exactly source: T) where T : BinaryInteger {
+    init?(exactly source: some BinaryInteger) {
         guard let val = Int(exactly: source) else { return nil }
         self.init(value: val)
     }

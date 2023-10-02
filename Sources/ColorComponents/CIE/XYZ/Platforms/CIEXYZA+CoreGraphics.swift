@@ -54,7 +54,7 @@ extension CIE.XYZ where Value: BinaryFloatingPoint {
     /// match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericXYZ` color space if necessary.
-    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZ/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -83,7 +83,7 @@ extension CIE.XYZ where Value: BinaryInteger {
     /// match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericXYZ` color space if necessary.
-    /// - SeeAlso: `CIE.XYZ.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZ/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -111,7 +111,7 @@ extension CIE.XYZA where Value: BinaryFloatingPoint {
     /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericXYZ` color space if necessary.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {
@@ -139,7 +139,7 @@ extension CIE.XYZA where Value: BinaryInteger {
     /// Tries to create new CIE.XYZA components that exactly match the components of the given color.
     /// - Parameter cgColor: The color to read the components from.
     /// - Note: This will convert the color to the `kCGColorSpaceGenericXYZ` color space if necessary.
-    /// - SeeAlso: `CIE.XYZA.init(exactly:)`
+    /// - SeeAlso: ``CIE/XYZA/init(exactly:)``
     @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
     @inlinable
     public init?(exactly cgColor: CGColor) {

@@ -12,7 +12,7 @@ extension HSB where Value: BinaryFloatingPoint {
 extension HSBA where Value: BinaryFloatingPoint {
     /// Creates new HSBA components using the given HSLA components.
     /// - Parameter hsla: The HSLA components to convert to HSBA.
-    /// - SeeAlso: `HSB.init(hsl:)`
+    /// - SeeAlso: ``HSB/init(hsl:)``
     @inlinable
     public init(hsla: HSLA<Value>) {
         self.init(hsb: HSB(hsl: hsla.hsl), alpha: hsla.alpha)
@@ -31,7 +31,7 @@ extension HSB where Value: BinaryInteger {
 extension HSBA where Value: BinaryInteger {
     /// Creates new HSBA components using the given HSLA components.
     /// - Parameter hsla: The HSLA components to convert to HSBA.
-    /// - SeeAlso: `HSB.init(hsl:)`
+    /// - SeeAlso: ``HSB/init(hsl:)``
     @inlinable
     public init(hsla: HSLA<Value>) {
         self.init(hsb: HSB(hsl: hsla.hsl), alpha: hsla.alpha)

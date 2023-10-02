@@ -61,7 +61,7 @@ extension HSB where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSB components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()
@@ -81,7 +81,7 @@ extension HSB where Value: BinaryInteger {
 
     /// Tries to create new HSB components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()
@@ -101,7 +101,7 @@ extension HSBA where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSBA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()
@@ -121,7 +121,7 @@ extension HSBA where Value: BinaryInteger {
 
     /// Tries to create new HSBA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (hsba, isExact) = uiColor._extractHSBA()

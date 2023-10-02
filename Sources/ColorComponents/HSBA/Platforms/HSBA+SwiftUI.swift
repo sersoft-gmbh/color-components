@@ -71,7 +71,7 @@ extension HSB where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -93,7 +93,7 @@ extension HSB where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -115,7 +115,7 @@ extension HSBA where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -137,7 +137,7 @@ extension HSBA where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through the platform native color (`NSColor` or `UIColor`)
     ///         due to the lack of component accessors on `SwiftUI.Color`.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         self.init(exactly: _PlatformColor(color))
@@ -162,7 +162,7 @@ extension HSB where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -186,7 +186,7 @@ extension HSB where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -210,7 +210,7 @@ extension HSBA where Value: BinaryFloatingPoint {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }
@@ -234,7 +234,7 @@ extension HSBA where Value: BinaryInteger {
     /// - Parameter color: The color to read the components from.
     /// - Note: This currently goes through `CGColor` due to the lack of component accessors on `SwiftUI.Color`.
     /// - Note: This returns `nil` if `cgColor` on `color` is `nil`, or if the exact conversion fails.
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly color: Color) {
         guard let cgColor = color.cgColor else { return nil }

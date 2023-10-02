@@ -58,7 +58,7 @@ extension RGB where Value: BinaryFloatingPoint {
 
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (rgba, isExact) = uiColor._extractRGBA()
@@ -78,7 +78,7 @@ extension RGB where Value: BinaryInteger {
 
     /// Tries to create new RGB components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `RGB.init(exactly:)`
+    /// - SeeAlso: ``RGB/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (rgba, isExact) = uiColor._extractRGBA()
@@ -98,7 +98,7 @@ extension RGBA where Value: BinaryFloatingPoint {
 
     /// Tries to create new RGBA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (rgba, isExact) = uiColor._extractRGBA()
@@ -118,7 +118,7 @@ extension RGBA where Value: BinaryInteger {
 
     /// Tries to create new RGBA components that exactly match the components of the given color.
     /// - Parameter uiColor: The color to read the components from.
-    /// - SeeAlso: `RGBA.init(exactly:)`
+    /// - SeeAlso: ``RGBA/init(exactly:)``
     @inlinable
     public init?(exactly uiColor: UIColor) {
         let (rgba, isExact) = uiColor._extractRGBA()

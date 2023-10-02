@@ -67,8 +67,8 @@ struct InexactFloat: BinaryFloatingPoint, RawRepresentable {
     }
 
     // All this just for these two...
-    init?<Source>(exactly value: Source) where Source : BinaryInteger { nil }
-    init?<Source>(exactly value: Source) where Source : BinaryFloatingPoint { nil }
+    init?(exactly value: some BinaryInteger) { nil }
+    init?(exactly value: some BinaryFloatingPoint) { nil }
 
     func distance(to other: Self) -> Stride {
         rawValue.distance(to: other.rawValue)

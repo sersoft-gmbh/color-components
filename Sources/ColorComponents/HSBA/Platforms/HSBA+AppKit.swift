@@ -5,8 +5,8 @@ import AppKit
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 extension NSColorSpace {
-    /// The default color space used by `HSB` and `HSBA` to create `NSColor`s when no color space was specified.
-    /// This is currently equivalent to `NSColorSpace.colorComponentsDefaultRGB`.
+    /// The default color space used by ``HSB`` and ``HSBA`` to create `NSColor`s when no color space was specified.
+    /// This is currently equivalent to ``NSColorSpace/colorComponentsDefaultRGB``.
     public static var colorComponentsDefaultHSB: NSColorSpace { .colorComponentsDefaultRGB }
 }
 
@@ -30,7 +30,7 @@ extension NSColor {
     /// Creates a new color using the given HSB components and color space.
     /// - Parameters:
     ///   - hsb: The HSB components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultHSB``.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ hsb: HSB<Value>,
                                                         colorSpace: NSColorSpace = .colorComponentsDefaultHSB) {
@@ -40,7 +40,7 @@ extension NSColor {
     /// Creates a new color using the given HSBA components and color space.
     /// - Parameters:
     ///   - hsba: The HSBA components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultHSB``.
     @inlinable
     public convenience init<Value: BinaryFloatingPoint>(_ hsba: HSBA<Value>,
                                                         colorSpace: NSColorSpace = .colorComponentsDefaultHSB) {
@@ -50,7 +50,7 @@ extension NSColor {
     /// Creates a new color using the given HSB components and color space.
     /// - Parameters:
     ///   - hsb: The HSB components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultHSB``.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ hsb: HSB<Value>,
                                                   colorSpace: NSColorSpace = .colorComponentsDefaultHSB) {
@@ -60,7 +60,7 @@ extension NSColor {
     /// Creates a new color using the given HSBA components and color space.
     /// - Parameters:
     ///   - hsba: The HSBA components.
-    ///   - colorSpace: The color space to use. Defaults to `NSColorSpace.colorComponentsDefaultHSB`.
+    ///   - colorSpace: The color space to use. Defaults to ``NSColorSpace/colorComponentsDefaultHSB``.
     @inlinable
     public convenience init<Value: BinaryInteger>(_ hsba: HSBA<Value>,
                                                   colorSpace: NSColorSpace = .colorComponentsDefaultHSB) {
@@ -84,7 +84,7 @@ extension NSColor {
 extension HSB where Value: BinaryFloatingPoint {
     /// Creates new HSB components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -93,9 +93,9 @@ extension HSB where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSB components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractHSBA().hsb)
@@ -108,7 +108,7 @@ extension HSB where Value: BinaryFloatingPoint {
 extension HSB where Value: BinaryInteger {
     /// Creates new HSB components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -117,9 +117,9 @@ extension HSB where Value: BinaryInteger {
 
     /// Tries to create new HSB components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
-    /// - SeeAlso: `HSB.init(exactly:)`
+    /// - SeeAlso: ``HSB/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractHSBA().hsb)
@@ -132,7 +132,7 @@ extension HSB where Value: BinaryInteger {
 extension HSBA where Value: BinaryFloatingPoint {
     /// Creates new HSBA components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -141,9 +141,9 @@ extension HSBA where Value: BinaryFloatingPoint {
 
     /// Tries to create new HSBA components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractHSBA())
@@ -156,7 +156,7 @@ extension HSBA where Value: BinaryFloatingPoint {
 extension HSBA where Value: BinaryInteger {
     /// Creates new HSBA components from the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
     @inlinable
     public init(_ nsColor: NSColor) {
@@ -165,9 +165,9 @@ extension HSBA where Value: BinaryInteger {
 
     /// Tries to create new HSBA components that exactly match the components of the given color.
     /// - Parameter nsColor: The color to read the components from.
-    /// - Note: This will convert the color to `NSColorSpace.colorComponentsDefaultHSB`
+    /// - Note: This will convert the color to ``NSColorSpace/colorComponentsDefaultHSB``
     ///         if it is not in a known HSB color space (which is the same as for RGB).
-    /// - SeeAlso: `HSBA.init(exactly:)`
+    /// - SeeAlso: ``HSBA/init(exactly:)``
     @inlinable
     public init?(exactly nsColor: NSColor) {
         self.init(exactly: nsColor._extractHSBA())

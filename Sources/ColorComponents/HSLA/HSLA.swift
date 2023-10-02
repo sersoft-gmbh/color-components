@@ -27,7 +27,7 @@ public struct HSLA<Value: ColorCompontentValue>: AlphaColorComponents {
     public var alpha: Value
 
     /// The hue component.
-    /// - SeeAlso: `HSL.hue`
+    /// - SeeAlso: ``HSL/hue``
     @inlinable
     public var hue: Value {
         get { hsl.hue }
@@ -35,7 +35,7 @@ public struct HSLA<Value: ColorCompontentValue>: AlphaColorComponents {
     }
 
     /// The saturation component.
-    /// - SeeAlso: `HSL.saturation`
+    /// - SeeAlso: ``HSL/saturation``
     @inlinable
     public var saturation: Value {
         get { hsl.saturation }
@@ -43,7 +43,7 @@ public struct HSLA<Value: ColorCompontentValue>: AlphaColorComponents {
     }
 
     /// The luminance component.
-    /// - SeeAlso: `HSL.luminance`
+    /// - SeeAlso: ``HSL/luminance``
     @inlinable
     public var luminance: Value {
         get { hsl.luminance }
@@ -73,7 +73,7 @@ public struct HSLA<Value: ColorCompontentValue>: AlphaColorComponents {
 extension HSL where Value: BinaryInteger {
     /// Creates new HSL components from another HSL color components object with integer values.
     /// - Parameter other: The other HSL color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: HSL<OtherValue>) {
         self.init(hue: .init(other.hue),
@@ -84,7 +84,7 @@ extension HSL where Value: BinaryInteger {
     /// Tries to create new HSL components that exactly match the values
     /// from another HSL color components object with integer values.
     /// - Parameter other: The other HSL color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: HSL<OtherValue>) {
         guard let hue = Value(exactly: other.hue),
@@ -97,7 +97,7 @@ extension HSL where Value: BinaryInteger {
     /// Creates new HSL components from another HSL color components object with floating point values.
     /// - Parameter other: The other HSL color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255) - including `hue`!
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: HSL<OtherValue>) {
         self.init(hue: .init(colorConverting: other.hue),
@@ -109,7 +109,7 @@ extension HSL where Value: BinaryInteger {
     /// from another HSL color components object with floating point values.
     /// - Parameter other: The other HSL color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255) - including `hue`!
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: HSL<OtherValue>) {
         guard let hue = Value(colorConvertingExactly: other.hue),
@@ -124,7 +124,7 @@ extension HSL where Value: BinaryFloatingPoint {
     /// Creates new HSL components from another HSL color components object with integer values.
     /// - Parameter other: The other HSL color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0) - including `hue`!.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: HSL<OtherValue>) {
         self.init(hue: .init(colorConverting: other.hue),
@@ -136,7 +136,7 @@ extension HSL where Value: BinaryFloatingPoint {
     /// from another HSB color components object with integer values.
     /// - Parameter other: The other HSB color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0) - including `hue`!.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: HSL<OtherValue>) {
         guard let hue = Value(colorConvertingExactly: other.hue),
@@ -148,7 +148,7 @@ extension HSL where Value: BinaryFloatingPoint {
 
     /// Creates new HSL components from another HSL color components object with floating point values.
     /// - Parameter other: The other HSL color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: HSL<OtherValue>) {
         self.init(hue: .init(other.hue),
@@ -159,7 +159,7 @@ extension HSL where Value: BinaryFloatingPoint {
     /// Tries to create new HSL components that exactly match the values
     /// from another HSL color components object with floating point values.
     /// - Parameter other: The other HSB color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: HSL<OtherValue>) {
         guard let hue = Value(exactly: other.hue),
@@ -173,7 +173,7 @@ extension HSL where Value: BinaryFloatingPoint {
 extension HSLA where Value: BinaryInteger {
     /// Creates new HSLA components from another HSLA color components object with integer values.
     /// - Parameter other: The other HSLA color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: HSLA<OtherValue>) {
         self.init(hsl: .init(other.hsl), alpha: .init(other.alpha))
@@ -182,7 +182,7 @@ extension HSLA where Value: BinaryInteger {
     /// Tries to create new HSLA components that exactly match the values
     /// from another HSLA color components object with integer values.
     /// - Parameter other: The other HSLA color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: HSLA<OtherValue>) {
         guard let hsl = HSL<Value>(exactly: other.hsl),
@@ -194,7 +194,7 @@ extension HSLA where Value: BinaryInteger {
     /// Creates new HSLA components from another HSLA color components object with floating point values.
     /// - Parameter other: The other HSLA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255) - including `hue`!
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: HSLA<OtherValue>) {
         self.init(hsl: .init(other.hsl), alpha: .init(colorConverting: other.alpha))
@@ -204,7 +204,7 @@ extension HSLA where Value: BinaryInteger {
     /// from another HSLA color components object with floating point values.
     /// - Parameter other: The other HSLA color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255) - including `hue`!
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: HSLA<OtherValue>) {
         guard let hsl = HSL<Value>(exactly: other.hsl),
@@ -218,7 +218,7 @@ extension HSLA where Value: BinaryFloatingPoint {
     /// Creates new HSLA components from another HSLA color components object with integer values.
     /// - Parameter other: The other HSLA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0) - including `hue`!
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: HSLA<OtherValue>) {
         self.init(hsl: .init(other.hsl), alpha: .init(colorConverting: other.alpha))
@@ -228,7 +228,7 @@ extension HSLA where Value: BinaryFloatingPoint {
     /// from another HSLA color components object with integer values.
     /// - Parameter other: The other HSLA color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0) - including `hue`!
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: HSLA<OtherValue>) {
         guard let hsl = HSL<Value>(exactly: other.hsl),
@@ -239,7 +239,7 @@ extension HSLA where Value: BinaryFloatingPoint {
 
     /// Creates new HSLA components from another HSLA color components object with floating point values.
     /// - Parameter other: The other HSLA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: HSLA<OtherValue>) {
         self.init(hsl: .init(other.hsl), alpha: .init(other.alpha))
@@ -248,7 +248,7 @@ extension HSLA where Value: BinaryFloatingPoint {
     /// Tries to create new HSLA components that exactly match the values
     /// from another HSLA color components object with floating point values.
     /// - Parameter other: The other HSLA color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: HSLA<OtherValue>) {
         guard let hsl = HSL<Value>(exactly: other.hsl),

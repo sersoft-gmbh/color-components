@@ -159,12 +159,10 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
     // - We have an iteration limit of 1024 iterations
     // - We stop after the first iteration that didn't have any errors (thus saving us the treshold).
     // - We dynamically lower `k` if the count is less than the desired `k`.
-    func kMeansClustered<D, G>(atMost maxK: Int,
-                               using randomNumberGenerator: inout G,
-                               distance: (Element, Element) -> D) -> Array<Cluster<Element>>
-    where D: Comparable, G: RandomNumberGenerator
-    {
-        guard !isEmpty else { return [] }
+    func kMeansClustered(atMost maxK: Int,
+                         using randomNumberGenerator: inout some RandomNumberGenerator,
+                         distance: (Element, Element) -> some Comparable) -> Array<Cluster<Element>> {
+        guard !isEmpty else { return .init() }
 
         var clusters = randomElements(count: Swift.min(maxK, count), using: &randomNumberGenerator)
             .map { Cluster(centroid: $0, size: .zero) }
@@ -201,8 +199,8 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
 }
 
 fileprivate extension RandomAccessCollection {
-    func nearestClusterIndex<Vec, D>(for point: Vec, distance: (Vec, Vec) -> D) -> Index
-    where Element == Cluster<Vec>, D: Comparable
+    func nearestClusterIndex<Vec>(for point: Vec, distance: (Vec, Vec) -> some Comparable) -> Index
+    where Element == Cluster<Vec>
     {
         withoutActuallyEscaping(distance) { distance in
             indices
@@ -215,9 +213,8 @@ fileprivate extension RandomAccessCollection {
 }
 
 fileprivate extension RandomAccessCollection where Index: FixedWidthInteger {
-    func randomElements<G>(count elemCount: Int, using randomGenerator: inout G) -> Array<Element>
-    where G: RandomNumberGenerator
-    {
+    func randomElements(count elemCount: Int,
+                        using randomGenerator: inout some RandomNumberGenerator) -> Array<Element> {
         guard !isEmpty else { return .init() }
         guard count > elemCount else { return Array(self) }
 

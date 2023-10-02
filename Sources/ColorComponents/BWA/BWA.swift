@@ -20,7 +20,7 @@ public struct BWA<Value: ColorCompontentValue>: AlphaColorComponents {
     public var alpha: Value
 
     /// The white component.
-    /// - SeeAlso: `BW.white`
+    /// - SeeAlso: ``BW/white`
     @inlinable
     public var white: Value {
         get { bw.white }
@@ -48,7 +48,7 @@ public struct BWA<Value: ColorCompontentValue>: AlphaColorComponents {
 extension BW where Value: BinaryInteger {
     /// Creates new black/white components from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: BW<OtherValue>) {
         self.init(white: .init(other.white))
@@ -57,7 +57,7 @@ extension BW where Value: BinaryInteger {
     /// Tries to create new black/white components that exactly match the values
     /// from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(exactly:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: BW<OtherValue>) {
         guard let white = Value(exactly: other.white) else { return nil }
@@ -67,7 +67,7 @@ extension BW where Value: BinaryInteger {
     /// Creates new black/white components from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: BW<OtherValue>) {
         self.init(white: .init(colorConverting: other.white))
@@ -77,7 +77,7 @@ extension BW where Value: BinaryInteger {
     /// from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(exactly:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: BW<OtherValue>) {
         guard let white = Value(colorConvertingExactly: other.white) else { return nil }
@@ -89,7 +89,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// Creates new black/white components from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: BW<OtherValue>) {
         self.init(white: .init(colorConverting: other.white))
@@ -99,7 +99,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(exactly:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: BW<OtherValue>) {
         guard let white = Value(colorConvertingExactly: other.white) else { return nil }
@@ -108,7 +108,7 @@ extension BW where Value: BinaryFloatingPoint {
 
     /// Creates new black/white components from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: BW<OtherValue>) {
         self.init(white: .init(other.white))
@@ -117,7 +117,7 @@ extension BW where Value: BinaryFloatingPoint {
     /// Tries to create new black/white components that exactly match the values
     /// from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(exactly:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: BW<OtherValue>) {
         guard let white = Value(exactly: other.white) else { return nil }
@@ -128,7 +128,7 @@ extension BW where Value: BinaryFloatingPoint {
 extension BWA where Value: BinaryInteger {
     /// Creates new black/white components with alpha channel from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components with alpha channel.
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: BWA<OtherValue>) {
         self.init(bw: .init(other.bw), alpha: .init(other.alpha))
@@ -137,7 +137,7 @@ extension BWA where Value: BinaryInteger {
     /// Tries to create new black/white components with alpha channel that exactly match the values
     /// from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components with alpha channel.
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: BWA<OtherValue>) {
         guard let bw = BW<Value>(exactly: other.bw),
@@ -149,7 +149,7 @@ extension BWA where Value: BinaryInteger {
     /// Creates new black/white components with alpha channel from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components with alpha channle.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(_:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: BWA<OtherValue>) {
         self.init(bw: .init(other.bw), alpha: .init(colorConverting: other.alpha))
@@ -159,7 +159,7 @@ extension BWA where Value: BinaryInteger {
     /// from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components with alpha channel.
     /// - Note: This will convert the floating point values (0.0 - 1.0) to integer values (0 - 255).
-    /// - SeeAlso: `BinaryInteger.init(exactly:)`
+    /// - SeeAlso: ``BinaryInteger/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: BWA<OtherValue>) {
         guard let bw = BW<Value>(exactly: other.bw),
@@ -173,7 +173,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// Creates new black/white components with alpha channel from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components with alpha channel.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryInteger>(_ other: BWA<OtherValue>) {
         self.init(bw: .init(other.bw), alpha: .init(colorConverting: other.alpha))
@@ -183,7 +183,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// from another b/w color components object with integer values.
     /// - Parameter other: The other black/white color components with alpha channel.
     /// - Note: This will convert the integer values (0 - 255) to floating point values (0.0 - 1.0).
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryInteger>(exactly other: BWA<OtherValue>) {
         guard let bw = BW<Value>(exactly: other.bw),
@@ -194,7 +194,7 @@ extension BWA where Value: BinaryFloatingPoint {
 
     /// Creates new black/white components with alpha channel from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components with alpha channel.
-    /// - SeeAlso: `BinaryFloatingPoint.init(_:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init<OtherValue: BinaryFloatingPoint>(_ other: BWA<OtherValue>) {
         self.init(bw: .init(other.bw), alpha: .init(other.alpha))
@@ -203,7 +203,7 @@ extension BWA where Value: BinaryFloatingPoint {
     /// Tries to create new black/white components with alpha channel that exactly match the values
     /// from another b/w color components object with floating point values.
     /// - Parameter other: The other black/white color components with alpha channel.
-    /// - SeeAlso: `BinaryFloatingPoint.init(exactly:)`
+    /// - SeeAlso: ``BinaryFloatingPoint/init(_:)``
     @inlinable
     public init?<OtherValue: BinaryFloatingPoint>(exactly other: BWA<OtherValue>) {
         guard let bw = BW<Value>(exactly: other.bw),
