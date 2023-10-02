@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Controls whether to queue pending announcements behind existing speech rather than",
+      "text" : "Controls whether to queue pending announcements behind existing speech",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "interrupting speech in progress.",
+      "text" : "rather than interrupting speech in progress.",
       "type" : "text"
     }
   ],
@@ -73,7 +73,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -388,7 +391,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/speechAnnouncementsQueued(_:)": {
   "abstract" : [
     {
-      "text" : "Controls whether to queue pending announcements behind existing speech rather than",
+      "text" : "Controls whether to queue pending announcements behind existing speech",
       "type" : "text"
     },
     {
@@ -396,7 +399,7 @@
       "type" : "text"
     },
     {
-      "text" : "interrupting speech in progress.",
+      "text" : "rather than interrupting speech in progress.",
       "type" : "text"
     }
   ],

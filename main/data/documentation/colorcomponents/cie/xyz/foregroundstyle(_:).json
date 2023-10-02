@@ -72,7 +72,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -217,26 +220,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that uses the given foreground style.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -330,6 +313,26 @@
     {
       "content" : [
         {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that uses the given foreground style.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "content" : [
+        {
           "anchor" : "discussion",
           "level" : 2,
           "text" : "Discussion",
@@ -400,10 +403,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-foregroundStyle-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -477,10 +477,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-foregroundStyle-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -683,10 +680,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-foregroundStyle-3",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -725,10 +719,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-foregroundStyle-4",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

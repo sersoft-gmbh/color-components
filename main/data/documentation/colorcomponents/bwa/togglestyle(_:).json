@@ -71,7 +71,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -216,34 +219,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that uses the specified toggle style for itself",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and its child views.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -309,6 +284,34 @@
           "name" : "style"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that uses the specified toggle style for itself",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and its child views.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -426,10 +429,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-1-iOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }
@@ -450,10 +450,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-1-macOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }
@@ -611,10 +608,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-2-iOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }
@@ -635,10 +629,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-2-macOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }
@@ -794,10 +785,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-3-iOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }
@@ -818,10 +806,7 @@
               [
                 {
                   "inlineContent" : [
-                    {
-                      "identifier" : "View-toggleStyle-3-macOS",
-                      "type" : "image"
-                    }
+
                   ],
                   "type" : "paragraph"
                 }

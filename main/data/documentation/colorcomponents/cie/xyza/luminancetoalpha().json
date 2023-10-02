@@ -56,7 +56,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -403,10 +406,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-luminanceToAlpha-1-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

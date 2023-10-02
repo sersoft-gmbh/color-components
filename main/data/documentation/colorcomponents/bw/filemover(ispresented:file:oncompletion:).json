@@ -150,7 +150,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -370,7 +373,31 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "has succeeded or failed.",
+                  "text" : "has succeeded or failed. To access the received URLs, call ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "startAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "When the access is no longer required, call ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "stopAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -418,6 +445,62 @@
           "level" : 2,
           "text" : "Discussion",
           "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This interface provides security-scoped URLs.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "Call the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "startAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " method to access or bookmark",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the URLs, and the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "stopAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " method",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "to release the access.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         },
         {
           "inlineContent" : [

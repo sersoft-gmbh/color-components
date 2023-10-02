@@ -1,15 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Marks this view as searchable, which configures the display of a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search field.",
+      "text" : "Marks this view as searchable with text, tokens, and suggestions.",
       "type" : "text"
     }
   ],
@@ -228,7 +220,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -411,6 +406,19 @@
             {
               "kind" : "text",
               "text" : ", "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -732,7 +740,7 @@
               "type" : "text"
             },
             {
-              "text" : "doc:Adding-Search-to-Your-App",
+              "text" : "doc:Adding-a-search-interface-to-your-app",
               "type" : "text"
             },
             {
@@ -827,15 +835,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/searchable(text:tokens:suggestedTokens:placement:prompt:token:)-7kxqx": {
   "abstract" : [
     {
-      "text" : "Marks this view as searchable, which configures the display of a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search field.",
+      "text" : "Marks this view as searchable with text, tokens, and suggestions.",
       "type" : "text"
     }
   ],

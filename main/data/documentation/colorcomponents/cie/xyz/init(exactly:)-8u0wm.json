@@ -179,7 +179,7 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "NSColorSpace.colorComponentsDefaultCIEXYZ",
+                  "code" : "NSColorSpace\/colorComponentsDefaultCIEXYZ",
                   "type" : "codeVoice"
                 },
                 {
@@ -195,6 +195,26 @@
             }
           ],
           "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                },
+                {
+                  "code" : "CIE\/XYZ\/init(exactly:)",
+                  "type" : "codeVoice"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "See Also",
           "style" : "note",
           "type" : "aside"
         }

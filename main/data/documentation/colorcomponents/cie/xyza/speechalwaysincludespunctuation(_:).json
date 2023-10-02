@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Sets whether VoiceOver should always speak all punctuation in the text view.",
+      "text" : "Sets whether VoiceOver should always speak all punctuation in the text",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "view.",
       "type" : "text"
     }
   ],
@@ -65,7 +73,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -231,7 +242,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use this modifier to control whether the system speaks punctuation characters",
+              "text" : "Use this modifier to control whether the system speaks punctuation",
               "type" : "text"
             },
             {
@@ -239,7 +250,7 @@
               "type" : "text"
             },
             {
-              "text" : "in the text. You might use this for code or other text where the punctuation is relevant, or where",
+              "text" : "characters in the text. You might use this for code or other text where",
               "type" : "text"
             },
             {
@@ -247,7 +258,7 @@
               "type" : "text"
             },
             {
-              "text" : "you want VoiceOver to speak a verbatim transcription of the text you provide. For example,",
+              "text" : "the punctuation is relevant, or where you want VoiceOver to speak a",
               "type" : "text"
             },
             {
@@ -255,7 +266,15 @@
               "type" : "text"
             },
             {
-              "text" : "given the text:",
+              "text" : "verbatim transcription of the text you provide. For example, given the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "text:",
               "type" : "text"
             }
           ],
@@ -273,7 +292,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "VoiceOver would speak “All the world apostrophe s a stage comma and all the men",
+              "text" : "VoiceOver would speak “All the world apostrophe s a stage comma and all",
               "type" : "text"
             },
             {
@@ -281,7 +300,7 @@
               "type" : "text"
             },
             {
-              "text" : "and women merely players semicolon”.",
+              "text" : "the men and women merely players semicolon”.",
               "type" : "text"
             }
           ],
@@ -415,7 +434,15 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/speechAlwaysIncludesPunctuation(_:)": {
   "abstract" : [
     {
-      "text" : "Sets whether VoiceOver should always speak all punctuation in the text view.",
+      "text" : "Sets whether VoiceOver should always speak all punctuation in the text",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "view.",
       "type" : "text"
     }
   ],

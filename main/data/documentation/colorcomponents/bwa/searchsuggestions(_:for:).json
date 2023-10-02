@@ -90,7 +90,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -349,8 +352,8 @@
             "    var id: Self { self }",
             "}",
             "",
-            "@State var text = \"\"",
-            "@State var suggestions: [FruitSuggestion] = []",
+            "@State private var text = \"\"",
+            "@State private var suggestions: [FruitSuggestion] = []",
             "",
             "var body: some View {",
             "    MainContent()",

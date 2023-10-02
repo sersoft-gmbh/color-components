@@ -145,7 +145,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -267,6 +270,19 @@
             {
               "kind" : "text",
               "text" : ")? = nil, "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -531,7 +547,8 @@
         {
           "code" : [
             "struct ShowPartDetail: View {",
-            "    @State var sheetDetail: InventoryItem?",
+            "    @State private var sheetDetail: InventoryItem?",
+            "",
             "    var body: some View {",
             "        Button(\"Show Part Details\") {",
             "            sheetDetail = InventoryItem(",
@@ -570,9 +587,59 @@
         },
         {
           "inlineContent" : [
+
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
             {
-              "identifier" : "SwiftUI-View-SheetItemContent.png",
-              "type" : "image"
+              "text" : "In vertically compact environments, such as iPhone in landscape",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "orientation, a sheet presentation automatically adapts to appear as a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "full-screen cover. Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/presentationCompactAdaptation(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/presentationCompactAdaptation(horizontal:vertical:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifier to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "override this behavior.",
+              "type" : "text"
             }
           ],
           "type" : "paragraph"

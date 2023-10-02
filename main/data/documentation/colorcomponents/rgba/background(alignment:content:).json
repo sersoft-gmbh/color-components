@@ -96,7 +96,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -187,6 +190,19 @@
               "text" : " = .center, "
             },
             {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "externalParam",
               "text" : "content"
             },
@@ -248,26 +264,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that uses the specified content as a background.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     },
     {
       "kind" : "parameters",
@@ -357,6 +353,26 @@
           "name" : "content"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that uses the specified content as a background.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -467,10 +483,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-background-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -604,10 +617,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-background-3",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -685,10 +695,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-background-3a",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -776,10 +783,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-background-4",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -924,6 +928,26 @@
             },
             {
               "text" : ", respectively.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "To configure the background of a presentation, like a sheet, use",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/presentationBackground(alignment:content:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             }
           ],

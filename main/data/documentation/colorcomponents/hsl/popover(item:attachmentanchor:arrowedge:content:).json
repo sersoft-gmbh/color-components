@@ -162,7 +162,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -287,6 +290,19 @@
             {
               "kind" : "text",
               "text" : " = .top, "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -617,7 +633,7 @@
         {
           "code" : [
             "struct PopoverExample: View {",
-            "    @State var popover: PopoverModel?",
+            "    @State private var popover: PopoverModel?",
             "",
             "    var body: some View {",
             "        Button(\"Show Popover\") {",
@@ -640,10 +656,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-popover-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

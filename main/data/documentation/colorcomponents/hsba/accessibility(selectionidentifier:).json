@@ -85,7 +85,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -115,6 +118,14 @@
         "deprecated" : true,
         "introducedAt" : "6.0",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "1.0",
+        "introducedAt" : "1.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],

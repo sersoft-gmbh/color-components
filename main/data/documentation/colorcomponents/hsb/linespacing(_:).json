@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -296,10 +299,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-view-lineSpacing.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

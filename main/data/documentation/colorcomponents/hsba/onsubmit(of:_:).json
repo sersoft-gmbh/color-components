@@ -81,7 +81,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -444,7 +447,7 @@
         },
         {
           "code" : [
-            "@StateObject var viewModel = ViewModel()",
+            "@StateObject private var viewModel = ViewModel()",
             "",
             "NavigationView {",
             "    SidebarView()",

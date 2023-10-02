@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Sets whether VoiceOver should speak the contents of the text view character by character.",
+      "text" : "Sets whether VoiceOver should speak the contents of the text view",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "character by character.",
       "type" : "text"
     }
   ],
@@ -64,7 +72,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -238,7 +249,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use this modifier when you want VoiceOver to speak text as individual letters,",
+              "text" : "Use this modifier when you want VoiceOver to speak text as individual",
               "type" : "text"
             },
             {
@@ -246,7 +257,15 @@
               "type" : "text"
             },
             {
-              "text" : "character by character. This is important for text that is not meant to be spoken together, like:",
+              "text" : "letters, character by character. This is important for text that is not",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "meant to be spoken together, like:",
               "type" : "text"
             }
           ],
@@ -272,7 +291,15 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "A number representing a series of digits, like 25, spoken as “two-five” rather than “twenty-five”.",
+                      "text" : "A number representing a series of digits, like 25, spoken as “two-five”",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "rather than “twenty-five”.",
                       "type" : "text"
                     }
                   ],
@@ -368,7 +395,15 @@
 "doc://ColorComponents/documentation/ColorComponents/BW/speechSpellsOutCharacters(_:)": {
   "abstract" : [
     {
-      "text" : "Sets whether VoiceOver should speak the contents of the text view character by character.",
+      "text" : "Sets whether VoiceOver should speak the contents of the text view",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "character by character.",
       "type" : "text"
     }
   ],

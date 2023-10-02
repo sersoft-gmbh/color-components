@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Adds an action to perform in response to the system’s Cut command.",
+      "text" : "Specifies an action that moves items to the Clipboard in response to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the system’s Cut command.",
       "type" : "text"
     }
   ],
@@ -95,7 +103,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -243,42 +254,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that triggers ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when a system cut command",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "occurs.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -286,7 +261,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "Type of items being cut.",
+                  "text" : "The type of items to cut.",
                   "type" : "text"
                 }
               ],
@@ -300,21 +275,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A Boolean value that specifies if cutting is enabled.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isEnabled"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An action closure that should delete the selected",
+                  "text" : "A closure that you implement to delete the selected",
                   "type" : "text"
                 },
                 {
@@ -322,15 +283,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "data and return ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Transferable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " items, which should be written to the",
+                  "text" : "items from the collection, and return them for addition to the",
                   "type" : "text"
                 },
                 {
@@ -338,16 +291,60 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "pasteboard.",
+                  "text" : "Clipboard. The items must conform to the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/coretransferable\/transferable",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "protocol.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "payload"
+          "name" : "action"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that sends one or more items to the Clipboard",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in response to a Cut command.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -358,20 +355,198 @@
           "type" : "heading"
         },
         {
+          "inlineContent" : [
+            {
+              "text" : "Use this modifier to remove one or more items from a collection of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "items and then move the items to the Clipboard when someone issues",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "a Cut command. People issue a Cut command by choosing Edit > Cut from",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the app’s menu, or by using the Command-X keyboard shortcut. The system",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "enables the Cut command for your app when it detects cuttable content.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, the following code enables people to remove bird names",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "from a list of birds:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
           "code" : [
-            "var birds = [\"owl\", \"parrot\", \"swift\"]",
-            "var selection = birds.startIndex",
+            "struct CuttableExample: View {",
+            "    @State private var birds = [\"owl\", \"parrot\", \"swift\"]",
+            "    @State private var selection: Set<String> = []",
             "",
-            "var body: some View {",
-            "    CustomTextContainer()",
+            "    var body: some View {",
+            "        List(birds, id: \\.self, selection: $selection) {",
+            "            Text($0)",
+            "        }",
             "        .cuttable(for: String.self) {",
-            "            let bird = birds[selection]",
-            "            birds.remove(at: selection)",
-            "            return [bird]",
+            "            for bird in selection {",
+            "                birds.removeAll(where: { $0 == bird })",
+            "            }",
+            "            return Array(selection)",
+            "        }",
+            "    }",
             "}"
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When someone selects “owl” and issues a Cut command, the ",
+              "type" : "text"
+            },
+            {
+              "code" : "action",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "closure removes the selected item from the list and returns it.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "In response, SwiftUI moves it to the Clipboard. If you want to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "copy the item without removing it, use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/copyable(_:)",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " modifier",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "instead.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "To enable people to cut using a custom action — like from a",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "context menu item — rather than using the system Cut command,",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "update the Clipboard directly using an",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/appkit\/nspasteboard",
+                  "type" : "text"
+                },
+                {
+                  "text" : " or a",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/uikit\/uipasteboard",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "instance.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -455,10 +630,87 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bwa\/view-implementations"
 },
+"doc://ColorComponents/documentation/ColorComponents/BWA/copyable(_:)": {
+  "abstract" : [
+    {
+      "text" : "Specifies a list of items to copy in response to the system’s Copy",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "command.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">(() -> ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : "]) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA\/copyable(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copyable(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/bwa\/copyable(_:)"
+},
 "doc://ColorComponents/documentation/ColorComponents/BWA/cuttable(for:action:)": {
   "abstract" : [
     {
-      "text" : "Adds an action to perform in response to the system’s Cut command.",
+      "text" : "Specifies an action that moves items to the Clipboard in response to",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the system’s Cut command.",
       "type" : "text"
     }
   ],

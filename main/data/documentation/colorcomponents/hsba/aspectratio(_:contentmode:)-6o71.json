@@ -81,7 +81,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -211,42 +214,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that constrains this view’s dimensions to the aspect",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "ratio of the given size using ",
-              "type" : "text"
-            },
-            {
-              "code" : "contentMode",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " as its scaling algorithm.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -310,6 +277,42 @@
           "name" : "contentMode"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that constrains this view’s dimensions to the aspect",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "ratio of the given size using ",
+              "type" : "text"
+            },
+            {
+              "code" : "contentMode",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " as its scaling algorithm.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -410,10 +413,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-aspectRatio-cgfloat.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

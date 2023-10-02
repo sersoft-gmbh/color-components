@@ -105,7 +105,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -381,7 +384,7 @@
         },
         {
           "code" : [
-            "@State var title: String",
+            "@State private var title: String",
             "var body: some View {",
             "    Color.pink",
             "        .frame(width: 400, height: 400)",

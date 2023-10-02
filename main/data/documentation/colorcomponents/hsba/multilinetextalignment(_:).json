@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Sets the alignment of multiline text in this view.",
+      "text" : "Sets the alignment of a text view that contains multiple lines of text.",
       "type" : "text"
     }
   ],
@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -177,6 +180,33 @@
       "kind" : "declarations"
     },
     {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A value that you use to align multiple lines of",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "text within a view.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "alignment"
+        }
+      ]
+    },
+    {
       "content" : [
         {
           "anchor" : "return-value",
@@ -213,33 +243,6 @@
       "kind" : "content"
     },
     {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value that you use to left-, right-, or",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "center-align the text within a view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "alignment"
-        }
-      ]
-    },
-    {
       "content" : [
         {
           "anchor" : "discussion",
@@ -250,15 +253,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "multilineTextAlignment(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to select an alignment for all of the",
+              "text" : "Use this modifier to set an alignment for a multiline block of text.",
               "type" : "text"
             },
             {
@@ -266,16 +261,11 @@
               "type" : "text"
             },
             {
-              "text" : "text in this view or view hierarchy.",
+              "text" : "For example, the modifier centers the contents of the following",
               "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
+            },
             {
-              "text" : "In the example below, the contents of the ",
+              "text" : " ",
               "type" : "text"
             },
             {
@@ -283,39 +273,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " view are center",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "aligned. This also applies to the interpolated newline placed in the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "middle of the text since “multiple lines” refers to all of the text",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "inside the view, regardless of any internal formatting or inclusion of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "interpolated text.",
+              "text" : " view:",
               "type" : "text"
             }
           ],
@@ -323,8 +281,8 @@
         },
         {
           "code" : [
-            "Text(\"This is a block of text that will show up in a text element as multiple lines.\\(\"\\n\") Here we have chosen to center this text.\")",
-            "    .frame(width: 200, height: 200, alignment: .leading)",
+            "Text(\"This is a block of text that shows up in a text element as multiple lines.\\(\"\\n\") Here we have chosen to center this text.\")",
+            "    .frame(width: 200)",
             "    .multilineTextAlignment(.center)"
           ],
           "syntax" : null,
@@ -333,8 +291,317 @@
         {
           "inlineContent" : [
             {
-              "identifier" : "SwiftUI-view-multilineTextAlignment.png",
-              "type" : "image"
+              "text" : "The text in the above example spans more than one line because:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The newline character introduces a line break.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The frame modifier limits the space available to the text view, and",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "by default a text view wraps lines that don’t fit in the available",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "width. As a result, the text before the explicit line break wraps to",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : " ",
+                      "type" : "text"
+                    },
+                    {
+                      "text" : "three lines, and the text after uses two lines.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The modifier applies the alignment to the all the lines of text in",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the view, regardless of why wrapping occurs:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The modifier has no effect on a ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view that contains only one",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "line of text, because a text view has a width that exactly matches the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "width of its widest line. If you want to align an entire text view",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "rather than its contents, set the aligment of its container, like a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "VStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " or a frame that you create with the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/frame(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:alignment:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "You can use this modifier to control the alignment of a ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Text",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "view that you create with the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Text\/init(_:style:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " initializer",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "to display localized dates and times, including when the view uses",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "only a single line, but only when that view appears in a widget.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The modifier also affects the content alignment of other text container",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "types, like ",
+              "type" : "text"
+            },
+            {
+              "code" : "TextEditor",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "TextField",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". In those cases, the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier sets the alignment even when the view contains only a single",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "line because view’s width isn’t dictated by the width of the text it",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "contains.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The modifier operates by setting the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "EnvironmentValues\/multilineTextAlignment",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " value in the environment,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "so it affects all the text containers in the modified view hierarchy.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "For example, you can apply the modifier to a ",
+              "type" : "text"
+            },
+            {
+              "code" : "VStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "configure all the text views inside the stack.",
+              "type" : "text"
             }
           ],
           "type" : "paragraph"
@@ -424,7 +691,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSBA/multilineTextAlignment(_:)": {
   "abstract" : [
     {
-      "text" : "Sets the alignment of multiline text in this view.",
+      "text" : "Sets the alignment of a text view that contains multiple lines of text.",
       "type" : "text"
     }
   ],

@@ -100,7 +100,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -138,6 +141,15 @@
         "introducedAt" : "6.0",
         "message" : "Use `overlay(alignment:content:)` instead.",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "Use `overlay(alignment:content:)` instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -270,34 +282,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that layers ",
-              "type" : "text"
-            },
-            {
-              "code" : "overlay",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " in front of the view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -337,6 +321,34 @@
           "name" : "alignment"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that layers ",
+              "type" : "text"
+            },
+            {
+              "code" : "overlay",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " in front of the view.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -390,10 +402,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

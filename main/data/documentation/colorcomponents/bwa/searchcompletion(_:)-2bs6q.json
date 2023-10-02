@@ -71,7 +71,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -271,8 +274,8 @@
             "    var id: Self { self }",
             "}",
             "",
-            "@State var text = \"\"",
-            "@State var tokens: [FruitToken] = []",
+            "@State private var text = \"\"",
+            "@State private var tokens: [FruitToken] = []",
             "",
             "SearchPlaceholderView()",
             "    .searchable(text: $text, tokens: $tokens) { token in",

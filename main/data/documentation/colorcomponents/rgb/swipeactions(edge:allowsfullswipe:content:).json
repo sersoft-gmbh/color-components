@@ -113,7 +113,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -212,6 +215,19 @@
             {
               "kind" : "text",
               "text" : " = true, "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -494,10 +510,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-swipeActions-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -748,10 +761,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-swipeActions-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

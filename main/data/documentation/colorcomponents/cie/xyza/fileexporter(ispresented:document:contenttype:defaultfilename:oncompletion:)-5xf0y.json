@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Presents a system interface for allowing the user to export an in-memory",
+      "text" : "Presents a system interface for exporting a document that’s stored in",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "document to a file on disk.",
+      "text" : "a reference type, like a class, to a file on disk.",
       "type" : "text"
     }
   ],
@@ -192,7 +192,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -828,7 +831,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/fileExporter(isPresented:document:contentType:defaultFilename:onCompletion:)-5xf0y": {
   "abstract" : [
     {
-      "text" : "Presents a system interface for allowing the user to export an in-memory",
+      "text" : "Presents a system interface for exporting a document that’s stored in",
       "type" : "text"
     },
     {
@@ -836,7 +839,7 @@
       "type" : "text"
     },
     {
-      "text" : "document to a file on disk.",
+      "text" : "a reference type, like a class, to a file on disk.",
       "type" : "text"
     }
   ],

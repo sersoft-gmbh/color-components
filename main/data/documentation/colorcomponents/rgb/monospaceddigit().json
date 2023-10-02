@@ -63,7 +63,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -360,10 +363,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-monospacedDigit-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

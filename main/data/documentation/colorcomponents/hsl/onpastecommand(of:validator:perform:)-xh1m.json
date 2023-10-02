@@ -149,7 +149,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -325,50 +328,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that triggers ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the system paste command",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "is invoked, validating the paste command with ",
-              "type" : "text"
-            },
-            {
-              "code" : "validator",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -392,7 +351,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "If the pasteboard doesn’t contain any of the supported types, the",
+                  "text" : "If the Clipboard doesn’t contain any of the supported types, the",
                   "type" : "text"
                 },
                 {
@@ -400,7 +359,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "paste command doesn’t trigger.",
+                  "text" : "Paste command doesn’t trigger.",
                   "type" : "text"
                 }
               ],
@@ -422,7 +381,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "receives items from the pasteboard with the types you specify in the",
+                  "text" : "receives items from the Clipboard with the types you specify in the",
                   "type" : "text"
                 },
                 {
@@ -466,7 +425,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " instead, the paste command doesn’t trigger.",
+                  "text" : " instead, the Paste command doesn’t trigger.",
                   "type" : "text"
                 }
               ],
@@ -480,7 +439,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The action to perform when the paste command triggers.",
+                  "text" : "The action to perform when the Paste command triggers.",
                   "type" : "text"
                 }
               ],
@@ -490,6 +449,50 @@
           "name" : "payloadAction"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that triggers ",
+              "type" : "text"
+            },
+            {
+              "code" : "action",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " when the system Paste command",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "is invoked, validating the Paste command with ",
+              "type" : "text"
+            },
+            {
+              "code" : "validator",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -522,7 +525,7 @@
               "type" : "text"
             },
             {
-              "text" : "array. The pasteboard items that the ",
+              "text" : "array. The Clipboard items that the ",
               "type" : "text"
             },
             {

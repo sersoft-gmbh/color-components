@@ -88,7 +88,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -250,50 +253,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that clips this view to ",
-              "type" : "text"
-            },
-            {
-              "code" : "shape",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", using ",
-              "type" : "text"
-            },
-            {
-              "code" : "style",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "define the shape’s rasterization.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -349,6 +308,50 @@
           "name" : "style"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that clips this view to ",
+              "type" : "text"
+            },
+            {
+              "code" : "shape",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", using ",
+              "type" : "text"
+            },
+            {
+              "code" : "style",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "define the shape’s rasterization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -450,10 +453,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-clipShape.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

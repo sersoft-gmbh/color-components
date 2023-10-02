@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Presents a system interface for allowing the user to export a collection",
+      "text" : "Presents a system interface for exporting a collection of value type",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "of in-memory documents to files on disk.",
+      "text" : "documents to files on disk.",
       "type" : "text"
     }
   ],
@@ -174,7 +174,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -746,7 +749,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileExporter(isPresented:documents:contentType:onCompletion:)-9gtxi": {
   "abstract" : [
     {
-      "text" : "Presents a system interface for allowing the user to export a collection",
+      "text" : "Presents a system interface for exporting a collection of value type",
       "type" : "text"
     },
     {
@@ -754,7 +757,7 @@
       "type" : "text"
     },
     {
-      "text" : "of in-memory documents to files on disk.",
+      "text" : "documents to files on disk.",
       "type" : "text"
     }
   ],

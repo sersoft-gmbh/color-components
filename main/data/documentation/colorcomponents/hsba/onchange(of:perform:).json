@@ -1,16 +1,19 @@
 {
   "abstract" : [
     {
-      "text" : "Adds a modifier for this view that fires an action when a specific",
+      "text" : "Performs an action when a specified value changes.",
       "type" : "text"
-    },
+    }
+  ],
+  "deprecationSummary" : [
     {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "value changes.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Use `onChange` with a two or zero parameter action closure instead.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
@@ -112,35 +115,46 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "17.0",
         "introducedAt" : "14.0",
+        "message" : "Use `onChange` with a two or zero parameter action closure instead.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "14.0",
         "introducedAt" : "11.0",
+        "message" : "Use `onChange` with a two or zero parameter action closure instead.",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "17.0",
         "introducedAt" : "14.0",
+        "message" : "Use `onChange` with a two or zero parameter action closure instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "10.0",
         "introducedAt" : "7.0",
+        "message" : "Use `onChange` with a two or zero parameter action closure instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -298,26 +312,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that fires an action when the specified value changes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -325,7 +319,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The value to check against when determining whether",
+                  "text" : "The value to check when determining whether to run the",
                   "type" : "text"
                 },
                 {
@@ -333,7 +327,23 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "to run the closure.",
+                  "text" : "closure. The value must conform to the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/Equatable",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "protocol.",
                   "type" : "text"
                 }
               ],
@@ -347,7 +357,31 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A closure to run when the value changes.",
+                  "text" : "A closure to run when the value changes. The closure",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "takes a ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "newValue",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " parameter that indicates the updated",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "value.",
                   "type" : "text"
                 }
               ],
@@ -355,22 +389,28 @@
             }
           ],
           "name" : "action"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The new value that failed the comparison check.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "newValue"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that runs an action when the specified value changes.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -383,15 +423,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "You can use ",
-              "type" : "text"
-            },
-            {
-              "code" : "onChange",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to trigger a side effect as the result of a",
+              "text" : "Use this modifier to run a closure when a value like",
               "type" : "text"
             },
             {
@@ -399,7 +431,7 @@
               "type" : "text"
             },
             {
-              "text" : "value changing, such as an ",
+              "text" : "an ",
               "type" : "text"
             },
             {
@@ -407,7 +439,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " key or a ",
+              "text" : " value or a ",
               "type" : "text"
             },
             {
@@ -415,53 +447,51 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ".",
+              "text" : " changes.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "For example, you can clear a cache when you notice",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "that the view’s scene moves to the background:",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
         },
         {
-          "inlineContent" : [
-            {
-              "code" : "onChange",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is called on the main thread. Avoid performing long-running",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "tasks on the main thread. If you need to perform a long-running task in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "response to ",
-              "type" : "text"
-            },
-            {
-              "code" : "value",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " changing, you should dispatch to a background queue.",
-              "type" : "text"
-            }
+          "code" : [
+            "struct ContentView: View {",
+            "    @Environment(\\.scenePhase) private var scenePhase",
+            "    @StateObject private var cache = DataCache()",
+            "",
+            "    var body: some View {",
+            "        MyView()",
+            "            .onChange(of: scenePhase) { newScenePhase in",
+            "                if newScenePhase == .background {",
+            "                    cache.empty()",
+            "                }",
+            "            }",
+            "    }",
+            "}"
           ],
-          "type" : "paragraph"
+          "syntax" : null,
+          "type" : "codeListing"
         },
         {
           "inlineContent" : [
             {
-              "text" : "The new value is passed into the closure. The previous value may be",
+              "text" : "SwiftUI passes the new value into the closure. You can also capture the",
               "type" : "text"
             },
             {
@@ -469,7 +499,7 @@
               "type" : "text"
             },
             {
-              "text" : "captured by the closure to compare it to the new value. For example, in",
+              "text" : "previous value to compare it to the new value. For example, in",
               "type" : "text"
             },
             {
@@ -519,6 +549,216 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The system may call the action closure on the main actor, so avoid",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "long-running tasks in the closure. If you need to perform such tasks,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "detach an asynchronous background task.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Important: This modifier is deprecated and has been replaced with new",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "versions that include either zero or two parameters within the closure,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "unlike this version that includes one parameter. This deprecated version",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "and the new versions behave differently with respect to how they execute",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the action closure, specifically when the closure captures other values.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Using the deprecated API, the closure is run with captured values that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "represent the “old” state. With the replacement API, the closure is run",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with captured values that represent the “new” state, which makes it",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "easier to correctly perform updates that rely on supplementary values",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "(that may or may not have changed) in addition to the changed value that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "triggered the action.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This modifier is deprecated and has been replaced with new",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "versions that include either zero or two parameters within the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "closure, unlike this version that includes one parameter. This",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "deprecated version and the new versions behave differently with",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "respect to how they execute the action closure, specifically when the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "closure captures other values. Using the deprecated API, the closure",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "is run with captured values that represent the “old” state. With the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "replacement API, the closure is run with captured values that",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "represent the “new” state, which makes it easier to correctly perform",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "updates that rely on supplementary values (that may or may not have",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "changed) in addition to the changed value that triggered the action.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -605,18 +845,11 @@
 "doc://ColorComponents/documentation/ColorComponents/HSBA/onChange(of:perform:)": {
   "abstract" : [
     {
-      "text" : "Adds a modifier for this view that fires an action when a specific",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "value changes.",
+      "text" : "Performs an action when a specified value changes.",
       "type" : "text"
     }
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

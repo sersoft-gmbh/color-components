@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Configures the view’s document for purposes of navigaiton.",
+      "text" : "Configures the view’s document for purposes of navigation.",
       "type" : "text"
     }
   ],
@@ -72,7 +72,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -412,7 +415,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/navigationDocument(_:)-1h5zd": {
   "abstract" : [
     {
-      "text" : "Configures the view’s document for purposes of navigaiton.",
+      "text" : "Configures the view’s document for purposes of navigation.",
       "type" : "text"
     }
   ],

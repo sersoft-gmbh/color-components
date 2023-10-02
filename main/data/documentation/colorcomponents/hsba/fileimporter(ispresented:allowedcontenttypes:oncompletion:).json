@@ -150,7 +150,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -370,7 +373,31 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "succeeded or failed.",
+                  "text" : "succeeded or failed. To access the received URLs, call ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "startAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "When the access is no longer required, call ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "stopAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -515,6 +542,116 @@
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This dialog provides security-scoped URLs.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "Call the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "startAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " method to access or bookmark",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the URLs, and the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "stopAccessingSecurityScopedResource",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " method",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "to release the access.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, an application can have a button that allows the user to choose the default directory",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with document templates loaded on every launch. Such a button might look like this:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            " struct PickTemplatesDirectoryButton: View {",
+            "     @State private var showFileImporter = false",
+            "     var onTemplatesDirectoryPicked: (URL) -> Void",
+            "",
+            "     var body: some View {",
+            "         Button {",
+            "             showFileImporter = true",
+            "         } label: {",
+            "             Label(\"Choose templates directory\", systemImage: \"folder.circle\")",
+            "         }",
+            "         .fileImporter(",
+            "             isPresented: $showFileImporter,",
+            "             allowedContentTypes: [.directory]",
+            "         ) { result in",
+            "              switch result {",
+            "              case .success(let directory):",
+            "                  \/\/ gain access to the directory",
+            "                  let gotAccess = directory.startAccessingSecurityScopedResource()",
+            "                  if !gotAccess { return }",
+            "                  \/\/ access the directory URL",
+            "                  \/\/ (read templates in the directory, make a bookmark, etc.)",
+            "                  onTemplatesDirectoryPicked(directory)",
+            "                  \/\/ release access",
+            "                  directory.stopAccessingSecurityScopedResource()",
+            "              case .failure(let error):",
+            "                  \/\/ handle error",
+            "                  print(error)",
+            "              }",
+            "         }",
+            "     }",
+            " }"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
         },
         {
           "content" : [

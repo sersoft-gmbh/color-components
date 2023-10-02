@@ -83,7 +83,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -121,6 +124,15 @@
         "introducedAt" : "7.0",
         "message" : "replace styled NavigationView with NavigationStack or NavigationSplitView instead",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "replace styled NavigationView with NavigationStack or NavigationSplitView instead",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -270,10 +282,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-navigationViewStyle-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -321,10 +330,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-navigationViewStyle-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

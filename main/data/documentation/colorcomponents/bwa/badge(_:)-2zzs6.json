@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -216,7 +219,7 @@
               "type" : "text"
             },
             {
-              "text" : "appear only in list rows and tab bars.",
+              "text" : "appear only in list rows, tab bars, and menus.",
               "type" : "text"
             }
           ],
@@ -264,10 +267,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-badge-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

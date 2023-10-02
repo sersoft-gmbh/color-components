@@ -82,7 +82,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -204,34 +207,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that doesn’t ask an enclosing grid for extra size",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in one or more axes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -293,6 +268,34 @@
           "name" : "axes"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that doesn’t ask an enclosing grid for extra size",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in one or more axes.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -391,10 +394,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-gridCellUnsizedAxes-1-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -454,10 +454,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-gridCellUnsizedAxes-2-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

@@ -100,7 +100,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -138,6 +141,15 @@
         "introducedAt" : "6.0",
         "message" : "Use `background(alignment:content:)` instead.",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "Use `background(alignment:content:)` instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -456,10 +468,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-background-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

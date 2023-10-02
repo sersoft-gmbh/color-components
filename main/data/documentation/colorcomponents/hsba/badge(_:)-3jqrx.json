@@ -71,7 +71,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -255,7 +258,7 @@
               "type" : "text"
             },
             {
-              "text" : "view. Keep the contents of the badge as short as possible. Badges only",
+              "text" : "view. Keep the contents of the badge as short as possible. Badges",
               "type" : "text"
             },
             {
@@ -263,7 +266,7 @@
               "type" : "text"
             },
             {
-              "text" : "appear in list rows and tab bars.",
+              "text" : "appear only in list rows, tab bars, and menus.",
               "type" : "text"
             }
           ],
@@ -325,10 +328,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-badge-3",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

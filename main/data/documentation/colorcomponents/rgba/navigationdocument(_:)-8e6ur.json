@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Configures the view’s document for purposes of navigaiton.",
+      "text" : "Configures the view’s document for purposes of navigation.",
       "type" : "text"
     }
   ],
@@ -71,7 +71,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -377,7 +380,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGBA/navigationDocument(_:)-8e6ur": {
   "abstract" : [
     {
-      "text" : "Configures the view’s document for purposes of navigaiton.",
+      "text" : "Configures the view’s document for purposes of navigation.",
       "type" : "text"
     }
   ],

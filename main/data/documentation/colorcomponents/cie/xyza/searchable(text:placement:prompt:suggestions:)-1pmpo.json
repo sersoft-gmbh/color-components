@@ -166,7 +166,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -313,6 +316,19 @@
             {
               "kind" : "text",
               "text" : ", "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -498,7 +514,7 @@
               "type" : "text"
             },
             {
-              "text" : "doc:Adding-Search-to-Your-App",
+              "text" : "doc:Adding-a-search-interface-to-your-app",
               "type" : "text"
             },
             {

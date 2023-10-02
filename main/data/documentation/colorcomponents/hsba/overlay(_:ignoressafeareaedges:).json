@@ -97,7 +97,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -276,26 +279,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view with the specified style drawn in front of it.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -367,6 +350,26 @@
           "name" : "edges"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view with the specified style drawn in front of it.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -489,10 +492,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-5",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -552,10 +552,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-6",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

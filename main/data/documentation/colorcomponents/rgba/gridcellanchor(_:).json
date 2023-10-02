@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -177,6 +180,33 @@
       "kind" : "declarations"
     },
     {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The unit point that defines how to align the view",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "within the bounds of its grid cell.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "anchor"
+        }
+      ]
+    },
+    {
       "content" : [
         {
           "anchor" : "return-value",
@@ -203,33 +233,6 @@
         }
       ],
       "kind" : "content"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The unit point that defines how to align the view",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "within the bounds of its grid cell.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "anchor"
-        }
-      ]
     },
     {
       "content" : [
@@ -465,10 +468,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-gridCellAnchor-1-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -527,10 +527,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-gridCellAnchor-2-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -727,10 +724,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-gridCellAnchor-3-iOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

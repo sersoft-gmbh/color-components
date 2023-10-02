@@ -65,7 +65,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -178,34 +181,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that applies the specified symbol variant or variants",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to itself and its child views.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -235,6 +210,34 @@
           "name" : "variant"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that applies the specified symbol variant or variants",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to itself and its child views.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -367,10 +370,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-symbolVariant-1",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -416,10 +416,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-symbolVariant-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -472,10 +469,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-symbolVariant-3",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

@@ -104,7 +104,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -193,6 +196,19 @@
             {
               "kind" : "text",
               "text" : ", "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI21ToolbarContentBuilderV",
+              "text" : "ToolbarContentBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -462,10 +478,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-Styling-ToolbarCustomization.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -599,10 +612,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-Styling-ToolbarCustomizationMenu.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

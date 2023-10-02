@@ -105,7 +105,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -121,6 +124,13 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "tvOS",
         "unavailable" : false
       }
     ],
@@ -204,6 +214,19 @@
             {
               "kind" : "text",
               "text" : ">, "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "externalParam",
@@ -307,7 +330,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A view builder representing the scopes of the search field",
+                  "text" : "A view builder that represents the scoping options",
                   "type" : "text"
                 },
                 {
@@ -315,12 +338,16 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "which will be used to populate a ",
+                  "text" : "SwiftUI uses to populate a ",
                   "type" : "text"
                 },
                 {
                   "code" : "Picker",
                   "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
                 }
               ],
               "type" : "paragraph"
@@ -437,7 +464,7 @@
               "type" : "text"
             },
             {
-              "text" : "field. In iOS, macOS, and tvOS, the picker appears below the search",
+              "text" : "field. In iOS, iPadOS, macOS, and tvOS, the picker appears below the",
               "type" : "text"
             },
             {
@@ -445,7 +472,7 @@
               "type" : "text"
             },
             {
-              "text" : "field when search is active. To ensure that the picker operates",
+              "text" : "search field when search is active. To ensure that the picker operates",
               "type" : "text"
             },
             {
@@ -461,16 +488,15 @@
               "type" : "text"
             },
             {
-              "text" : "view’s tag.",
+              "text" : "view’s tag. Then modify your search to account for the current value of",
               "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
+            },
             {
-              "text" : "You can then condition your search on the current value of the ",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ",
               "type" : "text"
             },
             {
@@ -478,11 +504,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "state property.",
+              "text" : " state property.",
               "type" : "text"
             }
           ],
@@ -499,7 +521,7 @@
               "type" : "text"
             },
             {
-              "text" : "doc:Adding-Search-to-Your-App",
+              "text" : "doc:Adding-a-search-interface-to-your-app",
               "type" : "text"
             },
             {

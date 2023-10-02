@@ -96,7 +96,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -187,6 +190,19 @@
               "text" : " = .center, "
             },
             {
+              "kind" : "attribute",
+              "text" : "@"
+            },
+            {
+              "kind" : "attribute",
+              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
+              "text" : "ViewBuilder"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
               "kind" : "externalParam",
               "text" : "content"
             },
@@ -248,26 +264,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that uses the specified content as a foreground.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     },
     {
       "kind" : "parameters",
@@ -357,6 +353,26 @@
           "name" : "content"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that uses the specified content as a foreground.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -469,10 +485,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-2",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -601,10 +614,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-3",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -681,10 +691,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-3a",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
@@ -775,10 +782,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-overlay-4",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

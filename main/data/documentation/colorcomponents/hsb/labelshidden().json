@@ -55,7 +55,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -234,10 +237,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-labelsHidden-1.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

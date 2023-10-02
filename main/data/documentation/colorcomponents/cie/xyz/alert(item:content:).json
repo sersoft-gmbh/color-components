@@ -125,7 +125,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -163,6 +166,15 @@
         "introducedAt" : "6.0",
         "message" : "use `alert(title:isPresented:presenting::actions:) instead.",
         "name" : "watchOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "use `alert(title:isPresented:presenting::actions:) instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -466,7 +478,7 @@
             "}",
             "",
             "struct ConfirmImportAlert: View {",
-            "    @State var alertDetails: FileInfo?",
+            "    @State private var alertDetails: FileInfo?",
             "    var body: some View {",
             "        Button(\"Show Alert\") {",
             "            alertDetails = FileInfo(name: \"MyImageFile.png\",",
@@ -488,10 +500,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-AlertItemContent.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         }

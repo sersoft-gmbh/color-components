@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -231,7 +234,7 @@
             "        }",
             "        .sheet(isPresented: $showSettings) {",
             "            SettingsView()",
-            "                .presentationDetents:([.medium, .large])",
+            "                .presentationDetents([.medium, .large])",
             "                .presentationDragIndicator(.visible)",
             "        }",
             "    }",

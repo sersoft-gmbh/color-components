@@ -56,7 +56,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -217,10 +220,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "SwiftUI-View-scaledToFill-1.png",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },

@@ -98,7 +98,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -232,42 +235,6 @@
       "kind" : "declarations"
     },
     {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that triggers ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when a system paste command",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "occurs.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
       "kind" : "parameters",
       "parameters" : [
         {
@@ -291,7 +258,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "If the pasteboard doesn’t contain any of the supported types, the",
+                  "text" : "If the Clipboard doesn’t contain any of the supported types, the",
                   "type" : "text"
                 },
                 {
@@ -299,7 +266,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "paste command doesn’t trigger.",
+                  "text" : "Paste command doesn’t trigger.",
                   "type" : "text"
                 }
               ],
@@ -313,7 +280,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The action to perform when the paste command",
+                  "text" : "The action to perform when the Paste command",
                   "type" : "text"
                 },
                 {
@@ -329,7 +296,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "pasteboard with the types you specify in the ",
+                  "text" : "Clipboard with the types you specify in the ",
                   "type" : "text"
                 },
                 {
@@ -351,6 +318,42 @@
           "name" : "payloadAction"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that triggers ",
+              "type" : "text"
+            },
+            {
+              "code" : "action",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " when a system Paste command",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "occurs.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     },
     {
       "content" : [
@@ -383,7 +386,7 @@
               "type" : "text"
             },
             {
-              "text" : "the array. The pasteboard items that the ",
+              "text" : "the array. The Clipboard items that the ",
               "type" : "text"
             },
             {

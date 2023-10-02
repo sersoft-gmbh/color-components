@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -208,53 +211,25 @@
             {
               "text" : "The border shape is used to draw the platter for a bordered button.",
               "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "On macOS, the specified border shape is only applied to bordered",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "buttons in widgets.",
+              "type" : "text"
             }
           ],
           "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This will only reflect on explicitly-set ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".bordered",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " or",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "borderedProminent",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " styles. Setting a shape without",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "explicitly setting the above styles will have no effect.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
         }
       ],
       "kind" : "content"

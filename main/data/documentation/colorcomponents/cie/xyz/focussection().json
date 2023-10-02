@@ -64,7 +64,10 @@
     ],
     "modules" : [
       {
-        "name" : "ColorComponents"
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUI"
+        ]
       }
     ],
     "platforms" : [
@@ -300,10 +303,7 @@
         },
         {
           "inlineContent" : [
-            {
-              "identifier" : "View-focusSection-tvOS",
-              "type" : "image"
-            }
+
           ],
           "type" : "paragraph"
         },
