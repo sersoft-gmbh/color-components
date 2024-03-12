@@ -166,6 +166,10 @@ final class ImageColorsCalculatorTests: XCTestCase {
 #if !canImport(CoreImage) || !canImport(UIKit)
         try skipUnavailableAPI()
 #else
+        guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *) else {
+            throw XCTSkip("MainActor not present")
+        }
+
         final class NonBackingUIImage: UIImage {
             override var ciImage: CIImage? { nil }
             override var cgImage: CGImage? { nil }
