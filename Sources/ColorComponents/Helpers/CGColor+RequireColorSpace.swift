@@ -1,17 +1,24 @@
+// FIXME: This compiler directive dance is only needed because the Swift 5.9 compiler seems to try to parse the `compiler(>=5.10)`
+//        directive's contents when it's nested in another `#if`.
+//        Swift 5.10 seems to fix this - revert to one big outer `#if canImport(CoreGraphics)` once Swift 5.9 support is dropped.
 #if canImport(CoreGraphics)
 import CoreGraphics
+#endif
 
+#if canImport(CoreGraphics) && compiler(>=5.10) && hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
 extension CGColorSpace {
     // There seems to be no constants for these in CoreGraphics...
-#if compiler(>=5.10) && hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
     static nonisolated(unsafe) let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     static nonisolated(unsafe) let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
-#else
+}
+#elseif canImport(CoreGraphics)
+extension CGColorSpace {
     static let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     static let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
-#endif
 }
+#endif
 
+#if canImport(CoreGraphics)
 extension CGColorSpace {
     static func _require(named colorSpaceName: CFString, file: StaticString = #file, line: UInt = #line) -> CGColorSpace {
         guard let colorSpace = CGColorSpace(name: colorSpaceName)
