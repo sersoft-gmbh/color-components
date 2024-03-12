@@ -34,7 +34,7 @@ extension CGColor {
     func _requireCompontens(in range: some RangeExpression<Int>,
                             file: StaticString = #file,
                             line: UInt = #line) -> Array<CGFloat> {
-        guard range.contains(numberOfComponents), let components = components
+        guard range.contains(numberOfComponents), let components
         else { fatalError("CGColor has no or an invalid number of components: \(self)", file: file, line: line) }
         return components
     }
