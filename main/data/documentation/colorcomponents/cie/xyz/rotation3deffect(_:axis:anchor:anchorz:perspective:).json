@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Rotates this view’s rendered output in three dimensions around the given",
+      "text" : "Renders a view’s content as if it’s rotated in three dimensions around",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "axis of rotation.",
+      "text" : "the specified axis.",
       "type" : "text"
     }
   ],
@@ -392,7 +392,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The angle at which to rotate the view.",
+                  "text" : "The angle by which to rotate the view’s content.",
                   "type" : "text"
                 }
               ],
@@ -406,31 +406,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "x",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "y",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "z",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " elements that specify the axis of",
+                  "text" : "The axis of rotation, specified as a tuple with named",
                   "type" : "text"
                 },
                 {
@@ -438,7 +414,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "rotation.",
+                  "text" : "elements for each of the three spatial dimensions.",
                   "type" : "text"
                 }
               ],
@@ -452,15 +428,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The location with a default of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "UnitPoint\/center",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " that",
+                  "text" : "A two dimensional unit point within the view about which to",
                   "type" : "text"
                 },
                 {
@@ -468,7 +436,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "defines a point in 3D space about which the rotation is anchored.",
+                  "text" : "perform the rotation. The default value is ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "UnitPoint\/center",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -482,15 +458,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The location with a default of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "0",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " that defines a point in",
+                  "text" : "The location on the z-axis around which to rotate the",
                   "type" : "text"
                 },
                 {
@@ -498,7 +466,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "3D space about which the rotation is anchored.",
+                  "text" : "content. The default is ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "0",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -512,15 +488,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The relative vanishing point with a default of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " for",
+                  "text" : "The relative vanishing point for the rotation. The",
                   "type" : "text"
                 },
                 {
@@ -528,7 +496,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "this rotation.",
+                  "text" : "default is ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "1",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
                   "type" : "text"
                 }
               ],
@@ -542,6 +518,26 @@
     {
       "content" : [
         {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view with rotated content.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "content" : [
+        {
           "anchor" : "discussion",
           "level" : 2,
           "text" : "Discussion",
@@ -550,15 +546,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "rotation3DEffect(_:axis:anchor:anchorZ:perspective:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to rotate the",
+              "text" : "Use this method to create the effect of rotating a view in three",
               "type" : "text"
             },
             {
@@ -566,7 +554,7 @@
               "type" : "text"
             },
             {
-              "text" : "view in three dimensions around the given axis of rotation, and",
+              "text" : "dimensions around a specified axis of rotation. The modifier projects",
               "type" : "text"
             },
             {
@@ -574,40 +562,11 @@
               "type" : "text"
             },
             {
-              "text" : "optionally, position the view at a custom display order and perspective.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, the text is rotated 45˚ about the ",
-              "type" : "text"
-            },
-            {
-              "code" : "y",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " axis,",
+              "text" : "the rotated content onto the original view’s plane. Use the",
               "type" : "text"
             },
             {
               "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "front-most (the default ",
-              "type" : "text"
-            },
-            {
-              "code" : "zIndex",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ") and default ",
               "type" : "text"
             },
             {
@@ -615,15 +574,23 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " (",
+              "text" : " value to control the renderer’s vanishing point. The",
               "type" : "text"
             },
             {
-              "code" : "1",
-              "type" : "codeVoice"
+              "text" : " ",
+              "type" : "text"
             },
             {
-              "text" : "):",
+              "text" : "following example creates the appearance of rotating text 45˚ about",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the y-axis:",
               "type" : "text"
             }
           ],
@@ -632,7 +599,12 @@
         {
           "code" : [
             "Text(\"Rotation by passing an angle in degrees\")",
-            "    .rotation3DEffect(.degrees(45), axis: (x: 0.0, y: 1.0, z: 0.0))",
+            "    .rotation3DEffect(",
+            "        .degrees(45),",
+            "        axis: (x: 0.0, y: 1.0, z: 0.0),",
+            "        anchor: .center,",
+            "        anchorZ: 0,",
+            "        perspective: 1)",
             "    .border(Color.gray)"
           ],
           "syntax" : null,
@@ -643,6 +615,58 @@
 
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "In visionOS, create this effect with",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "perspectiveRotationEffect(_:axis:anchor:anchorZ:perspective:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "instead. To truly rotate a view in three dimensions,",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "use a 3D rotation modifier without a perspective input like",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "rotation3DEffect(_:axis:anchor:)-8vi88",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -763,7 +787,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/rotation3DEffect(_:axis:anchor:anchorZ:perspective:)": {
   "abstract" : [
     {
-      "text" : "Rotates this view’s rendered output in three dimensions around the given",
+      "text" : "Renders a view’s content as if it’s rotated in three dimensions around",
       "type" : "text"
     },
     {
@@ -771,7 +795,7 @@
       "type" : "text"
     },
     {
-      "text" : "axis of rotation.",
+      "text" : "the specified axis.",
       "type" : "text"
     }
   ],

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Cycles through the given phases when the trigger value changes,",
+      "text" : "Animates effects that you apply to a view over a sequence of phases",
       "type" : "text"
     },
     {
@@ -9,15 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "updating the view using the modifiers you apply in ",
-      "type" : "text"
-    },
-    {
-      "code" : "body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "that change based on a trigger.",
       "type" : "text"
     }
   ],
@@ -441,7 +433,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "Phases defining the states that will be cycled through.",
+                  "text" : "The sequence of phases to cycle through. Ensure that the",
                   "type" : "text"
                 },
                 {
@@ -449,7 +441,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "This sequence must not be empty. If an empty sequence is provided,",
+                  "text" : "sequence isn’t empty. If it is, SwiftUI logs a runtime warning and",
                   "type" : "text"
                 },
                 {
@@ -457,15 +449,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "a visual warning will be displayed in place of this view, and a",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "warning will be logged.",
+                  "text" : "also returns a visual warning as the output view.",
                   "type" : "text"
                 }
               ],
@@ -479,7 +463,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A value to observe for changes.",
+                  "text" : "A value whose changes cause the animator to use the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "next phase.",
                   "type" : "text"
                 }
               ],
@@ -493,7 +485,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A view builder closure that takes two parameters. The first",
+                  "text" : "A view builder closure that takes two parameters: a proxy",
                   "type" : "text"
                 },
                 {
@@ -501,7 +493,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "parameter is a proxy value representing the modified view. The",
+                  "text" : "value representing the modified view and the current phase.",
                   "type" : "text"
                 },
                 {
@@ -509,7 +501,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "second parameter is the current phase.",
+                  "text" : "You can apply effects to the proxy based on the current phase.",
                   "type" : "text"
                 }
               ],
@@ -523,7 +515,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A closure that returns the animation to use when",
+                  "text" : "A closure that takes the current phase as input. Return",
                   "type" : "text"
                 },
                 {
@@ -531,7 +523,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "transitioning to the next phase. If ",
+                  "text" : "the animation to use when transitioning to the next phase. If you",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "return ",
                   "type" : "text"
                 },
                 {
@@ -539,7 +539,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " is returned, the",
+                  "text" : ", the transition doesn’t animate. If you don’t set this",
                   "type" : "text"
                 },
                 {
@@ -547,7 +547,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "transition will not be animated.",
+                  "text" : "parameter, SwiftUI uses a default animation.",
                   "type" : "text"
                 }
               ],
@@ -569,7 +569,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The phases that you provide specify the individual values that will",
+              "text" : "When the modified view first appears, this modifier renders its",
               "type" : "text"
             },
             {
@@ -577,7 +577,35 @@
               "type" : "text"
             },
             {
-              "text" : "be animated to when the trigger value changes.",
+              "code" : "content",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " closure using the first phase as input to the closure,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "along with a proxy for the modified view. Apply effects to the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "proxy — and thus to the modified view — in a way that’s appropriate",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for the first phase value.",
               "type" : "text"
             }
           ],
@@ -586,7 +614,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "When the view first appears, the value from the first phase is provided",
+              "text" : "Later, when the value of the ",
+              "type" : "text"
+            },
+            {
+              "code" : "trigger",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " input changes, the modifier",
               "type" : "text"
             },
             {
@@ -594,7 +630,7 @@
               "type" : "text"
             },
             {
-              "text" : "to the ",
+              "text" : "provides its ",
               "type" : "text"
             },
             {
@@ -602,7 +638,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " closure. When the trigger value changes, the content",
+              "text" : " closure with the value of the second phase.",
               "type" : "text"
             },
             {
@@ -610,7 +646,7 @@
               "type" : "text"
             },
             {
-              "text" : "closure is called with the value from the second phase and its",
+              "text" : "Update the effects that you apply to the proxy view accordingly,",
               "type" : "text"
             },
             {
@@ -618,7 +654,7 @@
               "type" : "text"
             },
             {
-              "text" : "corresponding animation. This continues until the last phase is",
+              "text" : "and the modifier animates the change for you. The next time the",
               "type" : "text"
             },
             {
@@ -626,7 +662,27 @@
               "type" : "text"
             },
             {
-              "text" : "reached, after which the first phase is animated to.",
+              "code" : "trigger",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " input changes, this procedure repeats using successive phases",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "until reaching the last phase, at which point the modifier loops back",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to the first phase.",
               "type" : "text"
             }
           ],
@@ -717,7 +773,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/phaseAnimator(_:trigger:content:animation:)": {
   "abstract" : [
     {
-      "text" : "Cycles through the given phases when the trigger value changes,",
+      "text" : "Animates effects that you apply to a view over a sequence of phases",
       "type" : "text"
     },
     {
@@ -725,15 +781,7 @@
       "type" : "text"
     },
     {
-      "text" : "updating the view using the modifiers you apply in ",
-      "type" : "text"
-    },
-    {
-      "code" : "body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
+      "text" : "that change based on a trigger.",
       "type" : "text"
     }
   ],

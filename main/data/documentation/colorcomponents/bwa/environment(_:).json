@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Sets an observable object of the environment to the given value.",
+      "text" : "Places an observable object in the view’s environment.",
       "type" : "text"
     }
   ],
@@ -234,7 +234,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The new object to set for this object’s type in the",
+                  "text" : "The object to set for this object’s type in the",
                   "type" : "text"
                 },
                 {
@@ -250,7 +250,15 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " to clear the object from the environment.",
+                  "text" : " to clear an object of this type from the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "environment.",
                   "type" : "text"
                 }
               ],
@@ -272,7 +280,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "A view that has the given object set in its environment.",
+              "text" : "A view that has the specified object in its environment.",
               "type" : "text"
             }
           ],
@@ -290,57 +298,9 @@
           "type" : "heading"
         },
         {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This modifier only accepts objects conforming to the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Observable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " protocol. For reading environment objects that conform to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ObservableObject",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "View\/environmentObject(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " instead.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Important",
-          "style" : "important",
-          "type" : "aside"
-        },
-        {
           "inlineContent" : [
             {
-              "text" : "Use this modifier to set custom objects in a view’s environment. For",
+              "text" : "Use this modifier to place an object that you declare with the",
               "type" : "text"
             },
             {
@@ -348,7 +308,23 @@
               "type" : "text"
             },
             {
-              "text" : "example, you could set the environment object for a custom ",
+              "text" : "doc:\/\/com.apple.documentation\/documentation\/Observation\/Observable()",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "macro into a view’s environment. For example, you can add an instance",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of a custom observable ",
               "type" : "text"
             },
             {
@@ -356,11 +332,19 @@
               "type" : "codeVoice"
             },
             {
+              "text" : " class to the environment of a",
+              "type" : "text"
+            },
+            {
               "text" : " ",
               "type" : "text"
             },
             {
-              "text" : "class:",
+              "code" : "ContentView",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ":",
               "type" : "text"
             }
           ],
@@ -368,7 +352,7 @@
         },
         {
           "code" : [
-            "@Observable final class Profile { ... }",
+            "@Observable class Profile { ... }",
             "",
             "struct RootView: View {",
             "    @State private var currentProfile: Profile?",
@@ -418,7 +402,7 @@
         {
           "code" : [
             "struct ContentView: View {",
-            "    @Environment(Account.self) private var currentAccount: Account",
+            "    @Environment(Profile.self) private var currentProfile: Profile",
             "",
             "    var body: some View { ... }",
             "}"
@@ -429,7 +413,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "This modifier affects the given view, as",
+              "text" : "This modifier affects the given view, as well as that view’s descendant",
               "type" : "text"
             },
             {
@@ -437,7 +421,7 @@
               "type" : "text"
             },
             {
-              "text" : "well as that view’s descendant views. It has no effect outside the view",
+              "text" : "views. It has no effect outside the view hierarchy on which you call it.",
               "type" : "text"
             },
             {
@@ -445,11 +429,75 @@
               "type" : "text"
             },
             {
-              "text" : "hierarchy on which you call it.",
+              "text" : "The environment of a given view hierarchy holds only one observable",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "object of a given type.",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This modifier takes an object that conforms to the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Observation\/Observable",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "protocol. To add environment objects that conform to the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Combine\/ObservableObject",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "protocol, use ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "View\/environmentObject(_:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " instead.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -536,7 +584,7 @@
 "doc://ColorComponents/documentation/ColorComponents/BWA/environment(_:)": {
   "abstract" : [
     {
-      "text" : "Sets an observable object of the environment to the given value.",
+      "text" : "Places an observable object in the view’s environment.",
       "type" : "text"
     }
   ],

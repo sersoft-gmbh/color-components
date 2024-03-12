@@ -385,7 +385,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/TaskPriority\/3851283-userInitiated",
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Swift\/TaskPriority\/userInitiated",
                   "type" : "text"
                 },
                 {
@@ -461,7 +461,7 @@
               "type" : "text"
             },
             {
-              "text" : "the view appears, or restarts the task with the ",
+              "text" : "the view appears, or restarts the task when the ",
               "type" : "text"
             },
             {
@@ -643,10 +643,13 @@
             "Text(status ?? \"Signed Out\")",
             "    .task(id: server) {",
             "        let sequence = NotificationCenter.default.notifications(",
-            "            named: .didChangeStatus,",
-            "            object: server)",
-            "        for try await notification in sequence {",
-            "            status = notification.userInfo[\"status\"] as? String",
+            "            named: .didUpdateStatus,",
+            "            object: server",
+            "        ).compactMap {",
+            "            $0.userInfo?[\"status\"] as? String",
+            "        }",
+            "        for await value in sequence {",
+            "            status = value",
             "        }",
             "    }"
           ],
@@ -672,15 +675,7 @@
               "type" : "text"
             },
             {
-              "text" : "method to wait indefinitely for an asynchronous sequence of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "notifications, given by an",
+              "text" : "method to create an asynchronous sequence of notifications, given by an",
               "type" : "text"
             },
             {
@@ -696,7 +691,15 @@
               "type" : "text"
             },
             {
-              "text" : "instance.",
+              "text" : "instance. The example then maps the notification sequence to a sequence",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of strings that correspond to values stored with each notification.",
               "type" : "text"
             }
           ],
@@ -733,7 +736,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The server then posts a notification of this type whenever its status",
+              "text" : "Whenever the server status changes, like after the user signs in, the",
               "type" : "text"
             },
             {
@@ -741,7 +744,7 @@
               "type" : "text"
             },
             {
-              "text" : "changes, like after the user signs in:",
+              "text" : "server posts a notification of this custom type:",
               "type" : "text"
             }
           ],
@@ -793,7 +796,7 @@
               "type" : "text"
             },
             {
-              "text" : "one, which then starts waiting for notifications from the new server.",
+              "text" : "one, which then waits for notifications from the new server.",
               "type" : "text"
             }
           ],

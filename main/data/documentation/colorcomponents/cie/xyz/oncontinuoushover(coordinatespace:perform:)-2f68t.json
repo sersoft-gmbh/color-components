@@ -265,7 +265,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "location values. Defaults to ",
+                  "text" : "location values. The default value is ",
                   "type" : "text"
                 },
                 {
@@ -295,15 +295,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "moves within, or exits the view’s bounds. The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " closure",
+                  "text" : "moves within, or exits the view’s bounds. The closure takes",
                   "type" : "text"
                 },
                 {
@@ -311,7 +303,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "passes the ",
+                  "text" : "a ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "phase",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " input that has the value ",
                   "type" : "text"
                 },
                 {
@@ -319,7 +319,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " phase with the pointer’s",
+                  "text" : " and",
                   "type" : "text"
                 },
                 {
@@ -327,7 +327,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "coordinates if the pointer is in the view’s bounds; otherwise, it",
+                  "text" : "contains the pointer’s coordinates if the pointer is within the",
                   "type" : "text"
                 },
                 {
@@ -335,7 +335,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "passes ",
+                  "text" : "view’s bounds. The closure receives the ",
                   "type" : "text"
                 },
                 {
@@ -343,7 +343,11 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : ".",
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "phase when the pointer leaves the view’s bounds.",
                   "type" : "text"
                 }
               ],
@@ -401,7 +405,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Call this method to define a region for detecting pointer movement with",
+              "text" : "Use this modifier to define a region for detecting pointer movement with",
               "type" : "text"
             },
             {
@@ -409,7 +413,7 @@
               "type" : "text"
             },
             {
-              "text" : "the size and position of this view.",
+              "text" : "a view. The following example updates a small rectangle’s position",
               "type" : "text"
             },
             {
@@ -417,7 +421,7 @@
               "type" : "text"
             },
             {
-              "text" : "The following example updates ",
+              "text" : "and style by modifying ",
               "type" : "text"
             },
             {
@@ -433,7 +437,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " to be",
+              "text" : " as the pointer",
               "type" : "text"
             },
             {
@@ -441,7 +445,7 @@
               "type" : "text"
             },
             {
-              "text" : "based on the phase provided to the closure:",
+              "text" : "moves within the larger, red rectangle:",
               "type" : "text"
             }
           ],
@@ -453,25 +457,23 @@
             "@State private var isHovering = false",
             "",
             "var body: some View {",
-            "    VStack {",
-            "        Color.red",
-            "            .frame(width: 400, height: 400)",
-            "            .onContinuousHover { phase in",
-            "                switch phase {",
-            "                case .active(let location):",
-            "                    hoverLocation = location",
-            "                    isHovering = true",
-            "                case .ended:",
-            "                    isHovering = false",
-            "                }",
+            "    Color.red",
+            "        .frame(width: 400, height: 400)",
+            "        .onContinuousHover { phase in",
+            "            switch phase {",
+            "            case .active(let location):",
+            "                hoverLocation = location",
+            "                isHovering = true",
+            "            case .ended:",
+            "                isHovering = false",
             "            }",
-            "            .overlay {",
-            "                Rectangle()",
-            "                    .frame(width: 50, height: 50)",
-            "                    .foregroundColor(isHovering ? .green : .blue)",
-            "                    .offset(x: hoverLocation.x, y: hoverLocation.y)",
-            "            }",
-            "    }",
+            "        }",
+            "        .overlay {",
+            "            Rectangle()",
+            "                .frame(width: 50, height: 50)",
+            "                .foregroundStyle(isHovering ? .green : .blue)",
+            "                .offset(x: hoverLocation.x, y: hoverLocation.y)",
+            "        }",
             "}"
           ],
           "syntax" : null,

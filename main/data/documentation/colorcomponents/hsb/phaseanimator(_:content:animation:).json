@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Cycles through the given phases continuously, updating the content",
+      "text" : "Animates effects that you apply to a view over a sequence of phases",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "using the view builder closure that you supply.",
+      "text" : "that change continuously.",
       "type" : "text"
     }
   ],
@@ -399,7 +399,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "Phases defining the states that will be cycled through.",
+                  "text" : "The sequence of phases to cycle through. Ensure that the",
                   "type" : "text"
                 },
                 {
@@ -407,7 +407,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "This sequence must not be empty. If an empty sequence is provided,",
+                  "text" : "sequence isn’t empty. If it is, SwiftUI logs a runtime warning and",
                   "type" : "text"
                 },
                 {
@@ -415,15 +415,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "a visual warning will be displayed in place of this view, and a",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "warning will be logged.",
+                  "text" : "also returns a visual warning as the output view.",
                   "type" : "text"
                 }
               ],
@@ -437,7 +429,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A view builder closure that takes two parameters. The first",
+                  "text" : "A view builder closure that takes two parameters: a proxy",
                   "type" : "text"
                 },
                 {
@@ -445,7 +437,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "parameter is a proxy value representing the modified view. The",
+                  "text" : "value representing the modified view and the current phase.",
                   "type" : "text"
                 },
                 {
@@ -453,7 +445,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "second parameter is the current phase.",
+                  "text" : "You can apply effects to the proxy based on the current phase.",
                   "type" : "text"
                 }
               ],
@@ -467,7 +459,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A closure that returns the animation to use when",
+                  "text" : "A closure that takes the current phase as input. Return",
                   "type" : "text"
                 },
                 {
@@ -475,7 +467,15 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "transitioning to the next phase. If ",
+                  "text" : "the animation to use when transitioning to the next phase. If you",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "return ",
                   "type" : "text"
                 },
                 {
@@ -483,7 +483,7 @@
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : " is returned, the",
+                  "text" : ", the transition doesn’t animate. If you don’t set this",
                   "type" : "text"
                 },
                 {
@@ -491,7 +491,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "transition will not be animated.",
+                  "text" : "parameter, SwiftUI uses a default animation.",
                   "type" : "text"
                 }
               ],
@@ -513,7 +513,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The phases that you provide define the individual values that will",
+              "text" : "When the modified view first appears, this modifier renders its",
               "type" : "text"
             },
             {
@@ -521,7 +521,35 @@
               "type" : "text"
             },
             {
-              "text" : "be animated between.",
+              "code" : "content",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " closure using the first phase as input to the closure,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "along with a proxy for the modified view. Apply effects to the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "proxy — and thus to the modified view — in a way that’s appropriate",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "for the first phase value.",
               "type" : "text"
             }
           ],
@@ -530,15 +558,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "When the view first appears, the the first phase is provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to the ",
+              "text" : "Right away, the modifier provides its ",
               "type" : "text"
             },
             {
@@ -546,7 +566,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " closure. The animator then immediately animates",
+              "text" : " closure with the value",
               "type" : "text"
             },
             {
@@ -554,19 +574,7 @@
               "type" : "text"
             },
             {
-              "text" : "to the second phase, using an animation returned from the ",
-              "type" : "text"
-            },
-            {
-              "code" : "animation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "closure. This continues until the last phase is reached, after which",
+              "text" : "of the second phase. Update the effects that you apply to the proxy",
               "type" : "text"
             },
             {
@@ -574,7 +582,31 @@
               "type" : "text"
             },
             {
-              "text" : "the animator loops back to the beginning.",
+              "text" : "view accordingly, and the modifier animates the change for you.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "As soon as the animation completes, the procedure repeats using",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "successive phases until reaching the last phase, at which point the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "modifier loops back to the first phase.",
               "type" : "text"
             }
           ],
@@ -665,7 +697,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/phaseAnimator(_:content:animation:)": {
   "abstract" : [
     {
-      "text" : "Cycles through the given phases continuously, updating the content",
+      "text" : "Animates effects that you apply to a view over a sequence of phases",
       "type" : "text"
     },
     {
@@ -673,7 +705,7 @@
       "type" : "text"
     },
     {
-      "text" : "using the view builder closure that you supply.",
+      "text" : "that change continuously.",
       "type" : "text"
     }
   ],

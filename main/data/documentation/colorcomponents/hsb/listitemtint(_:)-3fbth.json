@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Sets the tint effect associated with specific content in a list.",
+      "text" : "Sets the tint effect for content in a list.",
       "type" : "text"
     }
   ],
@@ -187,7 +187,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The tint effect to use, or nil to not override the",
+                  "text" : "The tint effect to use. Use ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to avoid  overriding",
                   "type" : "text"
                 },
                 {
@@ -195,7 +203,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "inherited tint.",
+                  "text" : "the inherited tint.",
                   "type" : "text"
                 }
               ],
@@ -217,7 +225,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "The containing list’s style will apply that tint as appropriate. watchOS",
+              "text" : "The containing list’s style applies the tint as appropriate. For",
               "type" : "text"
             },
             {
@@ -225,7 +233,7 @@
               "type" : "text"
             },
             {
-              "text" : "uses the tint color for its background platter appearance. Sidebars on",
+              "text" : "example, watchOS uses the tint color for its background platter",
               "type" : "text"
             },
             {
@@ -233,7 +241,11 @@
               "type" : "text"
             },
             {
-              "text" : "iOS and macOS apply the tint color to their ",
+              "text" : "appearance. Sidebars on iOS and macOS apply the tint color to their",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
               "type" : "text"
             },
             {
@@ -241,15 +253,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " icons, which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "otherwise use the accent color by default.",
+              "text" : " icons, which otherwise use the accent color by default.",
               "type" : "text"
             }
           ],
@@ -340,7 +344,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSB/listItemTint(_:)-3fbth": {
   "abstract" : [
     {
-      "text" : "Sets the tint effect associated with specific content in a list.",
+      "text" : "Sets the tint effect for content in a list.",
       "type" : "text"
     }
   ],

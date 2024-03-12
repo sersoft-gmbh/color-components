@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Sets a fixed tint color associated with specific content in a list.",
+      "text" : "Sets a fixed tint color for content in a list.",
       "type" : "text"
     }
   ],
@@ -187,7 +187,15 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The color to use to tint the content, or nil to not",
+                  "text" : "The color to use to tint the content. Use ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to",
                   "type" : "text"
                 },
                 {
@@ -195,14 +203,14 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "override the inherited tint.",
+                  "text" : "avoid overriding the inherited tint.",
                   "type" : "text"
                 }
               ],
               "type" : "paragraph"
             }
           ],
-          "name" : "color"
+          "name" : "tint"
         }
       ]
     },
@@ -217,15 +225,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "This is equivalent to using a tint of ",
-              "type" : "text"
-            },
-            {
-              "code" : "ListItemTint.fixed(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with the",
+              "text" : "The containing list’s style applies the tint as appropriate. For",
               "type" : "text"
             },
             {
@@ -233,24 +233,7 @@
               "type" : "text"
             },
             {
-              "text" : "provided ",
-              "type" : "text"
-            },
-            {
-              "code" : "tint",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " color.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The containing list’s style will apply that tint as appropriate. watchOS",
+              "text" : "example, watchOS uses the tint color for its background platter",
               "type" : "text"
             },
             {
@@ -258,15 +241,11 @@
               "type" : "text"
             },
             {
-              "text" : "uses the tint color for its background platter appearance. Sidebars on",
+              "text" : "appearance. Sidebars on iOS and macOS apply the tint color to their",
               "type" : "text"
             },
             {
               "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "iOS and macOS apply the tint color to their ",
               "type" : "text"
             },
             {
@@ -274,19 +253,67 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " icons, which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "otherwise use the accent color by default.",
+              "text" : " icons, which otherwise use the accent color by default.",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This modifier is equivalent to using the version of the modifier",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "that takes a ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ListItemTint",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " value and specifying the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "tint",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " color in",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the corresponding ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ListItemTint\/fixed(_:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " input.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -373,7 +400,7 @@
 "doc://ColorComponents/documentation/ColorComponents/HSLA/listItemTint(_:)-1qirm": {
   "abstract" : [
     {
-      "text" : "Sets a fixed tint color associated with specific content in a list.",
+      "text" : "Sets a fixed tint color for content in a list.",
       "type" : "text"
     }
   ],
