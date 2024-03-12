@@ -124,7 +124,7 @@ final class HSLA_SwiftUITests: XCTestCase {
 #endif
     }
 
-    func testViewConformance() throws {
+    func testViewConformance() async throws {
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -133,8 +133,10 @@ final class HSLA_SwiftUITests: XCTestCase {
         let hsl = HSL<Double>(hue: 0.5, saturation: 0.25, luminance: 0.75)
         let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
-        XCTAssertEqual(hsl.body as? Color, Color(hsl))
-        XCTAssertEqual(hsla.body as? Color, Color(hsla))
+        await MainActor.run {
+            XCTAssertEqual(hsl.body as? Color, Color(hsl))
+            XCTAssertEqual(hsla.body as? Color, Color(hsla))
+        }
 #else
         try skipUnavailableAPI()
 #endif

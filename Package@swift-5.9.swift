@@ -1,4 +1,4 @@
-// swift-tools-version:5.10
+// swift-tools-version:5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -8,16 +8,12 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("BareSlashRegexLiterals"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableUpcomingFeature("IsolatedDefaultValues"),
-    .enableUpcomingFeature("DeprecateApplicationMain"),
-//    .enableExperimentalFeature("AccessLevelOnImport"),
 //    .enableExperimentalFeature("VariadicGenerics"),
 ]
 
 let concurrencySwiftSettings: Array<SwiftSetting> = [
      // Not yet possible for ColorCalculations due to CIFormat constants being mutable.
     .enableExperimentalFeature("StrictConcurrency"),
-    .enableExperimentalFeature("GlobalConcurrency"),
 ]
 
 let package = Package(

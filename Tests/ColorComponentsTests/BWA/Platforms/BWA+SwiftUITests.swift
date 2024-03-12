@@ -108,7 +108,7 @@ final class BWA_SwiftUITests: XCTestCase {
 #endif
     }
 
-    func testViewConformance() throws {
+    func testViewConformance() async throws {
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -117,8 +117,10 @@ final class BWA_SwiftUITests: XCTestCase {
         let bw = BW<Double>(white: 0.5)
         let bwa = BWA(bw: bw, alpha: 0.25)
 
-        XCTAssertEqual(bw.body as? Color, Color(bw))
-        XCTAssertEqual(bwa.body as? Color, Color(bwa))
+        await MainActor.run {
+            XCTAssertEqual(bw.body as? Color, Color(bw))
+            XCTAssertEqual(bwa.body as? Color, Color(bwa))
+        }
 #else
         try skipUnavailableAPI()
 #endif

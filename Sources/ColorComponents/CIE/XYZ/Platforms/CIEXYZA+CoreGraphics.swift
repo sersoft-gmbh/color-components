@@ -7,7 +7,7 @@ extension CGColor {
     func _extractCIEXYZ(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> CIE.XYZ<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericXYZ)
         let components = color._requireCompontens(in: 3...4)
-        if let alpha = alpha {
+        if let alpha {
             alpha.pointee = color.alpha
         }
         return .init(x: components[0], y: components[1], z: components[2])

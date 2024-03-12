@@ -87,7 +87,7 @@ final class RGBA_HexTests: XCTestCase {
         XCTAssertNil(rgbInvalid)
         XCTAssertNil(rgbaInvalid)
 
-        if let rgb = rgb {
+        if let rgb {
             XCTAssertEqual(rgb.red, 1, accuracy: .ulpOfOne)
             XCTAssertEqual(rgb.green, 0x80 / 0xFF, accuracy: .ulpOfOne)
             XCTAssertEqual(rgb.blue, 0x55 / 0xFF, accuracy: .ulpOfOne)

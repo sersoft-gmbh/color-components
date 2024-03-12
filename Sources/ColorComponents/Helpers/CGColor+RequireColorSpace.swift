@@ -3,8 +3,13 @@ import CoreGraphics
 
 extension CGColorSpace {
     // There seems to be no constants for these in CoreGraphics...
+#if compiler(>=5.10) && hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
+    static nonisolated(unsafe) let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
+    static nonisolated(unsafe) let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
+#else
     static let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     static let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
+#endif
 }
 
 extension CGColorSpace {

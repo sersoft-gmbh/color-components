@@ -7,7 +7,7 @@ extension CGColor {
     func _extractBW(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> BW<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericGray)
         let components = color._requireCompontens(in: 1...2)
-        if let alpha = alpha {
+        if let alpha {
             alpha.pointee = color.alpha
         }
         return .init(white: components[0])

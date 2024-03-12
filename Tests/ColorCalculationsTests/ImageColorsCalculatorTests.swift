@@ -162,7 +162,7 @@ final class ImageColorsCalculatorTests: XCTestCase {
 #endif
     }
 
-    func testUIImageInitializer() throws {
+    func testUIImageInitializer() async throws {
 #if !canImport(CoreImage) || !canImport(UIKit)
         try skipUnavailableAPI()
 #else
@@ -182,13 +182,13 @@ final class ImageColorsCalculatorTests: XCTestCase {
         let uiImage = try XCTUnwrap(UIImage(contentsOfFile: img1URL.path))
         let calculator = ImageColorsCalculator(uiImage: uiImage)
         XCTAssertNotNil(calculator)
-        let uiImage2 = try XCTUnwrap(NonCIUIImage(contentsOfFile: img2URL.path))
+        let uiImage2 = try await MainActor.run { [img2URL] in try XCTUnwrap(NonCIUIImage(contentsOfFile: img2URL.path)) }
         let calculator2 = ImageColorsCalculator(uiImage: uiImage2)
         XCTAssertNotNil(calculator2)
-        let uiImage3 = try NonCGUIImage(ciImage: XCTUnwrap(CIImage(contentsOf: img1URL)))
+        let uiImage3 = try await MainActor.run { [img1URL] in try NonCGUIImage(ciImage: XCTUnwrap(CIImage(contentsOf: img1URL))) }
         let calculator3 = ImageColorsCalculator(uiImage: uiImage3)
         XCTAssertNotNil(calculator3)
-        let uiImage4 = try XCTUnwrap(NonBackingUIImage(contentsOfFile: img1URL.path))
+        let uiImage4 = try await MainActor.run { [img1URL] in try XCTUnwrap(NonBackingUIImage(contentsOfFile: img1URL.path)) }
         let calculator4 = ImageColorsCalculator(uiImage: uiImage4)
         XCTAssertNil(calculator4)
 #endif

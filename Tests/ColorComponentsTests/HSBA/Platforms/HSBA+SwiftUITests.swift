@@ -124,7 +124,7 @@ final class HSBA_SwiftUITests: XCTestCase {
 #endif
     }
 
-    func testViewConformance() throws {
+    func testViewConformance() async throws {
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -133,8 +133,10 @@ final class HSBA_SwiftUITests: XCTestCase {
         let hsb = HSB<Double>(hue: 0.5, saturation: 0.25, brightness: 0.75)
         let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
-        XCTAssertEqual(hsb.body as? Color, Color(hsb))
-        XCTAssertEqual(hsba.body as? Color, Color(hsba))
+        await MainActor.run {
+            XCTAssertEqual(hsb.body as? Color, Color(hsb))
+            XCTAssertEqual(hsba.body as? Color, Color(hsba))
+        }
 #else
         try skipUnavailableAPI()
 #endif

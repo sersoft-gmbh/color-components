@@ -123,7 +123,7 @@ final class RGBA_SwiftUITests: XCTestCase {
 #endif
     }
 
-    func testViewConformance() throws {
+    func testViewConformance() async throws {
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -132,8 +132,10 @@ final class RGBA_SwiftUITests: XCTestCase {
         let rgb = RGB<Double>(red: 0.5, green: 0.25, blue: 0.75)
         let rgba = RGBA(rgb: rgb, alpha: 0.25)
 
-        XCTAssertEqual(rgb.body as? Color, Color(rgb))
-        XCTAssertEqual(rgba.body as? Color, Color(rgba))
+        await MainActor.run {
+            XCTAssertEqual(rgb.body as? Color, Color(rgb))
+            XCTAssertEqual(rgba.body as? Color, Color(rgba))
+        }
 #else
         try skipUnavailableAPI()
 #endif
