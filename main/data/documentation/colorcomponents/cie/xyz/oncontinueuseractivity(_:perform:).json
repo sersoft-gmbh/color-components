@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Registers a handler to invoke when the view receives the specified",
+      "text" : "Registers a handler to invoke in response to a user activity that your",
       "type" : "text"
     },
     {
@@ -9,7 +9,7 @@
       "type" : "text"
     },
     {
-      "text" : "activity type for the scene or window the view is in.",
+      "text" : "app receives.",
       "type" : "text"
     }
   ],
@@ -246,7 +246,47 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The type of activity to handle.",
+                  "text" : "The type of activity that the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "action",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " closure",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "handles. Be sure that this string matches one of the values that",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "you list in the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "doc:\/\/com.apple.documentation\/documentation\/bundleresources\/information_property_list\/nsuseractivitytypes",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "array in your app’s Information Property List.",
                   "type" : "text"
                 }
               ],
@@ -260,7 +300,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A function to call that takes a",
+                  "text" : "A closure that SwiftUI calls when your app receives a user",
                   "type" : "text"
                 },
                 {
@@ -268,7 +308,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "doc:\/\/com.apple.documentation\/documentation\/Foundation\/NSUserActivity",
+                  "text" : "activity of the specified type. The closure takes the activity as",
                   "type" : "text"
                 },
                 {
@@ -276,15 +316,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "object as its parameter",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "when delivering the activity to the scene or window the view is in.",
+                  "text" : "an input parameter.",
                   "type" : "text"
                 }
               ],
@@ -294,6 +326,131 @@
           "name" : "action"
         }
       ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "return-value",
+          "level" : 2,
+          "text" : "Return Value",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A view that handles incoming user activities.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this view modifier to receive",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "doc:\/\/com.apple.documentation\/documentation\/Foundation\/NSUserActivity",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "instances in a particular scene within your app. The scene that SwiftUI",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "routes the incoming user activity to depends on the structure of your",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "app, what scenes are active, and other configuration. For more",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "information, see ",
+              "type" : "text"
+            },
+            {
+              "code" : "Scene\/handlesExternalEvents(matching:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "UI frameworks traditionally pass Universal Links to your app using a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "user activity. However, SwiftUI passes a Universal Link to your app",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "directly as a URL. To receive a Universal Link, use the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/onOpenURL(perform:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifier instead.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -411,7 +568,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/onContinueUserActivity(_:perform:)": {
   "abstract" : [
     {
-      "text" : "Registers a handler to invoke when the view receives the specified",
+      "text" : "Registers a handler to invoke in response to a user activity that your",
       "type" : "text"
     },
     {
@@ -419,7 +576,7 @@
       "type" : "text"
     },
     {
-      "text" : "activity type for the scene or window the view is in.",
+      "text" : "app receives.",
       "type" : "text"
     }
   ],

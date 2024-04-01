@@ -260,7 +260,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -1465,52 +1465,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-5gewc",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-7up1o",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-7i18b",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-kcbd",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:documents:contenttype:oncompletion:)-7x7pc",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:documents:contenttype:oncompletion:)-9hfth",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-4yjmz",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-5ezcb",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -1530,37 +1530,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -2340,12 +2340,12 @@
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/bw\/ondrop(of:delegate:)-1m904",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bw\/ondrop(of:delegate:)-698vl",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -3628,7 +3628,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -4833,52 +4833,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-58ek0",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-rq1y",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-82vzg",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-9r7u1",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:documents:contenttype:oncompletion:)-1dpb7",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:documents:contenttype:oncompletion:)-2pmdz",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-390as",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-8xivz",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -4898,37 +4898,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -5707,13 +5707,13 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/bwa\/ondrop(of:delegate:)-74bzc",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/bwa\/ondrop(of:delegate:)-8ksl7",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -6995,7 +6995,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -8195,52 +8195,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-2zqvo",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-894rn",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-5kq8u",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-64fwx",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:documents:contenttype:oncompletion:)-3ngv5",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:documents:contenttype:oncompletion:)-4rljf",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-493dp",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-8aebp",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -8260,37 +8260,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -9070,12 +9070,12 @@
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/hsb\/ondrop(of:delegate:)-13dou",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsb\/ondrop(of:delegate:)-9x17a",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -10388,7 +10388,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -11588,52 +11588,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-2le6x",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-5qjf6",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-2q5mw",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-6jsdb",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:documents:contenttype:oncompletion:)-4745s",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:documents:contenttype:oncompletion:)-6t8ti",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-1om73",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-3hrst",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -11653,37 +11653,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -12462,13 +12462,13 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsba\/ondrop(of:delegate:)-4h1av",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/hsba\/ondrop(of:delegate:)-xjl2",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -13750,7 +13750,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -14955,52 +14955,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-2zqb8",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-895c7",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-5klr6",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-64dux",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:documents:contenttype:oncompletion:)-3nhft",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:documents:contenttype:oncompletion:)-4ribz",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-48yzp",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-8aho5",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -15020,37 +15020,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -15830,12 +15830,12 @@
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/hsl\/ondrop(of:delegate:)-13d2a",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsl\/ondrop(of:delegate:)-9wxze",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -17148,7 +17148,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -18353,52 +18353,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-20ibb",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-739t8",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-2x4ba",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-7hhvl",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:documents:contenttype:oncompletion:)-3m83i",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:documents:contenttype:oncompletion:)-5vjhc",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-2519f",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-2ojc9",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -18418,37 +18418,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -19228,12 +19228,12 @@
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/hsla\/ondrop(of:delegate:)-2aa0g",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/hsla\/ondrop(of:delegate:)-3h455",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -20579,7 +20579,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -21784,52 +21784,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-2mn4k",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-4545h",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-30wxd",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-32svr",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:documents:contenttype:oncompletion:)-9e15d",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:documents:contenttype:oncompletion:)-9gtxi",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-1jpi0",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-3hwaj",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -21849,37 +21849,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -22658,13 +22658,13 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgb\/ondrop(of:delegate:)-7d9bf",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/rgb\/ondrop(of:delegate:)-8bwb0",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -24041,7 +24041,7 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/init(from:)",
-                    "title" : "init(from: Decoder) throws",
+                    "title" : "init(from: any Decoder) throws",
                     "type" : "init"
                   }
                 ],
@@ -25246,52 +25246,52 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-7ctay",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-9iak",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-4yucl",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-7dpjf",
-                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:documents:contenttype:oncompletion:)-1nnrn",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:documents:contenttype:oncompletion:)-5ys8o",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-9l267",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-h1yu",
-                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -25311,37 +25311,37 @@
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/filemover(ispresented:file:oncompletion:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/filemover(ispresented:files:oncompletion:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                    "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                     "type" : "method"
                   },
                   {
@@ -26121,12 +26121,12 @@
                   {
                     "deprecated" : true,
                     "path" : "\/documentation\/colorcomponents\/rgba\/ondrop(of:delegate:)-1x2no",
-                    "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/colorcomponents\/rgba\/ondrop(of:delegate:)-8e8ic",
-                    "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                    "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                     "type" : "method"
                   },
                   {
@@ -27432,7 +27432,7 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/init(from:)",
-                        "title" : "init(from: Decoder) throws",
+                        "title" : "init(from: any Decoder) throws",
                         "type" : "init"
                       }
                     ],
@@ -28637,52 +28637,52 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-45dfr",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-612l6",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-2zqno",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-47c7w",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:documents:contenttype:oncompletion:)-13q4x",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:documents:contenttype:oncompletion:)-94wkx",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-8qr1o",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-9t8hl",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                        "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                        "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
@@ -28702,37 +28702,37 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/filemover(ispresented:file:oncompletion:)",
-                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/filemover(ispresented:files:oncompletion:)",
-                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
@@ -29512,12 +29512,12 @@
                       {
                         "deprecated" : true,
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/ondrop(of:delegate:)-1jk32",
-                        "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                        "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyz\/ondrop(of:delegate:)-5p4m8",
-                        "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                        "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                         "type" : "method"
                       },
                       {
@@ -30820,7 +30820,7 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/init(from:)",
-                        "title" : "init(from: Decoder) throws",
+                        "title" : "init(from: any Decoder) throws",
                         "type" : "init"
                       }
                     ],
@@ -32025,52 +32025,52 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-407hu",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:document:contenttype:defaultfilename:oncompletion:)-5xf0y",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentType: UTType, defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-2ui0s",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:document:contenttypes:defaultfilename:oncompletion:oncancellation:)-9wn37",
-                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<D>(isPresented: Binding<Bool>, document: D?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:documents:contenttype:oncompletion:)-6deo7",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:documents:contenttype:oncompletion:)-7zcrr",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentType: UTType, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-2hpk2",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:documents:contenttypes:oncompletion:oncancellation:)-lyc6",
-                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C>(isPresented: Binding<Bool>, documents: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:item:contenttypes:defaultfilename:oncompletion:oncancellation:)",
-                        "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<T>(isPresented: Binding<Bool>, item: T?, contentTypes: [UTType], defaultFilename: String?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileexporter(ispresented:items:contenttypes:oncompletion:oncancellation:)",
-                        "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileExporter<C, T>(isPresented: Binding<Bool>, items: C, contentTypes: [UTType], onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
@@ -32090,37 +32090,37 @@
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileimporter(ispresented:allowedcontenttypes:allowsmultipleselection:oncompletion:oncancellation:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], allowsMultipleSelection: Bool, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/fileimporter(ispresented:allowedcontenttypes:oncompletion:)",
-                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileImporter(isPresented: Binding<Bool>, allowedContentTypes: [UTType], onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/filemover(ispresented:file:oncompletion:)",
-                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void) -> some View",
+                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/filemover(ispresented:file:oncompletion:oncancellation:)",
-                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileMover(isPresented: Binding<Bool>, file: URL?, onCompletion: (Result<URL, any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/filemover(ispresented:files:oncompletion:)",
-                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void) -> some View",
+                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/filemover(ispresented:files:oncompletion:oncancellation:)",
-                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], Error>) -> Void, onCancellation: () -> Void) -> some View",
+                        "title" : "func fileMover<C>(isPresented: Binding<Bool>, files: C, onCompletion: (Result<[URL], any Error>) -> Void, onCancellation: () -> Void) -> some View",
                         "type" : "method"
                       },
                       {
@@ -32900,12 +32900,12 @@
                       {
                         "deprecated" : true,
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/ondrop(of:delegate:)-103wb",
-                        "title" : "func onDrop(of: [String], delegate: DropDelegate) -> some View",
+                        "title" : "func onDrop(of: [String], delegate: any DropDelegate) -> some View",
                         "type" : "method"
                       },
                       {
                         "path" : "\/documentation\/colorcomponents\/cie\/xyza\/ondrop(of:delegate:)-66x1s",
-                        "title" : "func onDrop(of: [UTType], delegate: DropDelegate) -> some View",
+                        "title" : "func onDrop(of: [UTType], delegate: any DropDelegate) -> some View",
                         "type" : "method"
                       },
                       {

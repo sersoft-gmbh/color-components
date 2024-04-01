@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Expands the view out of its safe area.",
+      "text" : "Expands the safe area of a view.",
       "type" : "text"
     }
   ],
@@ -239,7 +239,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the kinds of rectangles removed from the safe area",
+                  "text" : "The regions to expand the view’s safe area into. The",
                   "type" : "text"
                 },
                 {
@@ -247,15 +247,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "that should be ignored (i.e. added back to the safe area",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "of the new child view).",
+                  "text" : "modifier expands into all safe area region types by default.",
                   "type" : "text"
                 }
               ],
@@ -269,7 +261,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the edges of the view that may be outset, any edges",
+                  "text" : "The set of edges to expand. Any edges that you",
                   "type" : "text"
                 },
                 {
@@ -277,7 +269,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "not in this set will be unchanged, even if that edge is",
+                  "text" : "don’t include in this set remain unchanged. The set includes all",
                   "type" : "text"
                 },
                 {
@@ -285,15 +277,7 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "abutting a safe area listed in ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "regions",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
+                  "text" : "edges by default.",
                   "type" : "text"
                 }
               ],
@@ -315,7 +299,84 @@
         {
           "inlineContent" : [
             {
-              "text" : "a new view with its safe area expanded.",
+              "text" : "A view with an expanded safe area.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "By default, the SwiftUI layout system sizes and positions views to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "avoid certain safe areas. This ensures that system content like the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "software keyboard or edges of the device don’t obstruct your",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "views. To extend your content into these regions, you can ignore",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "safe areas on specific edges by applying this modifier.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For examples of how to use this modifier,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "see ",
+              "type" : "text"
+            },
+            {
+              "text" : "doc:Adding-a-Background-to-Your-View",
+              "type" : "text"
+            },
+            {
+              "text" : ".",
               "type" : "text"
             }
           ],
@@ -406,7 +467,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGBA/ignoresSafeArea(_:edges:)": {
   "abstract" : [
     {
-      "text" : "Expands the view out of its safe area.",
+      "text" : "Expands the safe area of a view.",
       "type" : "text"
     }
   ],

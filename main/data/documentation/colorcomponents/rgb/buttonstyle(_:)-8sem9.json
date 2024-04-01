@@ -265,7 +265,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "You can also use this modifier to set the style for controls with a button",
+              "text" : "You can also use this modifier to set the style for controls that",
               "type" : "text"
             },
             {
@@ -273,7 +273,27 @@
               "type" : "text"
             },
             {
-              "text" : "style through composition:",
+              "text" : "acquire a button style through composition, like the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Menu",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "Toggle",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " views in the following example:",
               "type" : "text"
             }
           ],
@@ -300,15 +320,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "In this example, ",
+              "text" : "The ",
               "type" : "text"
             },
             {
-              "code" : ".menuStyle(.button)",
+              "code" : "View\/menuStyle(_:)",
               "type" : "codeVoice"
             },
             {
-              "text" : " says that the Terms and",
+              "text" : " modifier causes the Terms",
               "type" : "text"
             },
             {
@@ -316,7 +336,7 @@
               "type" : "text"
             },
             {
-              "text" : "Conditions menu renders as a button, while",
+              "text" : "and Conditions menu to render as a button. Similarly, the",
               "type" : "text"
             },
             {
@@ -324,11 +344,11 @@
               "type" : "text"
             },
             {
-              "code" : ".toggleStyle(.button)",
+              "code" : "View\/toggleStyle(_:)",
               "type" : "codeVoice"
             },
             {
-              "text" : " says that the two toggles also render as",
+              "text" : " modifier causes the two toggles to",
               "type" : "text"
             },
             {
@@ -336,15 +356,23 @@
               "type" : "text"
             },
             {
-              "text" : "buttons. Finally, ",
+              "text" : "render as buttons. The button style modifier then causes not only",
               "type" : "text"
             },
             {
-              "code" : ".buttonStyle(.bordered)",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the explicit Sign In ",
+              "type" : "text"
+            },
+            {
+              "code" : "Button",
               "type" : "codeVoice"
             },
             {
-              "text" : " says that the menu,",
+              "text" : ", but also the menu and toggles with",
               "type" : "text"
             },
             {
@@ -352,15 +380,7 @@
               "type" : "text"
             },
             {
-              "text" : "both toggles, and the Sign In button all render with the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "bordered button style.```",
+              "text" : "button styling, to render with the bordered button style.",
               "type" : "text"
             }
           ],

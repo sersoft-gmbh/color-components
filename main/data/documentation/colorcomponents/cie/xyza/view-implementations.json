@@ -20,6 +20,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "View Implementations"
   },
   "schemaVersion" : {
@@ -10750,6 +10751,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -12096,6 +12098,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -12222,6 +12225,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -21128,7 +21132,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -21309,7 +21313,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -21494,7 +21498,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -21696,7 +21700,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -21877,7 +21881,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -22041,7 +22045,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -22217,7 +22221,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -22410,7 +22414,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -22616,7 +22620,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -22805,7 +22809,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23184,7 +23188,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23341,7 +23345,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23498,7 +23502,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23638,7 +23642,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23778,7 +23782,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", any "
     },
     {
       "kind" : "typeIdentifier",
@@ -23942,7 +23946,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -24089,7 +24093,7 @@
     },
     {
       "kind" : "text",
-      "text" : "], "
+      "text" : "], any "
     },
     {
       "kind" : "typeIdentifier",
@@ -27120,7 +27124,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/handlesExternalEvents(preferring:allowing:)": {
   "abstract" : [
     {
-      "text" : "Specifies a modifier indicating the Scene this View",
+      "text" : "Specifies the external events that the view’s scene handles",
       "type" : "text"
     },
     {
@@ -27128,7 +27132,7 @@
       "type" : "text"
     },
     {
-      "text" : "is in can handle matching incoming External Events.",
+      "text" : "if the scene is already open.",
       "type" : "text"
     }
   ],
@@ -27747,7 +27751,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/ignoresSafeArea(_:edges:)": {
   "abstract" : [
     {
-      "text" : "Expands the view out of its safe area.",
+      "text" : "Expands the safe area of a view.",
       "type" : "text"
     }
   ],
@@ -29778,6 +29782,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI14LayoutValueKeyP0D0Qa",
       "text" : "Value"
     },
     {
@@ -34557,7 +34562,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/onContinueUserActivity(_:perform:)": {
   "abstract" : [
     {
-      "text" : "Registers a handler to invoke when the view receives the specified",
+      "text" : "Registers a handler to invoke in response to a user activity that your",
       "type" : "text"
     },
     {
@@ -34565,7 +34570,7 @@
       "type" : "text"
     },
     {
-      "text" : "activity type for the scene or window the view is in.",
+      "text" : "app receives.",
       "type" : "text"
     }
   ],
@@ -35278,7 +35283,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "typeIdentifier",
@@ -35365,7 +35370,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "typeIdentifier",
@@ -37244,7 +37249,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/onOpenURL(perform:)": {
   "abstract" : [
     {
-      "text" : "Registers a handler to invoke when the view receives a url for the",
+      "text" : "Registers a handler to invoke in response to a URL that your app",
       "type" : "text"
     },
     {
@@ -37252,7 +37257,7 @@
       "type" : "text"
     },
     {
-      "text" : "scene or window the view is in.",
+      "text" : "receives.",
       "type" : "text"
     }
   ],
@@ -37889,6 +37894,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -37991,6 +37997,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7Combine9PublisherP6OutputQa",
       "text" : "Output"
     },
     {
@@ -38886,6 +38893,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -39012,6 +39020,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -40444,6 +40453,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -45097,6 +45107,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -45311,6 +45322,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -45525,6 +45537,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -45713,6 +45726,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -45901,6 +45915,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -46089,6 +46104,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -47493,6 +47509,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -47705,6 +47722,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -47924,6 +47942,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -48102,6 +48121,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -48287,6 +48307,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -48465,6 +48486,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -48702,6 +48724,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -48939,6 +48962,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -49183,6 +49207,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -49386,6 +49411,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -49589,6 +49615,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -49799,6 +49826,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST7ElementQa",
       "text" : "Element"
     },
     {
@@ -54344,6 +54372,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
@@ -54629,6 +54658,7 @@
     },
     {
       "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13PreferenceKeyP5ValueQa",
       "text" : "Value"
     },
     {
