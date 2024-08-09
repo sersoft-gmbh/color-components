@@ -20,7 +20,7 @@ extension NSColor {
     // Currently unused
 //    @inlinable
 //    func _requireColorSpace(_ targetColorSpace: NSColorSpace, file: StaticString = #file, line: UInt = #line) -> NSColor {
-//        guard colorSpace != targetColorSpace else { return self }
+//        guard type != .componentBased || colorSpace != targetColorSpace else { return self }
 //        return _requireConverted(to: targetColorSpace, file: file, line: line)
 //    }
 
@@ -28,7 +28,7 @@ extension NSColor {
     func _requireColorSpace(in targetColorSpaces: Set<NSColorSpace>,
                             convertingTo targetColorSpace: NSColorSpace,
                             file: StaticString = #file, line: UInt = #line) -> NSColor {
-        guard !targetColorSpaces.contains(colorSpace) else { return self }
+        guard type != .componentBased || !targetColorSpaces.contains(colorSpace) else { return self }
         return _requireConverted(to: targetColorSpace, file: file, line: line)
     }
 }
