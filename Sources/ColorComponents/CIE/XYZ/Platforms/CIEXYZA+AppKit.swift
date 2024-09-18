@@ -1,5 +1,5 @@
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-import AppKit
+public import AppKit
 
 @available(iOS, unavailable)
 @available(tvOS, unavailable)

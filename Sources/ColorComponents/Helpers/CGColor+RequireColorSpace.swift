@@ -2,7 +2,7 @@
 //        directive's contents when it's nested in another `#if`.
 //        Swift 5.10 seems to fix this - revert to one big outer `#if canImport(CoreGraphics)` once Swift 5.9 support is dropped.
 #if canImport(CoreGraphics)
-import CoreGraphics
+public import CoreGraphics
 #endif
 
 #if canImport(CoreGraphics) && compiler(>=5.10) && hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)

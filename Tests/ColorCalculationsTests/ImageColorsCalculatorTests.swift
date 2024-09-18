@@ -170,16 +170,16 @@ final class ImageColorsCalculatorTests: XCTestCase {
             throw XCTSkip("MainActor not present")
         }
 
-        final class NonBackingUIImage: UIImage {
+        final class NonBackingUIImage: UIImage, @unchecked Sendable {
             override var ciImage: CIImage? { nil }
             override var cgImage: CGImage? { nil }
         }
 
-        final class NonCGUIImage: UIImage {
+        final class NonCGUIImage: UIImage, @unchecked Sendable {
             override var cgImage: CGImage? { nil }
         }
 
-        final class NonCIUIImage: UIImage {
+        final class NonCIUIImage: UIImage, @unchecked Sendable {
             override var ciImage: CIImage? { nil }
         }
 

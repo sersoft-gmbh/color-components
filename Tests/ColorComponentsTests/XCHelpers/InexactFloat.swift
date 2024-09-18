@@ -1,4 +1,4 @@
-struct InexactFloat: BinaryFloatingPoint, RawRepresentable {
+struct InexactFloat: Sendable, BinaryFloatingPoint, RawRepresentable {
     typealias RawValue = Float
 
     typealias IntegerLiteralType = RawValue.IntegerLiteralType

@@ -1,5 +1,5 @@
 #if canImport(UIKit)
-import UIKit
+public import UIKit
 
 @available(macOS, unavailable)
 extension UIColor {

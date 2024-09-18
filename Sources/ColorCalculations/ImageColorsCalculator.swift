@@ -1,7 +1,7 @@
 #if canImport(CoreImage)
-import CoreImage
-import CoreImage.CIFilterBuiltins
-import ColorComponents
+public import CoreImage
+internal import CoreImage.CIFilterBuiltins
+public import ColorComponents
 
 /// A calculator that calculates various colors for a given image.
 public struct ImageColorsCalculator {

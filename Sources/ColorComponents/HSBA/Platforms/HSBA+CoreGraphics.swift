@@ -1,5 +1,5 @@
 #if canImport(CoreGraphics)
-import CoreGraphics
+public import CoreGraphics
 
 extension HSB where Value: BinaryFloatingPoint {
     /// The `CGColor` that corresponds to these color components.

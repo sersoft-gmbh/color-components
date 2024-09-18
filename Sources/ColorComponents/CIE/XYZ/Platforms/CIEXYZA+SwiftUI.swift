@@ -1,6 +1,6 @@
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) // Combine check seems to be necessary
-import SwiftUI
+public import SwiftUI
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension Color {
@@ -141,7 +141,7 @@ extension CIE.XYZA where Value: BinaryInteger {
     }
 }
 #elseif canImport(CoreGraphics)
-import class CoreGraphics.CGColor
+public import class CoreGraphics.CGColor
 
 @available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
 extension CIE.XYZ where Value: BinaryFloatingPoint {

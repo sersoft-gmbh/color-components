@@ -1,14 +1,14 @@
 #if arch(arm64) || arch(x86_64)
 #if canImport(SwiftUI) && canImport(Combine) // Combine check seems to be necessary
-//import SwiftUI
+//public import SwiftUI
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
 #if canImport(UIKit)
-import class UIKit.UIColor
+public import class UIKit.UIColor
 @usableFromInline
 typealias _PlatformColor = UIColor
 #elseif (canImport(AppKit) && !targetEnvironment(macCatalyst))
-import class AppKit.NSColor
+public import class AppKit.NSColor
 @usableFromInline
 typealias _PlatformColor = NSColor
 #else
@@ -33,7 +33,7 @@ typealias _PlatformColor = NSColor
 #endif
 
 //#if canImport(CoreGraphics)
-//import CoreGraphics
+//public import CoreGraphics
 //
 //@available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
 //extension Color {

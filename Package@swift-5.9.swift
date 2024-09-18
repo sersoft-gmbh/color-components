@@ -8,6 +8,7 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("BareSlashRegexLiterals"),
     .enableUpcomingFeature("DisableOutwardActorInference"),
+    .enableExperimentalFeature("AccessLevelOnImport"),
 //    .enableExperimentalFeature("VariadicGenerics"),
 ]
 

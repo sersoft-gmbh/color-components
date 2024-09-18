@@ -1,7 +1,7 @@
 #if canImport(UIKit)
 import UIKit
 
-final class NoCompsUIColor: UIColor {
+final class NoCompsUIColor: UIColor, @unchecked Sendable {
     override func getWhite(_ white: UnsafeMutablePointer<CGFloat>?, alpha: UnsafeMutablePointer<CGFloat>?) -> Bool {
         false
     }

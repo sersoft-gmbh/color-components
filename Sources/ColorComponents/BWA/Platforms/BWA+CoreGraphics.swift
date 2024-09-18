@@ -1,5 +1,5 @@
 #if canImport(CoreGraphics)
-import CoreGraphics
+public import CoreGraphics
 
 @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
 extension CGColor {

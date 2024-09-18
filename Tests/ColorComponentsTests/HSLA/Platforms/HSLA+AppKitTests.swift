@@ -40,8 +40,8 @@ final class HSLA_AppKitTests: XCTestCase {
 
         XCTAssertEqual(hsl.hue, color.hueComponent)
         XCTAssertEqual(hsla.hue, color.hueComponent)
-        XCTAssertEqual(hsl.saturation, HSL(hsb: HSB(color)).saturation)
-        XCTAssertEqual(hsla.saturation, HSLA(hsba: HSBA(color)).saturation)
+        XCTAssertEqual(hsl.saturation, HSL<CGFloat>(hsb: HSB(color)).saturation)
+        XCTAssertEqual(hsla.saturation, HSLA<CGFloat>(hsba: HSBA(color)).saturation)
         XCTAssertEqual(hsl.brightness, color.brightnessComponent)
         XCTAssertEqual(hsla.brightness, color.brightnessComponent)
         XCTAssertEqual(hsla.alpha, color.alphaComponent)
@@ -64,10 +64,10 @@ final class HSLA_AppKitTests: XCTestCase {
         XCTAssertEqual(alphaColor.alphaComponent, .init(hsla.alpha) / 0xFF, accuracy: .ulpOfOne)
         XCTAssertEqual(opaqueColor.hueComponent, .init(hsl.hue) / 0xFF, accuracy: .ulpOfOne)
         XCTAssertEqual(alphaColor.hueComponent, .init(hsla.hue) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.saturationComponent, HSB(opaqueColor).saturation, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.saturationComponent, HSBA(alphaColor).saturation, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.brightnessComponent, HSB(opaqueColor).brightness, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.brightnessComponent, HSBA(alphaColor).brightness, accuracy: .ulpOfOne)
+        XCTAssertEqual(opaqueColor.saturationComponent, HSB<CGFloat>(opaqueColor).saturation, accuracy: .ulpOfOne)
+        XCTAssertEqual(alphaColor.saturationComponent, HSBA<CGFloat>(alphaColor).saturation, accuracy: .ulpOfOne)
+        XCTAssertEqual(opaqueColor.brightnessComponent, HSB<CGFloat>(opaqueColor).brightness, accuracy: .ulpOfOne)
+        XCTAssertEqual(alphaColor.brightnessComponent, HSBA<CGFloat>(alphaColor).brightness, accuracy: .ulpOfOne)
 #else
         try skipUnavailableAPI()
 #endif
@@ -87,8 +87,8 @@ final class HSLA_AppKitTests: XCTestCase {
 
         XCTAssertEqual(hsl.hue, .init(color.hueComponent * 0xFF))
         XCTAssertEqual(hsla.hue, .init(color.hueComponent * 0xFF))
-        XCTAssertEqual(hsl.saturation, HSL(hsb: HSB(color)).saturation, accuracy: 1)
-        XCTAssertEqual(hsla.saturation, HSLA(hsba: HSBA(color)).saturation, accuracy: 1)
+        XCTAssertEqual(hsl.saturation, HSL<UInt8>(hsb: HSB(color)).saturation, accuracy: 1)
+        XCTAssertEqual(hsla.saturation, HSLA<UInt8>(hsba: HSBA(color)).saturation, accuracy: 1)
         XCTAssertEqual(hsl.luminance, HSL(hsb: HSB(color)).luminance)
         XCTAssertEqual(hsla.luminance, HSLA(hsba: HSBA(color)).luminance)
         XCTAssertEqual(hsla.alpha, .init(color.alphaComponent * 0xFF))

@@ -40,8 +40,8 @@ final class HSLA_CoreGraphicsTests: XCTestCase {
 
         XCTAssertEqual(hsl.hue, 0.25)
         XCTAssertEqual(hsla.hue, 0.25)
-        XCTAssertEqual(hsl.saturation, HSL(rgb: RGB(cgColor)).saturation)
-        XCTAssertEqual(hsla.saturation, HSLA(rgba: RGBA(cgColor)).saturation)
+        XCTAssertEqual(hsl.saturation, HSL<CGFloat>(rgb: RGB(cgColor)).saturation)
+        XCTAssertEqual(hsla.saturation, HSLA<CGFloat>(rgba: RGBA(cgColor)).saturation)
         XCTAssertEqual(hsl.brightness, 0.75)
         XCTAssertEqual(hsla.brightness, 0.75)
         XCTAssertEqual(hsla.alpha, 0.5)
@@ -89,8 +89,8 @@ final class HSLA_CoreGraphicsTests: XCTestCase {
 
         XCTAssertEqual(hsl.hue, .init(0.25 * 0xFF))
         XCTAssertEqual(hsla.hue, .init(0.25 * 0xFF))
-        XCTAssertEqual(hsl.saturation, HSL(rgb: RGB(cgColor)).saturation)
-        XCTAssertEqual(hsla.saturation, HSLA(rgba: RGBA(cgColor)).saturation)
+        XCTAssertEqual(hsl.saturation, HSL<UInt8>(rgb: RGB(cgColor)).saturation)
+        XCTAssertEqual(hsla.saturation, HSLA<UInt8>(rgba: RGBA(cgColor)).saturation)
         XCTAssertEqual(hsl.luminance, HSL(rgb: RGB(cgColor)).luminance)
         XCTAssertEqual(hsla.luminance, HSLA(rgba: RGBA(cgColor)).luminance)
         XCTAssertEqual(hsla.alpha, .init(0.5 * 0xFF))

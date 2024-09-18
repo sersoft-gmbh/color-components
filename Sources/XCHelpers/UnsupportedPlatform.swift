@@ -1,4 +1,4 @@
-import XCTest
+public import XCTest
 
 extension XCTestCase {
     /// Throws `XCTSkip` with a message indicating that the API is not available on this platform.

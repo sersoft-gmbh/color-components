@@ -1,6 +1,6 @@
 #if canImport(CoreImage)
 #if canImport(CoreGraphics)
-import CoreGraphics
+public import CoreGraphics
 
 extension ImageColorsCalculator {
     /// Creates a calculator using the given `CGImage`.
@@ -13,7 +13,7 @@ extension ImageColorsCalculator {
 #endif
 
 #if canImport(UIKit)
-import UIKit
+public import UIKit
 
 extension ImageColorsCalculator {
     /// Creates a calculator using the given `UIImage`. Returns `nil` if the `UIImage` could not be converted to a `CIImage`.
@@ -31,7 +31,7 @@ extension ImageColorsCalculator {
 #endif
 
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-import AppKit
+public import AppKit
 
 extension ImageColorsCalculator {
     /// Creates a calculator using the given `NSImage`. Returns `nil` if the `NSImage` could not be converted to a `CIImage`.

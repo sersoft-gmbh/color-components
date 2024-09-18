@@ -1,10 +1,11 @@
 #if canImport(CoreImage)
-import CoreImage
-import ColorComponents
+public import CoreGraphics
+internal import CoreImage
+public import ColorComponents
 
 extension ImageColorsCalculator {
     /// Describes the mode that is used to calculate color distances.
-    public enum ColorDistanceMode {
+    public enum ColorDistanceMode: Sendable, Hashable {
         /// Unweighted, linear sRGB calculation.
         case linearSRGB
         /// Weighted sRGB calculation. R, G and B values are weighted to approximate human perception.
