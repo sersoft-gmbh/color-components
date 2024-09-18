@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE11contextMenu9menuItemsQrqd__yXE_tAaBRd__lF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -81,7 +81,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -132,6 +132,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -412,7 +420,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "People can activate the menu with an action like Control-clicking, or",
+              "text" : "When someone activates the context menu with an action like touch and",
               "type" : "text"
             },
             {
@@ -420,7 +428,7 @@
               "type" : "text"
             },
             {
-              "text" : "by using the touch and hold gesture in iOS and iPadOS:",
+              "text" : "hold in iOS or iPadOS, the system displays the menu next to the content:",
               "type" : "text"
             }
           ],
@@ -452,7 +460,72 @@
         {
           "inlineContent" : [
             {
-              "text" : "If you want to show a preview beside the menu, use",
+              "text" : "To customize the default preview, apply a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/contentShape(_:_:eoFill:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " with a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/contextMenuPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " kind. For example, you can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "change the preview’s corner radius or use a nested view as the preview.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "This view modifier produces a context menu on macOS, but that",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "platform doesn’t display a preview.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you want to show a different preview, you can use",
               "type" : "text"
             },
             {

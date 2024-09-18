@@ -31,7 +31,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE9animationyQrAA9AnimationVSgF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -77,7 +77,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -112,19 +112,19 @@
       {
         "beta" : false,
         "deprecated" : false,
-        "deprecatedAt" : "8.0",
-        "introducedAt" : "6.0",
+        "deprecatedAt" : "1.0",
+        "introducedAt" : "1.0",
         "message" : "Use withAnimation or animation(_:value:) instead.",
-        "name" : "watchOS",
+        "name" : "visionOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
-        "deprecatedAt" : "1.0",
-        "introducedAt" : "1.0",
+        "deprecatedAt" : "8.0",
+        "introducedAt" : "6.0",
         "message" : "Use withAnimation or animation(_:value:) instead.",
-        "name" : "visionOS",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -144,6 +144,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"

@@ -1,7 +1,7 @@
 {
   "abstract" : [
     {
-      "text" : "Adds a context menu with a preview to a view.",
+      "text" : "Adds a context menu with a custom preview to a view.",
       "type" : "text"
     }
   ],
@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE11contextMenu9menuItems7previewQrqd__yXE_qd_0_yXEtAaBRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
@@ -106,7 +106,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -149,6 +149,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -383,7 +391,15 @@
               "type" : "text"
             },
             {
-              "text" : "app’s user interface, the system shows a preview beside the menu.",
+              "text" : "app’s user interface, the system displays the custom preview beside the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "menu.",
               "type" : "text"
             },
             {
@@ -460,7 +476,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Define the preview by returning a view from the ",
+              "text" : "Define the custom preview by returning a view from the ",
               "type" : "text"
             },
             {
@@ -468,7 +484,11 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " closure. The",
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "closure. The system sizes the preview to match the size of its content.",
               "type" : "text"
             },
             {
@@ -476,15 +496,7 @@
               "type" : "text"
             },
             {
-              "text" : "system sizes the preview to match the size of its content. For example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "you can add a two button context menu to a ",
+              "text" : "For example, you can add a two button context menu to a ",
               "type" : "text"
             },
             {
@@ -492,7 +504,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " view, and include",
+              "text" : " view,",
               "type" : "text"
             },
             {
@@ -500,7 +512,7 @@
               "type" : "text"
             },
             {
-              "text" : "an ",
+              "text" : "and use an ",
               "type" : "text"
             },
             {
@@ -508,7 +520,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : " as a preview:",
+              "text" : " as the preview:",
               "type" : "text"
             }
           ],
@@ -556,6 +568,67 @@
         {
           "inlineContent" : [
 
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To customize the lift preview, shown while the system transitions",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to show your custom ",
+              "type" : "text"
+            },
+            {
+              "code" : "preview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", apply a ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/contentShape(_:_:eoFill:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with a ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/contextMenuPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " kind. For example, you",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "can change the lift preview’s corner radius or use a nested view as the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "lift preview.",
+              "type" : "text"
+            }
           ],
           "type" : "paragraph"
         },
@@ -775,7 +848,7 @@
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/contextMenu(menuItems:preview:)": {
   "abstract" : [
     {
-      "text" : "Adds a context menu with a preview to a view.",
+      "text" : "Adds a context menu with a custom preview to a view.",
       "type" : "text"
     }
   ],

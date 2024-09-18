@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE19typesettingLanguage_9isEnabledQr10Foundation6LocaleV0E0V_SbtF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -93,7 +93,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -143,6 +143,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -254,7 +262,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "A Boolean value that indicates whether text langauge is",
+                  "text" : "A Boolean value that indicates whether text language is",
                   "type" : "text"
                 },
                 {

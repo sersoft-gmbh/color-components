@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE6onDrag_7previewQrSo14NSItemProviderCyc_qd__yXEtAaBRd__lF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -90,7 +90,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -126,6 +126,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -404,6 +412,59 @@
             },
             {
               "text" : " is generated and used as the preview image.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To customize the lift preview, shown while the system transitions",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "to show your custom ",
+              "type" : "text"
+            },
+            {
+              "code" : "preview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", apply a ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/contentShape(_:_:eoFill:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with a ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/dragPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " kind. For example, you can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "change the preview’s corner radius or use a nested view as the preview.",
               "type" : "text"
             }
           ],

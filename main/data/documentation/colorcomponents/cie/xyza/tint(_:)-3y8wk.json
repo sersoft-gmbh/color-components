@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE4tintyQrqd__SgAA10ShapeStyleRd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -74,7 +74,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -124,6 +124,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -319,7 +327,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "This example shows a linear dashboard styled gauge tinted with a",
+              "text" : "This example shows a linear gauge tinted with a",
               "type" : "text"
             },
             {
@@ -327,11 +335,11 @@
               "type" : "text"
             },
             {
-              "text" : "gradient from  ",
+              "text" : "gradient from ",
               "type" : "text"
             },
             {
-              "code" : "ShapeStyle\/green",
+              "code" : "ShapeStyle\/blue",
               "type" : "codeVoice"
             },
             {
@@ -353,9 +361,11 @@
           "code" : [
             "struct ControlTint: View {",
             "    var body: some View {",
-            "        Gauge(value: 75, in: 0...100)",
-            "            .gaugeStyle(.linearDashboard)",
-            "            .tint(Gradient(colors: [.red, .yellow, .green]))",
+            "        Gauge(value: 75, in: 0...100) {",
+            "            Text(\"Temperature\")",
+            "        }",
+            "        .gaugeStyle(.linearCapacity)",
+            "        .tint(Gradient(colors: [.blue, .orange, .red]))",
             "    }",
             "}"
           ],

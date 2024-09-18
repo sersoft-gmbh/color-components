@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12contentShape__6eoFillQrAA07ContentE5KindsV_qd__SbtAA0E0Rd__lF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -99,7 +99,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -149,6 +149,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -388,7 +396,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ". For example, the",
+              "text" : ". The following example sets",
               "type" : "text"
             },
             {
@@ -396,7 +404,7 @@
               "type" : "text"
             },
             {
-              "text" : "following example only sets the focus ring shape of the view, without",
+              "text" : "the focus ring shape of the view, without affecting its shape for",
               "type" : "text"
             },
             {
@@ -404,7 +412,7 @@
               "type" : "text"
             },
             {
-              "text" : "affecting its shape for hit-testing:",
+              "text" : "hit-testing:",
               "type" : "text"
             }
           ],
@@ -417,6 +425,316 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can apply multiple kinds of content shapes to the same view. For",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "example, apply a ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/interaction",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " shape and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/focusEffect",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " shape together to set both the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "hit-testing shape and focus ring shape on a view.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Context-Menu--Drag-Previews",
+          "level" : 2,
+          "text" : "Context Menu & Drag Previews",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can control the preview shown by the system for context menus or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "drags using the relevant content shape kind, like",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/dragPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/contextMenuPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example creates a ",
+              "type" : "text"
+            },
+            {
+              "code" : "VStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " of an ",
+              "type" : "text"
+            },
+            {
+              "code" : "Image",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "that has a context menu with a custom content shape:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "VStack {",
+            "    Image(\"turtlerock\")",
+            "        .contentShape(.contextMenuPreview,",
+            "                      RoundedRectangle(cornerRadius: 10))",
+            "    Text(\"Turtle Rock\")",
+            "}",
+            ".contextMenu {",
+            "    Button {",
+            "        \/\/ Add this item to a list of favorites.",
+            "    } label: {",
+            "        Label(\"Add to Favorites\", systemImage: \"heart\")",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When someone activates the context menu with an action like touch and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "hold in iOS or iPadOS, the system uses the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Image",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " as the preview for",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the context menu, applying the requested corner radius.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The content shape also supports applying modifiers such as",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "InsettableShape\/inset(by:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to add padding.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Similar to ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ContentShapeKinds\/focusEffect",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ",",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ContentShapeKinds\/contextMenuPreview",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " and",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ContentShapeKinds\/dragPreview",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " content shapes do not impact the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "hit-testing shape. In this example, someone can touch and hold anywhere",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "on the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "VStack",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to activate the menu. If you only want the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Image",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "to activate the menu, apply ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "View\/contextMenu(menuItems:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "Image",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " instead.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"

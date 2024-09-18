@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE12symbolEffect_7options8isActiveQrqd___7Symbols06SymbolE7OptionsVSbtAG010IndefinitejE0Rd__AG0jE0Rd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -108,7 +108,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -158,6 +158,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -350,7 +358,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "whether the effect is active or inactive.",
+                  "text" : "Whether the effect is active or inactive.",
                   "type" : "text"
                 }
               ],
@@ -372,7 +380,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "a copy of the view with a symbol effect added.",
+              "text" : "A copy of the view with a symbol effect added.",
               "type" : "text"
             }
           ],

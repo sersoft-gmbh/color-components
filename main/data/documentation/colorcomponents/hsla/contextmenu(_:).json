@@ -31,7 +31,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE11contextMenuyQrAA07ContextE0Vyqd__GSgAaBRd__lF::SYNTHESIZED::s:15ColorComponents4HSLAV",
     "fragments" : [
       {
@@ -93,7 +93,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -119,18 +119,18 @@
       {
         "beta" : false,
         "deprecated" : false,
-        "deprecatedAt" : "7.0",
-        "introducedAt" : "6.0",
-        "name" : "watchOS",
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "Use `contextMenu(menuItems:)` instead.",
+        "name" : "visionOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
-        "deprecatedAt" : "100000.0",
-        "introducedAt" : "1.0",
-        "message" : "Use `contextMenu(menuItems:)` instead.",
-        "name" : "visionOS",
+        "deprecatedAt" : "7.0",
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -150,6 +150,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -425,6 +433,47 @@
         {
           "inlineContent" : [
 
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To customize the default preview, apply a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/contentShape(_:_:eoFill:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " with a",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ContentShapeKinds\/contextMenuPreview",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " kind. For example, you can",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "change the preview’s corner radius or use a nested view as the preview.",
+              "type" : "text"
+            }
           ],
           "type" : "paragraph"
         }

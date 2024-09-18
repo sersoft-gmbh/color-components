@@ -28,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE16rotation3DEffect_4axis6anchor0G1Z11perspectiveQrAA5AngleV_14CoreFoundation7CGFloatV1x_AM1yAM1ztAA9UnitPointVA2MtF::SYNTHESIZED::s:15ColorComponents3RGBV",
     "fragments" : [
       {
@@ -172,7 +172,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -222,6 +222,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -652,7 +660,7 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "rotation3DEffect(_:axis:anchor:)-8vi88",
+                  "code" : "rotation3DEffect(_:axis:anchor:)",
                   "type" : "codeVoice"
                 },
                 {

@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE17buttonBorderShapeyQrAA06ButtoneF0VF::SYNTHESIZED::s:15ColorComponents4HSLAV",
     "fragments" : [
       {
@@ -66,7 +66,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -116,6 +116,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -187,7 +195,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the shape to use.",
+                  "text" : "The shape to use.",
                   "type" : "text"
                 }
               ],
@@ -217,7 +225,7 @@
               "type" : "text"
             },
             {
-              "text" : "On macOS, the specified border shape is only applied to bordered",
+              "text" : "In macOS, some border shapes are only applicable to bordered",
               "type" : "text"
             },
             {
@@ -226,6 +234,39 @@
             },
             {
               "text" : "buttons in widgets.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The border shape affects buttons of the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "PrimitiveButtonStyle\/bordered",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "PrimitiveButtonStyle\/borderedProminent",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " styles.",
               "type" : "text"
             }
           ],

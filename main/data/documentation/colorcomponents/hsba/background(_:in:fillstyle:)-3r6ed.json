@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE10background_2in9fillStyleQrqd___qd_0_AA04FillG0VtAA05ShapeG0Rd__AA010InsettableI0Rd_0_r0_lF::SYNTHESIZED::s:15ColorComponents4HSBAV",
     "fragments" : [
       {
@@ -114,7 +114,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -164,6 +164,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -572,23 +580,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "This modifier and ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/background(_:in:fillStyle:)-89n7j",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " are",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "convenience methods for placing a single shape behind a view. To",
+              "text" : "This modifier is a  convenience method for placing a single shape behind a view. To",
               "type" : "text"
             },
             {

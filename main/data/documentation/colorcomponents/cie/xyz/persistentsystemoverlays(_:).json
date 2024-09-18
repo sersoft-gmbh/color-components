@@ -29,7 +29,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE24persistentSystemOverlaysyQrAA10VisibilityOF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
@@ -75,7 +75,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -125,6 +125,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -226,7 +234,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Use this modifier if you would like to customise the immersive",
+              "text" : "Use this modifier to influence the appearance of system overlays",
               "type" : "text"
             },
             {
@@ -234,7 +242,16 @@
               "type" : "text"
             },
             {
-              "text" : "experience of your app by hiding or showing system overlays that may",
+              "text" : "in your app. The behavior varies by platform.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In iOS, the following example hides every persistent system overlay.",
               "type" : "text"
             },
             {
@@ -242,7 +259,7 @@
               "type" : "text"
             },
             {
-              "text" : "affect user experience. The following example hides every persistent",
+              "text" : "In visionOS 2 and later, the SharePlay Indicator hides if the",
               "type" : "text"
             },
             {
@@ -250,7 +267,67 @@
               "type" : "text"
             },
             {
-              "text" : "system overlay.",
+              "text" : "scene is shared through SharePlay, or not shared at all.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "During screen sharing, the indicator always remains visible.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "The Home indicator doesn’t appear without specific user intent",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "when you set visibility to ",
+              "type" : "text"
+            },
+            {
+              "code" : "hidden",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". For a ",
+              "type" : "text"
+            },
+            {
+              "code" : "WindowGroup",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ",",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the modifier affects the visibility of the window chrome. For an",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ImmersiveSpace",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", it affects the Home indicator.",
               "type" : "text"
             }
           ],
@@ -269,26 +346,33 @@
           "type" : "codeListing"
         },
         {
-          "inlineContent" : [
+          "content" : [
             {
-              "text" : "Note that this modifier only sets a preference and, ultimately the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "system will decide if it will honour it or not.",
-              "type" : "text"
+              "inlineContent" : [
+                {
+                  "text" : "You can indicate a preference with this modifier, but the system",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "might or might not be able to honor that preference.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
             }
           ],
-          "type" : "paragraph"
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         },
         {
           "inlineContent" : [
             {
-              "text" : "These non-transient system views include:",
+              "text" : "Affected non-transient system views can include, but are not limited to:",
               "type" : "text"
             }
           ],
@@ -301,7 +385,7 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "The Home indicator",
+                      "text" : "The Home indicator.",
                       "type" : "text"
                     }
                   ],
@@ -314,7 +398,7 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "The SharePlay indicator",
+                      "text" : "The SharePlay indicator.",
                       "type" : "text"
                     }
                   ],
@@ -327,7 +411,7 @@
                 {
                   "inlineContent" : [
                     {
-                      "text" : "The Multi-task indicator and Picture-in-picture on iPad",
+                      "text" : "The Multitasking Controls button and Picture in Picture on iPad.",
                       "type" : "text"
                     }
                   ],

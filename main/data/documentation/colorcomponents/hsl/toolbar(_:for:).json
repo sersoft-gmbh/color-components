@@ -20,7 +20,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE7toolbar_3forQrAA10VisibilityO_AA16ToolbarPlacementVdtF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -83,7 +83,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -91,29 +91,37 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "renamed" : "toolbarVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "macOS",
+        "renamed" : "toolbarVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "16.0",
         "name" : "tvOS",
+        "renamed" : "toolbarVisibility(_:for:)",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "9.0",
         "name" : "watchOS",
+        "renamed" : "toolbarVisibility(_:for:)",
         "unavailable" : false
       }
     ],
@@ -133,6 +141,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -322,7 +338,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "This examples shows a view that hides the navigation bar.",
+              "text" : "This examples shows a view that hides the navigation bar on iOS, or the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "window toolbar items on macOS.",
               "type" : "text"
             }
           ],
@@ -333,6 +357,37 @@
             "NavigationView {",
             "    ContentView()",
             "        .toolbar(.hidden)",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To hide the entire titlebar on macOS, use this modifier with",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "ToolbarPlacement\/windowToolbar",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " placement.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "NavigationView {",
+            "    ContentView()",
+            "        .toolbar(.hidden, for: .windowToolbar)",
             "}"
           ],
           "syntax" : null,
@@ -435,7 +490,7 @@
               "type" : "text"
             },
             {
-              "text" : "able to be fullfilled.",
+              "text" : "able to be fulfilled.",
               "type" : "text"
             }
           ],
@@ -530,6 +585,7 @@
       "type" : "text"
     }
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

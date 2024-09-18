@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Associates a search token with the value of this view.",
+      "text" : "Associates a search token with the value of this view when used",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "as a search suggestion.",
       "type" : "text"
     }
   ],
@@ -20,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE16searchCompletionyQrqd__s12IdentifiableRd__lF::SYNTHESIZED::s:15ColorComponents3HSLV",
     "fragments" : [
       {
@@ -73,7 +81,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -109,6 +117,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -379,7 +395,15 @@
 "doc://ColorComponents/documentation/ColorComponents/HSL/searchCompletion(_:)-56lvo": {
   "abstract" : [
     {
-      "text" : "Associates a search token with the value of this view.",
+      "text" : "Associates a search token with the value of this view when used",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "as a search suggestion.",
       "type" : "text"
     }
   ],

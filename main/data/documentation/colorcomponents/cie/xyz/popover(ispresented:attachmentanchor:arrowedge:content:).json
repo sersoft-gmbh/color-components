@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE7popover11isPresented16attachmentAnchor9arrowEdge7contentQrAA7BindingVySbG_AA017PopoverAttachmentH0OAA0J0Oqd__yctAaBRd__lF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
@@ -142,7 +142,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -178,6 +178,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -438,7 +446,11 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "location of the popover’s arrow in macOS. The default is ",
+                  "text" : "location of the popover’s arrow. The default is",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
                   "type" : "text"
                 },
                 {
@@ -447,14 +459,6 @@
                 },
                 {
                   "text" : ".",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "iOS ignores this parameter.",
                   "type" : "text"
                 }
               ],
@@ -553,7 +557,9 @@
             "        Button(\"Show Popover\") {",
             "            self.isShowingPopover = true",
             "        }",
-            "        .popover(isPresented: $isShowingPopover) {",
+            "        .popover(",
+            "            isPresented: $isShowingPopover, arrowEdge: .bottom",
+            "        ) {",
             "            Text(\"Popover Content\")",
             "                .padding()",
             "        }",

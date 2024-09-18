@@ -29,7 +29,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE7popover4item16attachmentAnchor9arrowEdge7contentQrAA7BindingVyqd__SgG_AA017PopoverAttachmentG0OAA0I0Oqd_0_qd__cts12IdentifiableRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
@@ -165,7 +165,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -201,6 +201,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -537,7 +545,11 @@
                   "type" : "text"
                 },
                 {
-                  "text" : "location of the popover’s arrow in macOS. The default is ",
+                  "text" : "location of the popover’s arrow. The default is",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
                   "type" : "text"
                 },
                 {
@@ -546,14 +558,6 @@
                 },
                 {
                   "text" : ".",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "iOS ignores this parameter.",
                   "type" : "text"
                 }
               ],
@@ -640,7 +644,7 @@
             "        Button(\"Show Popover\") {",
             "            popover = PopoverModel(message: \"Custom Message\")",
             "        }",
-            "        .popover(item: $popover) { detail in",
+            "        .popover(item: $popover, arrowEdge: .bottom) { detail in",
             "            Text(\"\\(detail.message)\")",
             "                .padding()",
             "        }",

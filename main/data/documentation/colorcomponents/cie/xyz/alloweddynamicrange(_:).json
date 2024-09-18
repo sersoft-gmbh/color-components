@@ -29,7 +29,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE19allowedDynamicRangeyQrAA5ImageV0eF0VSgF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
@@ -84,7 +84,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -127,6 +127,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -207,7 +215,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the requested dynamic range, or nil to",
+                  "text" : "The requested dynamic range, or nil to",
                   "type" : "text"
                 },
                 {
@@ -237,7 +245,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "a new view.",
+              "text" : "A new view.",
               "type" : "text"
             }
           ],

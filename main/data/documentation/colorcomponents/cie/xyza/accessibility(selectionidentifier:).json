@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE13accessibility19selectionIdentifierAA15ModifiedContentVyxAA31AccessibilityAttachmentModifierVGs11AnyHashableV_tF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -88,7 +88,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -116,17 +116,17 @@
       },
       {
         "beta" : false,
-        "deprecated" : true,
-        "introducedAt" : "6.0",
-        "name" : "watchOS",
-        "unavailable" : false
-      },
-      {
-        "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "1.0",
         "introducedAt" : "1.0",
         "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : true,
+        "introducedAt" : "6.0",
+        "name" : "watchOS",
         "unavailable" : false
       }
     ],
@@ -146,6 +146,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"

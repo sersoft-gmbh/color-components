@@ -44,7 +44,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE16anchorPreference3key5value9transformQrqd_0_m_AA6AnchorV6SourceVyqd___G5ValueQyd_0_AIyqd__GctAA0E3KeyRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3HSBV",
     "fragments" : [
       {
@@ -189,7 +189,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -239,6 +239,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -434,7 +442,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the preference key type.",
+                  "text" : "The preference key type.",
                   "type" : "text"
                 }
               ],
@@ -448,7 +456,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the geometry value in the current coordinate space.",
+                  "text" : "The geometry value in the current coordinate space.",
                   "type" : "text"
                 }
               ],
@@ -462,7 +470,7 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "the function to produce the preference value.",
+                  "text" : "The function to produce the preference value.",
                   "type" : "text"
                 }
               ],
@@ -484,7 +492,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "a new version of the view that writes the preference.",
+              "text" : "A new version of the view that writes the preference.",
               "type" : "text"
             }
           ],

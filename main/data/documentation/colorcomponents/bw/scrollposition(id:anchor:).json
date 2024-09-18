@@ -28,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE14scrollPosition2id6anchorQrAA7BindingVyqd__SgG_AA9UnitPointVSgtSHRd__lF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -108,7 +108,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -158,6 +158,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -389,7 +397,7 @@
               "type" : "text"
             },
             {
-              "text" : "in the provided binding when events occur that might cause it",
+              "text" : "in the provided binding visible when events occur that might cause it",
               "type" : "text"
             },
             {
@@ -563,6 +571,23 @@
             },
             {
               "text" : "aligned to the bottom.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If no anchor has been provided, SwiftUI will scroll the minimal amount",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "when using the scroll position to programmatically scroll to a view.",
               "type" : "text"
             }
           ],

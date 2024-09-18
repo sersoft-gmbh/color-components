@@ -1,7 +1,15 @@
 {
   "abstract" : [
     {
-      "text" : "Associates a fully formed string with the value of this view.",
+      "text" : "Associates a fully formed string with the value of this view when used",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "as a search suggestion.",
       "type" : "text"
     }
   ],
@@ -20,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE16searchCompletionyQrSSF::SYNTHESIZED::s:15ColorComponents3BWAV",
     "fragments" : [
       {
@@ -66,7 +74,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -116,6 +124,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -178,25 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A string to use as the view’s completion.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "text"
-        }
-      ]
     },
     {
       "content" : [
@@ -361,7 +358,15 @@
 "doc://ColorComponents/documentation/ColorComponents/BWA/searchCompletion(_:)-1tkz5": {
   "abstract" : [
     {
-      "text" : "Associates a fully formed string with the value of this view.",
+      "text" : "Associates a fully formed string with the value of this view when used",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "as a search suggestion.",
       "type" : "text"
     }
   ],

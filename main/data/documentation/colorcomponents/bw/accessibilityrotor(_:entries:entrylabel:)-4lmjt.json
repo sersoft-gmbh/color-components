@@ -28,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE18accessibilityRotor_7entries10entryLabelQrqd___Sayqd_0_Gs7KeyPathCyqd_0_SSGtSyRd__s12IdentifiableRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents2BWV",
     "fragments" : [
       {
@@ -139,7 +139,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -189,6 +189,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -457,44 +465,6 @@
             }
           ],
           "name" : "entries"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Key path on the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Identifiable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " type that can be",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "used to get a user-visible label for every Rotor entry. This is used",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "on macOS when the user opens the list of entries for the Rotor.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "entry"
         }
       ]
     },

@@ -28,7 +28,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE8cuttable3for6actionQrqd__m_Sayqd__Gyct16CoreTransferable0H0Rd__lF::SYNTHESIZED::s:15ColorComponents3RGBV",
     "fragments" : [
       {
@@ -105,7 +105,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -134,6 +134,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -668,7 +676,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">(() -> ["
+      "text" : ">("
+    },
+    {
+      "kind" : "attribute",
+      "text" : "@autoclosure "
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> ["
     },
     {
       "kind" : "typeIdentifier",

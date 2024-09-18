@@ -21,7 +21,7 @@
   },
   "kind" : "symbol",
   "metadata" : {
-    "extendedModule" : "SwiftUI",
+    "extendedModule" : "SwiftUICore",
     "externalID" : "s:7SwiftUI4ViewPAAE17searchSuggestionsyQrqd__yXEAaBRd__lF::SYNTHESIZED::s:15ColorComponents3CIEO4XYZAV",
     "fragments" : [
       {
@@ -74,7 +74,7 @@
       {
         "name" : "ColorComponents",
         "relatedModules" : [
-          "SwiftUI"
+          "SwiftUICore"
         ]
       }
     ],
@@ -124,6 +124,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "keyword",
               "text" : "func"
@@ -306,7 +314,7 @@
               "type" : "text"
             },
             {
-              "code" : "View\/searchCompletion(_:)-2uaf3",
+              "code" : "View\/searchCompletion(_:)",
               "type" : "codeVoice"
             },
             {
@@ -458,7 +466,7 @@
             "    .searchable(text: $text)",
             "    .searchSuggestions {",
             "        ForEach(model.suggestedSearches) { suggestion in",
-            "            Label(suggestion.title,  image: suggestion.image)",
+            "            Label(suggestion.title, image: suggestion.image)",
             "                .searchCompletion(suggestion.text)",
             "        }",
             "    }"
