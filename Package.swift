@@ -10,11 +10,6 @@ let swiftSettings: Array<SwiftSetting> = [
     .enableExperimentalFeature("GlobalConcurrency"),
 ]
 
-let concurrencySwiftSettings: Array<SwiftSetting> = [
-     // Not yet possible for ColorCalculations due to CIFormat constants being mutable.
-    // .enableExperimentalFeature("GlobalConcurrency"),
-]
-
 let package = Package(
     name: "color-components",
     products: [
@@ -34,14 +29,14 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ColorComponents",
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
         .target(
             name: "ColorCalculations",
             dependencies: ["ColorComponents"],
             swiftSettings: swiftSettings),
         .target(
             name: "XCHelpers",
-            swiftSettings: swiftSettings + concurrencySwiftSettings,
+            swiftSettings: swiftSettings,
             linkerSettings: [
                 .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .macCatalyst, .tvOS, .watchOS, .visionOS])),
             ]),
@@ -51,7 +46,7 @@ let package = Package(
                 "ColorComponents",
                 "XCHelpers",
             ],
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
         .testTarget(
             name: "ColorCalculationsTests",
             dependencies: [
@@ -61,6 +56,6 @@ let package = Package(
             resources: [
                 .copy("TestImages"),
             ],
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
     ]
 )

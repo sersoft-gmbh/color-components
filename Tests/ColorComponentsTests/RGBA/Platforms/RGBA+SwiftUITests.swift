@@ -133,8 +133,8 @@ final class RGBA_SwiftUITests: XCTestCase {
         let rgba = RGBA(rgb: rgb, alpha: 0.25)
 
         await MainActor.run {
-            XCTAssertEqual(rgb.body as? Color, Color(rgb))
-            XCTAssertEqual(rgba.body as? Color, Color(rgba))
+            XCTAssertBody(of: rgb, equals: Color(rgb))
+            XCTAssertBody(of: rgba, equals: Color(rgba))
         }
 #else
         try skipUnavailableAPI()

@@ -134,8 +134,8 @@ final class HSBA_SwiftUITests: XCTestCase {
         let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
         await MainActor.run {
-            XCTAssertEqual(hsb.body as? Color, Color(hsb))
-            XCTAssertEqual(hsba.body as? Color, Color(hsba))
+            XCTAssertBody(of: hsb, equals: Color(hsb))
+            XCTAssertBody(of: hsba, equals: Color(hsba))
         }
 #else
         try skipUnavailableAPI()

@@ -130,8 +130,8 @@ final class CIEXYZA_SwiftUITests: XCTestCase {
         let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0.25)
 
         await MainActor.run {
-            XCTAssertEqual(cieXYZ.body as? Color, Color(cieXYZ))
-            XCTAssertEqual(cieXYZA.body as? Color, Color(cieXYZA))
+            XCTAssertBody(of: cieXYZ, equals: Color(cieXYZ))
+            XCTAssertBody(of: cieXYZA, equals: Color(cieXYZA))
         }
 #else
         try skipUnavailableAPI()

@@ -40,14 +40,12 @@ extension Color {
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension CIE.XYZ: View where Value: BinaryFloatingPoint {
-    /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
 }
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
 extension CIE.XYZA: View where Value: BinaryFloatingPoint {
-    /// See `View.body`.
     @inlinable
     public var body: some View { Color(self) }
 }

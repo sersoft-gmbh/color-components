@@ -5,7 +5,7 @@ import XCHelpers
 import SwiftUI
 #endif
 #endif
-import ColorComponents
+@testable import ColorComponents
 
 final class HSLA_SwiftUITests: XCTestCase {
     func testColorCreationWithFloatingPoint() throws {
@@ -134,8 +134,8 @@ final class HSLA_SwiftUITests: XCTestCase {
         let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
         await MainActor.run {
-            XCTAssertEqual(hsl.body as? Color, Color(hsl))
-            XCTAssertEqual(hsla.body as? Color, Color(hsla))
+            XCTAssertBody(of: hsl, equals: Color(hsl))
+            XCTAssertBody(of: hsla, equals: Color(hsla))
         }
 #else
         try skipUnavailableAPI()

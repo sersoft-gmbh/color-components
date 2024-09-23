@@ -118,8 +118,8 @@ final class BWA_SwiftUITests: XCTestCase {
         let bwa = BWA(bw: bw, alpha: 0.25)
 
         await MainActor.run {
-            XCTAssertEqual(bw.body as? Color, Color(bw))
-            XCTAssertEqual(bwa.body as? Color, Color(bwa))
+            XCTAssertBody(of: bw, equals: Color(bw))
+            XCTAssertBody(of: bwa, equals: Color(bwa))
         }
 #else
         try skipUnavailableAPI()
