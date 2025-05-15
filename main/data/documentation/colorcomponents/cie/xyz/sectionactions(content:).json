@@ -1,11 +1,16 @@
 {
+  "abstract" : [
+    {
+      "text" : "Adds custom actions to a section.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
       ]
     ]
   },
@@ -226,6 +231,77 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "On iOS, the actions are displayed as items after the content",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of the section. On macOS, the actions are displayed",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "when a user hovers over the section.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example adds an ‘Add’ button to",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the ‘Categories’ section.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "List {",
+            "    Label(\"Home\", systemImage: \"house\")",
+            "    Label(\"Alerts\", systemImage: \"bell\")",
+            "",
+            "    Section(\"Categories\") {",
+            "        Label(\"Climate\", systemImage: \"fan\")",
+            "        Label(\"Lights\", systemImage: \"lightbulb\")",
+            "    }",
+            "    .sectionActions {",
+            "        Button(\"Add Category\", systemImage: \"plus\") { }",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -329,20 +405,12 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/view-implementations"
-},
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/sectionActions(content:)": {
   "abstract" : [
-
+    {
+      "text" : "Adds custom actions to a section.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

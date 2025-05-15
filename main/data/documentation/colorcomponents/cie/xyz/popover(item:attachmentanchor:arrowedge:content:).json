@@ -18,8 +18,7 @@
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
       ]
     ]
   },
@@ -30,7 +29,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "SwiftUICore",
-    "externalID" : "s:7SwiftUI4ViewPAAE7popover4item16attachmentAnchor9arrowEdge7contentQrAA7BindingVyqd__SgG_AA017PopoverAttachmentG0OAA0I0Oqd_0_qd__cts12IdentifiableRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
+    "externalID" : "s:7SwiftUI4ViewPAAE7popover4item16attachmentAnchor9arrowEdge7contentQrAA7BindingVyqd__SgG_AA017PopoverAttachmentG0OAA0I0OSgqd_0_qd__cts12IdentifiableRd__AaBRd_0_r0_lF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -121,7 +120,7 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : "?, "
       },
       {
         "kind" : "externalParam",
@@ -298,7 +297,7 @@
             },
             {
               "kind" : "text",
-              "text" : " = .top, "
+              "text" : "? = nil, "
             },
             {
               "kind" : "attribute",
@@ -553,11 +552,11 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "Edge\/top",
+                  "code" : "nil",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : ".",
+                  "text" : ", which results in the system allowing any arrow edge.",
                   "type" : "text"
                 }
               ],
@@ -664,6 +663,74 @@
 
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Prior to iOS 18.1, the popover arrow edge was not",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "respected. Apps that are re-compiled with the iOS 18.1 or later SDK or",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "visionOS 2.1 or later SDK and run on iOS 18.1 or later or visionOS 2.1",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or later have the arrow edge respected. On macOS, arrow edge has always",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "been respected. Alternatively, to allow the system to choose the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "best orientation of the popover’s arrow, use the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "View\/popover(item:attachmentAnchor:content:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " variant.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -770,17 +837,6 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
 },
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/view-implementations"
-},
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/popover(item:attachmentAnchor:arrowEdge:content:)": {
   "abstract" : [
     {
@@ -886,7 +942,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "?, "
     },
     {
       "kind" : "externalParam",

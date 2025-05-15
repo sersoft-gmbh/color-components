@@ -17,8 +17,7 @@
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB"
       ]
     ]
   },
@@ -191,6 +190,14 @@
           "tokens" : [
             {
               "kind" : "attribute",
+              "text" : "@preconcurrency"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "attribute",
               "text" : "nonisolated"
             },
             {
@@ -359,6 +366,23 @@
             },
             {
               "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "T"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8SendableP",
+              "text" : "Sendable"
+            },
+            {
+              "kind" : "text",
               "text" : "\n"
             }
           ]
@@ -430,6 +454,20 @@
             }
           ],
           "name" : "action"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The new value that failed the comparison check.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "newValue"
         }
       ]
     },
@@ -730,17 +768,6 @@
   "title" : "RGB",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGB/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgb\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/onGeometryChange(for:of:action:)-7gjth": {
   "abstract" : [

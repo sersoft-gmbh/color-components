@@ -18,8 +18,7 @@
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA"
       ]
     ]
   },
@@ -263,6 +262,56 @@
             }
           ],
           "name" : "action"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The old scroll phase.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "oldPhase"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The new scroll phase.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "newPhase"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The scroll geometry at the time of the scroll",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "phase change.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "geometry"
         }
       ]
     },
@@ -442,10 +491,10 @@
             "    \/\/ ...",
             "}",
             ".onScrollPhaseChange { oldPhase, newPhase, context in",
-            "    if newPhase == .panning {",
+            "    if newPhase == .interacting {",
             "        lastOffset = context.geometry.contentOffset.y",
             "    }",
-            "    if oldPhase == .panning, newPhase != .animating,",
+            "    if oldPhase == .interacting, newPhase != .animating,",
             "        context.geometry.contentOffset.y - lastOffset < 0.0",
             "    {",
             "        hidesToolbarContent = true",
@@ -613,17 +662,6 @@
   "title" : "CIE.XYZA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/onScrollPhaseChange(_:)-k09z": {
   "abstract" : [

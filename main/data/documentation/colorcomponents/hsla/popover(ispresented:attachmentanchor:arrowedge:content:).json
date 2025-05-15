@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA"
       ]
     ]
   },
@@ -21,7 +20,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "SwiftUICore",
-    "externalID" : "s:7SwiftUI4ViewPAAE7popover11isPresented16attachmentAnchor9arrowEdge7contentQrAA7BindingVySbG_AA017PopoverAttachmentH0OAA0J0Oqd__yctAaBRd__lF::SYNTHESIZED::s:15ColorComponents4HSLAV",
+    "externalID" : "s:7SwiftUI4ViewPAAE7popover11isPresented16attachmentAnchor9arrowEdge7contentQrAA7BindingVySbG_AA017PopoverAttachmentH0OAA0J0OSgqd__yctAaBRd__lF::SYNTHESIZED::s:15ColorComponents4HSLAV",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -105,7 +104,7 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : "?, "
       },
       {
         "kind" : "externalParam",
@@ -267,7 +266,7 @@
             },
             {
               "kind" : "text",
-              "text" : " = .top, "
+              "text" : "? = nil, "
             },
             {
               "kind" : "attribute",
@@ -453,11 +452,11 @@
                   "type" : "text"
                 },
                 {
-                  "code" : "Edge\/top",
+                  "code" : "nil",
                   "type" : "codeVoice"
                 },
                 {
-                  "text" : ".",
+                  "text" : ", which results in the system allowing any arrow edge.",
                   "type" : "text"
                 }
               ],
@@ -573,6 +572,74 @@
 
           ],
           "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Prior to iOS 18.1, the popover arrow edge was not",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "respected. Apps that are re-compiled with the iOS 18.1 or later SDK or",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "visionOS 2.1 or later SDK and run on iOS 18.1 or later or visionOS 2.1",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or later have the arrow edge respected. On macOS, arrow edge has always",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "been respected. Alternatively, to allow the system to choose the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "best orientation of the popover’s arrow, use the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "View\/popover(isPresented:attachmentAnchor:content:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " variant.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -644,17 +711,6 @@
   "title" : "HSLA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsla"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSLA/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsla\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/popover(isPresented:attachmentAnchor:arrowEdge:content:)": {
   "abstract" : [
@@ -746,7 +802,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "?, "
     },
     {
       "kind" : "externalParam",

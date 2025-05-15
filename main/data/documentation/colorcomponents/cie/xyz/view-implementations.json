@@ -244,6 +244,8 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentMargins(_:for:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentShape(_:_:eoFill:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentShape(_:eoFill:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentToolbar(for:content:)-3l71s",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentToolbar(for:content:)-5bwtd",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentTransition(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contextMenu(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contextMenu(forSelectionType:menu:primaryAction:)",
@@ -264,6 +266,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/defaultScrollAnchor(_:for:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/deleteDisabled(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogIcon(_:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogPreventsAppTermination(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogSeverity(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogSuppressionToggle(_:isSuppressed:)-4fvt9",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogSuppressionToggle(_:isSuppressed:)-7j91u",
@@ -549,9 +552,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/pointerStyle(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/pointerVisibility(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(isPresented:attachmentAnchor:arrowEdge:content:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(isPresented:attachmentAnchor:content:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(item:attachmentAnchor:arrowEdge:content:)",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(item:attachmentAnchor:content:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/position(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/position(x:y:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/preference(key:value:)",
@@ -567,6 +568,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationDetents(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationDetents(_:selection:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationDragIndicator(_:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationPreventsAppTermination(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationSizing(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentedWindowStyle(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentedWindowToolbarStyle(_:)",
@@ -708,6 +710,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarBackground(_:for:)-5czfc",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarBackgroundVisibility(_:for:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarColorScheme(_:for:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarForegroundStyle(_:for:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarItemHidden(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarRole(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarTitleDisplayMode(_:)",
@@ -744,6 +747,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/windowMinimizeBehavior(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/windowResizeBehavior(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/windowToolbarFullScreenVisibility(_:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/writingToolsAffordanceVisibility(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/writingToolsBehavior(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/zIndex(_:)"
       ],
@@ -19774,6 +19778,194 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/contentshape(_:eofill:)"
 },
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/contentToolbar(for:content:)-3l71s": {
+  "abstract" : [
+    {
+      "text" : "Populates the toolbar of the specified content view type with",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the views you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contentToolbar"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI23ContentToolbarPlacementV",
+      "text" : "ContentToolbarPlacement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentToolbar(for:content:)-3l71s",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "contentToolbar(for:content:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/contenttoolbar(for:content:)-3l71s"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/contentToolbar(for:content:)-5bwtd": {
+  "abstract" : [
+    {
+      "text" : "Populates the toolbar of the specified content view type with",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "the views you provide.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contentToolbar"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI23ContentToolbarPlacementV",
+      "text" : "ContentToolbarPlacement"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": () -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Content"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/contentToolbar(for:content:)-5bwtd",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "contentToolbar(for:content:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/contenttoolbar(for:content:)-5bwtd"
+},
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/contentTransition(_:)": {
   "abstract" : [
     {
@@ -21247,6 +21439,68 @@
   "title" : "dialogIcon(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/dialogicon(_:)"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/dialogPreventsAppTermination(_:)": {
+  "abstract" : [
+    {
+      "text" : "Whether the alert or confirmation dialog prevents the app",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "from being quit\/terminated by the system or app termination menu item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dialogPreventsAppTermination"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/dialogPreventsAppTermination(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dialogPreventsAppTermination(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/dialogpreventsapptermination(_:)"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/dialogSeverity(_:)": {
   "abstract" : [
@@ -33451,7 +33705,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -33476,7 +33738,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -33578,7 +33848,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -33620,7 +33898,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -33645,7 +33931,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -35609,7 +35903,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -35705,7 +36007,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -35757,7 +36067,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -38704,7 +39022,15 @@
     },
     {
       "kind" : "text",
-      "text" : "(some "
+      "text" : "("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -39506,7 +39832,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -43916,7 +44250,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", (() -> "
+      "text" : ", () -> "
     },
     {
       "kind" : "typeIdentifier",
@@ -43925,7 +44259,7 @@
     },
     {
       "kind" : "text",
-      "text" : ")) -> "
+      "text" : ") -> "
     },
     {
       "kind" : "keyword",
@@ -44003,7 +44337,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45486,7 +45828,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">(some "
+      "text" : ">("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45528,7 +45878,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45623,7 +45981,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">(some "
+      "text" : ">("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45640,7 +46006,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45682,7 +46056,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -45998,7 +46380,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "?, "
     },
     {
       "kind" : "externalParam",
@@ -46036,118 +46418,6 @@
   "title" : "popover(isPresented:attachmentAnchor:arrowEdge:content:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/popover(ispresented:attachmentanchor:arrowedge:content:)"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/popover(isPresented:attachmentAnchor:content:)": {
-  "abstract" : [
-    {
-      "text" : "Presents a popover when a given condition is true.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "popover"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "isPresented"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI7BindingV",
-      "text" : "Binding"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:Sb",
-      "text" : "Bool"
-    },
-    {
-      "kind" : "text",
-      "text" : ">, "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "attachmentAnchor"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI23PopoverAttachmentAnchorO",
-      "text" : "PopoverAttachmentAnchor"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "content"
-    },
-    {
-      "kind" : "text",
-      "text" : ": () -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "some"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI4ViewP",
-      "text" : "View"
-    }
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(isPresented:attachmentAnchor:content:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "popover(isPresented:attachmentAnchor:content:)",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/popover(ispresented:attachmentanchor:content:)"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/popover(item:attachmentAnchor:arrowEdge:content:)": {
   "abstract" : [
@@ -46254,7 +46524,7 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : "?, "
     },
     {
       "kind" : "externalParam",
@@ -46300,141 +46570,6 @@
   "title" : "popover(item:attachmentAnchor:arrowEdge:content:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/popover(item:attachmentanchor:arrowedge:content:)"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/popover(item:attachmentAnchor:content:)": {
-  "abstract" : [
-    {
-      "text" : "Presents a popover using the given item as a data source for the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "popover’s content.",
-      "type" : "text"
-    }
-  ],
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "popover"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Item"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "item"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI7BindingV",
-      "text" : "Binding"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Item"
-    },
-    {
-      "kind" : "text",
-      "text" : "?>, "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "attachmentAnchor"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI23PopoverAttachmentAnchorO",
-      "text" : "PopoverAttachmentAnchor"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "content"
-    },
-    {
-      "kind" : "text",
-      "text" : ": ("
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Item"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Content"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "keyword",
-      "text" : "some"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI4ViewP",
-      "text" : "View"
-    }
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/popover(item:attachmentAnchor:content:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "popover(item:attachmentAnchor:content:)",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/popover(item:attachmentanchor:content:)"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/position(_:)": {
   "abstract" : [
@@ -47509,6 +47644,68 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/presentationdragindicator(_:)"
 },
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/presentationPreventsAppTermination(_:)": {
+  "abstract" : [
+    {
+      "text" : "Whether a presentation prevents the app from being terminated\/quit",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "by the system or app termination menu item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "presentationPreventsAppTermination"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/presentationPreventsAppTermination(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "presentationPreventsAppTermination(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/presentationpreventsapptermination(_:)"
+},
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/presentationSizing(_:)": {
   "abstract" : [
     {
@@ -47531,7 +47728,15 @@
     },
     {
       "kind" : "text",
-      "text" : "(some "
+      "text" : "("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -50113,7 +50318,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -50359,7 +50572,15 @@
     },
     {
       "kind" : "text",
-      "text" : "<(some "
+      "text" : "<("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -50430,7 +50651,15 @@
     },
     {
       "kind" : "text",
-      "text" : "(some "
+      "text" : "("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -50630,7 +50859,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -50793,7 +51030,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -51695,7 +51940,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -51738,7 +51991,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -51953,7 +52214,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -52168,7 +52437,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -52357,7 +52634,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -52546,7 +52831,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -52692,7 +52985,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -52735,7 +53036,15 @@
     },
     {
       "kind" : "text",
-      "text" : ">) -> some "
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -56490,7 +56799,10 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/sectionActions(content:)": {
   "abstract" : [
-
+    {
+      "text" : "Adds custom actions to a section.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -59563,7 +59875,15 @@
     },
     {
       "kind" : "text",
-      "text" : "(some "
+      "text" : "("
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -61159,6 +61479,84 @@
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/toolbarcolorscheme(_:for:)"
 },
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/toolbarForegroundStyle(_:for:)": {
+  "abstract" : [
+    {
+      "text" : "Specifies the preferred foreground style of bars managed by SwiftUI.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "toolbarForegroundStyle"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "S"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "S"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "for"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI16ToolbarPlacementV",
+      "text" : "ToolbarPlacement"
+    },
+    {
+      "kind" : "text",
+      "text" : "...) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/toolbarForegroundStyle(_:for:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "toolbarForegroundStyle(_:for:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/toolbarforegroundstyle(_:for:)"
+},
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/toolbarItemHidden(_:)": {
   "abstract" : [
     {
@@ -62061,7 +62459,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -63486,7 +63892,15 @@
     },
     {
       "kind" : "text",
-      "text" : ") -> some "
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -63827,6 +64241,68 @@
   "title" : "windowToolbarFullScreenVisibility(_:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz\/windowtoolbarfullscreenvisibility(_:)"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/writingToolsAffordanceVisibility(_:)": {
+  "abstract" : [
+    {
+      "text" : "Specifies whether the system should show the Writing Tools affordance",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "for text input views affected by the environment.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "writingToolsAffordanceVisibility"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI10VisibilityO",
+      "text" : "Visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/writingToolsAffordanceVisibility(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "writingToolsAffordanceVisibility(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/writingtoolsaffordancevisibility(_:)"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/writingToolsBehavior(_:)": {
   "abstract" : [

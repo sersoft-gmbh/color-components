@@ -10,8 +10,7 @@
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
       ]
     ]
   },
@@ -196,7 +195,19 @@
             {
               "inlineContent" : [
                 {
-                  "text" : "The preferred color scheme for this view.",
+                  "text" : "The preferred color scheme for this view, or",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "nil",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " to indicate no preference.",
                   "type" : "text"
                 }
               ],
@@ -321,7 +332,7 @@
             "        List {",
             "            Toggle(\"Dark Mode\", isOn: $isDarkMode)",
             "        }",
-            "        .preferredColorScheme(isDarkMode ? .dark : .light)",
+            "        .preferredColorScheme(isDarkMode ? .dark : nil)",
             "    }",
             "}"
           ],
@@ -396,7 +407,15 @@
         {
           "inlineContent" : [
             {
-              "text" : "A common use for this modifier is to create side-by-side previews of the",
+              "text" : "Pass ",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to indicate that there is no preferred color scheme for this",
               "type" : "text"
             },
             {
@@ -404,7 +423,166 @@
               "type" : "text"
             },
             {
-              "text" : "same view with light and dark appearances:",
+              "text" : "view. This is useful in cases where a preferred color scheme should only",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "be applied conditionally. In the previous example, the sheet will prefer",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "dark mode when ",
+              "type" : "text"
+            },
+            {
+              "code" : "isDarkMode",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is set to ",
+              "type" : "text"
+            },
+            {
+              "code" : "true",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", but otherwise defer to the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "color scheme as determined by the system.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Multiple views in the same view hierarchy can set a preferred color",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "scheme. Applying this modifier overrides any existing preferred color",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "scheme set for the view, such as by one of its subviews. If there are",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "conflicting, non-",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " color scheme preferences set by parallel branches",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of the view hierarchy, the system will prioritize the first non-",
+              "type" : "text"
+            },
+            {
+              "code" : "nil",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "preference based on the order of the views. In the example below, the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "preferred color scheme for the entire view will resolve to ",
+              "type" : "text"
+            },
+            {
+              "code" : ".dark",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", from",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the second view:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "VStack {",
+            "    Text(\"First\")",
+            "        .preferredColorScheme(.light)",
+            "        .preferredColorScheme(nil) \/\/ overrides `.light`",
+            "",
+            "    Text(\"Second\")",
+            "        .preferredColorScheme(.dark)",
+            "",
+            "    Text(\"Third\")",
+            "        .preferredColorScheme(.light)",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A common use for this modifier is to create side-by-side previews",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "of the same view with light and dark appearances:",
               "type" : "text"
             }
           ],
@@ -562,17 +740,6 @@
   "title" : "CIE.XYZ",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/preferredColorScheme(_:)": {
   "abstract" : [

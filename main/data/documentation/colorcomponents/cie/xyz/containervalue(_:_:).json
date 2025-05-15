@@ -10,8 +10,7 @@
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
       ]
     ]
   },
@@ -443,11 +442,15 @@
         {
           "code" : [
             "VStack {",
-            "    Text(\"A\").containerValue(\\.myKey, 1) \/\/ myKey = 1",
-            "    Text(\"B\").containerValue(\\.myKey, 2) \/\/ myKey = 2",
+            "    Text(\"A\")",
+            "        .containerValue(\\.myCustomValue, 1) \/\/ myCustomValue = 1",
+            "    Text(\"B\")",
+            "        .containerValue(\\.myCustomValue, 2) \/\/ myCustomValue = 2",
             "    \/\/ container values are unaffected by views that aren't containers:",
-            "    Text(\"C\").containerValue(\\.myKey, 3).padding() \/\/ myKey = 3",
-            "} \/\/ myKey = its default value, container values do not escape the container"
+            "    Text(\"C\")",
+            "        .containerValue(\\.myCustomValue, 3)",
+            "        .padding() \/\/ myCustomValue = 3",
+            "} \/\/ myCustomValue = it's default value, values do not escape the container"
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -455,7 +458,7 @@
         {
           "inlineContent" : [
             {
-              "text" : "Even if a stack has only one child, container values still wouldn’t",
+              "text" : "Even if a stack has only one child, container values still won’t",
               "type" : "text"
             },
             {
@@ -463,7 +466,7 @@
               "type" : "text"
             },
             {
-              "text" : "be lifted to the ",
+              "text" : "be readable outside of the ",
               "type" : "text"
             },
             {
@@ -471,7 +474,7 @@
               "type" : "codeVoice"
             },
             {
-              "text" : ". Container values don’t escape a container",
+              "text" : ". Container values don’t escape a",
               "type" : "text"
             },
             {
@@ -479,11 +482,99 @@
               "type" : "text"
             },
             {
-              "text" : "even if the container has only one child.",
+              "text" : "container even if the container has only one child.",
               "type" : "text"
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In this example, a direct subview writes a container value, allowing its",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "direct container view to read it back:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@ViewBuilder var content: some View {",
+            "    Text(\"A\")",
+            "        .containerValue(\\.myCustomValue, 1)",
+            "}",
+            "",
+            "ForEach(subviews: content) { subview in",
+            "    Text(\"value = \\(subview.containerValues.myCustomValue)\") \/\/ shows \"value = 1\"",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "However in the next example, the wrapping ",
+              "type" : "text"
+            },
+            {
+              "code" : "VStack",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " means the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Text",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " view",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "is not a direct subview of the outer container, so that container cannot",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "read the changed value:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "@ViewBuilder var containedContent: some View {",
+            "    VStack {",
+            "        Text(\"A\")",
+            "            .containerValue(\\.myCustomValue, 1)",
+            "    }",
+            "}",
+            "",
+            "ForEach(subviews: containedContent) { subviews in",
+            "    Text(\"value = \\(subview.containerValues.myCustomValue)\") \/\/ shows the default value",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"
@@ -589,17 +680,6 @@
   "title" : "CIE.XYZ",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyz"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/containerValue(_:_:)": {
   "abstract" : [

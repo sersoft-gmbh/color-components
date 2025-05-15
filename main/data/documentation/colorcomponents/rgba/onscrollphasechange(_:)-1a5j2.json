@@ -17,8 +17,7 @@
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA"
       ]
     ]
   },
@@ -262,6 +261,56 @@
             }
           ],
           "name" : "action"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The old scroll phase.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "oldPhase"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The new scroll phase.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "newPhase"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The scroll geometry at the time of the scroll",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "phase change.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "geometry"
         }
       ]
     },
@@ -441,10 +490,10 @@
             "    \/\/ ...",
             "}",
             ".onScrollPhaseChange { oldPhase, newPhase, context in",
-            "    if newPhase == .panning {",
+            "    if newPhase == .interacting {",
             "        lastOffset = context.geometry.contentOffset.y",
             "    }",
-            "    if oldPhase == .panning, newPhase != .animating,",
+            "    if oldPhase == .interacting, newPhase != .animating,",
             "        context.geometry.contentOffset.y - lastOffset < 0.0",
             "    {",
             "        hidesToolbarContent = true",
@@ -578,17 +627,6 @@
   "title" : "RGBA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgba"
-},
-"doc://ColorComponents/documentation/ColorComponents/RGBA/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/rgba\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/onScrollPhaseChange(_:)-1a5j2": {
   "abstract" : [

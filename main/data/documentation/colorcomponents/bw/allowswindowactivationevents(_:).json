@@ -17,8 +17,7 @@
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW"
       ]
     ]
   },
@@ -311,6 +310,46 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "It’s only possible to disallow handling events that activate the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "containing window for views that allow it by default or that inherit",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "this behavior from their ancestors. Views that explicitly already",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "disallow this functionality can’t have it turned on.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -382,17 +421,6 @@
   "title" : "BW",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/bw"
-},
-"doc://ColorComponents/documentation/ColorComponents/BW/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/bw\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/allowsWindowActivationEvents(_:)": {
   "abstract" : [

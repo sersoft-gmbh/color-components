@@ -17,8 +17,7 @@
     "paths" : [
       [
         "doc:\/\/ColorComponents\/documentation\/ColorComponents",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
-        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations"
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA"
       ]
     ]
   },
@@ -233,6 +232,37 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "AXChartDescriptorRepresentable",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "used to describe your chart and its data.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "chartDescriptor"
+        }
+      ]
     },
     {
       "content" : [
@@ -496,17 +526,6 @@
   "title" : "HSBA",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/hsba"
-},
-"doc://ColorComponents/documentation/ColorComponents/HSBA/View-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA\/View-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "View Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/hsba\/view-implementations"
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/accessibilityChartDescriptor(_:)": {
   "abstract" : [
