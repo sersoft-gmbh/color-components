@@ -1,20 +1,12 @@
-// swift-tools-version:5.9
+// swift-tools-version:6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let swiftSettings: Array<SwiftSetting> = [
-    .enableUpcomingFeature("ConciseMagicFile"),
+    .swiftLanguageMode(.v6),
     .enableUpcomingFeature("ExistentialAny"),
-    .enableUpcomingFeature("BareSlashRegexLiterals"),
-    .enableUpcomingFeature("DisableOutwardActorInference"),
-    .enableExperimentalFeature("AccessLevelOnImport"),
-//    .enableExperimentalFeature("VariadicGenerics"),
-]
-
-let concurrencySwiftSettings: Array<SwiftSetting> = [
-     // Not yet possible for ColorCalculations due to CIFormat constants being mutable.
-    .enableExperimentalFeature("StrictConcurrency"),
+    .enableUpcomingFeature("InternalImportsByDefault"),
 ]
 
 let package = Package(
@@ -36,14 +28,14 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "ColorComponents",
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
         .target(
             name: "ColorCalculations",
             dependencies: ["ColorComponents"],
             swiftSettings: swiftSettings),
         .target(
             name: "XCHelpers",
-            swiftSettings: swiftSettings + concurrencySwiftSettings,
+            swiftSettings: swiftSettings,
             linkerSettings: [
                 .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .macCatalyst, .tvOS, .watchOS, .visionOS])),
             ]),
@@ -53,7 +45,7 @@ let package = Package(
                 "ColorComponents",
                 "XCHelpers",
             ],
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
         .testTarget(
             name: "ColorCalculationsTests",
             dependencies: [
@@ -63,6 +55,6 @@ let package = Package(
             resources: [
                 .copy("TestImages"),
             ],
-            swiftSettings: swiftSettings + concurrencySwiftSettings),
+            swiftSettings: swiftSettings),
     ]
 )
