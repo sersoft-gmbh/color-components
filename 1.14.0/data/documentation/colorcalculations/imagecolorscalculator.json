@@ -1,0 +1,869 @@
+{
+  "abstract" : [
+    {
+      "text" : "A calculator that calculates various colors for a given image.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17ColorCalculations21ImageColorsCalculatorV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ImageColorsCalculator"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorCalculations"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ImageColorsCalculator"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "ImageColorsCalculator.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/color-components\/blob\/refs\/tags\/1.14.0\/Sources\/ColorCalculations\/ImageColorsCalculator.swift#L7"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "ImageColorsCalculator"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ImageColorsCalculator"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(cgImage:)",
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(image:)",
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(nsImage:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/image"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/averageColor(in:)",
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/maxComponentColor(in:)",
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/mostProminentColor(as:in:distanceAs:pixelLimit:colorLimit:)",
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "anchor" : "Enumerations",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/ColorDistanceMode"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcalculations\/imagecolorscalculator"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorCalculations/documentation/ColorCalculations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorCalculations",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator": {
+  "abstract" : [
+    {
+      "text" : "A calculator that calculates various colors for a given image.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ImageColorsCalculator"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ImageColorsCalculator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ImageColorsCalculator",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/ColorDistanceMode": {
+  "abstract" : [
+    {
+      "text" : "Describes the mode that is used to calculate color distances.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ColorDistanceMode"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/ColorDistanceMode",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ColorDistanceMode"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "ImageColorsCalculator.ColorDistanceMode",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/colordistancemode"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/averageColor(in:)": {
+  "abstract" : [
+    {
+      "text" : "Calculates the average color for the image, optionally restricting it to a given rect.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "averageColor"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@S@CGRect",
+      "text" : "CGRect"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4RGBAV",
+      "text" : "RGBA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5UInt8V",
+      "text" : "UInt8"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/averageColor(in:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "averageColor(in:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/averagecolor(in:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/image": {
+  "abstract" : [
+    {
+      "text" : "The image of the calculator.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "image"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)CIImage",
+      "text" : "CIImage"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/image",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "image",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/image"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/init(cgImage:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a calculator using the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "CGImage",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cgImage"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@T@CGImageRef",
+      "text" : "CGImage"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(cgImage:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(cgImage:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/init(cgimage:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/init(image:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new calculator using the given image.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "image"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)CIImage",
+      "text" : "CIImage"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(image:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(image:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/init(image:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/init(nsImage:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a calculator using the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "NSImage",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Returns ",
+      "type" : "text"
+    },
+    {
+      "code" : "nil",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " if the ",
+      "type" : "text"
+    },
+    {
+      "code" : "NSImage",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " could not be converted to a ",
+      "type" : "text"
+    },
+    {
+      "code" : "CIImage",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "nsImage"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:objc(cs)NSImage",
+      "text" : "NSImage"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/init(nsImage:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(nsImage:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/init(nsimage:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/maxComponentColor(in:)": {
+  "abstract" : [
+    {
+      "text" : "Calculates the color with the maximum component values for the image, optionally restricting it to a given rect.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "maxComponentColor"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@S@CGRect",
+      "text" : "CGRect"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents4RGBAV",
+      "text" : "RGBA"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5UInt8V",
+      "text" : "UInt8"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/maxComponentColor(in:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "maxComponentColor(in:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/maxcomponentcolor(in:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/mostProminentColor(as:in:distanceAs:pixelLimit:colorLimit:)": {
+  "abstract" : [
+    {
+      "text" : "Calculates the color that is most prominent in the image, optionally restricting it to a given rect.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "mostProminentColor"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "as"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@S@CGRect",
+      "text" : "CGRect"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "distanceAs"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17ColorCalculations21ImageColorsCalculatorV",
+      "text" : "ImageColorsCalculator"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17ColorCalculations21ImageColorsCalculatorV0A12DistanceModeO",
+      "text" : "ColorDistanceMode"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pixelLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "colorLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3RGBV",
+      "text" : "RGB"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ">"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/mostProminentColor(as:in:distanceAs:pixelLimit:colorLimit:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "mostProminentColor(as:in:distanceAs:pixelLimit:colorLimit:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/mostprominentcolor(as:in:distanceas:pixellimit:colorlimit:)"
+},
+"doc://ColorCalculations/documentation/ColorCalculations/ImageColorsCalculator/prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)": {
+  "abstract" : [
+    {
+      "text" : "Calculates the most prominent colors in the image, optionally restricting it to a given rect.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "prominentColors"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "as"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ".Type, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "c:@S@CGRect",
+      "text" : "CGRect"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "distanceAs"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17ColorCalculations21ImageColorsCalculatorV",
+      "text" : "ImageColorsCalculator"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17ColorCalculations21ImageColorsCalculatorV0A12DistanceModeO",
+      "text" : "ColorDistanceMode"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pixelLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "colorLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sa",
+      "text" : "Array"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:15ColorComponents3RGBV",
+      "text" : "RGB"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "V"
+    },
+    {
+      "kind" : "text",
+      "text" : ">>"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations\/ImageColorsCalculator\/prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/prominentcolors(as:in:distanceas:pixellimit:colorlimit:)"
+}
+}
+}
