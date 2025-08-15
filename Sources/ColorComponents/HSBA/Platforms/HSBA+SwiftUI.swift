@@ -1,5 +1,4 @@
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine) // Combine check seems to be necessary
+#if canImport(SwiftUI)
 public import SwiftUI
 
 @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
@@ -239,6 +238,5 @@ extension HSBA where Value: BinaryInteger {
         self.init(exactly: cgColor)
     }
 }
-#endif
 #endif
 #endif

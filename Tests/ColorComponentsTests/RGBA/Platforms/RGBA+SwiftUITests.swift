@@ -1,15 +1,12 @@
 import XCTest
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI)
 import SwiftUI
-#endif
 #endif
 import ColorComponents
 
 final class RGBA_SwiftUITests: XCTestCase {
     func testColorCreationWithFloatingPoint() throws {
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -21,14 +18,10 @@ final class RGBA_SwiftUITests: XCTestCase {
 #else
         try skipUnavailableAPI()
 #endif
-#else
-        try skipUnavailableAPI()
-#endif
     }
 
     func testCreationFromColorWithFloatingPoint() throws {
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
@@ -56,14 +49,10 @@ final class RGBA_SwiftUITests: XCTestCase {
 #else
         try skipUnavailableAPI()
 #endif
-#else
-        try skipUnavailableAPI()
-#endif
     }
 
     func testColorCreationWithInteger() throws {
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI)
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -83,14 +72,10 @@ final class RGBA_SwiftUITests: XCTestCase {
 #else
         try skipUnavailableAPI()
 #endif
-#else
-        try skipUnavailableAPI()
-#endif
     }
 
     func testCreationFromColorWithInteger() throws {
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine)
+#if canImport(SwiftUI)
         guard #available(macOS 11, iOS 14, tvOS 14, watchOS 7, *)
         else { try skipUnavailableAPI() }
 
@@ -118,14 +103,10 @@ final class RGBA_SwiftUITests: XCTestCase {
 #else
         try skipUnavailableAPI()
 #endif
-#else
-        try skipUnavailableAPI()
-#endif
     }
 
     func testViewConformance() async throws {
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
+#if canImport(SwiftUI) && (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)) || canImport(CoreGraphics))
         guard #available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
         else { try skipUnavailableAPI() }
 
@@ -136,9 +117,6 @@ final class RGBA_SwiftUITests: XCTestCase {
             XCTAssertBody(of: rgb, equals: Color(rgb))
             XCTAssertBody(of: rgba, equals: Color(rgba))
         }
-#else
-        try skipUnavailableAPI()
-#endif
 #else
         try skipUnavailableAPI()
 #endif

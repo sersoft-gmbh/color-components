@@ -13,7 +13,7 @@ func XCTAssertBody<V: View, Expected: View & Equatable>(
     let viewBody = view.body
     // Xcode as of version 16 erases all `some` return types to their `@_typeErasure` type (if any).
     // There is a build setting for projects (SWIFT_ENABLE_OPAQUE_TYPE_ERASURE=NO), but that's not possible for SPM packages.
-    // However, we can "unpack" the any view for these builds. Worst case scenario: We don't check the view body.
+    // However, we can "unpack" the `AnyView` for these builds. Worst case scenario: We don't check the view body.
     // Kudos to Joe Groff for digging up the build setting: https://f.duriansoftware.com/@joe/113170928606701687
 #if Xcode && swift(>=6.0)
     XCTAssert(type(of: viewBody) == Expected.self || type(of: viewBody) == AnyView.self, "\(type(of: viewBody)) != \(Expected.self) || \(AnyView.self): \(message())",

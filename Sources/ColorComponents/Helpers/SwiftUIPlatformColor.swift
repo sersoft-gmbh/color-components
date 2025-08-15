@@ -1,5 +1,4 @@
-#if arch(arm64) || arch(x86_64)
-#if canImport(SwiftUI) && canImport(Combine) // Combine check seems to be necessary
+#if canImport(SwiftUI)
 //public import SwiftUI
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
@@ -48,5 +47,4 @@ typealias _PlatformColor = NSColor
 //}
 //#endif
 
-#endif
 #endif
