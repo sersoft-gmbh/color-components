@@ -18,7 +18,7 @@ extension HSLATests {
             let alphaColor = UIColor(hsla)
 
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -28,7 +28,7 @@ extension HSLATests {
             #expect(brightness == HSB(hsl: hsl).brightness)
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -76,7 +76,7 @@ extension HSLATests {
             let alphaColor = UIColor(hsla)
 
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -86,7 +86,7 @@ extension HSLATests {
             #expect(brightness.isApproximatelyEqual(to: HSB<CGFloat>(hsl: HSL(hsl)).brightness, absoluteTolerance: .ulpOfOne))
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))

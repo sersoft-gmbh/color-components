@@ -31,7 +31,7 @@ extension HSLATests {
         func creationFromCGColorWithFloatingPoint() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.5625, 0.75, 0.375, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.5625, 0.75, 0.375, 0.5]))
@@ -78,7 +78,7 @@ extension HSLATests {
         func creationFromCGColorWithInteger() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.5625, 0.75, 0.375, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.5625, 0.75, 0.375, 0.5]))
@@ -96,7 +96,7 @@ extension HSLATests {
             #expect(hsla.alpha == UInt8(0.5 * 0xFF))
             #expect(HSL<Int8>(exactly: cgColor) == nil)
             #expect(HSLA<Int8>(exactly: cgColor) == nil)
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             #expect(try HSL<UInt8>(exactly: #require(unsafe CGColor(colorSpace: colorSpace, components: [1, 1, 1, 1]))) != nil)
             #expect(try HSLA<UInt8>(exactly: #require(unsafe CGColor(colorSpace: colorSpace, components: [1, 1, 1, 1]))) != nil)
 #else

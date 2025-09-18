@@ -31,7 +31,7 @@ extension RGBATests {
         func creationFromCGColorWithFloatingPoint() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
@@ -78,7 +78,7 @@ extension RGBATests {
         func creationFromCGColorWithInteger() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
@@ -104,7 +104,7 @@ extension RGBATests {
         func creationFromCGColorConvertingColorSpaces() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.25, 0.5]))

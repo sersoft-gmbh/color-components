@@ -136,7 +136,7 @@ struct ImageColorsCalculatorTests {
     @Test(.enabled(if: coreImageAvailable && coreGraphicsAvailable))
     func cgImageInitializer() throws {
 #if canImport(CoreImage) && canImport(CoreGraphics)
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
         let cgImageDataProvider = try #require(unsafe CGDataProvider(filename: img1URL.path))
         let cgImage = try #require({
             CGImage(jpegDataProviderSource: cgImageDataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent)

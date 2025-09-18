@@ -62,7 +62,7 @@ extension NSColor {
             allowedColorSpaces.insert(.extendedGenericGamma22Gray)
         }
         var bwa = BWA<CGFloat>(white: 0, alpha: 1)
-#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
+#if compiler(>=6.2)
         unsafe _requireColorSpace(in: allowedColorSpaces, convertingTo: .colorComponentsDefaultGray)
             .getWhite(&bwa.bw.white, alpha: &bwa.alpha)
 #else
