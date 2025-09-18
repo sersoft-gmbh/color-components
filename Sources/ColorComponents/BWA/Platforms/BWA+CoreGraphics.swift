@@ -7,16 +7,26 @@ extension CGColor {
     func _extractBW(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> BW<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericGray)
         let components = color._requireCompontens(in: 1...2)
+#if hasFeature(StrictMemorySafety)
+        if let alpha = unsafe alpha {
+            unsafe alpha.pointee = color.alpha
+        }
+#else
         if let alpha {
             alpha.pointee = color.alpha
         }
+#endif
         return .init(white: components[0])
     }
 
     @inlinable
     func _extractBWA() -> BWA<CGFloat> {
         var alpha: CGFloat = 1
+#if hasFeature(StrictMemorySafety)
+        let bw = unsafe _extractBW(alpha: &alpha)
+#else
         let bw = _extractBW(alpha: &alpha)
+#endif
         return .init(bw: bw, alpha: alpha)
     }
 }

@@ -42,10 +42,17 @@ extension UIColor {
     @usableFromInline
     func _extractHSBA() -> (HSBA<CGFloat>, isExact: Bool) {
         var hsba = HSBA<CGFloat>(hue: 0, saturation: 0, brightness: 0, alpha: 1)
+#if hasFeature(StrictMemorySafety)
+        let isExact = unsafe getHue(&hsba.hsb.hue,
+                                    saturation: &hsba.hsb.saturation,
+                                    brightness: &hsba.hsb.brightness,
+                                    alpha: &hsba.alpha)
+#else
         let isExact = getHue(&hsba.hsb.hue,
                              saturation: &hsba.hsb.saturation,
                              brightness: &hsba.hsb.brightness,
                              alpha: &hsba.alpha)
+#endif
         return (hsba, isExact)
     }
 }

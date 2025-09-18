@@ -4,7 +4,7 @@ internal import CoreImage.CIFilterBuiltins
 public import ColorComponents
 
 /// A calculator that calculates various colors for a given image.
-public struct ImageColorsCalculator {
+public struct ImageColorsCalculator: Sendable {
     /// The image of the calculator.
     public let image: CIImage
 
@@ -23,12 +23,21 @@ public struct ImageColorsCalculator {
         let outputImg = filter.outputImage!
         assert(outputImg.extent.size == CGSize(width: 1, height: 1))
         var rgba = Array<UInt8>(repeating: 0, count: 4)
+#if hasFeature(StrictMemorySafety)
+        unsafe context.render(outputImg,
+                              toBitmap: &rgba,
+                              rowBytes: rgba.count,
+                              bounds: outputImg.extent,
+                              format: .RGBA8,
+                              colorSpace: nil)
+#else
         context.render(outputImg,
                        toBitmap: &rgba,
                        rowBytes: rgba.count,
                        bounds: outputImg.extent,
                        format: .RGBA8,
                        colorSpace: nil)
+#endif
         return RGBA(red: rgba[0], green: rgba[1], blue: rgba[2], alpha: rgba[3])
     }
 

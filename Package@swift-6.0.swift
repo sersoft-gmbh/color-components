@@ -22,6 +22,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(url: "https://github.com/apple/swift-numerics", from: "1.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,24 +34,18 @@ let package = Package(
             name: "ColorCalculations",
             dependencies: ["ColorComponents"],
             swiftSettings: swiftSettings),
-        .target(
-            name: "XCHelpers",
-            swiftSettings: swiftSettings,
-            linkerSettings: [
-                .linkedFramework("XCTest", .when(platforms: [.iOS, .macOS, .macCatalyst, .tvOS, .watchOS, .visionOS])),
-            ]),
         .testTarget(
             name: "ColorComponentsTests",
             dependencies: [
+                .product(name: "Numerics", package: "swift-numerics"),
                 "ColorComponents",
-                "XCHelpers",
             ],
             swiftSettings: swiftSettings),
         .testTarget(
             name: "ColorCalculationsTests",
             dependencies: [
+                .product(name: "Numerics", package: "swift-numerics"),
                 "ColorCalculations",
-                "XCHelpers",
             ],
             resources: [
                 .copy("TestImages"),
@@ -58,3 +53,26 @@ let package = Package(
             swiftSettings: swiftSettings),
     ]
 )
+
+import class Foundation.ProcessInfo
+
+// We need this to not have to limit our package to macOS 13+. Remove once this is anyways the lowest deployment target.
+if ProcessInfo.processInfo.environment["ENABLE_BENCHMARKS"] == "1" {
+    package.dependencies.append(.package(url: "https://github.com/ordo-one/package-benchmark", from: "1.29.0"))
+    package.platforms = package.platforms ?? []
+    package.platforms?.append(.macOS(.v13))
+    package.targets.append(.executableTarget(
+        name: "ColorCalculationsBenchmarks",
+        dependencies: [
+            .product(name: "Benchmark", package: "package-benchmark"),
+            "ColorCalculations",
+        ],
+        path: "Benchmarks/ColorCalculationsBenchmarks",
+        resources: [
+            .copy("TestImages"),
+        ],
+        swiftSettings: swiftSettings,
+        plugins: [
+            .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+        ]))
+}

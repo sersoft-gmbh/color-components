@@ -23,12 +23,21 @@ extension ImageColorsCalculator {
         assert(colorLimit > 0)
         let img = (rect.map(image.cropped(to:)) ?? image).limitedTo(pixelCount: pixelLimit)
         var pixels = Array<UInt8>(repeating: 0, count: Int(floor(img.extent.width * img.extent.height)) * 4)
+#if hasFeature(StrictMemorySafety)
+        unsafe context.render(img,
+                              toBitmap: &pixels,
+                              rowBytes: Int(floor(img.extent.width)) * 4,
+                              bounds: img.extent,
+                              format: .RGBA8,
+                              colorSpace: nil)
+#else
         context.render(img,
                        toBitmap: &pixels,
                        rowBytes: Int(floor(img.extent.width)) * 4,
                        bounds: img.extent,
                        format: .RGBA8,
                        colorSpace: nil)
+#endif
         // FIXME: This check is currently a bit over-simplified. We should probably be more clever about this
         //        and only do it if there are no colors above the brightness limit...
         let ignoreBrightness = pixels.count <= 128 * 4
@@ -94,7 +103,8 @@ extension ImageColorsCalculator {
     }
 }
 
-// This fixes builds on Xcode 15 - which somehow has issues distinguishing calls to `filter`...
+// This fixes builds on Xcode 15+ - which somehow has issues distinguishing calls to `filter`...
+// 09/25: Still needed for Xcode 26 / Swift 6.2 - in release mode
 fileprivate extension LazySequenceProtocol {
     @_transparent
     func lazyFilter(_ isIncluded: @escaping (Elements.Element) -> Bool) -> LazyFilterSequence<Elements> {
@@ -151,6 +161,8 @@ fileprivate struct Cluster<Vec: SIMD> where Vec.Scalar: BinaryFloatingPoint {
 
     static var zero: Cluster { .init(centroid: .zero, size: .zero) }
 }
+
+extension Cluster: Sendable where Vec: Sendable, Vec.Scalar: Sendable {}
 
 fileprivate extension RandomAccessCollection
 where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoint

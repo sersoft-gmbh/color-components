@@ -1,50 +1,53 @@
-import XCTest
+import Testing
+#if canImport(CoreGraphics)
+import CoreGraphics
+fileprivate typealias FltType = CGFloat
+#else
+fileprivate typealias FltType = Double
+#endif
 @testable import ColorComponents
 
-final class HSLA_PlaygroundTests: XCTestCase {
-    func testPlaygroundColorWithFloatingPoint() throws {
-        let hsl = HSL<CGFloat>(hue: 0.5, saturation: 0.73, luminance: 0.89)
-        let hsla = HSLA(hsl: hsl, alpha: 0.25)
+extension HSLATests {
+    @Suite
+    struct PlaygroundTests {
+        @Test
+        func playgroundColorWithFloatingPoint() throws {
+            let hsl = HSL<FltType>(hue: 0.5, saturation: 0.73, luminance: 0.89)
+            let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
-        let opaquePlaygroundColor = hsl._playgroundColor
-        let alphaPlaygroundColor = hsla._playgroundColor
+            let opaquePlaygroundColor = hsl._playgroundColor
+            let alphaPlaygroundColor = hsla._playgroundColor
 
-#if canImport(AppKit) || canImport(UIKit) || canImport(CoreGraphics)
-        XCTAssertNotNil(opaquePlaygroundColor)
-        XCTAssertNotNil(alphaPlaygroundColor)
 #if canImport(AppKit) || canImport(UIKit)
-        XCTAssertEqual(opaquePlaygroundColor, _PlatformColor(hsl))
-        XCTAssertEqual(alphaPlaygroundColor, _PlatformColor(hsla))
+            #expect(opaquePlaygroundColor == _PlatformColor(hsl))
+            #expect(alphaPlaygroundColor == _PlatformColor(hsla))
+#elseif canImport(CoreGraphics)
+            #expect(opaquePlaygroundColor == hsl.cgColor)
+            #expect(alphaPlaygroundColor == hsla.cgColor)
 #else
-        XCTAssertEqual(opaquePlaygroundColor, hsl.cgColor)
-        XCTAssertEqual(alphaPlaygroundColor, hsla.cgColor)
+            #expect(opaquePlaygroundColor == nil)
+            #expect(alphaPlaygroundColor == nil)
 #endif
-#else
-        XCTAssertNil(opaquePlaygroundColor)
-        XCTAssertNil(alphaPlaygroundColor)
-#endif
-    }
+        }
 
-    func testPlaygroundColorWithBinaryInteger() throws {
-        let hsl = HSL<UInt8>(hue: 0x9A, saturation: 0xF3, luminance: 0xFA)
-        let hsla = HSLA(hsl: hsl, alpha: 0x77)
+        @Test
+        func playgroundColorWithBinaryInteger() throws {
+            let hsl = HSL<UInt8>(hue: 0x9A, saturation: 0xF3, luminance: 0xFA)
+            let hsla = HSLA(hsl: hsl, alpha: 0x77)
 
-        let opaquePlaygroundColor = hsl._playgroundColor
-        let alphaPlaygroundColor = hsla._playgroundColor
+            let opaquePlaygroundColor = hsl._playgroundColor
+            let alphaPlaygroundColor = hsla._playgroundColor
 
-#if canImport(AppKit) || canImport(UIKit) || canImport(CoreGraphics)
-        XCTAssertNotNil(opaquePlaygroundColor)
-        XCTAssertNotNil(alphaPlaygroundColor)
 #if canImport(AppKit) || canImport(UIKit)
-        XCTAssertEqual(opaquePlaygroundColor, _PlatformColor(hsl))
-        XCTAssertEqual(alphaPlaygroundColor, _PlatformColor(hsla))
+            #expect(opaquePlaygroundColor == _PlatformColor(hsl))
+            #expect(alphaPlaygroundColor == _PlatformColor(hsla))
+#elseif canImport(CoreGraphics)
+            #expect(opaquePlaygroundColor == hsl.cgColor)
+            #expect(alphaPlaygroundColor == hsla.cgColor)
 #else
-        XCTAssertEqual(opaquePlaygroundColor, hsl.cgColor)
-        XCTAssertEqual(alphaPlaygroundColor, hsla.cgColor)
+            #expect(opaquePlaygroundColor == nil)
+            #expect(alphaPlaygroundColor == nil)
 #endif
-#else
-        XCTAssertNil(opaquePlaygroundColor)
-        XCTAssertNil(alphaPlaygroundColor)
-#endif
+        }
     }
 }

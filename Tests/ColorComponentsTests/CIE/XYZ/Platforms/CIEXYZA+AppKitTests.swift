@@ -1,108 +1,116 @@
-import XCTest
+import Testing
+import Numerics
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 #endif
 import ColorComponents
 
-final class CIEXYZA_AppKitTests: XCTestCase {
-    func testNSColorCreationWithFloatingPoint() throws {
+extension CIEXYZATests {
+    @Suite(.enabled(if: .appKitAvailable))
+    struct AppKitTests {
+        @Test
+        func nsColorCreationWithFloatingPoint() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let cieXYZ = CIE.XYZ<CGFloat>(x: 0.25, y: 0.5, z: 0.75)
-        let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0.25)
-        let rgb = RGB(cieXYZ: cieXYZ)
+            let cieXYZ = CIE.XYZ<CGFloat>(x: 0.25, y: 0.5, z: 0.75)
+            let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0.25)
+            let rgb = RGB(cieXYZ: cieXYZ)
 
-        let opaqueColor = NSColor(cieXYZ)
-        let alphaColor = NSColor(cieXYZA)
+            let opaqueColor = NSColor(cieXYZ)
+            let alphaColor = NSColor(cieXYZA)
 
-        XCTAssertEqual(opaqueColor.alphaComponent, 1)
-        XCTAssertEqual(alphaColor.alphaComponent, cieXYZA.alpha)
-        XCTAssertEqual(opaqueColor.redComponent, rgb.red)
-        XCTAssertEqual(alphaColor.redComponent, rgb.red)
-        XCTAssertEqual(opaqueColor.greenComponent, rgb.green)
-        XCTAssertEqual(alphaColor.greenComponent, rgb.green)
-        XCTAssertEqual(opaqueColor.blueComponent, rgb.blue)
-        XCTAssertEqual(alphaColor.blueComponent, rgb.blue)
-#else
-        try skipUnavailableAPI()
+            #expect(opaqueColor.alphaComponent == 1)
+            #expect(alphaColor.alphaComponent == cieXYZA.alpha)
+            #expect(opaqueColor.redComponent == rgb.red)
+            #expect(alphaColor.redComponent == rgb.red)
+            #expect(opaqueColor.greenComponent == rgb.green)
+            #expect(alphaColor.greenComponent == rgb.green)
+            #expect(opaqueColor.blueComponent == rgb.blue)
+            #expect(alphaColor.blueComponent == rgb.blue)
 #endif
-    }
-
-    func testCreationFromNSColorWithFloatingPoint() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let color: NSColor
-        if #available(macOS 10.12, *) {
-            color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
-        } else {
-            color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
         }
 
-        let cieXYZ = CIE.XYZ<CGFloat>(color)
-        let cieXYZA = CIE.XYZA<CGFloat>(color)
-
-        let cieXYZViaRGB = CIE.XYZ(rgb: RGB<CGFloat>(color))
-
-        XCTAssertEqual(cieXYZ.x, cieXYZViaRGB.x)
-        XCTAssertEqual(cieXYZA.x, cieXYZViaRGB.x)
-        XCTAssertEqual(cieXYZ.y, cieXYZViaRGB.y)
-        XCTAssertEqual(cieXYZA.y, cieXYZViaRGB.y)
-        XCTAssertEqual(cieXYZ.z, cieXYZViaRGB.z)
-        XCTAssertEqual(cieXYZA.z, cieXYZViaRGB.z)
-        XCTAssertEqual(cieXYZA.alpha, color.alphaComponent)
-        XCTAssertNil(CIE.XYZ<InexactFloat>(exactly: color))
-        XCTAssertNil(CIE.XYZA<InexactFloat>(exactly: color))
-#else
-        try skipUnavailableAPI()
-#endif
-    }
-
-    func testNSColorCreationWithInteger() throws {
+        @Test
+        func creationFromNSColorWithFloatingPoint() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let cieXYZ = CIE.XYZ<UInt8>(x: 0x30, y: 090, z: 0xA0)
-        let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0x40)
-
-        let rgb = RGB(cieXYZ: CIE.XYZ<CGFloat>(cieXYZ))
-
-        let opaqueColor = NSColor(cieXYZ)
-        let alphaColor = NSColor(cieXYZA)
-
-        XCTAssertEqual(opaqueColor.alphaComponent, 1)
-        XCTAssertEqual(alphaColor.alphaComponent, .init(cieXYZA.alpha) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.redComponent, rgb.red, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.redComponent, rgb.red, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.greenComponent, rgb.green, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.greenComponent, rgb.green, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.blueComponent, rgb.blue, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.blueComponent, rgb.blue, accuracy: .ulpOfOne)
+            let color: NSColor
+            if #available(macOS 10.12, *) {
+                color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
+            } else {
+#if hasFeature(StrictMemorySafety)
+                color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #else
-        try skipUnavailableAPI()
+                color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #endif
-    }
+            }
 
-    func testCreationFromNSColorWithInteger() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let color: NSColor
-        if #available(macOS 10.12, *) {
-            color = NSColor(red: 0.25, green: 0.5, blue: 0.75, alpha: 0.25)
-        } else {
-            color = NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
+            let cieXYZ = CIE.XYZ<CGFloat>(color)
+            let cieXYZA = CIE.XYZA<CGFloat>(color)
+
+            let cieXYZViaRGB = CIE.XYZ(rgb: RGB<CGFloat>(color))
+
+            #expect(cieXYZ.x == cieXYZViaRGB.x)
+            #expect(cieXYZA.x == cieXYZViaRGB.x)
+            #expect(cieXYZ.y == cieXYZViaRGB.y)
+            #expect(cieXYZA.y == cieXYZViaRGB.y)
+            #expect(cieXYZ.z == cieXYZViaRGB.z)
+            #expect(cieXYZA.z == cieXYZViaRGB.z)
+            #expect(cieXYZA.alpha == color.alphaComponent)
+            #expect(CIE.XYZ<InexactFloat>(exactly: color) == nil)
+            #expect(CIE.XYZA<InexactFloat>(exactly: color) == nil)
+#endif
         }
 
-        let cieXYZ = CIE.XYZ<UInt8>(color)
-        let cieXYZA = CIE.XYZA<UInt8>(color)
+        @Test
+        func nsColorCreationWithInteger() throws {
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            let cieXYZ = CIE.XYZ<UInt8>(x: 0x30, y: 090, z: 0xA0)
+            let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0x40)
 
-        let cieXYZViaRGB = CIE.XYZ<UInt8>(CIE.XYZ(rgb: RGB<CGFloat>(color)))
+            let rgb = RGB(cieXYZ: CIE.XYZ<CGFloat>(cieXYZ))
 
-        XCTAssertEqual(cieXYZ.x, cieXYZViaRGB.x)
-        XCTAssertEqual(cieXYZA.x, cieXYZViaRGB.x)
-        XCTAssertEqual(cieXYZ.y, cieXYZViaRGB.y)
-        XCTAssertEqual(cieXYZA.y, cieXYZViaRGB.y)
-        XCTAssertEqual(cieXYZ.z, cieXYZViaRGB.z)
-        XCTAssertEqual(cieXYZA.z, cieXYZViaRGB.z)
-        XCTAssertEqual(cieXYZA.alpha, .init(color.alphaComponent * 0xFF))
-        XCTAssertNil(CIE.XYZ<Int8>(exactly: color))
-        XCTAssertNil(CIE.XYZA<Int8>(exactly: color))
-#else
-        try skipUnavailableAPI()
+            let opaqueColor = NSColor(cieXYZ)
+            let alphaColor = NSColor(cieXYZA)
+
+            #expect(opaqueColor.alphaComponent == 1)
+            #expect(alphaColor.alphaComponent.isApproximatelyEqual(to: CGFloat(cieXYZA.alpha) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.redComponent.isApproximatelyEqual(to: rgb.red, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.redComponent.isApproximatelyEqual(to: rgb.red, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.greenComponent.isApproximatelyEqual(to: rgb.green, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.greenComponent.isApproximatelyEqual(to: rgb.green, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.blueComponent.isApproximatelyEqual(to: rgb.blue, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.blueComponent.isApproximatelyEqual(to: rgb.blue, absoluteTolerance: .ulpOfOne))
 #endif
+        }
+
+        @Test
+        func creationFromNSColorWithInteger() throws {
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            let color: NSColor
+            if #available(macOS 10.12, *) {
+                color = NSColor(red: 0.25, green: 0.5, blue: 0.75, alpha: 0.25)
+            } else {
+#if hasFeature(StrictMemorySafety)
+                color = unsafe NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
+#else
+                color = NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
+#endif
+            }
+
+            let cieXYZ = CIE.XYZ<UInt8>(color)
+            let cieXYZA = CIE.XYZA<UInt8>(color)
+
+            let cieXYZViaRGB = CIE.XYZ<UInt8>(CIE.XYZ(rgb: RGB<CGFloat>(color)))
+
+            #expect(cieXYZ.x == cieXYZViaRGB.x)
+            #expect(cieXYZA.x == cieXYZViaRGB.x)
+            #expect(cieXYZ.y == cieXYZViaRGB.y)
+            #expect(cieXYZA.y == cieXYZViaRGB.y)
+            #expect(cieXYZ.z == cieXYZViaRGB.z)
+            #expect(cieXYZA.z == cieXYZViaRGB.z)
+            #expect(cieXYZA.alpha == UInt8(color.alphaComponent * 0xFF))
+            #expect(CIE.XYZ<Int8>(exactly: color) == nil)
+            #expect(CIE.XYZA<Int8>(exactly: color) == nil)
+#endif
+        }
     }
 }

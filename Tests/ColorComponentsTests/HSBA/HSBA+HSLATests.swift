@@ -1,32 +1,38 @@
-import XCTest
+import Testing
+import Numerics
 import ColorComponents
 
-final class HSBA_HSLATests: XCTestCase {
-    func testCreationFromHSLA() {
-        let hsl = HSL<Double>(hue: 0.1, saturation: 0.5, luminance: 0.75)
-        let hsla = HSLA<Double>(hsl: hsl, alpha: 0.9)
+extension HSBATests {
+    @Suite
+    struct HSLATests {
+        @Test
+        func creationFromFloatingPointHSLA() {
+            let hsl = HSL<Double>(hue: 0.1, saturation: 0.5, luminance: 0.75)
+            let hsla = HSLA<Double>(hsl: hsl, alpha: 0.9)
 
-        let hsb = HSB(hsl: hsl)
-        let hsba = HSBA(hsla: hsla)
+            let hsb = HSB(hsl: hsl)
+            let hsba = HSBA(hsla: hsla)
 
-        XCTAssertEqual(hsb.hue, 0.1, accuracy: .ulpOfOne)
-        XCTAssertEqual(hsb.saturation, 0.2857142857142858, accuracy: .ulpOfOne)
-        XCTAssertEqual(hsb.brightness, 0.875, accuracy: .ulpOfOne)
-        XCTAssertEqual(hsba.hsb, hsb)
-        XCTAssertEqual(hsba.alpha, hsla.alpha)
-    }
+            #expect(hsb.hue.isApproximatelyEqual(to: 0.1, absoluteTolerance: .ulpOfOne))
+            #expect(hsb.saturation.isApproximatelyEqual(to: 0.2857142857142858, absoluteTolerance: .ulpOfOne))
+            #expect(hsb.brightness.isApproximatelyEqual(to: 0.875, absoluteTolerance: .ulpOfOne))
+            #expect(hsba.hsb == hsb)
+            #expect(hsba.alpha == hsla.alpha)
+        }
 
-    func testCreationFromHSBA_WithIntegers() {
-        let hsl = HSL<UInt8>(hue: 0xFA, saturation: 0x80, luminance: 0xB0)
-        let hsla = HSLA<UInt8>(hsl: hsl, alpha: 0xFA)
+        @Test
+        func creationFromIntegerHSBA() {
+            let hsl = HSL<UInt8>(hue: 0xFA, saturation: 0x80, luminance: 0xB0)
+            let hsla = HSLA<UInt8>(hsl: hsl, alpha: 0xFA)
 
-        let hsb = HSB(hsl: hsl)
-        let hsba = HSBA(hsla: hsla)
+            let hsb = HSB(hsl: hsl)
+            let hsba = HSBA(hsla: hsla)
 
-        XCTAssertEqual(hsb.hue, 0xFA)
-        XCTAssertEqual(hsb.saturation, 0x5D)
-        XCTAssertEqual(hsb.brightness, 0xD7)
-        XCTAssertEqual(hsba.hsb, hsb)
-        XCTAssertEqual(hsba.alpha, hsla.alpha)
+            #expect(hsb.hue == 0xFA)
+            #expect(hsb.saturation == 0x5D)
+            #expect(hsb.brightness == 0xD7)
+            #expect(hsba.hsb == hsb)
+            #expect(hsba.alpha == hsla.alpha)
+        }
     }
 }

@@ -7,16 +7,26 @@ extension CGColor {
     func _extractCIEXYZ(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> CIE.XYZ<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericXYZ)
         let components = color._requireCompontens(in: 3...4)
+#if hasFeature(StrictMemorySafety)
+        if let alpha = unsafe alpha {
+            unsafe alpha.pointee = color.alpha
+        }
+#else
         if let alpha {
             alpha.pointee = color.alpha
         }
+#endif
         return .init(x: components[0], y: components[1], z: components[2])
     }
 
     @inlinable
     func _extractCIEXYZA() -> CIE.XYZA<CGFloat> {
         var alpha: CGFloat = 1
+#if hasFeature(StrictMemorySafety)
+        let xyz = unsafe _extractCIEXYZ(alpha: &alpha)
+#else
         let xyz = _extractCIEXYZ(alpha: &alpha)
+#endif
         return .init(xyz: xyz, alpha: alpha)
     }
 }
@@ -26,7 +36,11 @@ extension CGColor {
     @usableFromInline
     static func _makeXYZA(x: CGFloat, y: CGFloat, z: CGFloat, alpha: CGFloat = 1) -> CGColor {
         if #available(macOS 11, *) {
+#if hasFeature(StrictMemorySafety)
+            return unsafe ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
+#else
             return ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
+#endif
         } else {
             return RGBA(cieXYZA: .init(x: x, y: y, z: z, alpha: alpha)).cgColor
         }

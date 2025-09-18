@@ -1,143 +1,147 @@
-import XCTest
+import Testing
+import Numerics
 import ColorComponents
 
-final class RGBA_HexTests: XCTestCase {
-    func testCreationFromHex() {
-        let rgb = RGB<UInt64>(hex: 0xFF8055)
-        let rgba = RGBA<UInt64>(hex: 0xFF8055FA as UInt64)
+extension RGBATests {
+    @Suite
+    struct HexTests {
+        @Test
+        func creationFromHex() {
+            let rgb = RGB<UInt64>(hex: 0xFF8055)
+            let rgba = RGBA<UInt64>(hex: 0xFF8055FA as UInt64)
 
-        XCTAssertEqual(rgb.red, 0xFF)
-        XCTAssertEqual(rgb.green, 0x80)
-        XCTAssertEqual(rgb.blue, 0x55)
-        XCTAssertEqual(rgba.rgb, rgb)
-        XCTAssertEqual(rgba.alpha, 0xFA)
-    }
-
-    func testCreationFromHexOfDifferentSize() {
-        let rgb = RGB<UInt8>(hex: 0xFF8055)
-        let rgba = RGBA<UInt8>(hex: 0xFF8055FA as UInt64)
-
-        XCTAssertEqual(rgb.red, 0xFF)
-        XCTAssertEqual(rgb.green, 0x80)
-        XCTAssertEqual(rgb.blue, 0x55)
-        XCTAssertEqual(rgba.rgb, rgb)
-        XCTAssertEqual(rgba.alpha, 0xFA)
-    }
-
-    func testCreationFromHexUsingFloatingPoint() {
-        let rgb = RGB<Float>(hex: 0xFF8055)
-        let rgba = RGBA<Float>(hex: 0xFF8055FA as UInt64)
-
-        XCTAssertEqual(rgb.red, 1, accuracy: .ulpOfOne)
-        XCTAssertEqual(rgb.green, 0x80 / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(rgb.blue, 0x55 / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(rgba.rgb, rgb)
-        XCTAssertEqual(rgba.alpha, 0xFA / 0xFF, accuracy: .ulpOfOne)
-    }
-
-    func testCreationFromHexString() {
-        let rgb = RGB<UInt8>(hexString: "FF8055")
-        let rgb0x = RGB<UInt8>(hexString: "0xFF8055")
-        let rgbHash = RGB<UInt8>(hexString: "#FF8055")
-        let rgbInvalid = RGB<UInt8>(hexString: "0xTESTIN")
-        let rgba = RGBA<UInt8>(hexString: "FF8055FA")
-        let rgba0x = RGBA<UInt8>(hexString: "0xFF8055FA")
-        let rgbaHash = RGBA<UInt8>(hexString: "#FF8055FA")
-        let rgbaInvalid = RGBA<UInt8>(hexString: "0xTESTINIT")
-
-        XCTAssertNotNil(rgb)
-        XCTAssertNotNil(rgb0x)
-        XCTAssertNotNil(rgbHash)
-        XCTAssertNotNil(rgba)
-        XCTAssertNotNil(rgba0x)
-        XCTAssertNotNil(rgbaHash)
-
-        XCTAssertNil(rgbInvalid)
-        XCTAssertNil(rgbaInvalid)
-
-        XCTAssertEqual(rgb?.red, 0xFF)
-        XCTAssertEqual(rgb?.green, 0x80)
-        XCTAssertEqual(rgb?.blue, 0x55)
-        XCTAssertEqual(rgba?.rgb, rgb)
-        XCTAssertEqual(rgba?.alpha, 0xFA)
-
-        XCTAssertEqual(rgb0x, rgb)
-        XCTAssertEqual(rgbHash, rgb)
-        XCTAssertEqual(rgba0x, rgba)
-        XCTAssertEqual(rgbaHash, rgba)
-    }
-
-    func testCreationFromHexStringWithFloatingPoint() {
-        let rgb = RGB<Float>(hexString: "FF8055")
-        let rgb0x = RGB<Float>(hexString: "0xFF8055")
-        let rgbHash = RGB<Float>(hexString: "#FF8055")
-        let rgbInvalid = RGB<Float>(hexString: "0xTESTIN")
-        let rgba = RGBA<Float>(hexString: "FF8055FA")
-        let rgba0x = RGBA<Float>(hexString: "0xFF8055FA")
-        let rgbaHash = RGBA<Float>(hexString: "#FF8055FA")
-        let rgbaInvalid = RGBA<Float>(hexString: "0xTESTINIT")
-
-        XCTAssertNotNil(rgb)
-        XCTAssertNotNil(rgb0x)
-        XCTAssertNotNil(rgbHash)
-        XCTAssertNotNil(rgba)
-        XCTAssertNotNil(rgba0x)
-        XCTAssertNotNil(rgbaHash)
-
-        XCTAssertNil(rgbInvalid)
-        XCTAssertNil(rgbaInvalid)
-
-        if let rgb {
-            XCTAssertEqual(rgb.red, 1, accuracy: .ulpOfOne)
-            XCTAssertEqual(rgb.green, 0x80 / 0xFF, accuracy: .ulpOfOne)
-            XCTAssertEqual(rgb.blue, 0x55 / 0xFF, accuracy: .ulpOfOne)
+            #expect(rgb.red == 0xFF)
+            #expect(rgb.green == 0x80)
+            #expect(rgb.blue == 0x55)
+            #expect(rgba.rgb == rgb)
+            #expect(rgba.alpha == 0xFA)
         }
-        XCTAssertEqual(rgba?.rgb, rgb)
-        XCTAssertEqual(try XCTUnwrap(rgba).alpha, 0xFA / 0xFF, accuracy: .ulpOfOne)
 
-        XCTAssertEqual(rgb0x, rgb)
-        XCTAssertEqual(rgbHash, rgb)
-        XCTAssertEqual(rgba0x, rgba)
-        XCTAssertEqual(rgbaHash, rgba)
-    }
+        @Test
+        func creationFromHexOfDifferentSize() {
+            let rgb = RGB<UInt8>(hex: 0xFF8055)
+            let rgba = RGBA<UInt8>(hex: 0xFF8055FA as UInt64)
 
-    func testHexValue() {
-        let rgb = RGB<UInt64>(red: 0xFF, green: 0x08, blue: 0x55)
-        let rgba = RGBA<UInt64>(rgb: rgb, alpha: 0xFA)
+            #expect(rgb.red == 0xFF)
+            #expect(rgb.green == 0x80)
+            #expect(rgb.blue == 0x55)
+            #expect(rgba.rgb == rgb)
+            #expect(rgba.alpha == 0xFA)
+        }
 
-        XCTAssertEqual(rgb.hexValue(), 0xFF0855)
-        XCTAssertEqual(rgba.hexValue(), 0xFF0855FA as UInt64)
-    }
+        @Test
+        func creationFromHexUsingFloatingPoint() {
+            let rgb = RGB<Float>(hex: 0xFF8055)
+            let rgba = RGBA<Float>(hex: 0xFF8055FA as UInt64)
 
-    func testHexValueWithDifferentSize() {
-        let rgb = RGB<UInt8>(red: 0xFF, green: 0x08, blue: 0x55)
-        let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFA)
+            #expect(rgb.red.isApproximatelyEqual(to: 1, absoluteTolerance: .ulpOfOne))
+            #expect(rgb.green.isApproximatelyEqual(to: 0x80 / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(rgb.blue.isApproximatelyEqual(to: 0x55 / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(rgba.rgb == rgb)
+            #expect(rgba.alpha.isApproximatelyEqual(to: 0xFA / 0xFF, absoluteTolerance: .ulpOfOne))
+        }
 
-        XCTAssertEqual(rgb.hexValue(as: UInt64.self), 0xFF0855)
-        XCTAssertEqual(rgba.hexValue(as: UInt64.self), 0xFF0855FA)
-    }
+        @Test
+        func creationFromHexString() {
+            let rgb = RGB<UInt8>(hexString: "FF8055")
+            let rgb0x = RGB<UInt8>(hexString: "0xFF8055")
+            let rgbHash = RGB<UInt8>(hexString: "#FF8055")
+            let rgbInvalid = RGB<UInt8>(hexString: "0xTESTIN")
+            let rgba = RGBA<UInt8>(hexString: "FF8055FA")
+            let rgba0x = RGBA<UInt8>(hexString: "0xFF8055FA")
+            let rgbaHash = RGBA<UInt8>(hexString: "#FF8055FA")
+            let rgbaInvalid = RGBA<UInt8>(hexString: "0xTESTINIT")
 
-    func testHexValueWithFloatingPoint() {
-        let rgb = RGB<Float>(red: 0xFF / 0xFF, green: 0x08 / 0xFF, blue: 0x55 / 0xFF)
-        let rgba = RGBA<Float>(rgb: rgb, alpha: 0xFA / 0xFF)
+            #expect(rgb != nil)
+            #expect(rgb0x != nil)
+            #expect(rgbHash != nil)
+            #expect(rgba != nil)
+            #expect(rgba0x != nil)
+            #expect(rgbaHash != nil)
 
-        XCTAssertEqual(rgb.hexValue(as: UInt64.self), 0xFF0855)
-        XCTAssertEqual(rgba.hexValue(as: UInt64.self), 0xFF0855FA)
-    }
+            #expect(rgbInvalid == nil)
+            #expect(rgbaInvalid == nil)
 
-    func testHexString() {
-        let rgb = RGB(red: 0xFF, green: 0x08, blue: 0x55)
-        let rgba = RGBA(rgb: rgb, alpha: 0xFA)
+            #expect(rgb?.red == 0xFF)
+            #expect(rgb?.green == 0x80)
+            #expect(rgb?.blue == 0x55)
+            #expect(rgba?.rgb == rgb)
+            #expect(rgba?.alpha == 0xFA)
 
-        XCTAssertEqual(rgb.hexString(prefix: "0x", postfix: ";", uppercase: true), "0xFF0855;")
-        XCTAssertEqual(rgba.hexString(prefix: "0x", postfix: ";", uppercase: true), "0xFF0855FA;")
-    }
+            #expect(rgb0x == rgb)
+            #expect(rgbHash == rgb)
+            #expect(rgba0x == rgba)
+            #expect(rgbaHash == rgba)
+        }
 
-    func testHexStringWithFloatingPoint() {
-        let rgb = RGB<Float>(red: 1, green: 0x08 / 0xFF, blue: 0x55 / 0xFF)
-        let rgba = RGBA(rgb: rgb, alpha: 0xFA / 0xFF)
+        @Test
+        func creationFromHexStringWithFloatingPoint() throws {
+            let rgb = try #require(RGB<Float>(hexString: "FF8055"))
+            let rgb0x = try #require(RGB<Float>(hexString: "0xFF8055"))
+            let rgbHash = try #require(RGB<Float>(hexString: "#FF8055"))
+            let rgba = try #require(RGBA<Float>(hexString: "FF8055FA"))
+            let rgba0x = try #require(RGBA<Float>(hexString: "0xFF8055FA"))
+            let rgbaHash = try #require(RGBA<Float>(hexString: "#FF8055FA"))
 
-        XCTAssertEqual(rgb.hexString(prefix: "0x", postfix: ";", uppercase: true), "0xFF0855;")
-        XCTAssertEqual(rgba.hexString(prefix: "0x", postfix: ";", uppercase: true), "0xFF0855FA;")
+            #expect(RGB<Float>(hexString: "0xTESTIN") == nil)
+            #expect(RGBA<Float>(hexString: "0xTESTINIT") == nil)
+
+            #expect(rgb.red.isApproximatelyEqual(to: 1, absoluteTolerance: .ulpOfOne))
+            #expect(rgb.green.isApproximatelyEqual(to: 0x80 / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(rgb.blue.isApproximatelyEqual(to: 0x55 / 0xFF, absoluteTolerance: .ulpOfOne))
+
+            #expect(rgba.rgb == rgb)
+            #expect(rgba.alpha.isApproximatelyEqual(to: 0xFA / 0xFF, absoluteTolerance: .ulpOfOne))
+
+            #expect(rgb0x == rgb)
+            #expect(rgbHash == rgb)
+            #expect(rgba0x == rgba)
+            #expect(rgbaHash == rgba)
+        }
+
+        @Test
+        func hexValue() {
+            let rgb = RGB<UInt64>(red: 0xFF, green: 0x08, blue: 0x55)
+            let rgba = RGBA<UInt64>(rgb: rgb, alpha: 0xFA)
+
+            #expect(rgb.hexValue() == 0xFF0855)
+            #expect(rgba.hexValue() == 0xFF0855FA as UInt64)
+        }
+
+        @Test
+        func hexValueWithDifferentSize() {
+            let rgb = RGB<UInt8>(red: 0xFF, green: 0x08, blue: 0x55)
+            let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFA)
+
+            #expect(rgb.hexValue(as: UInt64.self) == 0xFF0855)
+            #expect(rgba.hexValue(as: UInt64.self) == 0xFF0855FA)
+        }
+
+        @Test
+        func hexValueWithFloatingPoint() {
+            let rgb = RGB<Float>(red: 0xFF / 0xFF, green: 0x08 / 0xFF, blue: 0x55 / 0xFF)
+            let rgba = RGBA<Float>(rgb: rgb, alpha: 0xFA / 0xFF)
+
+            #expect(rgb.hexValue(as: UInt64.self) == 0xFF0855)
+            #expect(rgba.hexValue(as: UInt64.self) == 0xFF0855FA)
+        }
+
+        @Test
+        func hexString() {
+            let rgb = RGB(red: 0xFF, green: 0x08, blue: 0x55)
+            let rgba = RGBA(rgb: rgb, alpha: 0xFA)
+
+            #expect(rgb.hexString(prefix: "0x", postfix: ";", uppercase: true) == "0xFF0855;")
+            #expect(rgba.hexString(prefix: "0x", postfix: ";", uppercase: true) == "0xFF0855FA;")
+        }
+
+        @Test
+        func hexStringWithFloatingPoint() {
+            let rgb = RGB<Float>(red: 1, green: 0x08 / 0xFF, blue: 0x55 / 0xFF)
+            let rgba = RGBA(rgb: rgb, alpha: 0xFA / 0xFF)
+
+            #expect(rgb.hexString(prefix: "0x", postfix: ";", uppercase: true) == "0xFF0855;")
+            #expect(rgba.hexString(prefix: "0x", postfix: ";", uppercase: true) == "0xFF0855FA;")
+        }
     }
 }

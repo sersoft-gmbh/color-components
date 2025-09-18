@@ -1,24 +1,22 @@
-// FIXME: This compiler directive dance is only needed because the Swift 5.9 compiler seems to try to parse the `compiler(>=5.10)`
-//        directive's contents when it's nested in another `#if`.
-//        Swift 5.10 seems to fix this - revert to one big outer `#if canImport(CoreGraphics)` once Swift 5.9 support is dropped.
 #if canImport(CoreGraphics)
 public import CoreGraphics
-#endif
 
-#if canImport(CoreGraphics) && compiler(>=5.10) && hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
 extension CGColorSpace {
     // There seems to be no constants for these in CoreGraphics...
+#if hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
+#if hasFeature(StrictMemorySafety)
+    @safe static nonisolated(unsafe) let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
+    @safe static nonisolated(unsafe) let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
+#else
     static nonisolated(unsafe) let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     static nonisolated(unsafe) let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
-}
-#elseif canImport(CoreGraphics)
-extension CGColorSpace {
+#endif
+#else
     static let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     static let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
-}
 #endif
+}
 
-#if canImport(CoreGraphics)
 extension CGColorSpace {
     static func _require(named colorSpaceName: CFString, file: StaticString = #file, line: UInt = #line) -> CGColorSpace {
         guard let colorSpace = CGColorSpace(name: colorSpaceName)
@@ -32,8 +30,13 @@ extension CGColor {
     static func _makeRequired(in colorSpaceName: CFString, components: UnsafePointer<CGFloat>,
                               file: StaticString = #file, line: UInt = #line) -> CGColor {
         let colorSpace = CGColorSpace._require(named: colorSpaceName, file: file, line: line)
+#if hasFeature(StrictMemorySafety)
+        guard let color = unsafe CGColor(colorSpace: colorSpace, components: components)
+        else { unsafe fatalError("Could not create CGColor in \(colorSpace) with components \(components)") }
+#else
         guard let color = CGColor(colorSpace: colorSpace, components: components)
         else { fatalError("Could not create CGColor in \(colorSpace) with components \(components)") }
+#endif
         return color
     }
 

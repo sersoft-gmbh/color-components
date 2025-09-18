@@ -1,200 +1,209 @@
-import XCTest
+import Testing
+import Numerics
 import ColorComponents
 
-final class RGBATests: XCTestCase {
-    func testSimpleCreation() {
+@Suite
+struct RGBATests {
+    @Test
+    func simpleCreation() {
         let rgb = RGB<UInt8>(red: 128, green: 64, blue: 32)
         let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFF)
         let rgba2 = RGBA<UInt8>(red: 128, green: 64, blue: 32, alpha: 0xFF)
-        XCTAssertEqual(rgb.red, 128)
-        XCTAssertEqual(rgb.green, 64)
-        XCTAssertEqual(rgb.blue, 32)
-        XCTAssertEqual(rgba.rgb, rgb)
-        XCTAssertEqual(rgba.rgb.red, 128)
-        XCTAssertEqual(rgba.rgb.green, 64)
-        XCTAssertEqual(rgba.rgb.blue, 32)
-        XCTAssertEqual(rgba2.rgb.red, 128)
-        XCTAssertEqual(rgba2.rgb.green, 64)
-        XCTAssertEqual(rgba2.rgb.blue, 32)
-        XCTAssertEqual(rgba.alpha, 0xFF)
-        XCTAssertEqual(rgba2.alpha, 0xFF)
-        XCTAssertEqual(rgba, rgba2)
+        #expect(rgb.red == 128)
+        #expect(rgb.green == 64)
+        #expect(rgb.blue == 32)
+        #expect(rgba.rgb == rgb)
+        #expect(rgba.rgb.red == 128)
+        #expect(rgba.rgb.green == 64)
+        #expect(rgba.rgb.blue == 32)
+        #expect(rgba2.rgb.red == 128)
+        #expect(rgba2.rgb.green == 64)
+        #expect(rgba2.rgb.blue == 32)
+        #expect(rgba.alpha == 0xFF)
+        #expect(rgba2.alpha == 0xFF)
+        #expect(rgba == rgba2)
     }
 
-    func testModification() {
+    @Test
+    func modification() {
         var rgba = RGBA<UInt8>(red: 128, green: 64, blue: 32, alpha: 0xFF)
         rgba.red = 120
         rgba.green = 60
         rgba.blue = 30
-        XCTAssertEqual(rgba.red, 120)
-        XCTAssertEqual(rgba.rgb.red, 120)
-        XCTAssertEqual(rgba.green, 60)
-        XCTAssertEqual(rgba.rgb.green, 60)
-        XCTAssertEqual(rgba.blue, 30)
-        XCTAssertEqual(rgba.rgb.blue, 30)
+        #expect(rgba.red == 120)
+        #expect(rgba.rgb.red == 120)
+        #expect(rgba.green == 60)
+        #expect(rgba.rgb.green == 60)
+        #expect(rgba.blue == 30)
+        #expect(rgba.rgb.blue == 30)
     }
 
-    func testIntegerToIntegerConversion() {
+    @Test
+    func integerToIntegerConversion() {
         let rgb = RGB<UInt8>(red: 128, green: 64, blue: 32)
         let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFF)
 
         let rgbInt = RGB<Int>(rgb)
         let rgbaInt = RGBA<Int>(rgba)
 
-        XCTAssertEqual(rgbInt.red, .init(rgb.red))
-        XCTAssertEqual(rgbaInt.red, .init(rgba.red))
-        XCTAssertEqual(rgbInt.green, .init(rgb.green))
-        XCTAssertEqual(rgbaInt.green, .init(rgba.green))
-        XCTAssertEqual(rgbInt.blue, .init(rgb.blue))
-        XCTAssertEqual(rgbaInt.blue, .init(rgba.blue))
-        XCTAssertEqual(rgbaInt.alpha, .init(rgba.alpha))
+        #expect(rgbInt.red == Int(rgb.red))
+        #expect(rgbaInt.red == Int(rgba.red))
+        #expect(rgbInt.green == Int(rgb.green))
+        #expect(rgbaInt.green == Int(rgba.green))
+        #expect(rgbInt.blue == Int(rgb.blue))
+        #expect(rgbaInt.blue == Int(rgba.blue))
+        #expect(rgbaInt.alpha == Int(rgba.alpha))
     }
 
-    func testExactIntegerToIntegerConversion() {
+    @Test
+    func exactIntegerToIntegerConversion() throws {
         let rgb = RGB<UInt8>(red: 128, green: 64, blue: 32)
         let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFF)
 
-        let rgbExact = RGB<UInt>(exactly: rgb)
-        let rgbaExact = RGBA<UInt>(exactly: rgba)
+        #expect(RGB<Int8>(exactly: rgb) == nil)
+        #expect(RGBA<Int8>(exactly: rgba) == nil)
 
-        XCTAssertNil(RGB<Int8>(exactly: rgb))
-        XCTAssertNil(RGBA<Int8>(exactly: rgba))
-        XCTAssertNotNil(rgbExact)
-        XCTAssertNotNil(rgbaExact)
-        XCTAssertEqual(rgbExact?.red, .init(rgb.red))
-        XCTAssertEqual(rgbaExact?.red, .init(rgba.red))
-        XCTAssertEqual(rgbExact?.green, .init(rgb.green))
-        XCTAssertEqual(rgbaExact?.green, .init(rgba.green))
-        XCTAssertEqual(rgbExact?.blue, .init(rgb.blue))
-        XCTAssertEqual(rgbaExact?.blue, .init(rgba.blue))
-        XCTAssertEqual(rgbaExact?.alpha, .init(rgba.alpha))
+        let rgbExact = try #require(RGB<UInt>(exactly: rgb))
+        let rgbaExact = try #require(RGBA<UInt>(exactly: rgba))
+
+        #expect(rgbExact.red == UInt(rgb.red))
+        #expect(rgbaExact.red == UInt(rgba.red))
+        #expect(rgbExact.green == UInt(rgb.green))
+        #expect(rgbaExact.green == UInt(rgba.green))
+        #expect(rgbExact.blue == UInt(rgb.blue))
+        #expect(rgbaExact.blue == UInt(rgba.blue))
+        #expect(rgbaExact.alpha == UInt(rgba.alpha))
     }
 
-    func testFloatToIntegerConversion() {
+    @Test
+    func floatToIntegerConversion() {
         let rgb = RGB<Float>(red: 0.5, green: 0.25, blue: 0.125)
         let rgba = RGBA<Float>(rgb: rgb, alpha: 1)
 
         let rgbInt = RGB<Int>(rgb)
         let rgbaInt = RGBA<Int>(rgba)
 
-        XCTAssertEqual(rgbInt.red, .init(rgb.red * 0xFF))
-        XCTAssertEqual(rgbaInt.red, .init(rgba.red * 0xFF))
-        XCTAssertEqual(rgbInt.green, .init(rgb.green * 0xFF))
-        XCTAssertEqual(rgbaInt.green, .init(rgba.green * 0xFF))
-        XCTAssertEqual(rgbInt.blue, .init(rgb.blue * 0xFF))
-        XCTAssertEqual(rgbaInt.blue, .init(rgba.blue * 0xFF))
-        XCTAssertEqual(rgbaInt.alpha, .init(rgba.alpha * 0xFF))
+        #expect(rgbInt.red == Int(rgb.red * 0xFF))
+        #expect(rgbaInt.red == Int(rgba.red * 0xFF))
+        #expect(rgbInt.green == Int(rgb.green * 0xFF))
+        #expect(rgbaInt.green == Int(rgba.green * 0xFF))
+        #expect(rgbInt.blue == Int(rgb.blue * 0xFF))
+        #expect(rgbaInt.blue == Int(rgba.blue * 0xFF))
+        #expect(rgbaInt.alpha == Int(rgba.alpha * 0xFF))
     }
 
-    func testExactFloatToIntegerConversion() {
+    @Test
+    func exactFloatToIntegerConversion() throws {
         let rgb = RGB<Float>(red: 1, green: 0, blue: 1)
         let rgba = RGBA<Float>(rgb: rgb, alpha: 1)
 
-        let rgbExact = RGB<UInt8>(exactly: rgb)
-        let rgbaExact = RGBA<UInt8>(exactly: rgba)
+        #expect(RGB<Int8>(exactly: rgb) == nil)
+        #expect(RGBA<Int8>(exactly: rgba) == nil)
 
-        XCTAssertNil(RGB<Int8>(exactly: rgb))
-        XCTAssertNil(RGBA<Int8>(exactly: rgba))
-        XCTAssertNotNil(rgbExact)
-        XCTAssertNotNil(rgbaExact)
-        XCTAssertEqual(rgbExact?.red, .init(rgb.red * 0xFF))
-        XCTAssertEqual(rgbaExact?.red, .init(rgba.red * 0xFF))
-        XCTAssertEqual(rgbExact?.green, .init(rgb.green * 0xFF))
-        XCTAssertEqual(rgbaExact?.green, .init(rgba.green * 0xFF))
-        XCTAssertEqual(rgbExact?.blue, .init(rgb.blue * 0xFF))
-        XCTAssertEqual(rgbaExact?.blue, .init(rgba.blue * 0xFF))
-        XCTAssertEqual(rgbaExact?.alpha, .init(rgba.alpha * 0xFF))
+        let rgbExact = try #require(RGB<UInt8>(exactly: rgb))
+        let rgbaExact = try #require(RGBA<UInt8>(exactly: rgba))
+
+        #expect(rgbExact.red == UInt8(rgb.red * 0xFF))
+        #expect(rgbaExact.red == UInt8(rgba.red * 0xFF))
+        #expect(rgbExact.green == UInt8(rgb.green * 0xFF))
+        #expect(rgbaExact.green == UInt8(rgba.green * 0xFF))
+        #expect(rgbExact.blue == UInt8(rgb.blue * 0xFF))
+        #expect(rgbaExact.blue == UInt8(rgba.blue * 0xFF))
+        #expect(rgbaExact.alpha == UInt8(rgba.alpha * 0xFF))
     }
 
-    func testFloatToFloatConversion() {
+    @Test
+    func floatToFloatConversion() {
         let rgb = RGB<Float>(red: 0.5, green: 0.25, blue: 0.125)
         let rgba = RGBA<Float>(rgb: rgb, alpha: 1)
 
         let rgbDbl = RGB<Double>(rgb)
         let rgbaDbl = RGBA<Double>(rgba)
 
-        XCTAssertEqual(rgbDbl.red, .init(rgb.red))
-        XCTAssertEqual(rgbaDbl.red, .init(rgba.red))
-        XCTAssertEqual(rgbDbl.green, .init(rgb.green))
-        XCTAssertEqual(rgbaDbl.green, .init(rgba.green))
-        XCTAssertEqual(rgbDbl.blue, .init(rgb.blue))
-        XCTAssertEqual(rgbaDbl.blue, .init(rgba.blue))
-        XCTAssertEqual(rgbaDbl.alpha, .init(rgba.alpha))
+        #expect(rgbDbl.red == Double(rgb.red))
+        #expect(rgbaDbl.red == Double(rgba.red))
+        #expect(rgbDbl.green == Double(rgb.green))
+        #expect(rgbaDbl.green == Double(rgba.green))
+        #expect(rgbDbl.blue == Double(rgb.blue))
+        #expect(rgbaDbl.blue == Double(rgba.blue))
+        #expect(rgbaDbl.alpha == Double(rgba.alpha))
     }
 
-    func testExactFloatToFloatConversion() {
+    @Test
+    func exactFloatToFloatConversion() throws {
         let rgb = RGB<Double>(red: 0.5, green: 0.25, blue: 0.125)
         let rgba = RGBA<Double>(rgb: rgb, alpha: 1)
 
-        let rgbExact = RGB<Float>(exactly: rgb)
-        let rgbaExact = RGBA<Float>(exactly: rgba)
+        #expect(RGB<InexactFloat>(exactly: rgb) == nil)
+        #expect(RGBA<InexactFloat>(exactly: rgba) == nil)
 
-        XCTAssertNil(RGB<InexactFloat>(exactly: rgb))
-        XCTAssertNil(RGBA<InexactFloat>(exactly: rgba))
-        XCTAssertNotNil(rgbExact)
-        XCTAssertNotNil(rgbaExact)
-        XCTAssertEqual(rgbExact?.red, .init(rgb.red))
-        XCTAssertEqual(rgbaExact?.red, .init(rgba.red))
-        XCTAssertEqual(rgbExact?.green, .init(rgb.green))
-        XCTAssertEqual(rgbaExact?.green, .init(rgba.green))
-        XCTAssertEqual(rgbExact?.blue, .init(rgb.blue))
-        XCTAssertEqual(rgbaExact?.blue, .init(rgba.blue))
-        XCTAssertEqual(rgbaExact?.alpha, .init(rgba.alpha))
+        let rgbExact = try #require(RGB<Float>(exactly: rgb))
+        let rgbaExact = try #require(RGBA<Float>(exactly: rgba))
+
+        #expect(rgbExact.red == Float(rgb.red))
+        #expect(rgbaExact.red == Float(rgba.red))
+        #expect(rgbExact.green == Float(rgb.green))
+        #expect(rgbaExact.green == Float(rgba.green))
+        #expect(rgbExact.blue == Float(rgb.blue))
+        #expect(rgbaExact.blue == Float(rgba.blue))
+        #expect(rgbaExact.alpha == Float(rgba.alpha))
     }
 
-    func testIntegerToFloatConversion() {
+    @Test
+    func integerToFloatConversion() {
         let rgb = RGB<UInt8>(red: 128, green: 64, blue: 32)
         let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFF)
 
         let rgbInt = RGB<Double>(rgb)
         let rgbaInt = RGBA<Double>(rgba)
 
-        XCTAssertEqual(rgbInt.red, .init(rgb.red) / 0xFF)
-        XCTAssertEqual(rgbaInt.red, .init(rgba.red) / 0xFF)
-        XCTAssertEqual(rgbInt.green, .init(rgb.green) / 0xFF)
-        XCTAssertEqual(rgbaInt.green, .init(rgba.green) / 0xFF)
-        XCTAssertEqual(rgbInt.blue, .init(rgb.blue) / 0xFF)
-        XCTAssertEqual(rgbaInt.blue, .init(rgba.blue) / 0xFF)
-        XCTAssertEqual(rgbaInt.alpha, .init(rgba.alpha) / 0xFF)
+        #expect(rgbInt.red == Double(rgb.red) / 0xFF)
+        #expect(rgbaInt.red == Double(rgba.red) / 0xFF)
+        #expect(rgbInt.green == Double(rgb.green) / 0xFF)
+        #expect(rgbaInt.green == Double(rgba.green) / 0xFF)
+        #expect(rgbInt.blue == Double(rgb.blue) / 0xFF)
+        #expect(rgbaInt.blue == Double(rgba.blue) / 0xFF)
+        #expect(rgbaInt.alpha == Double(rgba.alpha) / 0xFF)
     }
 
-    func testExactIntegerToFloatConversion() {
+    @Test
+    func exactIntegerToFloatConversion() throws {
         let rgb = RGB<UInt8>(red: 128, green: 64, blue: 32)
         let rgba = RGBA<UInt8>(rgb: rgb, alpha: 0xFF)
 
-        let rgbExact = RGB<Double>(exactly: rgb)
-        let rgbaExact = RGBA<Double>(exactly: rgba)
+        #expect(RGB<InexactFloat>(exactly: rgb) == nil)
+        #expect(RGBA<InexactFloat>(exactly: rgba) == nil)
 
-        XCTAssertNil(RGB<InexactFloat>(exactly: rgb))
-        XCTAssertNil(RGBA<InexactFloat>(exactly: rgba))
-        XCTAssertNotNil(rgbExact)
-        XCTAssertNotNil(rgbaExact)
-        XCTAssertEqual(rgbExact?.red, .init(rgb.red) / 0xFF)
-        XCTAssertEqual(rgbaExact?.red, .init(rgba.red) / 0xFF)
-        XCTAssertEqual(rgbExact?.green, .init(rgb.green) / 0xFF)
-        XCTAssertEqual(rgbaExact?.green, .init(rgba.green) / 0xFF)
-        XCTAssertEqual(rgbExact?.blue, .init(rgb.blue) / 0xFF)
-        XCTAssertEqual(rgbaExact?.blue, .init(rgba.blue) / 0xFF)
-        XCTAssertEqual(rgbaExact?.alpha, .init(rgba.alpha) / 0xFF)
+        let rgbExact = try #require(RGB<Double>(exactly: rgb))
+        let rgbaExact = try #require(RGBA<Double>(exactly: rgba))
+
+        #expect(rgbExact.red == Double(rgb.red) / 0xFF)
+        #expect(rgbaExact.red == Double(rgba.red) / 0xFF)
+        #expect(rgbExact.green == Double(rgb.green) / 0xFF)
+        #expect(rgbaExact.green == Double(rgba.green) / 0xFF)
+        #expect(rgbExact.blue == Double(rgb.blue) / 0xFF)
+        #expect(rgbaExact.blue == Double(rgba.blue) / 0xFF)
+        #expect(rgbaExact.alpha == Double(rgba.alpha) / 0xFF)
     }
 
-    func testFloatingPointColorComponentsConformance() {
+    @Test
+    func floatingPointColorComponentsConformance() {
         var rgb = RGB<Double>(red: 0.5, green: 0.25, blue: 0.125)
         var rgba = RGBA<Double>(rgb: rgb, alpha: 0.75)
 
         let oldBrightness = rgb.brightness
-        XCTAssertEqual(rgb.brightness, rgb.red * 0.299 + rgb.green * 0.587 + rgb.blue * 0.114)
-        XCTAssertEqual(rgba.brightness, rgb.brightness)
+        #expect(rgb.brightness == rgb.red * 0.299 + rgb.green * 0.587 + rgb.blue * 0.114)
+        #expect(rgba.brightness == rgb.brightness)
 
         rgb.changeBrightness(by: 0.1)
         rgba.changeBrightness(by: 0.1)
 
-        XCTAssertEqual(rgb.red, 0.6)
-        XCTAssertEqual(rgb.green, 0.35)
-        XCTAssertEqual(rgb.blue, 0.225)
-        XCTAssertEqual(rgba.rgb, rgb)
-        XCTAssertEqual(rgba.alpha, 0.75)
-        XCTAssertEqual(rgb.brightness, oldBrightness + 0.1, accuracy: 0.0001)
-        XCTAssertEqual(rgba.brightness, oldBrightness + 0.1, accuracy: 0.0001)
+        #expect(rgb.red == 0.6)
+        #expect(rgb.green == 0.35)
+        #expect(rgb.blue == 0.225)
+        #expect(rgba.rgb == rgb)
+        #expect(rgba.alpha == 0.75)
+        #expect(rgb.brightness.isApproximatelyEqual(to: oldBrightness + 0.1, absoluteTolerance: 0.0001))
+        #expect(rgba.brightness.isApproximatelyEqual(to: oldBrightness + 0.1, absoluteTolerance: 0.0001))
     }
 }

@@ -70,10 +70,17 @@ extension NSColor {
     @usableFromInline
     func _extractHSBA() -> HSBA<CGFloat> {
         var hsba = HSBA<CGFloat>(hue: 0, saturation: 0, brightness: 0, alpha: 1)
+#if hasFeature(StrictMemorySafety)
+        unsafe _convertedToRGB().getHue(&hsba.hsb.hue,
+                                        saturation: &hsba.hsb.saturation,
+                                        brightness: &hsba.hsb.brightness,
+                                        alpha: &hsba.alpha)
+#else
         _convertedToRGB().getHue(&hsba.hsb.hue,
                                  saturation: &hsba.hsb.saturation,
                                  brightness: &hsba.hsb.brightness,
                                  alpha: &hsba.alpha)
+#endif
         return hsba
     }
 }

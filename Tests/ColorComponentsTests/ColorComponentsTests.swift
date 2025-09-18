@@ -1,8 +1,10 @@
-import XCTest
+import Testing
 @testable import ColorComponents
 
-final class ColorComponentsTests: XCTestCase {
-    func testClearColorCheck() {
+@Suite
+struct ColorComponentsTests {
+    @Test
+    func clearColorCheck() {
         let bw = BW<UInt8>(white: 0x50)
         let bwa = BWA<UInt8>(bw: bw, alpha: 0)
 
@@ -13,13 +15,14 @@ final class ColorComponentsTests: XCTestCase {
         let hsb = HSB<Int>(hue: 0xFC, saturation: 0x5A, brightness: 0x3E)
         let hsba = HSBA<Int>(hsb: hsb, alpha: 0x23)
 
-        XCTAssertTrue(bwa.isClearColor)
-        XCTAssertTrue(rgba.isClearColor)
-        XCTAssertFalse(hsba.isClearColor)
-        XCTAssertFalse(rgba2.isClearColor)
+        #expect(bwa.isClearColor)
+        #expect(rgba.isClearColor)
+        #expect(!hsba.isClearColor)
+        #expect(!rgba2.isClearColor)
     }
 
-    func testBrightColorCheck() {
+    @Test
+    func brightColorCheck() {
         let bw = BW<Double>(white: 0.5)
         let bwa = BWA<Double>(bw: bw, alpha: 0)
 
@@ -29,21 +32,22 @@ final class ColorComponentsTests: XCTestCase {
         let hsb = HSB<Double>(hue: 0.75, saturation: 0.5, brightness: 0.25)
         let hsba = HSBA<Double>(hsb: hsb, alpha: 1 / 3)
 
-        XCTAssertFalse(bw.isDarkColor)
-        XCTAssertFalse(bwa.isDarkColor)
-        XCTAssertTrue(bw.isBrightColor)
-        XCTAssertTrue(bwa.isBrightColor)
-        XCTAssertTrue(rgb.isDarkColor)
-        XCTAssertTrue(rgba.isDarkColor)
-        XCTAssertFalse(rgb.isBrightColor)
-        XCTAssertFalse(rgba.isBrightColor)
-        XCTAssertTrue(hsb.isDarkColor)
-        XCTAssertTrue(hsba.isDarkColor)
-        XCTAssertFalse(hsb.isBrightColor)
-        XCTAssertFalse(hsba.isBrightColor)
+        #expect(!bw.isDarkColor)
+        #expect(!bwa.isDarkColor)
+        #expect(bw.isBrightColor)
+        #expect(bwa.isBrightColor)
+        #expect(rgb.isDarkColor)
+        #expect(rgba.isDarkColor)
+        #expect(!rgb.isBrightColor)
+        #expect(!rgba.isBrightColor)
+        #expect(hsb.isDarkColor)
+        #expect(hsba.isDarkColor)
+        #expect(!hsb.isBrightColor)
+        #expect(!hsba.isBrightColor)
     }
 
-    func testPlaygroundDescription() throws {
+    @Test
+    func playgroundDescription() throws {
         let fltRGB = RGB<Double>(red: 0.5, green: 0.1, blue: 0.3)
         let fltRGBA = RGBA<Double>(rgb: fltRGB, alpha: 0.85)
         let intRGB = RGB<UInt8>(red: 0x98, green: 0x74, blue: 0x32)
@@ -60,17 +64,17 @@ final class ColorComponentsTests: XCTestCase {
         let dummyAlphaDesc = dummyRGBA.playgroundDescription
 
 #if canImport(AppKit) || canImport(UIKit) || canImport(CoreGraphics)
-        XCTAssertEqual(fltOpaqueDesc as? _PlaygroundColor, fltRGB._playgroundColor)
-        XCTAssertEqual(fltAlphaDesc as? _PlaygroundColor, fltRGBA._playgroundColor)
-        XCTAssertEqual(intOpaqueDesc as? _PlaygroundColor, intRGB._playgroundColor)
-        XCTAssertEqual(intAlphaDesc as? _PlaygroundColor, intRGBA._playgroundColor)
+        #expect(fltOpaqueDesc as? _PlaygroundColor == fltRGB._playgroundColor)
+        #expect(fltAlphaDesc as? _PlaygroundColor == fltRGBA._playgroundColor)
+        #expect(intOpaqueDesc as? _PlaygroundColor == intRGB._playgroundColor)
+        #expect(intAlphaDesc as? _PlaygroundColor == intRGBA._playgroundColor)
 #else
-        XCTAssertEqual(fltOpaqueDesc as? String, String(describing: fltRGB))
-        XCTAssertEqual(fltAlphaDesc as? String, String(describing: fltRGBA))
-        XCTAssertEqual(intOpaqueDesc as? String, String(describing: intRGB))
-        XCTAssertEqual(intAlphaDesc as? String, String(describing: intRGBA))
+        #expect(fltOpaqueDesc as? String == String(describing: fltRGB))
+        #expect(fltAlphaDesc as? String == String(describing: fltRGBA))
+        #expect(intOpaqueDesc as? String == String(describing: intRGB))
+        #expect(intAlphaDesc as? String == String(describing: intRGBA))
 #endif
-        XCTAssertEqual(dummyOpaqueDesc as? String, String(describing: dummyRGB))
-        XCTAssertEqual(dummyAlphaDesc as? String, String(describing: dummyRGBA))
+        #expect(dummyOpaqueDesc as? String == String(describing: dummyRGB))
+        #expect(dummyAlphaDesc as? String == String(describing: dummyRGBA))
     }
 }

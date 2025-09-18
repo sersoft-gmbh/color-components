@@ -1,101 +1,109 @@
-import XCTest
+import Testing
+import Numerics
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 import AppKit
 #endif
 import ColorComponents
 
-final class HSBA_AppKitTests: XCTestCase {
-    func testNSColorCreationWithFloatingPoint() throws {
+extension HSBATests {
+    @Suite(.enabled(if: .appKitAvailable))
+    struct AppKitTests {
+        @Test
+        func nsColorCreationWithFloatingPoint() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let hsb = HSB<CGFloat>(hue: 0.25, saturation: 0.5, brightness: 0.75)
-        let hsba = HSBA(hsb: hsb, alpha: 0.25)
+            let hsb = HSB<CGFloat>(hue: 0.25, saturation: 0.5, brightness: 0.75)
+            let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
-        let opaqueColor = NSColor(hsb)
-        let alphaColor = NSColor(hsba)
+            let opaqueColor = NSColor(hsb)
+            let alphaColor = NSColor(hsba)
 
-        XCTAssertEqual(opaqueColor.alphaComponent, 1)
-        XCTAssertEqual(alphaColor.alphaComponent, hsba.alpha)
-        XCTAssertEqual(opaqueColor.hueComponent, hsb.hue)
-        XCTAssertEqual(alphaColor.hueComponent, hsba.hue)
-        XCTAssertEqual(opaqueColor.saturationComponent, hsb.saturation)
-        XCTAssertEqual(alphaColor.saturationComponent, hsba.saturation)
-        XCTAssertEqual(opaqueColor.brightnessComponent, hsb.brightness)
-        XCTAssertEqual(alphaColor.brightnessComponent, hsba.brightness)
-#else
-        try skipUnavailableAPI()
+            #expect(opaqueColor.alphaComponent == 1)
+            #expect(alphaColor.alphaComponent == hsba.alpha)
+            #expect(opaqueColor.hueComponent == hsb.hue)
+            #expect(alphaColor.hueComponent == hsba.hue)
+            #expect(opaqueColor.saturationComponent == hsb.saturation)
+            #expect(alphaColor.saturationComponent == hsba.saturation)
+            #expect(opaqueColor.brightnessComponent == hsb.brightness)
+            #expect(alphaColor.brightnessComponent == hsba.brightness)
 #endif
-    }
-
-    func testCreationFromNSColorWithFloatingPoint() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let color: NSColor
-        if #available(macOS 10.12, *) {
-            color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
-        } else {
-            color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
         }
 
-        let hsb = HSB<CGFloat>(color)
-        let hsba = HSBA<CGFloat>(color)
-
-        XCTAssertEqual(hsb.hue, color.hueComponent)
-        XCTAssertEqual(hsba.hue, color.hueComponent)
-        XCTAssertEqual(hsb.saturation, color.saturationComponent)
-        XCTAssertEqual(hsba.saturation, color.saturationComponent)
-        XCTAssertEqual(hsb.brightness, color.brightnessComponent)
-        XCTAssertEqual(hsba.brightness, color.brightnessComponent)
-        XCTAssertEqual(hsba.alpha, color.alphaComponent)
-        XCTAssertNil(HSB<InexactFloat>(exactly: color))
-        XCTAssertNil(HSBA<InexactFloat>(exactly: color))
-#else
-        try skipUnavailableAPI()
-#endif
-    }
-
-    func testNSColorCreationWithInteger() throws {
+        @Test
+        func creationFromNSColorWithFloatingPoint() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let hsb = HSB<UInt8>(hue: 0x40, saturation: 0x80, brightness: 0xB0)
-        let hsba = HSBA(hsb: hsb, alpha: 0x40)
-
-        let opaqueColor = NSColor(hsb)
-        let alphaColor = NSColor(hsba)
-
-        XCTAssertEqual(opaqueColor.alphaComponent, 1)
-        XCTAssertEqual(alphaColor.alphaComponent, .init(hsba.alpha) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.hueComponent, .init(hsb.hue) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.hueComponent, .init(hsba.hue) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.saturationComponent, .init(hsb.saturation) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.saturationComponent, .init(hsba.saturation) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(opaqueColor.brightnessComponent, .init(hsb.brightness) / 0xFF, accuracy: .ulpOfOne)
-        XCTAssertEqual(alphaColor.brightnessComponent, .init(hsba.brightness) / 0xFF, accuracy: .ulpOfOne)
+            let color: NSColor
+            if #available(macOS 10.12, *) {
+                color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
+            } else {
+#if hasFeature(StrictMemorySafety)
+                color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #else
-        try skipUnavailableAPI()
+                color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #endif
-    }
+            }
 
-    func testCreationFromNSColorWithInteger() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-        let color: NSColor
-        if #available(macOS 10.12, *) {
-            color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
-        } else {
-            color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
+            let hsb = HSB<CGFloat>(color)
+            let hsba = HSBA<CGFloat>(color)
+
+            #expect(hsb.hue == color.hueComponent)
+            #expect(hsba.hue == color.hueComponent)
+            #expect(hsb.saturation == color.saturationComponent)
+            #expect(hsba.saturation == color.saturationComponent)
+            #expect(hsb.brightness == color.brightnessComponent)
+            #expect(hsba.brightness == color.brightnessComponent)
+            #expect(hsba.alpha == color.alphaComponent)
+            #expect(HSB<InexactFloat>(exactly: color) == nil)
+            #expect(HSBA<InexactFloat>(exactly: color) == nil)
+#endif
         }
 
-        let hsb = HSB<UInt8>(color)
-        let hsba = HSBA<UInt8>(color)
+        @Test
+        func nsColorCreationWithInteger() throws {
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            let hsb = HSB<UInt8>(hue: 0x40, saturation: 0x80, brightness: 0xB0)
+            let hsba = HSBA(hsb: hsb, alpha: 0x40)
 
-        XCTAssertEqual(hsb.hue, .init(color.hueComponent * 0xFF))
-        XCTAssertEqual(hsba.hue, .init(color.hueComponent * 0xFF))
-        XCTAssertEqual(hsb.saturation, .init(color.saturationComponent * 0xFF))
-        XCTAssertEqual(hsba.saturation, .init(color.saturationComponent * 0xFF))
-        XCTAssertEqual(hsb.brightness, .init(color.brightnessComponent * 0xFF))
-        XCTAssertEqual(hsba.brightness, .init(color.brightnessComponent * 0xFF))
-        XCTAssertEqual(hsba.alpha, .init(color.alphaComponent * 0xFF))
-        XCTAssertNil(HSB<Int8>(exactly: color))
-        XCTAssertNil(HSBA<Int8>(exactly: color))
-#else
-        try skipUnavailableAPI()
+            let opaqueColor = NSColor(hsb)
+            let alphaColor = NSColor(hsba)
+
+            #expect(opaqueColor.alphaComponent == 1)
+            #expect(alphaColor.alphaComponent.isApproximatelyEqual(to: CGFloat(hsba.alpha) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.hueComponent.isApproximatelyEqual(to: CGFloat(hsb.hue) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.hueComponent.isApproximatelyEqual(to: CGFloat(hsba.hue) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.saturationComponent.isApproximatelyEqual(to: CGFloat(hsb.saturation) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.saturationComponent.isApproximatelyEqual(to: CGFloat(hsba.saturation) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(opaqueColor.brightnessComponent.isApproximatelyEqual(to: CGFloat(hsb.brightness) / 0xFF, absoluteTolerance: .ulpOfOne))
+            #expect(alphaColor.brightnessComponent.isApproximatelyEqual(to: CGFloat(hsba.brightness) / 0xFF, absoluteTolerance: .ulpOfOne))
 #endif
+        }
+
+        @Test
+        func creationFromNSColorWithInteger() throws {
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            let color: NSColor
+            if #available(macOS 10.12, *) {
+                color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
+            } else {
+#if hasFeature(StrictMemorySafety)
+                color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
+#else
+                color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
+#endif
+            }
+
+            let hsb = HSB<UInt8>(color)
+            let hsba = HSBA<UInt8>(color)
+
+            #expect(hsb.hue == UInt8(color.hueComponent * 0xFF))
+            #expect(hsba.hue == UInt8(color.hueComponent * 0xFF))
+            #expect(hsb.saturation == UInt8(color.saturationComponent * 0xFF))
+            #expect(hsba.saturation == UInt8(color.saturationComponent * 0xFF))
+            #expect(hsb.brightness == UInt8(color.brightnessComponent * 0xFF))
+            #expect(hsba.brightness == UInt8(color.brightnessComponent * 0xFF))
+            #expect(hsba.alpha == UInt8(color.alphaComponent * 0xFF))
+            #expect(HSB<Int8>(exactly: color) == nil)
+            #expect(HSBA<Int8>(exactly: color) == nil)
+#endif
+        }
     }
 }

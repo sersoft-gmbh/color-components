@@ -7,16 +7,26 @@ extension CGColor {
     func _extractRGB(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> RGB<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericRGB)
         let components = color._requireCompontens(in: 3...4)
+#if hasFeature(StrictMemorySafety)
+        if let alpha = unsafe alpha {
+            unsafe alpha.pointee = color.alpha
+        }
+#else
         if let alpha {
             alpha.pointee = color.alpha
         }
+#endif
         return .init(red: components[0], green: components[1], blue: components[2])
     }
 
     @inlinable
     func _extractRGBA() -> RGBA<CGFloat> {
         var alpha: CGFloat = 1
+#if hasFeature(StrictMemorySafety)
+        let rgb = unsafe _extractRGB(alpha: &alpha)
+#else
         let rgb = _extractRGB(alpha: &alpha)
+#endif
         return .init(rgb: rgb, alpha: alpha)
     }
 }

@@ -39,10 +39,17 @@ extension UIColor {
     @usableFromInline
     func _extractRGBA() -> (RGBA<CGFloat>, isExact: Bool) {
         var rgba = RGBA<CGFloat>(red: 0, green: 0, blue: 0, alpha: 1)
+#if hasFeature(StrictMemorySafety)
+        let isExact = unsafe getRed(&rgba.rgb.red,
+                                    green: &rgba.rgb.green,
+                                    blue: &rgba.rgb.blue,
+                                    alpha: &rgba.alpha)
+#else
         let isExact = getRed(&rgba.rgb.red,
                              green: &rgba.rgb.green,
                              blue: &rgba.rgb.blue,
                              alpha: &rgba.alpha)
+#endif
         return (rgba, isExact)
     }
 }

@@ -1,95 +1,94 @@
-import XCTest
+import Testing
 #if canImport(CoreGraphics)
 import CoreGraphics
 #endif
 import ColorComponents
 
-final class BWA_CoreGraphicsTests: XCTestCase {
-    func testCGColorCreationWithFloatingPoint() throws {
+extension BWATests {
+    @Suite(.enabled(if: .coreGraphicsAvailable))
+    struct CoreGraphicsTests {
+        @Test
+        @available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
+        func cgColorCreationWithFloatingPoint() throws {
 #if canImport(CoreGraphics)
-        guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
-        else { try skipUnavailableAPI() }
+            let bw = BW<CGFloat>(white: 0.5)
+            let bwa = BWA(bw: bw, alpha: 0.25)
 
-        let bw = BW<CGFloat>(white: 0.5)
-        let bwa = BWA(bw: bw, alpha: 0.25)
+            let opaqueColor = bw.cgColor
+            let alphaColor = bwa.cgColor
 
-        let opaqueColor = bw.cgColor
-        let alphaColor = bwa.cgColor
-
-        XCTAssertEqual(opaqueColor.alpha, 1)
-        XCTAssertEqual(alphaColor.alpha, 0.25)
-        XCTAssertEqual(opaqueColor.components, [0.5, 1.0])
-        XCTAssertEqual(alphaColor.components, [0.5, 0.25])
-        XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#else
-        try skipUnavailableAPI()
+            #expect(opaqueColor.alpha == 1)
+            #expect(alphaColor.alpha == 0.25)
+            #expect(opaqueColor.components == [0.5, 1.0])
+            #expect(alphaColor.components == [0.5, 0.25])
+            #expect(opaqueColor.colorSpace == CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
+            #expect(alphaColor.colorSpace == CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
 #endif
-    }
+        }
 
-    func testCreationFromCGColorWithFloatingPoint() throws {
+        @Test
+        @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
+        func creationFromCGColorWithFloatingPoint() throws {
 #if canImport(CoreGraphics)
-        guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
-        else { try skipUnavailableAPI() }
-
-        let colorSpace = try XCTUnwrap(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        let cgColor = try XCTUnwrap(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
-
-        let bw = BW<CGFloat>(cgColor)
-        let bwa = BWA<CGFloat>(cgColor)
-
-        XCTAssertEqual(bw.white, 0.75)
-        XCTAssertEqual(bwa.white, 0.75)
-        XCTAssertEqual(bwa.alpha, 0.5)
-        XCTAssertNotNil(BWA<CGFloat>(exactly: cgColor))
-        XCTAssertNotNil(BW<CGFloat>(exactly: cgColor))
-        XCTAssertNil(BW<InexactFloat>(exactly: cgColor))
-        XCTAssertNil(BWA<InexactFloat>(exactly: cgColor))
+            let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
+#if hasFeature(StrictMemorySafety)
+            let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
-        try skipUnavailableAPI()
+            let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #endif
-    }
 
-    func testCGColorCreationWithInteger() throws {
+            let bw = BW<CGFloat>(cgColor)
+            let bwa = BWA<CGFloat>(cgColor)
+
+            #expect(bw.white == 0.75)
+            #expect(bwa.white == 0.75)
+            #expect(bwa.alpha == 0.5)
+            #expect(BWA<CGFloat>(exactly: cgColor) != nil)
+            #expect(BW<CGFloat>(exactly: cgColor) != nil)
+            #expect(BW<InexactFloat>(exactly: cgColor) == nil)
+            #expect(BWA<InexactFloat>(exactly: cgColor) == nil)
+#endif
+        }
+
+        @Test
+        @available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
+        func cgColorCreationWithInteger() throws {
 #if canImport(CoreGraphics)
-        guard #available(macOS 10.5, iOS 13, tvOS 13, watchOS 6, *)
-        else { try skipUnavailableAPI() }
+            let bw = BW<UInt8>(white: 0x80)
+            let bwa = BWA(bw: bw, alpha: 0x40)
 
-        let bw = BW<UInt8>(white: 0x80)
-        let bwa = BWA(bw: bw, alpha: 0x40)
+            let opaqueColor = bw.cgColor
+            let alphaColor = bwa.cgColor
 
-        let opaqueColor = bw.cgColor
-        let alphaColor = bwa.cgColor
-
-        XCTAssertEqual(opaqueColor.alpha, 1)
-        XCTAssertEqual(alphaColor.alpha, 0x40 / 0xFF)
-        XCTAssertEqual(opaqueColor.components, [0x80 / 0xFF as CGFloat, 1.0])
-        XCTAssertEqual(alphaColor.components, [0x80 / 0xFF as CGFloat, 0x40 / 0xFF as CGFloat])
-        XCTAssertEqual(opaqueColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        XCTAssertEqual(alphaColor.colorSpace, CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#else
-        try skipUnavailableAPI()
+            #expect(opaqueColor.alpha == 1)
+            #expect(alphaColor.alpha == (0x40 / 0xFF) as CGFloat)
+            #expect(opaqueColor.components == [0x80 / 0xFF as CGFloat, 1.0])
+            #expect(alphaColor.components == [0x80 / 0xFF as CGFloat, 0x40 / 0xFF as CGFloat])
+            #expect(opaqueColor.colorSpace == CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
+            #expect(alphaColor.colorSpace == CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
 #endif
-    }
+        }
 
-    func testCreationFromCGColorWithInteger() throws {
+        @Test
+        @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
+        func creationFromCGColorWithInteger() throws {
 #if canImport(CoreGraphics)
-        guard #available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
-        else { try skipUnavailableAPI() }
-
-        let colorSpace = try XCTUnwrap(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-        let cgColor = try XCTUnwrap(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
-
-        let bw = BW<UInt8>(cgColor)
-        let bwa = BWA<UInt8>(cgColor)
-
-        XCTAssertEqual(bw.white, 0xBF)
-        XCTAssertEqual(bwa.white, 0xBF)
-        XCTAssertEqual(bwa.alpha, 0x7F)
-        XCTAssertNil(BW<Int8>(exactly: cgColor))
-        XCTAssertNil(BWA<Int8>(exactly: cgColor))
+            let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
+#if hasFeature(StrictMemorySafety)
+            let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
-        try skipUnavailableAPI()
+            let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #endif
+
+            let bw = BW<UInt8>(cgColor)
+            let bwa = BWA<UInt8>(cgColor)
+
+            #expect(bw.white == 0xBF)
+            #expect(bwa.white == 0xBF)
+            #expect(bwa.alpha == 0x7F)
+            #expect(BW<Int8>(exactly: cgColor) == nil)
+            #expect(BWA<Int8>(exactly: cgColor) == nil)
+#endif
+        }
     }
 }
