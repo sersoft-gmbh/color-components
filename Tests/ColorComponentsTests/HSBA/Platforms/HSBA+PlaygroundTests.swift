@@ -15,8 +15,8 @@ extension HSBATests {
             let hsb = HSB<FltType>(hue: 0.5, saturation: 0.73, brightness: 0.89)
             let hsba = HSBA(hsb: hsb, alpha: 0.25)
 
-            let opaquePlaygroundColor = hsb._playgroundColor
-            let alphaPlaygroundColor = hsba._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = hsb._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = hsba._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(hsb))
@@ -35,8 +35,8 @@ extension HSBATests {
             let hsb = HSB<UInt8>(hue: 0x9A, saturation: 0xF3, brightness: 0xFA)
             let hsba = HSBA(hsb: hsb, alpha: 0x77)
 
-            let opaquePlaygroundColor = hsb._playgroundColor
-            let alphaPlaygroundColor = hsba._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = hsb._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = hsba._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(hsb))

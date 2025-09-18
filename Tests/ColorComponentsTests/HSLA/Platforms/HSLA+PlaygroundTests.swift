@@ -15,8 +15,8 @@ extension HSLATests {
             let hsl = HSL<FltType>(hue: 0.5, saturation: 0.73, luminance: 0.89)
             let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
-            let opaquePlaygroundColor = hsl._playgroundColor
-            let alphaPlaygroundColor = hsla._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = hsl._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = hsla._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(hsl))
@@ -35,8 +35,8 @@ extension HSLATests {
             let hsl = HSL<UInt8>(hue: 0x9A, saturation: 0xF3, luminance: 0xFA)
             let hsla = HSLA(hsl: hsl, alpha: 0x77)
 
-            let opaquePlaygroundColor = hsl._playgroundColor
-            let alphaPlaygroundColor = hsla._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = hsl._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = hsla._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(hsl))

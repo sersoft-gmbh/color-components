@@ -15,8 +15,8 @@ extension BWATests {
             let bw = BW<FltType>(white: 0.5)
             let bwa = BWA(bw: bw, alpha: 0.25)
 
-            let opaquePlaygroundColor = bw._playgroundColor
-            let alphaPlaygroundColor = bwa._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = bw._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = bwa._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(bw))
@@ -35,8 +35,8 @@ extension BWATests {
             let bw = BW<UInt8>(white: 0x90)
             let bwa = BWA(bw: bw, alpha: 0x77)
 
-            let opaquePlaygroundColor = bw._playgroundColor
-            let alphaPlaygroundColor = bwa._playgroundColor
+            let opaquePlaygroundColor: _PlaygroundColor = bw._playgroundColor
+            let alphaPlaygroundColor: _PlaygroundColor = bwa._playgroundColor
 
 #if canImport(AppKit) || canImport(UIKit)
             #expect(opaquePlaygroundColor == _PlatformColor(bw))
