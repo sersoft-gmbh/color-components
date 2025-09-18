@@ -31,7 +31,7 @@ extension BWATests {
         func creationFromCGColorWithFloatingPoint() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
@@ -74,7 +74,7 @@ extension BWATests {
         func creationFromCGColorWithInteger() throws {
 #if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))

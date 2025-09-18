@@ -23,7 +23,7 @@ extension ImageColorsCalculator {
         assert(colorLimit > 0)
         let img = (rect.map(image.cropped(to:)) ?? image).limitedTo(pixelCount: pixelLimit)
         var pixels = Array<UInt8>(repeating: 0, count: Int(floor(img.extent.width * img.extent.height)) * 4)
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
         unsafe context.render(img,
                               toBitmap: &pixels,
                               rowBytes: Int(floor(img.extent.width)) * 4,

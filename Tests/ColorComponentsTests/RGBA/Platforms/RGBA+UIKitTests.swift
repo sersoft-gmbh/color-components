@@ -17,7 +17,7 @@ extension RGBATests {
             let alphaColor = UIColor(rgba)
             
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -27,7 +27,7 @@ extension RGBATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -75,7 +75,7 @@ extension RGBATests {
             let alphaColor = UIColor(rgba)
             
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -85,7 +85,7 @@ extension RGBATests {
             #expect(blue == CGFloat(rgb.blue) / 0xFF)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))

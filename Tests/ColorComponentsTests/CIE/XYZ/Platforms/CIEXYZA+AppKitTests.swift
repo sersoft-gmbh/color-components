@@ -36,7 +36,7 @@ extension CIEXYZATests {
             if #available(macOS 10.12, *) {
                 color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
             } else {
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
                 color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #else
                 color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
@@ -89,7 +89,7 @@ extension CIEXYZATests {
             if #available(macOS 10.12, *) {
                 color = NSColor(red: 0.25, green: 0.5, blue: 0.75, alpha: 0.25)
             } else {
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
                 color = unsafe NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
 #else
                 color = NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)

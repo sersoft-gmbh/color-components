@@ -17,7 +17,7 @@ extension BWATests {
             let alphaColor = UIColor(bwa)
             
             var (white, alpha) = (CGFloat(), CGFloat())
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe opaqueColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(opaqueColor.getWhite(&white, alpha: &alpha))
@@ -25,7 +25,7 @@ extension BWATests {
             #expect(white == bw.white)
             #expect(alpha == 1)
             (white, alpha) = (0, 0)
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe alphaColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(alphaColor.getWhite(&white, alpha: &alpha))
@@ -65,7 +65,7 @@ extension BWATests {
             let alphaColor = UIColor(bwa)
             
             var (white, alpha) = (CGFloat(), CGFloat())
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe opaqueColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(opaqueColor.getWhite(&white, alpha: &alpha))
@@ -73,7 +73,7 @@ extension BWATests {
             #expect(white == CGFloat(bw.white) / 0xFF)
             #expect(alpha == 1)
             (white, alpha) = (0, 0)
-#if compiler(>=6.2)
+#if (compiler(>=6.2))
             #expect(unsafe alphaColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(alphaColor.getWhite(&white, alpha: &alpha))
