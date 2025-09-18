@@ -1,4 +1,5 @@
-#if canImport(UIKit)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
 public import UIKit
 
 @available(macOS, unavailable)
@@ -39,7 +40,7 @@ extension UIColor {
     @usableFromInline
     func _extractRGBA() -> (RGBA<CGFloat>, isExact: Bool) {
         var rgba = RGBA<CGFloat>(red: 0, green: 0, blue: 0, alpha: 1)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         let isExact = unsafe getRed(&rgba.rgb.red,
                                     green: &rgba.rgb.green,
                                     blue: &rgba.rgb.blue,

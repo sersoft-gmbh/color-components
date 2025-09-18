@@ -30,12 +30,13 @@ extension HSBATests {
 
         @Test
         func creationFromNSColorWithFloatingPoint() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
             let color: NSColor
             if #available(macOS 10.12, *) {
                 color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
             } else {
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
                 color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #else
                 color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
@@ -79,12 +80,13 @@ extension HSBATests {
 
         @Test
         func creationFromNSColorWithInteger() throws {
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
             let color: NSColor
             if #available(macOS 10.12, *) {
                 color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
             } else {
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
                 color = unsafe NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)
 #else
                 color = NSColor(colorSpace: .genericRGB, components: [0.5625, 0.75, 0.375, 0.25], count: 4)

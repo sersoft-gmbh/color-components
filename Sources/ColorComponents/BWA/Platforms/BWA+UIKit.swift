@@ -1,4 +1,5 @@
-#if canImport(UIKit)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
 public import UIKit
 
 @available(macOS, unavailable)
@@ -39,7 +40,7 @@ extension UIColor {
     @usableFromInline
     func _extractBWA() -> (BWA<CGFloat>, isExact: Bool) {
         var bwa = BWA<CGFloat>(white: 0, alpha: 1)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         let isExact = unsafe getWhite(&bwa.bw.white, alpha: &bwa.alpha)
 #else
         let isExact = getWhite(&bwa.bw.white, alpha: &bwa.alpha)

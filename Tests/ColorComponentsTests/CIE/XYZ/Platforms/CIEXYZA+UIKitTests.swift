@@ -9,7 +9,8 @@ extension CIEXYZATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let cieXYZ = CIE.XYZ<CGFloat>(x: 0.5, y: 0.25, z: 0.75)
             let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0.25)
 
@@ -19,7 +20,7 @@ extension CIEXYZATests {
             let alphaColor = UIColor(cieXYZA)
 
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -29,7 +30,7 @@ extension CIEXYZATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -71,7 +72,8 @@ extension CIEXYZATests {
 
         @Test
         func uiColorCreationWithInteger() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let cieXYZ = CIE.XYZ<UInt8>(x: 0x80, y: 0x40, z: 0xB0)
             let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0x40)
 
@@ -81,7 +83,7 @@ extension CIEXYZATests {
             let alphaColor = UIColor(cieXYZA)
 
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -91,7 +93,7 @@ extension CIEXYZATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))

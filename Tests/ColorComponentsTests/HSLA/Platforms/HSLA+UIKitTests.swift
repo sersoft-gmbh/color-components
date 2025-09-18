@@ -10,7 +10,8 @@ extension HSLATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let hsl = HSL<CGFloat>(hue: 0.5, saturation: 0.25, luminance: 0.75)
             let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
@@ -18,7 +19,7 @@ extension HSLATests {
             let alphaColor = UIColor(hsla)
 
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -28,7 +29,7 @@ extension HSLATests {
             #expect(brightness == HSB(hsl: hsl).brightness)
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -68,7 +69,8 @@ extension HSLATests {
 
         @Test
         func uiColorCreationWithInteger() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let hsl = HSL<UInt8>(hue: 0x80, saturation: 0x40, luminance: 0xB0)
             let hsla = HSLA(hsl: hsl, alpha: 0x40)
 
@@ -76,7 +78,7 @@ extension HSLATests {
             let alphaColor = UIColor(hsla)
 
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -86,7 +88,7 @@ extension HSLATests {
             #expect(brightness.isApproximatelyEqual(to: HSB<CGFloat>(hsl: HSL(hsl)).brightness, absoluteTolerance: .ulpOfOne))
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))

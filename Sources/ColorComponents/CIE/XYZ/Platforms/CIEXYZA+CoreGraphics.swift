@@ -1,4 +1,5 @@
-#if canImport(CoreGraphics)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreGraphics)
 public import CoreGraphics
 
 @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
@@ -7,7 +8,7 @@ extension CGColor {
     func _extractCIEXYZ(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> CIE.XYZ<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericXYZ)
         let components = color._requireCompontens(in: 3...4)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         if let alpha = unsafe alpha {
             unsafe alpha.pointee = color.alpha
         }
@@ -22,7 +23,7 @@ extension CGColor {
     @inlinable
     func _extractCIEXYZA() -> CIE.XYZA<CGFloat> {
         var alpha: CGFloat = 1
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         let xyz = unsafe _extractCIEXYZ(alpha: &alpha)
 #else
         let xyz = _extractCIEXYZ(alpha: &alpha)
@@ -36,7 +37,7 @@ extension CGColor {
     @usableFromInline
     static func _makeXYZA(x: CGFloat, y: CGFloat, z: CGFloat, alpha: CGFloat = 1) -> CGColor {
         if #available(macOS 11, *) {
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             return unsafe ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])
 #else
             return ._makeRequired(in: CGColorSpace.genericXYZ, components: [x, y, z, alpha])

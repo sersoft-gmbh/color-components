@@ -1,4 +1,5 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 @available(iOS, unavailable)
@@ -62,7 +63,7 @@ extension NSColor {
             allowedColorSpaces.insert(.extendedGenericGamma22Gray)
         }
         var bwa = BWA<CGFloat>(white: 0, alpha: 1)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         unsafe _requireColorSpace(in: allowedColorSpaces, convertingTo: .colorComponentsDefaultGray)
             .getWhite(&bwa.bw.white, alpha: &bwa.alpha)
 #else

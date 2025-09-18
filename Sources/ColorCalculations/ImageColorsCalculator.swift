@@ -1,4 +1,5 @@
-#if canImport(CoreImage)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreImage)
 public import CoreImage
 internal import CoreImage.CIFilterBuiltins
 public import ColorComponents
@@ -23,7 +24,7 @@ public struct ImageColorsCalculator {
         let outputImg = filter.outputImage!
         assert(outputImg.extent.size == CGSize(width: 1, height: 1))
         var rgba = Array<UInt8>(repeating: 0, count: 4)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         unsafe context.render(outputImg,
                               toBitmap: &rgba,
                               rowBytes: rgba.count,

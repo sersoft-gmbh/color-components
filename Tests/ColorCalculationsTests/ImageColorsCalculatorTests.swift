@@ -136,8 +136,9 @@ struct ImageColorsCalculatorTests {
 
     @Test(.enabled(if: coreGraphicsAvailable))
     func cgImageInitializer() throws {
-#if canImport(CoreImage) && canImport(CoreGraphics)
-#if (compiler(>=6.2))
+        // The compiler(>=6.0) here check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreImage) && canImport(CoreGraphics)
+#if compiler(>=6.2)
         let cgImageDataProvider = try #require(unsafe CGDataProvider(filename: img1URL.path))
 #else
         let cgImageDataProvider = try #require(CGDataProvider(filename: img1URL.path))

@@ -1,4 +1,5 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 @available(iOS, unavailable)
@@ -75,7 +76,7 @@ extension NSColor {
     @usableFromInline
     func _extractRGBA() -> RGBA<CGFloat> {
         var rgba = RGBA<CGFloat>(red: 0, green: 0, blue: 0, alpha: 1)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         unsafe _convertedToRGB().getRed(&rgba.rgb.red,
                                         green: &rgba.rgb.green,
                                         blue: &rgba.rgb.blue,

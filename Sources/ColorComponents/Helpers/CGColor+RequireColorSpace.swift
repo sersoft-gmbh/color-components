@@ -1,10 +1,11 @@
-#if canImport(CoreGraphics)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreGraphics)
 public import CoreGraphics
 
 extension CGColorSpace {
     // There seems to be no constants for these in CoreGraphics...
 #if hasFeature(StrictConcurrency) && hasFeature(GlobalConcurrency)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
     @safe static nonisolated(unsafe) let genericGray: CFString = "kCGColorSpaceGenericGray" as CFString
     @safe static nonisolated(unsafe) let genericRGB: CFString = "kCGColorSpaceGenericRGB" as CFString
 #else
@@ -30,7 +31,7 @@ extension CGColor {
     static func _makeRequired(in colorSpaceName: CFString, components: UnsafePointer<CGFloat>,
                               file: StaticString = #file, line: UInt = #line) -> CGColor {
         let colorSpace = CGColorSpace._require(named: colorSpaceName, file: file, line: line)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         guard let color = unsafe CGColor(colorSpace: colorSpace, components: components)
         else { unsafe fatalError("Could not create CGColor in \(colorSpace) with components \(components)") }
 #else

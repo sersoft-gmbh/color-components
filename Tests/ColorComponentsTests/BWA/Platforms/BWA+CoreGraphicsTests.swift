@@ -29,9 +29,10 @@ extension BWATests {
         @Test
         @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         func creationFromCGColorWithFloatingPoint() throws {
-#if canImport(CoreGraphics)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
@@ -72,9 +73,10 @@ extension BWATests {
         @Test
         @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         func creationFromCGColorWithInteger() throws {
-#if canImport(CoreGraphics)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))
 #else
             let cgColor = try #require(CGColor(colorSpace: colorSpace, components: [0.75, 0.5]))

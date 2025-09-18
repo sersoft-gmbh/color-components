@@ -10,7 +10,8 @@ extension HSBATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let hsb = HSB<CGFloat>(hue: 0.5, saturation: 0.25, brightness: 0.75)
             let hsba = HSBA(hsb: hsb, alpha: 0.25)
             
@@ -18,7 +19,7 @@ extension HSBATests {
             let alphaColor = UIColor(hsba)
             
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -28,7 +29,7 @@ extension HSBATests {
             #expect(brightness == hsb.brightness)
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -68,7 +69,8 @@ extension HSBATests {
         
         @Test
         func uiColorCreationWithInteger() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let hsb = HSB<UInt8>(hue: 0x80, saturation: 0x40, brightness: 0xB0)
             let hsba = HSBA(hsb: hsb, alpha: 0x40)
             
@@ -76,7 +78,7 @@ extension HSBATests {
             let alphaColor = UIColor(hsba)
             
             var (hue, saturation, brightness, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(opaqueColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
@@ -86,7 +88,7 @@ extension HSBATests {
             #expect(brightness.isApproximatelyEqual(to: CGFloat(hsb.brightness) / 0xFF, absoluteTolerance: .ulpOfOne))
             #expect(alpha == 1)
             (hue, saturation, brightness, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))
 #else
             #expect(alphaColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))

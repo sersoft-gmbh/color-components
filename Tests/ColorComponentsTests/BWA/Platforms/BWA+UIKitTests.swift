@@ -9,7 +9,8 @@ extension BWATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let bw = BW<CGFloat>(white: 0.5)
             let bwa = BWA(bw: bw, alpha: 0.25)
             
@@ -17,7 +18,7 @@ extension BWATests {
             let alphaColor = UIColor(bwa)
             
             var (white, alpha) = (CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(opaqueColor.getWhite(&white, alpha: &alpha))
@@ -25,7 +26,7 @@ extension BWATests {
             #expect(white == bw.white)
             #expect(alpha == 1)
             (white, alpha) = (0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(alphaColor.getWhite(&white, alpha: &alpha))
@@ -57,7 +58,8 @@ extension BWATests {
         
         @Test
         func uiColorCreationWithInteger() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let bw = BW<UInt8>(white: 0x80)
             let bwa = BWA(bw: bw, alpha: 0x40)
             
@@ -65,7 +67,7 @@ extension BWATests {
             let alphaColor = UIColor(bwa)
             
             var (white, alpha) = (CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(opaqueColor.getWhite(&white, alpha: &alpha))
@@ -73,7 +75,7 @@ extension BWATests {
             #expect(white == CGFloat(bw.white) / 0xFF)
             #expect(alpha == 1)
             (white, alpha) = (0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getWhite(&white, alpha: &alpha))
 #else
             #expect(alphaColor.getWhite(&white, alpha: &alpha))

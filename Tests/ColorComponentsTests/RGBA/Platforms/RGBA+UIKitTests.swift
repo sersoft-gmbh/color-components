@@ -9,7 +9,8 @@ extension RGBATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let rgb = RGB<CGFloat>(red: 0.5, green: 0.25, blue: 0.75)
             let rgba = RGBA(rgb: rgb, alpha: 0.25)
             
@@ -17,7 +18,7 @@ extension RGBATests {
             let alphaColor = UIColor(rgba)
             
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -27,7 +28,7 @@ extension RGBATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -67,7 +68,8 @@ extension RGBATests {
         
         @Test
         func uiColorCreationWithInteger() throws {
-#if canImport(UIKit)
+            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
             let rgb = RGB<UInt8>(red: 0x80, green: 0x40, blue: 0xB0)
             let rgba = RGBA(rgb: rgb, alpha: 0x40)
             
@@ -75,7 +77,7 @@ extension RGBATests {
             let alphaColor = UIColor(rgba)
             
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -85,7 +87,7 @@ extension RGBATests {
             #expect(blue == CGFloat(rgb.blue) / 0xFF)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))

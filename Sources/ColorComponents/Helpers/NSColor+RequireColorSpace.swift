@@ -1,4 +1,5 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 @available(iOS, unavailable)
@@ -7,7 +8,7 @@ public import AppKit
 extension NSColor {
     @inlinable
     convenience init(colorSpace: NSColorSpace, components: Array<CGFloat>) {
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         unsafe self.init(colorSpace: colorSpace, components: components, count: components.count)
 #else
         self.init(colorSpace: colorSpace, components: components, count: components.count)

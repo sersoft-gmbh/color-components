@@ -1,4 +1,5 @@
-#if canImport(UIKit)
+// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
+#if compiler(>=6.0) && canImport(UIKit)
 public import UIKit
 
 @available(macOS, unavailable)
@@ -42,7 +43,7 @@ extension UIColor {
     @usableFromInline
     func _extractHSBA() -> (HSBA<CGFloat>, isExact: Bool) {
         var hsba = HSBA<CGFloat>(hue: 0, saturation: 0, brightness: 0, alpha: 1)
-#if (compiler(>=6.2))
+#if compiler(>=6.2)
         let isExact = unsafe getHue(&hsba.hsb.hue,
                                     saturation: &hsba.hsb.saturation,
                                     brightness: &hsba.hsb.brightness,
