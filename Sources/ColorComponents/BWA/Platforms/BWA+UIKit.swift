@@ -39,7 +39,7 @@ extension UIColor {
     @usableFromInline
     func _extractBWA() -> (BWA<CGFloat>, isExact: Bool) {
         var bwa = BWA<CGFloat>(white: 0, alpha: 1)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
         let isExact = unsafe getWhite(&bwa.bw.white, alpha: &bwa.alpha)
 #else
         let isExact = getWhite(&bwa.bw.white, alpha: &bwa.alpha)

@@ -75,7 +75,7 @@ extension NSColor {
     @usableFromInline
     func _extractRGBA() -> RGBA<CGFloat> {
         var rgba = RGBA<CGFloat>(red: 0, green: 0, blue: 0, alpha: 1)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
         unsafe _convertedToRGB().getRed(&rgba.rgb.red,
                                         green: &rgba.rgb.green,
                                         blue: &rgba.rgb.blue,

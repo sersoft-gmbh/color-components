@@ -19,7 +19,7 @@ extension CIEXYZATests {
             let alphaColor = UIColor(cieXYZA)
 
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -29,7 +29,7 @@ extension CIEXYZATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -81,7 +81,7 @@ extension CIEXYZATests {
             let alphaColor = UIColor(cieXYZA)
 
             var (red, green, blue, alpha) = (CGFloat(), CGFloat(), CGFloat(), CGFloat())
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             #expect(unsafe opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(opaqueColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
@@ -91,7 +91,7 @@ extension CIEXYZATests {
             #expect(blue == rgb.blue)
             #expect(alpha == 1)
             (red, green, blue, alpha) = (0, 0, 0, 0)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             #expect(unsafe alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))
 #else
             #expect(alphaColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha))

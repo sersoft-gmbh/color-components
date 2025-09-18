@@ -23,7 +23,7 @@ public struct ImageColorsCalculator: Sendable {
         let outputImg = filter.outputImage!
         assert(outputImg.extent.size == CGSize(width: 1, height: 1))
         var rgba = Array<UInt8>(repeating: 0, count: 4)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
         unsafe context.render(outputImg,
                               toBitmap: &rgba,
                               rowBytes: rgba.count,

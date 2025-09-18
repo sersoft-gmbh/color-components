@@ -26,7 +26,7 @@ extension BWATests {
         @Test
         func creationFromNSColorWithFloatingPoint() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             let color = unsafe NSColor(colorSpace: .genericGray, components: [0.5, 0.25], count: 2)
 #else
             let color = NSColor(colorSpace: .genericGray, components: [0.5, 0.25], count: 2)
@@ -62,7 +62,7 @@ extension BWATests {
         @Test
         func creationFromNSColorWithInteger() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
             let color = unsafe NSColor(colorSpace: .genericGray, components: [0.75, 0.25], count: 2)
 #else
             let color = NSColor(colorSpace: .genericGray, components: [0.75, 0.25], count: 2)

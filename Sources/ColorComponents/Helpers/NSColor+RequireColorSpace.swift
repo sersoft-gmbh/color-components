@@ -7,7 +7,7 @@ public import AppKit
 extension NSColor {
     @inlinable
     convenience init(colorSpace: NSColorSpace, components: Array<CGFloat>) {
-#if hasFeature(StrictMemorySafety)
+#if compiler(>=6.2) && hasFeature(StrictMemorySafety)
         unsafe self.init(colorSpace: colorSpace, components: components, count: components.count)
 #else
         self.init(colorSpace: colorSpace, components: components, count: components.count)
