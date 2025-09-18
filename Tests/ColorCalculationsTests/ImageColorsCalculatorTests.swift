@@ -138,13 +138,12 @@ struct ImageColorsCalculatorTests {
 #if canImport(CoreImage) && canImport(CoreGraphics)
 #if compiler(>=6.2)
         let cgImageDataProvider = try #require(unsafe CGDataProvider(filename: img1URL.path))
+#else
+        let cgImageDataProvider = try #require(CGDataProvider(filename: img1URL.path))
+#endif
         let cgImage = try #require({
             CGImage(jpegDataProviderSource: cgImageDataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent)
         }())
-#else
-        let cgImage = try #require(CGImage(jpegDataProviderSource: img1URL.path.withCString { try #require(CGDataProvider(filename: $0)) },
-                                           decode: nil, shouldInterpolate: false, intent: .defaultIntent))
-#endif
         let calculator: ImageColorsCalculator? = ImageColorsCalculator(cgImage: cgImage)
         #expect(calculator != nil)
 #endif
