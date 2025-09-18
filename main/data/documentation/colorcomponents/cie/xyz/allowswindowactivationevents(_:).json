@@ -164,7 +164,7 @@
             },
             {
               "kind" : "text",
-              "text" : "? = true) -> "
+              "text" : "?) -> "
             },
             {
               "kind" : "keyword",
@@ -305,7 +305,7 @@
             "HStack {",
             "    Rectangle()",
             "        .onTapGesture { ... }",
-            "        .allowsWindowActivationEvents(true)",
+            "        .allowsWindowActivationEvents()",
             "}",
             ".allowsWindowActivationEvents(false)"
           ],
@@ -351,6 +351,46 @@
           "name" : "Note",
           "style" : "note",
           "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Prefer using ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "View\/allowsWindowActivationEvents()",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " if the",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "parameter is is always ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "true",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " and it never changes.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -380,7 +420,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",

@@ -94,7 +94,8 @@
     {
       "identifiers" : [
         "doc:\/\/ColorComponents\/s15BitwiseCopyableP",
-        "doc:\/\/ColorComponents\/s8SendableP"
+        "doc:\/\/ColorComponents\/s8SendableP",
+        "doc:\/\/ColorComponents\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -136,7 +137,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
@@ -250,6 +254,11 @@
 "doc://ColorComponents/s15BitwiseCopyableP": {
   "identifier" : "doc:\/\/ColorComponents\/s15BitwiseCopyableP",
   "title" : "Swift.BitwiseCopyable",
+  "type" : "unresolvable"
+},
+"doc://ColorComponents/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ColorComponents\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
   "type" : "unresolvable"
 },
 "doc://ColorComponents/s8SendableP": {

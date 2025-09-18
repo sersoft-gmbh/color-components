@@ -456,7 +456,7 @@
                       "type" : "codeVoice"
                     },
                     {
-                      "text" : ".",
+                      "text" : " on supported platforms.",
                       "type" : "text"
                     }
                   ],
@@ -466,6 +466,30 @@
             }
           ],
           "type" : "unorderedList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Sheet presentations on macOS do not support translucency",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or transparency — the background is always opaque.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"
@@ -495,7 +519,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",

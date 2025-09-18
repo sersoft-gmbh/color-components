@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -23,6 +29,267 @@
     "symbolKind" : "module",
     "title" : "ColorComponents"
   },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Installation",
+          "level" : 2,
+          "text" : "Installation",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add the following dependency to your ",
+              "type" : "text"
+            },
+            {
+              "code" : "Package.swift",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ":",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            ".package(url: \"https:\/\/github.com\/sersoft-gmbh\/color-components.git\", from: \"1.0.0\"),"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Or add it via Xcode (as of Xcode 11).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Usage",
+          "level" : 2,
+          "text" : "Usage",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "These color component implementations are currently included in ",
+              "type" : "text"
+            },
+            {
+              "code" : "ColorComponents",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ":",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BW",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/BWA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSB",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSBA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " (with aliases for ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSV",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSVA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ")",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSL",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/HSLA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGBA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : " & ",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+                      "isActive" : true,
+                      "type" : "reference"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Each implementation is generic and supports both integer values (0 - 255) and floating point values (0.0 - 1.0). Also, conversions between components have been implemented. Some conversions have to go through other components, though.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If available, each implementation also provides conversion options from and to the platform native colors (e.g. ",
+              "type" : "text"
+            },
+            {
+              "code" : "UIColor",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " on iOS, tvOS & watchOS and ",
+              "type" : "text"
+            },
+            {
+              "code" : "NSColor",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " on macOS). ",
+              "type" : "text"
+            },
+            {
+              "code" : "SwiftUI.Color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " is also supported as of macOS 11, iOS 14, tvOS 14 and watchOS 7. Due to the lack of direct component accessors, ",
+              "type" : "text"
+            },
+            {
+              "code" : "SwiftUI.Color",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " support goes through the aforementioned platform colors.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 3,
@@ -102,7 +369,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
@@ -291,6 +561,74 @@
   "title" : "CIE",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+  "abstract" : [
+    {
+      "text" : "An opaque XYZ color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZ",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA": {
+  "abstract" : [
+    {
+      "text" : "An XYZA (x, y, z, alpha) color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZA"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZA",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyza"
 },
 "doc://ColorComponents/documentation/ColorComponents/ColorComponents": {
   "abstract" : [

@@ -89,7 +89,8 @@
       "identifiers" : [
         "doc:\/\/ColorCalculations\/SQ",
         "doc:\/\/ColorCalculations\/SH",
-        "doc:\/\/ColorCalculations\/s8SendableP"
+        "doc:\/\/ColorCalculations\/s8SendableP",
+        "doc:\/\/ColorCalculations\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -149,7 +150,10 @@
 },
 "doc://ColorCalculations/documentation/ColorCalculations": {
   "abstract" : [
-
+    {
+      "text" : "Calculate colors of images.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations",
   "kind" : "symbol",
@@ -292,6 +296,11 @@
   "title" : "ImageColorsCalculator.ColorDistanceMode.weightedSRGB",
   "type" : "topic",
   "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/colordistancemode\/weightedsrgb"
+},
+"doc://ColorCalculations/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ColorCalculations\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://ColorCalculations/s8SendableP": {
   "identifier" : "doc:\/\/ColorCalculations\/s8SendableP",

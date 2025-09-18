@@ -82,6 +82,17 @@
       "kind" : "declarations"
     }
   ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/ColorCalculations\/s8SendableP",
+        "doc:\/\/ColorCalculations\/s16SendableMetatypeP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 3,
@@ -145,7 +156,10 @@
 "references": {
 "doc://ColorCalculations/documentation/ColorCalculations": {
   "abstract" : [
-
+    {
+      "text" : "Calculate colors of images.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorCalculations\/documentation\/ColorCalculations",
   "kind" : "symbol",
@@ -864,6 +878,16 @@
   "title" : "prominentColors(as:in:distanceAs:pixelLimit:colorLimit:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcalculations\/imagecolorscalculator\/prominentcolors(as:in:distanceas:pixellimit:colorlimit:)"
+},
+"doc://ColorCalculations/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/ColorCalculations\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
+},
+"doc://ColorCalculations/s8SendableP": {
+  "identifier" : "doc:\/\/ColorCalculations\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
 }
 }
 }

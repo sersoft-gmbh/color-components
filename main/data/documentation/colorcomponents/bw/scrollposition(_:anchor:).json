@@ -460,7 +460,7 @@
             "    }",
             "    .scrollTargetLayout()",
             "}",
-            ".scrollPosition($scrolledID)"
+            ".scrollPosition($position)"
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -768,7 +768,7 @@
             "    }",
             "    .scrollTargetLayout()",
             "}",
-            ".scrollPosition($scrolledID, anchor: .bottom)"
+            ".scrollPosition($position, anchor: .bottom)"
           ],
           "syntax" : null,
           "type" : "codeListing"
@@ -834,7 +834,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",

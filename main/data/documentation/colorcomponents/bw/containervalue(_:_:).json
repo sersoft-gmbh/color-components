@@ -574,6 +574,77 @@
           ],
           "syntax" : null,
           "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The container values modifier can also be used to modify mutable",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "subfields of container values.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct PinPosition {",
+            "    var rotation: Double = 0",
+            "    var xOffset: Int = 0",
+            "}",
+            "",
+            "extension ContainerValues {",
+            "    @Entry var pinPosition: PinPosition = .init()",
+            "}",
+            "",
+            "\/\/ pinPosition.rotation = 0, pinPosition.xOffset = 3",
+            "Text(\"A\").containerValue(\\.pinPosition.xOffset, 3)",
+            "",
+            "\/\/ pinPosition.rotation = 10, pinPosition.xOffset = 5",
+            "Text(\"B\")",
+            "    .containerValue(\\.pinPosition.rotation, 10)",
+            "    .containerValue(\\.pinPosition.xOffset, 5)"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This allows you to group multiple related container values into",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "structs while maintaining separate modifiers to write each value.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "extension View {",
+            "    func pinRotation(_ rotation: Double) -> some View {",
+            "        containerValue(\\.pinPosition.rotation, rotation)",
+            "    }",
+            "",
+            "    func pinXOffset(_ xOffset: Int) -> some View {",
+            "        containerValue(\\.pinPosition.xOffset, xOffset)",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"
@@ -603,7 +674,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",

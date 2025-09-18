@@ -82,6 +82,13 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "Mac Catalyst",
         "unavailable" : false
@@ -235,7 +242,23 @@
               "type" : "text"
             },
             {
-              "text" : "with the navigation title in the titlebar.",
+              "text" : "with the navigation title in the titlebar. On iOS and iPadOS,",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the subtitle is displayed with the navigation title in the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "navigation bar.",
               "type" : "text"
             }
           ],
@@ -269,7 +292,10 @@
 "references": {
 "doc://ColorComponents/documentation/ColorComponents": {
   "abstract" : [
-
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
   "kind" : "symbol",
