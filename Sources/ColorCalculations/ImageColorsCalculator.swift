@@ -4,7 +4,7 @@ internal import CoreImage.CIFilterBuiltins
 public import ColorComponents
 
 /// A calculator that calculates various colors for a given image.
-public struct ImageColorsCalculator: Sendable {
+public struct ImageColorsCalculator {
     /// The image of the calculator.
     public let image: CIImage
 
@@ -88,4 +88,8 @@ public struct ImageColorsCalculator: Sendable {
 //        }
 //    }
 }
+
+#if compiler(>=6.2)
+extension ImageColorsCalculator: Sendable {}
+#endif
 #endif
