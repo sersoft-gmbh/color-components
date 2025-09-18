@@ -1,3 +1,4 @@
+import Foundation
 import Testing
 import ColorComponents
 import ColorCalculations
@@ -26,7 +27,7 @@ fileprivate let appKitAvailable = true
 fileprivate let appKitAvailable = false
 #endif
 
-@Suite
+@Suite(.enabled(if: coreImageAvailable))
 struct ImageColorsCalculatorTests {
     private let img1URL: URL
     private let img2URL: URL
@@ -48,7 +49,7 @@ struct ImageColorsCalculatorTests {
                                                  subdirectory: "TestImages"))
     }
 
-    @Test(.enabled(if: coreImageAvailable))
+    @Test
     @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
     func averageColor() throws {
 #if canImport(CoreImage)
@@ -72,7 +73,7 @@ struct ImageColorsCalculatorTests {
 #endif
     }
 
-    @Test(.enabled(if: coreImageAvailable))
+    @Test
     @available(macOS 11.0, iOS 14.0, tvOS 14.0, watchOS 7.0, *)
     func maxComponentColor() throws {
 #if canImport(CoreImage)
@@ -93,7 +94,7 @@ struct ImageColorsCalculatorTests {
 #endif
     }
 
-    @Test(.enabled(if: coreImageAvailable))
+    @Test
     func mostProminentColor() throws {
 #if canImport(CoreImage)
         let img1 = try #require(CIImage(contentsOf: img1URL))
@@ -133,7 +134,7 @@ struct ImageColorsCalculatorTests {
 #endif
     }
 
-    @Test(.enabled(if: coreImageAvailable && coreGraphicsAvailable))
+    @Test(.enabled(if: coreGraphicsAvailable))
     func cgImageInitializer() throws {
 #if canImport(CoreImage) && canImport(CoreGraphics)
 #if compiler(>=6.2)
@@ -149,7 +150,7 @@ struct ImageColorsCalculatorTests {
 #endif
     }
 
-    @Test(.enabled(if: coreImageAvailable && uiKitAvailable))
+    @Test(.enabled(if: uiKitAvailable))
     @available(macOS 10.15, iOS 13, tvOS 13, watchOS 6, *)
     func uiImageInitializer() async throws {
 #if canImport(CoreImage) && canImport(UIKit)
@@ -177,7 +178,7 @@ struct ImageColorsCalculatorTests {
 #endif
     }
 
-    @Test(.enabled(if: coreImageAvailable && appKitAvailable))
+    @Test(.enabled(if: appKitAvailable))
     func nsImageInitializer() throws {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
         let nsImage = try #require(NSImage(contentsOf: img3URL))
