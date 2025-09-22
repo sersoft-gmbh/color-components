@@ -1,0 +1,563 @@
+{
+  "abstract" : [
+    {
+      "text" : "Binds the selection of the search field associated with the nearest",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "searchable modifier to the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "TextSelection",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " value.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/searchSelection(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "SwiftUICore",
+    "externalID" : "s:7SwiftUI4ViewPAAE15searchSelectionyQrAA7BindingVyAA04TextE0VSgGF::SYNTHESIZED::s:15ColorComponents3CIEO3XYZV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "searchSelection"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI7BindingV",
+        "text" : "Binding"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI13TextSelectionV",
+        "text" : "TextSelection"
+      },
+      {
+        "kind" : "text",
+        "text" : "?>) -> "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:7SwiftUI4ViewP",
+        "text" : "View"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ColorComponents",
+        "relatedModules" : [
+          "SwiftUICore"
+        ]
+      }
+    ],
+    "platforms" : [
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "visionOS",
+        "unavailable" : false
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "searchSelection(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "macOS"
+          ],
+          "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "nonisolated"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "searchSelection"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "selection"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI7BindingV",
+              "text" : "Binding"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI13TextSelectionV",
+              "text" : "TextSelection"
+            },
+            {
+              "kind" : "text",
+              "text" : "?>) -> "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:7SwiftUI4ViewP",
+              "text" : "View"
+            },
+            {
+              "kind" : "text",
+              "text" : "\n"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The selection value to bind.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "selection"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this modifier to read and set selection in your search interface.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Selection is represented using ",
+              "type" : "text"
+            },
+            {
+              "code" : "TextSelection",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " where the indices are",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "relative to the search text you provide on the",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "code" : "View\/searchable(text:placement:prompt:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " modifier. Note that this",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "value will not represent selection outside of the text, such as in any",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "leading tokens.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "SwiftUI will automatically update this value when the user changes",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "selection, such as by typing. Likewise, you can change selection by",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "writing to this value.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The following example creates a search interface that selects all of",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "the text on focus.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "struct ContentView: View {",
+            "    @State var text = \"Hello, world!\"",
+            "    @State var selection: TextSelection?",
+            "    @FocusState var focused",
+            "",
+            "    var body: some View {",
+            "        NavigationSplitView {",
+            "            Sidebar()",
+            "                .searchable(text: $text)",
+            "                .searchFocused($focused)",
+            "                .searchSelection($selection)",
+            "        } detail: {",
+            "            Detail()",
+            "        }",
+            "        .onChange(of: focused) {",
+            "            if focused {",
+            "                selection = TextSelection(",
+            "                    range: text.startIndex..<text.endIndex)",
+            "            }",
+            "        }",
+            "    }",
+            "}"
+          ],
+          "syntax" : null,
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/colorcomponents\/cie\/xyz\/searchselection(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ColorComponents/documentation/ColorComponents": {
+  "abstract" : [
+    {
+      "text" : "Easily deal with various representations of colors.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ColorComponents",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE": {
+  "abstract" : [
+    {
+      "text" : "Namespace for all CIE components.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CIE"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CIE"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ": {
+  "abstract" : [
+    {
+      "text" : "An opaque XYZ color components representation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "XYZ"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "CIE.XYZ",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz"
+},
+"doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/searchSelection(_:)": {
+  "abstract" : [
+    {
+      "text" : "Binds the selection of the search field associated with the nearest",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "searchable modifier to the given ",
+      "type" : "text"
+    },
+    {
+      "code" : "TextSelection",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " value.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "searchSelection"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI7BindingV",
+      "text" : "Binding"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI13TextSelectionV",
+      "text" : "TextSelection"
+    },
+    {
+      "kind" : "text",
+      "text" : "?>) -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZ\/searchSelection(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "searchSelection(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/cie\/xyz\/searchselection(_:)"
+}
+}
+}
