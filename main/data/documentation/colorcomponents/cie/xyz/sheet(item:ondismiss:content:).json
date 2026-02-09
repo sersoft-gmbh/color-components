@@ -651,6 +651,95 @@
             }
           ],
           "type" : "paragraph"
+        },
+        {
+          "anchor" : "Breakthrough-effect",
+          "level" : 3,
+          "text" : "Breakthrough effect",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In visionOS, most system presentations appear with a breakthrough effect by",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "default. To change how the enclosing presentation breaks through",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "content occluding it, use ",
+              "type" : "text"
+            },
+            {
+              "code" : "presentationBreakthroughEffect(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ",",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "like in the following example:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            ".sheet(item: $sheetDetail,",
+            "       onDismiss: didDismiss) { detail in",
+            "    VStack(alignment: .leading, spacing: 20) {",
+            "        Text(\"Part Number: \\(detail.partNumber)\")",
+            "        Text(\"Name: \\(detail.name)\")",
+            "        Text(\"Quantity On-Hand: \\(detail.quantity)\")",
+            "    }",
+            "    .presentationBreakthroughEffect(.prominent)",
+            "    .onTapGesture {",
+            "        sheetDetail = nil",
+            "    }",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Passing a ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".none",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " value for a sheet has no effect.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
         }
       ],
       "kind" : "content"

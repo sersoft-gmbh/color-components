@@ -730,6 +730,64 @@
           "name" : "Important",
           "style" : "important",
           "type" : "aside"
+        },
+        {
+          "anchor" : "Breakthrough-effect",
+          "level" : 3,
+          "text" : "Breakthrough effect",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "In visionOS, most system presentations appear with a breakthrough effect by",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "default. To change how the enclosing presentation breaks through",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "content occluding it, use ",
+              "type" : "text"
+            },
+            {
+              "code" : "presentationBreakthroughEffect(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ",",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "like in the following example:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            ".popover(item: $popover) { detail in",
+            "    Text(\"\\(detail.message)\")",
+            "        .padding()",
+            "        .presentationBreakthroughEffect(.prominent)",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
         }
       ],
       "kind" : "content"

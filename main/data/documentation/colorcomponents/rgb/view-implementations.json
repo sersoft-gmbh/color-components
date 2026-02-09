@@ -792,6 +792,7 @@
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/tableColumnHeaders(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/tableStyle(_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/tag(_:includeOptional:)",
+        "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/task(id:name:executorPreference:priority:file:line:_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/task(id:priority:_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/task(priority:_:)",
         "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/textCase(_:)",
@@ -30733,7 +30734,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogConfirmationLabel(_:)-1uquf": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -30819,7 +30820,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogConfirmationLabel(_:)-3mgr0": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -30905,7 +30906,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogConfirmationLabel(_:)-4vk7s": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -30991,7 +30992,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogConfirmationLabel(_:)-9mwol": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -31342,7 +31343,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogMessage(_:)-1m0dj": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -31436,7 +31437,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogMessage(_:)-2nldo": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -31537,7 +31538,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogMessage(_:)-9vnb1": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -31627,7 +31628,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogMessage(_:)-be7r": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -31721,7 +31722,7 @@
 "doc://ColorComponents/documentation/ColorComponents/RGB/fileDialogURLEnabled(_:)": {
   "abstract" : [
     {
-      "text" : "On macOS, configures the the ",
+      "text" : "On macOS, configures the ",
       "type" : "text"
     },
     {
@@ -70337,6 +70338,193 @@
   "title" : "tag(_:includeOptional:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/rgb\/tag(_:includeoptional:)"
+},
+"doc://ColorComponents/documentation/ColorComponents/RGB/task(id:name:executorPreference:priority:file:line:_:)": {
+  "abstract" : [
+    {
+      "text" : "Adds a task to perform before this view appears or when a specified",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "value changes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "task"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "T"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "executorPreference"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sch",
+      "text" : "TaskExecutor"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "priority"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ScP",
+      "text" : "TaskPriority"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "file"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "line"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "sending"
+    },
+    {
+      "kind" : "text",
+      "text" : " () "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s4Voida",
+      "text" : "Void"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:7SwiftUI4ViewP",
+      "text" : "View"
+    }
+  ],
+  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/RGB\/task(id:name:executorPreference:priority:file:line:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "task(id:name:executorPreference:priority:file:line:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/colorcomponents\/rgb\/task(id:name:executorpreference:priority:file:line:_:)"
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/task(id:priority:_:)": {
   "abstract" : [
