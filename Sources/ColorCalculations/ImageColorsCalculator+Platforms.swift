@@ -30,7 +30,7 @@ extension ImageColorsCalculator {
 }
 #endif
 
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 extension ImageColorsCalculator {
