@@ -1,4 +1,4 @@
-#if canImport(CoreImage)
+#if compiler(>=6.0) && canImport(CoreImage)
 #if canImport(CoreGraphics)
 public import CoreGraphics
 
@@ -30,7 +30,7 @@ extension ImageColorsCalculator {
 }
 #endif
 
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 extension ImageColorsCalculator {
