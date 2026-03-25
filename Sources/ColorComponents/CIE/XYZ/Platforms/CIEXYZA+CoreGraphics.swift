@@ -5,7 +5,7 @@ public import CoreGraphics
 @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
 extension CGColor {
     @usableFromInline
-    func _extractCIEXYZ(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> CIE.XYZ<CGFloat> {
+    func _extractCIEXYZ(alpha: UnsafeMutablePointer<CGFloat>?) -> CIE.XYZ<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericXYZ)
         let components = color._requireCompontens(in: 3...4)
 #if compiler(>=6.2)
@@ -18,6 +18,15 @@ extension CGColor {
         }
 #endif
         return .init(x: components[0], y: components[1], z: components[2])
+    }
+
+    @inlinable
+    func _extractCIEXYZ() -> CIE.XYZ<CGFloat> {
+#if compiler(>=6.2)
+        unsafe _extractCIEXYZ(alpha: nil)
+#else
+        _extractCIEXYZ(alpha: nil)
+#endif
     }
 
     @inlinable

@@ -5,7 +5,7 @@ public import CoreGraphics
 @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
 extension CGColor {
     @usableFromInline
-    func _extractRGB(alpha: UnsafeMutablePointer<CGFloat>? = nil) -> RGB<CGFloat> {
+    func _extractRGB(alpha: UnsafeMutablePointer<CGFloat>?) -> RGB<CGFloat> {
         let color = _requireColorSpace(named: CGColorSpace.genericRGB)
         let components = color._requireCompontens(in: 3...4)
 #if compiler(>=6.2)
@@ -18,6 +18,15 @@ extension CGColor {
         }
 #endif
         return .init(red: components[0], green: components[1], blue: components[2])
+    }
+
+    @inlinable
+    func _extractRGB() -> RGB<CGFloat> {
+#if compiler(>=6.2)
+        unsafe _extractRGB(alpha: nil)
+#else
+        _extractRGB(alpha: nil)
+#endif
     }
 
     @inlinable

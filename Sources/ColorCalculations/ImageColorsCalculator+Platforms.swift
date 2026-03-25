@@ -30,15 +30,20 @@ extension ImageColorsCalculator {
 }
 #endif
 
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
 public import AppKit
 
 extension ImageColorsCalculator {
     /// Creates a calculator using the given `NSImage`. Returns `nil` if the `NSImage` could not be converted to a `CIImage`.
     /// - Parameter nsImage: The `NSImage` to convert to a `CIImage` for calculations.
     public init?(nsImage: NSImage) {
+#if compiler(>=6.2)
+        guard let cgImage = unsafe nsImage.cgImage(forProposedRect: nil, context: nil, hints: nil)
+        else { return nil }
+#else
         guard let cgImage = nsImage.cgImage(forProposedRect: nil, context: nil, hints: nil)
         else { return nil }
+#endif
         self.init(cgImage: cgImage)
     }
 }

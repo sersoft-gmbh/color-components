@@ -54,9 +54,9 @@ extension ImageColorsCalculator {
             stride(from: pixels.startIndex, to: pixels.endIndex, by: 4)
                 .lazy
                 .map { RGBA<UInt8>(red: pixels[$0], green: pixels[$0 + 1], blue: pixels[$0 + 2], alpha: pixels[$0 + 3]) }
-                .lazyFilter { $0.alpha == 0xFF } // only opaque colors are taken into account
+                .filter { $0.alpha == 0xFF } // only opaque colors are taken into account
                 .map { RGB<V>($0.rgb) }
-                .lazyFilter { ignoreBrightness || $0.brightness > 0.05 } // For large images, filter colors with a low brightness.
+                .filter { ignoreBrightness || $0.brightness > 0.05 } // For large images, filter colors with a low brightness.
                 .map { SIMD3<V>($0.red, $0.green, $0.blue) } as Array<SIMD3<V>>
         )
         .kMeansClustered(atMost: colorLimit, using: &randomGen, distance: distanceCalculation)
@@ -106,12 +106,12 @@ extension ImageColorsCalculator {
 
 // This fixes builds on Xcode 15+ - which somehow has issues distinguishing calls to `filter`...
 // 09/25: Still needed for Xcode 26 / Swift 6.2 - in release mode
-fileprivate extension LazySequenceProtocol {
-    @_transparent
-    func lazyFilter(_ isIncluded: @escaping (Elements.Element) -> Bool) -> LazyFilterSequence<Elements> {
-        filter(isIncluded)
-    }
-}
+//fileprivate extension LazySequenceProtocol {
+//    @_transparent
+//    func lazyFilter(_ isIncluded: @escaping (Elements.Element) -> Bool) -> LazyFilterSequence<Elements> {
+//        filter(isIncluded)
+//    }
+//}
 
 fileprivate extension CIImage {
     func limitedTo(pixelCount: Int) -> CIImage {
@@ -128,8 +128,13 @@ fileprivate extension CIImage {
 }
 
 fileprivate extension Numeric {
+#if compiler(>=6.3)
+    @inline(always)
+    func squared() -> Self { self * self }
+#else
     @inline(__always)
     func squared() -> Self { self * self }
+#endif
 }
 
 fileprivate extension RGB where Value: UnsignedInteger {
