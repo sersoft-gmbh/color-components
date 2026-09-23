@@ -9,8 +9,7 @@ extension BWATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let bw = BW<CGFloat>(white: 0.5)
             let bwa = BWA(bw: bw, alpha: 0.25)
             
@@ -58,8 +57,7 @@ extension BWATests {
         
         @Test
         func uiColorCreationWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let bw = BW<UInt8>(white: 0x80)
             let bwa = BWA(bw: bw, alpha: 0x40)
             

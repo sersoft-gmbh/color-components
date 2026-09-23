@@ -25,13 +25,15 @@ extension RGBATests {
         func creationFromColorWithFloatingPoint() throws {
 #if canImport(SwiftUI)
             let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
+            let rgb: RGB<CGFloat>
+            let rgba: RGBA<CGFloat>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let rgb = RGB<CGFloat>(color)
-            let rgba = RGBA<CGFloat>(color)
+            rgb = RGB<CGFloat>(color)
+            rgba = RGBA<CGFloat>(color)
 #elseif canImport(CoreGraphics)
-            let rgb = try #require(RGB<CGFloat>(color))
-            let rgba = try #require(RGBA<CGFloat>(color))
+            rgb = try #require(RGB<CGFloat>(color))
+            rgba = try #require(RGBA<CGFloat>(color))
 #else
             return
 #endif
@@ -71,13 +73,15 @@ extension RGBATests {
         func creationFromColorWithInteger() throws {
 #if canImport(SwiftUI)
             let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
+            let rgb: RGB<UInt8>
+            let rgba: RGBA<UInt8>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let rgb = RGB<UInt8>(color)
-            let rgba = RGBA<UInt8>(color)
+            rgb = RGB<UInt8>(color)
+            rgba = RGBA<UInt8>(color)
 #elseif canImport(CoreGraphics)
-            let rgb = try #require(RGB<UInt8>(color))
-            let rgba = try #require(RGBA<UInt8>(color))
+            rgb = try #require(RGB<UInt8>(color))
+            rgba = try #require(RGBA<UInt8>(color))
 #else
             return
 #endif

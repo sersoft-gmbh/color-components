@@ -30,8 +30,7 @@ extension HSLATests {
 
         @Test
         func creationFromNSColorWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
             let color: NSColor
             if #available(macOS 10.12, *) {
                 color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)
@@ -80,8 +79,7 @@ extension HSLATests {
 
         @Test
         func creationFromNSColorWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
             let color: NSColor
             if #available(macOS 10.12, *) {
                 color = NSColor(colorSpace: .genericRGB, hue: 0.25, saturation: 0.5, brightness: 0.75, alpha: 0.25)

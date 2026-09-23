@@ -29,8 +29,7 @@ extension RGBATests {
         @Test
         @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         func creationFromCGColorWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreGraphics)
+#if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
 #if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
@@ -77,8 +76,7 @@ extension RGBATests {
         @Test
         @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         func creationFromCGColorWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreGraphics)
+#if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericRGB" as CFString))
 #if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5, 0.75, 0.5]))
@@ -104,8 +102,7 @@ extension RGBATests {
         @Test
         @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)
         func creationFromCGColorConvertingColorSpaces() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreGraphics)
+#if canImport(CoreGraphics)
             let colorSpace = try #require(CGColorSpace(name: "kCGColorSpaceGenericGray" as CFString))
 #if compiler(>=6.2)
             let cgColor = try #require(unsafe CGColor(colorSpace: colorSpace, components: [0.25, 0.5]))

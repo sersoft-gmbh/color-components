@@ -25,13 +25,15 @@ extension BWATests {
         func creationFromColorWithFloatingPoint() throws {
 #if canImport(SwiftUI)
             let color = Color(white: 0.5, opacity: 0.25)
+            let bw: BW<CGFloat>
+            let bwa: BWA<CGFloat>
 
 #if (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)))
-            let bw = BW<CGFloat>(color)
-            let bwa = BWA<CGFloat>(color)
+            bw = BW<CGFloat>(color)
+            bwa = BWA<CGFloat>(color)
 #elseif canImport(CoreGraphics)
-            let bw = try #require(BW<CGFloat>(color))
-            let bwa = try #require(BWA<CGFloat>(color))
+            bw = try #require(BW<CGFloat>(color))
+            bwa = try #require(BWA<CGFloat>(color))
 #else
             return
 #endif
@@ -61,13 +63,15 @@ extension BWATests {
         func creationFromColorWithInteger() throws {
 #if canImport(SwiftUI)
             let color = Color(white: 0.75, opacity: 0.25)
+            let bw: BW<UInt8>
+            let bwa: BWA<UInt8>
 
 #if (canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst)))
-            let bw = BW<UInt8>(color)
-            let bwa = BWA<UInt8>(color)
+            bw = BW<UInt8>(color)
+            bwa = BWA<UInt8>(color)
 #elseif canImport(CoreGraphics)
-            let bw = try #require(BW<UInt8>(color))
-            let bwa = try #require(BWA<UInt8>(color))
+            bw = try #require(BW<UInt8>(color))
+            bwa = try #require(BWA<UInt8>(color))
 #else
             return
 #endif

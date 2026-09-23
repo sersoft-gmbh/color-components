@@ -1,5 +1,4 @@
-// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
 public import UIKit
 
 @available(macOS, unavailable)

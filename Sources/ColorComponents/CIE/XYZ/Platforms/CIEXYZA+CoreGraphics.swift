@@ -1,5 +1,4 @@
-// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreGraphics)
+#if canImport(CoreGraphics)
 public import CoreGraphics
 
 @available(macOS 10.11, iOS 10, tvOS 10, watchOS 3, *)

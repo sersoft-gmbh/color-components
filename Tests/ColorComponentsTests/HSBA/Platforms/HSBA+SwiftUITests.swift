@@ -25,13 +25,15 @@ extension HSBATests {
         func creationFromColorWithFloatingPoint() throws {
 #if canImport(SwiftUI)
             let color = Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25)
+            let hsb: HSB<CGFloat>
+            let hsba: HSBA<CGFloat>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let hsb = HSB<CGFloat>(color)
-            let hsba = HSBA<CGFloat>(color)
+            hsb = HSB<CGFloat>(color)
+            hsba = HSBA<CGFloat>(color)
 #elseif canImport(CoreGraphics)
-            let hsb = try #require(HSB<CGFloat>(color))
-            let hsba = try #require(HSBA<CGFloat>(color))
+            hsb = try #require(HSB<CGFloat>(color))
+            hsba = try #require(HSBA<CGFloat>(color))
 #else
             return
 #endif
@@ -71,13 +73,17 @@ extension HSBATests {
         func creationFromColorWithInteger() throws {
 #if canImport(SwiftUI)
             let color = Color(hue: 0.5, saturation: 0.25, brightness: 0.75, opacity: 0.25)
+            let hsb: HSB<UInt8>
+            let hsba: HSBA<UInt8>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let hsb = HSB<UInt8>(color)
-            let hsba = HSBA<UInt8>(color)
+            hsb = HSB<UInt8>(color)
+            hsba = HSBA<UInt8>(color)
 #elseif canImport(CoreGraphics)
-            let hsb = try #require(HSB<UInt8>(color))
-            let hsba = try #require(HSBA<UInt8>(color))
+            hsb = try #require(HSB<UInt8>(color))
+            hsba = try #require(HSBA<UInt8>(color))
+#else
+            return
 #endif
 
             #expect(hsb.hue == UInt8(0.5 * 0xFF))

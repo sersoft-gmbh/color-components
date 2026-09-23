@@ -25,15 +25,18 @@ extension CIEXYZATests {
         func creationFromColorWithFloatingPoint() throws {
 #if canImport(SwiftUI)
             let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
+            let cieXYZ: CIE.XYZ<Double>
+            let cieXYZA: CIE.XYZA<Double>
+            let cieXYZViaRGB: CIE.XYZ<Double>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let cieXYZ = CIE.XYZ<Double>(color)
-            let cieXYZA = CIE.XYZA<Double>(color)
-            let cieXYZViaRGB = CIE.XYZ<Double>(rgb: RGB<Double>(color))
+            cieXYZ = CIE.XYZ<Double>(color)
+            cieXYZA = CIE.XYZA<Double>(color)
+            cieXYZViaRGB = CIE.XYZ<Double>(rgb: RGB<Double>(color))
 #elseif canImport(CoreGraphics)
-            let cieXYZ = try #require(CIE.XYZ<Double>(color))
-            let cieXYZA = try #require(CIE.XYZA<Double>(color))
-            let cieXYZViaRGB = try CIE.XYZ<Double>(rgb: #require(RGB<Double>(color)))
+            cieXYZ = try #require(CIE.XYZ<Double>(color))
+            cieXYZA = try #require(CIE.XYZA<Double>(color))
+            cieXYZViaRGB = try CIE.XYZ<Double>(rgb: #require(RGB<Double>(color)))
 #else
             return
 #endif
@@ -67,15 +70,18 @@ extension CIEXYZATests {
         func creationFromColorWithInteger() throws {
 #if canImport(SwiftUI)
             let color = Color(red: 0.5, green: 0.25, blue: 0.75, opacity: 0.25)
+            let cieXYZ: CIE.XYZ<UInt8>
+            let cieXYZA: CIE.XYZA<UInt8>
+            let cieXYZViaRGB: CIE.XYZ<UInt8>
 
 #if canImport(UIKit) || (canImport(AppKit) && !targetEnvironment(macCatalyst))
-            let cieXYZ = CIE.XYZ<UInt8>(color)
-            let cieXYZA = CIE.XYZA<UInt8>(color)
-            let cieXYZViaRGB = CIE.XYZ<UInt8>(CIE.XYZ(rgb: RGB<Double>(color)))
+            cieXYZ = CIE.XYZ<UInt8>(color)
+            cieXYZA = CIE.XYZA<UInt8>(color)
+            cieXYZViaRGB = CIE.XYZ<UInt8>(CIE.XYZ(rgb: RGB<Double>(color)))
 #elseif canImport(CoreGraphics)
-            let cieXYZ = try #require(CIE.XYZ<UInt8>(color))
-            let cieXYZA = try #require(CIE.XYZA<UInt8>(color))
-            let cieXYZViaRGB = try CIE.XYZ<UInt8>(CIE.XYZ(rgb: #require(RGB<Double>(color))))
+            cieXYZ = try #require(CIE.XYZ<UInt8>(color))
+            cieXYZA = try #require(CIE.XYZA<UInt8>(color))
+            cieXYZViaRGB = try CIE.XYZ<UInt8>(CIE.XYZ(rgb: #require(RGB<Double>(color))))
 #else
             return
 #endif

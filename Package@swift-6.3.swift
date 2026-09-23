@@ -1,12 +1,18 @@
-// swift-tools-version:6.0
+// swift-tools-version:6.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let swiftSettings: Array<SwiftSetting> = [
     .swiftLanguageMode(.v6),
+    .strictMemorySafety(),
+    // Xcode 26.0 fails to build targets with dependencies having this enabled...
+    // .treatAllWarnings(as: .error),
     .enableUpcomingFeature("ExistentialAny"),
     .enableUpcomingFeature("InternalImportsByDefault"),
+    .enableUpcomingFeature("MemberImportVisibility"),
+    .enableUpcomingFeature("ImmutableWeakCaptures"),
+    .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
 ]
 
 let package = Package(
@@ -57,6 +63,7 @@ let package = Package(
 import class Foundation.ProcessInfo
 
 // We need this to not have to limit our package to macOS 13+. Remove once this is anyways the lowest deployment target.
+// For local development, flip to `!= "0"` instead of `== "1"`
 if ProcessInfo.processInfo.environment["ENABLE_BENCHMARKS"] == "1" {
     package.dependencies.append(.package(url: "https://github.com/ordo-one/package-benchmark", from: "1.29.0"))
     package.platforms = package.platforms ?? []

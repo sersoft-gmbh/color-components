@@ -9,8 +9,7 @@ extension CIEXYZATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let cieXYZ = CIE.XYZ<CGFloat>(x: 0.5, y: 0.25, z: 0.75)
             let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0.25)
 
@@ -72,8 +71,7 @@ extension CIEXYZATests {
 
         @Test
         func uiColorCreationWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let cieXYZ = CIE.XYZ<UInt8>(x: 0x80, y: 0x40, z: 0xB0)
             let cieXYZA = CIE.XYZA(xyz: cieXYZ, alpha: 0x40)
 

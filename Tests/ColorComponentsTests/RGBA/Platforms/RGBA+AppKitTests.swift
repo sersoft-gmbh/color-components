@@ -29,8 +29,7 @@ extension RGBATests {
 
         @Test
         func creationFromNSColorWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 #if compiler(>=6.2)
             let color = unsafe NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
 #else
@@ -74,8 +73,7 @@ extension RGBATests {
 
         @Test
         func creationFromNSColorWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 #if compiler(>=6.2)
             let color = unsafe NSColor(colorSpace: .genericRGB, components: [0.25, 0.5, 0.75, 0.25], count: 4)
 #else

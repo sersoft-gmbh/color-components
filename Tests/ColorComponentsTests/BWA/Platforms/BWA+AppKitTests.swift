@@ -25,8 +25,7 @@ extension BWATests {
 
         @Test
         func creationFromNSColorWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 #if compiler(>=6.2)
             let color = unsafe NSColor(colorSpace: .genericGray, components: [0.5, 0.25], count: 2)
 #else
@@ -62,8 +61,7 @@ extension BWATests {
 
         @Test
         func creationFromNSColorWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(AppKit) && !targetEnvironment(macCatalyst)
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
 #if compiler(>=6.2)
             let color = unsafe NSColor(colorSpace: .genericGray, components: [0.75, 0.25], count: 2)
 #else

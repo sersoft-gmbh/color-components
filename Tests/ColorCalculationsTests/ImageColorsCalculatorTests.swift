@@ -136,16 +136,19 @@ struct ImageColorsCalculatorTests {
 
     @Test(.enabled(if: coreGraphicsAvailable))
     func cgImageInitializer() throws {
-        // The compiler(>=6.0) here check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreImage) && canImport(CoreGraphics)
+#if canImport(CoreImage) && canImport(CoreGraphics)
 #if compiler(>=6.2)
         let cgImageDataProvider = try #require(unsafe CGDataProvider(filename: img1URL.path))
+        let cgImage = try #require({
+            unsafe CGImage(jpegDataProviderSource: cgImageDataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent)
+        }())
 #else
         let cgImageDataProvider = try #require(CGDataProvider(filename: img1URL.path))
-#endif
         let cgImage = try #require({
             CGImage(jpegDataProviderSource: cgImageDataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent)
         }())
+#endif
+
         let calculator: ImageColorsCalculator? = ImageColorsCalculator(cgImage: cgImage)
         #expect(calculator != nil)
 #endif

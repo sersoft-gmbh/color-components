@@ -9,8 +9,7 @@ extension RGBATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let rgb = RGB<CGFloat>(red: 0.5, green: 0.25, blue: 0.75)
             let rgba = RGBA(rgb: rgb, alpha: 0.25)
             
@@ -68,8 +67,7 @@ extension RGBATests {
         
         @Test
         func uiColorCreationWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let rgb = RGB<UInt8>(red: 0x80, green: 0x40, blue: 0xB0)
             let rgba = RGBA(rgb: rgb, alpha: 0x40)
             

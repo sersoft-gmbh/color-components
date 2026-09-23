@@ -10,8 +10,7 @@ extension HSLATests {
     struct UIKitTests {
         @Test
         func uiColorCreationWithFloatingPoint() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let hsl = HSL<CGFloat>(hue: 0.5, saturation: 0.25, luminance: 0.75)
             let hsla = HSLA(hsl: hsl, alpha: 0.25)
 
@@ -69,8 +68,7 @@ extension HSLATests {
 
         @Test
         func uiColorCreationWithInteger() throws {
-            // The compiler(6.0) check here is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(UIKit)
+#if canImport(UIKit)
             let hsl = HSL<UInt8>(hue: 0x80, saturation: 0x40, luminance: 0xB0)
             let hsla = HSLA(hsl: hsl, alpha: 0x40)
 

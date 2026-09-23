@@ -1,5 +1,4 @@
-// The compiler check is needed due to a bug in Swift 6.0. Remove this as of 6.1.
-#if compiler(>=6.0) && canImport(CoreImage)
+#if canImport(CoreImage)
 public import CoreGraphics
 internal import CoreImage
 public import ColorComponents
@@ -210,7 +209,7 @@ where Index: FixedWidthInteger, Element: SIMD, Element.Scalar: BinaryFloatingPoi
         } while errors > 0 && iters < 1024
 #if DEBUG
         if iters >= 1024 {
-            print("[ColorCalculator.prominentColors]: Exceeded clustering iteration limit...")
+            print("[ColorCalculator.prominentColors]: Exceeded clustering iteration limit. This is only printed in DEBUG builds.")
         }
 #endif
         return clusters
