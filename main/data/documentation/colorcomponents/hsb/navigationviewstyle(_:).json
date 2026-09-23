@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the style for navigation views within this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -95,6 +89,24 @@
         "introducedAt" : "13.0",
         "message" : "replace styled NavigationView with NavigationStack or NavigationSplitView instead",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "replace styled NavigationView with NavigationStack or NavigationSplitView instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "replace styled NavigationView with NavigationStack or NavigationSplitView instead",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -252,96 +264,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to change the appearance and behavior of navigation",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "views. For example, by default, navigation views appear with multiple",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "columns in wider environments, like iPad in landscape orientation:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can apply the ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationViewStyle\/stack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " style to force",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "single-column stack navigation in these environments:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "NavigationView {",
-            "    List {",
-            "        NavigationLink(\"Purple\", destination: ColorDetail(color: .purple))",
-            "        NavigationLink(\"Pink\", destination: ColorDetail(color: .pink))",
-            "        NavigationLink(\"Orange\", destination: ColorDetail(color: .orange))",
-            "    }",
-            "    .navigationTitle(\"Colors\")",
-            "",
-            "    Text(\"Select a Color\") \/\/ A placeholder to show before selection.",
-            "}",
-            ".navigationViewStyle(.stack)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -416,10 +338,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/navigationViewStyle(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the style for navigation views within this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

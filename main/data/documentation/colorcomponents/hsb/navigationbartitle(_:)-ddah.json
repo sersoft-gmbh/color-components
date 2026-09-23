@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the title of this view’s navigation bar with a string.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "navigationTitle(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "navigationTitle(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "navigationTitle(_:)",
         "unavailable" : false
       },
@@ -232,129 +244,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A title for this view to display in the navigation",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "bar.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "title"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "navigationBarTitle(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to set the title of the navigation bar",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "using a ",
-              "type" : "text"
-            },
-            {
-              "code" : "String",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". This modifier only takes effect when this view is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "inside of and visible within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, text for the navigation bar title is provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "using a string:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct FlavorView: View {",
-            "    let items = [\"Chocolate\", \"Vanilla\", \"Strawberry\", \"Mint Chip\",",
-            "                 \"Pistachio\"]",
-            "    let text = \"Today's Flavors\"",
-            "    var body: some View {",
-            "        NavigationView {",
-            "            List(items, id: \\.self) {",
-            "                Text($0)",
-            "            }",
-            "            .navigationBarTitle(text)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -429,10 +318,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/navigationBarTitle(_:)-ddah": {
   "abstract" : [
-    {
-      "text" : "Sets the title of this view’s navigation bar with a string.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the Touch Bar content to be shown in the Touch Bar when applicable.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -221,132 +215,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A collection of views that the Touch Bar displays.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "touchBar"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that contains the Touch Bar content.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/touchBar(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to provide a static set of views that are",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "displayed by the Touch Bar when appropriate, depending on whether the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view has focus.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below provides Touch Bar content in-line, that creates the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "content the Touch Bar displays:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "func selectHearts() {\/* ... *\/ }",
-            "func selectClubs() { \/* ... *\/ }",
-            "func selectSpades() { \/* ... *\/ }",
-            "func selectDiamonds() { \/* ... *\/ }",
-            "",
-            "TextField(\"TouchBar Demo\", text: $placeholder)",
-            "    .frame(maxWidth: .infinity, maxHeight: .infinity)",
-            "    .focusable()",
-            "    .touchBar {",
-            "        Button(\"♥️ - Hearts\", action: selectHearts)",
-            "        Button(\"♣️ - Clubs\", action: selectClubs)",
-            "        Button(\"♠️ - Spades\", action: selectSpades)",
-            "        Button(\"♦️ - Diamonds\", action: selectDiamonds)",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -421,10 +289,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/touchBar(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the Touch Bar content to be shown in the Touch Bar when applicable.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a textual description of the value that the view contains.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -89,6 +83,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -208,42 +216,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to describe the value represented by a view, but only if that’s different than the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view’s label. For example, for a slider that you label as “Volume” using accessibilityLabel(),",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "you can provide the current volume setting, like “60%”, using accessibilityValue().",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -352,10 +324,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/accessibilityValue(_:)-1yklw": {
   "abstract" : [
-    {
-      "text" : "Adds a textual description of the value that the view contains.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a textual description of the value that the view contains.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -110,6 +104,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "macOS",
         "unavailable" : false
@@ -152,6 +160,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -248,91 +264,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The accessibility value to apply.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "valueResource"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If true the accessibility value is applied; otherwise",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the accessibility value is unchanged.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isEnabled"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to describe the value represented by a view, but only",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "if that’s different than the view’s label. For example, for a slider",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that you label as “Volume” using accessibilityLabel(), you can provide",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the current volume setting, like “60%”, using accessibilityValue().",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -407,10 +338,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/accessibilityValue(_:isEnabled:)-6upod": {
   "abstract" : [
-    {
-      "text" : "Adds a textual description of the value that the view contains.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

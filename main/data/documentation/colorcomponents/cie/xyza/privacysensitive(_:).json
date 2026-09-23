@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Marks the view as containing sensitive, private user data.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -76,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -186,55 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "SwiftUI redacts views marked with this modifier when you apply the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "RedactionReasons\/privacy",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " redaction reason.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct BankAccountView: View {",
-            "    var body: some View {",
-            "        VStack {",
-            "            Text(\"Account #\")",
-            "",
-            "            Text(accountNumber)",
-            "                .font(.headline)",
-            "                .privacySensitive() \/\/ Hide only the account number.",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -343,10 +302,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/privacySensitive(_:)": {
   "abstract" : [
-    {
-      "text" : "Marks the view as containing sensitive, private user data.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

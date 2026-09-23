@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates an identity value to glass effects defined within",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -126,6 +112,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -287,62 +287,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You use this modifier with the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/glassEffect(_:in:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view modifier and ",
-              "type" : "text"
-            },
-            {
-              "code" : "GlassEffectContainer",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. When used together,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "SwiftUI will use the provided identifier to animate shapes to and from",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "each other during transitions.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -417,18 +361,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/glassEffectID(_:in:)": {
   "abstract" : [
-    {
-      "text" : "Associates an identity value to glass effects defined within",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

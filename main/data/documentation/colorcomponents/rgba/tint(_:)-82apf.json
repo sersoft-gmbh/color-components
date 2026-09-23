@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the tint within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -82,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -224,215 +232,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The tint to apply.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "tint"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to override the default accent color for this view with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a given styling. Unlike an app’s accent color, which can be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "overridden by user preference, tint is always respected and should",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "be used as a way to provide additional meaning to the control.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Controls which are unable to style themselves using the given type of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ShapeStyle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will try to approximate the styling as best as they can",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "(i.e. controls which can not style themselves using a gradient will",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "attempt to use the color of the gradient’s first stop).",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example shows a linear gauge tinted with a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "gradient from ",
-              "type" : "text"
-            },
-            {
-              "code" : "ShapeStyle\/blue",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to ",
-              "type" : "text"
-            },
-            {
-              "code" : "ShapeStyle\/red",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ControlTint: View {",
-            "    var body: some View {",
-            "        Gauge(value: 75, in: 0...100) {",
-            "            Text(\"Temperature\")",
-            "        }",
-            "        .gaugeStyle(.linearCapacity)",
-            "        .tint(Gradient(colors: [.blue, .orange, .red]))",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Some controls adapt to the tint color differently based on their style,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the current platform, and the surrounding context. For example, in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "macOS, a button with the ",
-              "type" : "text"
-            },
-            {
-              "code" : "PrimitiveButtonStyle\/bordered",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " style doesn’t",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "tint its background, but one with the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "PrimitiveButtonStyle\/borderedProminent",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " style does. In macOS, neither",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of these button styles tint their label, but they do in other platforms.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -507,10 +306,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/tint(_:)-82apf": {
   "abstract" : [
-    {
-      "text" : "Sets the tint within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the label that is used in a section index to point to this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "section, typically only a single character long.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -89,6 +75,20 @@
         "beta" : false,
         "deprecated" : false,
         "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
         "name" : "macOS",
         "unavailable" : false
       },
@@ -130,6 +130,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -200,70 +208,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The label to display in the section index, or ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to display no label for this section.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "See also ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "listSectionIndexVisibility(_:)",
-                      "type" : "codeVoice"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -338,18 +282,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/sectionIndexLabel(_:)-13lgd": {
   "abstract" : [
-    {
-      "text" : "Sets the label that is used in a section index to point to this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "section, typically only a single character long.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

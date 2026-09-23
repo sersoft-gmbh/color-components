@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an accessibility action to the view. Actions allow assistive",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "technologies, such as the VoiceOver, to interact with the view by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "invoking the action.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -127,6 +105,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "macOS",
         "unavailable" : false
@@ -162,6 +154,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -274,46 +274,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, this is how a custom action to compose",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a new email could be added to a view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    ContentView()",
-            "        .accessibilityAction(named: \"New Message\") {",
-            "            \/\/ Handle action",
-            "        }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -422,26 +382,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/accessibilityAction(named:_:)-3xpbo": {
   "abstract" : [
-    {
-      "text" : "Adds an accessibility action to the view. Actions allow assistive",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "technologies, such as the VoiceOver, to interact with the view by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "invoking the action.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

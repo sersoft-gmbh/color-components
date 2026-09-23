@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates a destination view with a bound value for use within a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "navigation stack or navigation split view",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -153,6 +139,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -268,8 +268,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -370,302 +370,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to the data presented, or ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " if nothing is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "currently presented.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "item"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A view builder that defines a view to display",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "when ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "item",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " is not ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "destination"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Add this view modifier to a view inside a ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationSplitView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to describe the view that the stack displays",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when presenting a particular kind of data. Programmatically update",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the binding to display or remove the view. For example, you can replace",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the view showing in the detail column of a navigation split view:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var colorShown: Color?",
-            "",
-            "NavigationSplitView {",
-            "    List {",
-            "        Button(\"Mint\") { colorShown = .mint }",
-            "        Button(\"Pink\") { colorShown = .pink }",
-            "        Button(\"Teal\") { colorShown = .teal }",
-            "    }",
-            "    .navigationDestination(item: $colorShown) { color in",
-            "        ColorDetail(color: color)",
-            "    }",
-            "} detail: {",
-            "    Text(\"Select a color\")",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "When the person using the app taps on the Mint button, the mint color",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "shows in the detail and ",
-              "type" : "text"
-            },
-            {
-              "code" : "colorShown",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " gets the value ",
-              "type" : "text"
-            },
-            {
-              "code" : "Color.mint",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". You",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "can reset the navigation split view to show the message “Select a color”",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "by setting ",
-              "type" : "text"
-            },
-            {
-              "code" : "colorShown",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " back to ",
-              "type" : "text"
-            },
-            {
-              "code" : "nil",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can add more than one navigation destination modifier to the stack",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "if it needs to present more than one kind of data.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Do not put a navigation destination modifier inside a “lazy” container,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "like ",
-              "type" : "text"
-            },
-            {
-              "code" : "List",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or ",
-              "type" : "text"
-            },
-            {
-              "code" : "LazyVStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". These containers create child views",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "only when needed to render on screen. Add the navigation destination",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "modifier outside these containers so that the navigation split view can",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "always see the destination.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -740,18 +444,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/navigationDestination(item:destination:)": {
   "abstract" : [
-    {
-      "text" : "Associates a destination view with a bound value for use within a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "navigation stack or navigation split view",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

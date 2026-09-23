@@ -1,34 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Plays the specified ",
-      "type" : "text"
-    },
-    {
-      "code" : "feedback",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " when the provided ",
-      "type" : "text"
-    },
-    {
-      "code" : "trigger",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "changes.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -123,6 +93,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -289,80 +273,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Which type of feedback to play.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "feedback"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value to monitor for changes to determine when to play.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "trigger"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, you could play feedback when a state value changes:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct MyView: View {",
-            "    @State private var showAccessory = false",
-            "",
-            "    var body: some View {",
-            "        ContentView()",
-            "            .sensoryFeedback(.selection, trigger: showAccessory)",
-            "            .onLongPressGesture {",
-            "                showAccessory.toggle()",
-            "            }",
-            "",
-            "        if showAccessory {",
-            "            AccessoryView()",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -437,34 +347,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/sensoryFeedback(_:trigger:)": {
   "abstract" : [
-    {
-      "text" : "Plays the specified ",
-      "type" : "text"
-    },
-    {
-      "code" : "feedback",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " when the provided ",
-      "type" : "text"
-    },
-    {
-      "code" : "trigger",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "changes.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

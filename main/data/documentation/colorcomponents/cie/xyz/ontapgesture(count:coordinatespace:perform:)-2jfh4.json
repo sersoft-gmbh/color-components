@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and provides the action with the location of the interaction.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -143,6 +129,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -305,244 +305,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The number of taps or clicks required to trigger the action",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "closure provided in ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ". Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "count"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The coordinate space in which to receive",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "location values. Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "CoordinateSpace\/local",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "coordinateSpace"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform. This closure receives an input",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "that indicates where the interaction occurred.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to perform the specified ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the user clicks",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "or taps on the modified view ",
-              "type" : "text"
-            },
-            {
-              "code" : "count",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " times. The action closure receives",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the location of the interaction.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If you create a control that’s functionally equivalent",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Button",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ButtonStyle",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to create a customized button",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "instead.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following code adds a tap gesture to a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Circle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " that toggles the color",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the circle based on the tap location.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct TapGestureExample: View {",
-            "    @State private var location: CGPoint = .zero",
-            "",
-            "    var body: some View {",
-            "        Circle()",
-            "            .fill(self.location.y > 50 ? Color.blue : Color.red)",
-            "            .frame(width: 100, height: 100, alignment: .center)",
-            "            .onTapGesture { location in",
-            "                self.location = location",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -651,18 +413,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/onTapGesture(count:coordinateSpace:perform:)-2jfh4": {
   "abstract" : [
-    {
-      "text" : "Adds an action to perform when this view recognizes a tap gesture,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and provides the action with the location of the interaction.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

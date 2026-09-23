@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Apply an attribute-only text formatting definition to all nested editor",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -108,6 +94,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -275,108 +275,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Using only an attribute scope for the text formatting definition allows",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the editor to use all attributes in the scope, but does not constrain",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "their values in any way. To constrain what values attribute can have,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "use ",
-              "type" : "text"
-            },
-            {
-              "code" : "attributedTextFormattingDefinition(_:)-81jn6",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example editor allows using Genmoji, but otherwise is a plain text",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "editor:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct MyAttributeScope: AttributeScope {",
-            "    let adaptiveImageGlyph: AttributeScopes.SwiftUIAttributes.AdaptiveImageGlyphAttribute",
-            "}",
-            "",
-            "extension AttributeScopes {",
-            "    var myAttributeScope: MyAttributeScope.Type { MyAttributeScope.self }",
-            "}",
-            "",
-            "TextEditor(text: $text)",
-            "    .attributedTextFormattingDefinition(\\.myAttributeScope)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The default configuration uses SwiftUI’s attribute scope:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TextEditor(text: $text)",
-            "    .attributedTextFormattingDefinition(\\.swiftUI)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -451,18 +349,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/attributedTextFormattingDefinition(_:)-4xw1g": {
   "abstract" : [
-    {
-      "text" : "Apply an attribute-only text formatting definition to all nested editor",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "views.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

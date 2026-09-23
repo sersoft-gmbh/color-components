@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Activates this view as the source of a drag and drop operation, allowing",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "to provide optional identifiable payload and specify the namespace",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "of the drag container this view belongs to.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -146,8 +124,36 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -366,215 +372,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A type of the dragged item.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "itemType"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that returns a single",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "instance or a value conforming to ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "doc:\/\/com.apple.documentation\/documentation\/coretransferable\/transferable",
-                  "type" : "text"
-                },
-                {
-                  "text" : " that",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "represents the draggable data from this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "payload"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A namespace of the associated drag container.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "containerNamespace"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that activates this view as the source of a drag and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drop operation, beginning with user gesture input.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Applying the ",
-              "type" : "text"
-            },
-            {
-              "code" : "draggable(_:_:containerNamespace:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier adds",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the appropriate gestures for drag and drop to this view.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "When a drag operation begins, a rendering of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "this view is generated and used as the preview image.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If the view is enclosed in a ",
-              "type" : "text"
-            },
-            {
-              "code" : "dragContainer(for:in:_)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view becomes its draggable element, and the item’s identifier",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "is used as drag payload identifier.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "   var fruits: [Fruit]",
-            "   var selectedFruits: [Fruit.ID]",
-            "",
-            "   var body: some View {",
-            "       ScrollView {",
-            "           VStack {",
-            "               ForEach(fruits) { fruit in",
-            "                   FruitView(fruit)",
-            "                       .draggable(fruit)",
-            "               }",
-            "           }",
-            "       }",
-            "       .dragContainer(for: Fruit.self) { identifiers in",
-            "           fruits(with: identifiers)",
-            "       }",
-            "   }",
-            "",
-            "   func fruits(with: [Fruit.ID]) -> [Fruit] { ... }",
-            "   struct Fruit: Identifiable, Transferable { ... }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -649,26 +446,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/draggable(_:item:containerNamespace:)": {
   "abstract" : [
-    {
-      "text" : "Activates this view as the source of a drag and drop operation, allowing",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "to provide optional identifiable payload and specify the namespace",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "of the drag container this view belongs to.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

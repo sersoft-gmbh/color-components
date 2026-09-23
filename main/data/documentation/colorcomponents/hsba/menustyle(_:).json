@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the style for menus within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -82,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -217,49 +225,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To set a specific style for all menu instances within a view, use the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "menuStyle(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Menu(\"PDF\") {",
-            "    Button(\"Open in Preview\", action: openInPreview)",
-            "    Button(\"Save as PDF\", action: saveAsPDF)",
-            "}",
-            ".menuStyle(ButtonMenuStyle())"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -334,10 +299,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/menuStyle(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the style for menus within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

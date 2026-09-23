@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents a confirmation dialog when a dismiss action has been triggered.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -138,6 +132,27 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "macOS",
         "unavailable" : false
@@ -247,8 +262,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -276,8 +291,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -362,275 +377,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The key for the localized string that describes the title",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "of the dialog.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "titleKey"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A Boolean value that determines whether",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to present the dialog upon dismissal.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "shouldPresent"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A view builder returning the dialog’s actions.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "actions"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A view builder returning the message for the dialog.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "message"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "On macOS, the dialog will be presented when attempting to dismiss the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "window for this view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, you could present a dialog asking to persist unsaved",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "changes:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "struct ComposeMessage: View {",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "@State private var message = Message()",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    MessageEditor(message: $message)",
-            "        .dismissalConfirmationDialog(",
-            "            \"Save This Message As Draft?\",",
-            "            shouldPresent: message.hasUnsavedChanges",
-            "        ) {",
-            "            Button(\"Save\") {",
-            "                message.save()",
-            "            }",
-            "            Button(\"Don't Save\", role: .destructive) {",
-            "                message.discard()",
-            "            }",
-            "        } message: {",
-            "            Text(",
-            "                \"\"\"",
-            "                This message has not been sent and contains\\",
-            "                unsaved changes.",
-            "                \"\"\")",
-            "        }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "}",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "All actions in the dialog will dismiss the dialog after the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "action runs. The default button will be shown with greater prominence.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "You can influence the default button by assigning it the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "KeyboardShortcut\/defaultAction",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " keyboard shortcut.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The system may reorder the buttons based on their role and prominence.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Dismissal dialogs include a standard cancellation action by default.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "If you provide a button with a role of ",
-              "type" : "text"
-            },
-            {
-              "code" : "ButtonRole\/cancel",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", that",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button takes the place of the default cancellation action.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The cancellation action will always prevent the dismissal, while other",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "actions will allow the dismiss to proceed.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -705,10 +451,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/dismissalConfirmationDialog(_:shouldPresent:actions:message:)-3sm9x": {
   "abstract" : [
-    {
-      "text" : "Presents a confirmation dialog when a dismiss action has been triggered.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

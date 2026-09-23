@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Enables importing item providers from services, such as Continuity Camera",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on macOS.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -232,71 +218,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The types of content that the view supports importing.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "An empty array means the view does not currently support importing.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "contentTypes"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that will be called with the imported service",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "item. Return ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "false",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to indicate that there was a failure to receive",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the items.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onImport"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -371,18 +292,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/importsItemProviders(_:onImport:)": {
   "abstract" : [
-    {
-      "text" : "Enables importing item providers from services, such as Continuity Camera",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on macOS.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

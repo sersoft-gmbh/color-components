@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to be called when the view crosses the threshold to be considered on\/off screen.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -101,6 +95,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -252,126 +260,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The amount required to be visible within the viewport of the parent",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "view before the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " is fired. By default when the view has crossed more than 50%",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "on-screen, the action will be called.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "threshold"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action which will be called when the threshold has been reached.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to be informed when the view has crossed the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "provided threshold to be considered on\/off screen.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct VideoPlayer: View {",
-            "    @State var playing: Bool",
-            "",
-            "    var body: some View {",
-            "        Group {",
-            "            \/\/ ...",
-            "        }",
-            "        .onScrollVisibilityChange(threshold: 0.2) { isVisible in",
-            "            playing = isVisible",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "When the view appears on-screen, the action will be called if the threshold",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "has already been reached.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -446,10 +334,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/onScrollVisibilityChange(threshold:_:)": {
   "abstract" : [
-    {
-      "text" : "Adds an action to be called when the view crosses the threshold to be considered on\/off screen.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

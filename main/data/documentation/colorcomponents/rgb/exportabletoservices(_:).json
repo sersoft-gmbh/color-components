@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Exports items for consumption by shortcuts,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "quick actions, and services.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -231,73 +217,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that will be called on request of the items",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "by the shortcut or service.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "payload"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If the associated view supports selection, the exported item should",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "reflect that selected subpart.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var title: String",
-            "var body: some View {",
-            "    Color.pink",
-            "        .frame(width: 400, height: 400)",
-            "        .exportableToServices([title])",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -372,18 +291,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/exportableToServices(_:)": {
   "abstract" : [
-    {
-      "text" : "Exports items for consumption by shortcuts,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "quick actions, and services.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

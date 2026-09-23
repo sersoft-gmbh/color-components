@@ -1,50 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileImporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "or ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileMover",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " with a custom message that is presented to the user,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "similar to a title.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -116,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -212,25 +180,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The key to a localized string to display.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "messageKey"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -339,50 +288,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/fileDialogMessage(_:)-621mp": {
   "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileImporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "or ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileMover",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " with a custom message that is presented to the user,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "similar to a title.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

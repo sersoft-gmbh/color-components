@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Binds the selection of the search field associated with the nearest",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "searchable modifier to the given ",
-      "type" : "text"
-    },
-    {
-      "code" : "TextSelection",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -101,6 +79,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -213,167 +205,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The selection value to bind.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "selection"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to read and set selection in your search interface.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Selection is represented using ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextSelection",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " where the indices are",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "relative to the search text you provide on the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/searchable(text:placement:prompt:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier. Note that this",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "value will not represent selection outside of the text, such as in any",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "leading tokens.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "SwiftUI will automatically update this value when the user changes",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "selection, such as by typing. Likewise, you can change selection by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "writing to this value.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example creates a search interface that selects all of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the text on focus.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State var text = \"Hello, world!\"",
-            "    @State var selection: TextSelection?",
-            "    @FocusState var focused",
-            "",
-            "    var body: some View {",
-            "        NavigationSplitView {",
-            "            Sidebar()",
-            "                .searchable(text: $text)",
-            "                .searchFocused($focused)",
-            "                .searchSelection($selection)",
-            "        } detail: {",
-            "            Detail()",
-            "        }",
-            "        .onChange(of: focused) {",
-            "            if focused {",
-            "                selection = TextSelection(",
-            "                    range: text.startIndex..<text.endIndex)",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -482,26 +313,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/searchSelection(_:)": {
   "abstract" : [
-    {
-      "text" : "Binds the selection of the search field associated with the nearest",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "searchable modifier to the given ",
-      "type" : "text"
-    },
-    {
-      "code" : "TextSelection",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

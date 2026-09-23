@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies a transformation to a preference value.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -117,6 +111,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -425,10 +433,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/transformPreference(_:_:)": {
   "abstract" : [
-    {
-      "text" : "Applies a transformation to a preference value.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

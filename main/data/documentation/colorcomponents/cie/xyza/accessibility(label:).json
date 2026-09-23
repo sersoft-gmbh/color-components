@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a label to the view that describes its contents.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,6 +92,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityLabel(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityLabel(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityLabel(_:)",
         "unavailable" : false
       },
@@ -225,50 +237,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to provide an accessibility label for a view that doesn’t display text, like an icon.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "For example, you could use this method to label a button that plays music with the text “Play”.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Don’t include text in the label that repeats information that users already have. For example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "don’t use the label “Play button” because a button already has a trait that identifies it as a button.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -377,10 +345,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibility(label:)": {
   "abstract" : [
-    {
-      "text" : "Adds a label to the view that describes its contents.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

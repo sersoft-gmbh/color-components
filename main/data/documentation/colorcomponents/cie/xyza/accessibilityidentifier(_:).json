@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Uses the string you specify to identify the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -89,6 +83,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -208,26 +216,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this value for testing. It isn’t visible to the user.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -336,10 +324,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibilityIdentifier(_:)": {
   "abstract" : [
-    {
-      "text" : "Uses the string you specify to identify the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

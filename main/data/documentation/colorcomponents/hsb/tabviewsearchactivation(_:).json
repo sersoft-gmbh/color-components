@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the activation and deactivation behavior of search in the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search tab.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -179,87 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier on a ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to change how search activation is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "handled. The exact activation behavior is determined by the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabSearchActivation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " you pass to this modifier:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct TabExampleView: View {",
-            "    @State private var text: String = \"\"",
-            "",
-            "    var body: some View {",
-            "        TabView {",
-            "            Tab(\"Books\", systemImage: \"book\") {",
-            "                BooksTab()",
-            "            }",
-            "            Tab(role: .search) {",
-            "                NavigationStack {",
-            "                    SearchContent()",
-            "                }",
-            "            }",
-            "        }",
-            "        .searchable(text: $text)",
-            "        .tabViewSearchActivation(.searchTabSelection)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, search is only activated and deactivated by the user.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -334,18 +253,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/tabViewSearchActivation(_:)": {
   "abstract" : [
-    {
-      "text" : "Configures the activation and deactivation behavior of search in the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "search tab.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

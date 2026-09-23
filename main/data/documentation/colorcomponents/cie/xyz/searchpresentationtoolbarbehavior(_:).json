@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the search toolbar presentation behavior for any",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "searchable modifiers within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -84,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "17.1",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.1",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.1",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -194,71 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default on iOS, a toolbar may hide parts of its content when",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "presenting search to focus on searching. You can override",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "this behavior by providing a value of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "SearchPresentationToolbarBehavior\/avoidHidingContent",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to this modifer.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var searchText = \"\"",
-            "",
-            "List {",
-            "    \/\/ ... content",
-            "}",
-            ".searchable(text: $searchText)",
-            ".searchPresentationToolbarBehavior(.avoidHidingContent)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -367,18 +302,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/searchPresentationToolbarBehavior(_:)": {
   "abstract" : [
-    {
-      "text" : "Configures the search toolbar presentation behavior for any",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "searchable modifiers within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates an anchor to control the position of a scroll view in a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "particular circumstance.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -100,6 +86,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -242,206 +242,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can associate a ",
-              "type" : "text"
-            },
-            {
-              "code" : "UnitPoint",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to a ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " using the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/defaultScrollAnchor(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier. By default, the system",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "uses this point for different kinds of behaviors including:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Where the scroll view should initially be scrolled",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "How the scroll view should handle content size or",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "container size changes",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "How the scroll view should align content smaller than",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "its container size",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can further customize this behavior by assigning different unit",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "points for these different cases.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, you can use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/defaultScrollAnchor(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to provide a value of ",
-              "type" : "text"
-            },
-            {
-              "code" : "UnitPoint\/bottom",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " as the anchor for all cases",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and then opt out of certain cases by providing a different value",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "for them.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@Binding var items: [Item]",
-            "@Binding var scrolledID: Item.ID?",
-            "",
-            "ScrollView {",
-            "    LazyVStack {",
-            "        ForEach(items) { item in",
-            "            ItemView(item)",
-            "        }",
-            "    }",
-            "}",
-            ".defaultScrollAnchor(.bottom)",
-            ".defaultScrollAnchor(.topLeading, for: .alignment)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -516,18 +316,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/defaultScrollAnchor(_:for:)": {
   "abstract" : [
-    {
-      "text" : "Associates an anchor to control the position of a scroll view in a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "particular circumstance.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

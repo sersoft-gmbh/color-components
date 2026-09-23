@@ -1,46 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileImporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", or ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileMover",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom text that is presented to the user,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "similar to a title.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -111,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -207,25 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The optional text to use as the file dialog message.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "message"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -300,46 +253,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/fileDialogMessage(_:)-85bd3": {
   "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileImporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ", or ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileMover",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom text that is presented to the user,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "similar to a title.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Controls the visibility of a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Table",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "’s column header views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -179,141 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "visible",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will show table columns,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "hidden",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will remove them, and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "automatic",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will defer to default",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "behavior.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, ",
-              "type" : "text"
-            },
-            {
-              "code" : "Table",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will display a global header view with the labels",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of each table column. This area is also where users can sort, resize,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and rearrange the columns. For simple cases that don’t require those",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "features, this header can be hidden.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This will not affect the header of any ",
-              "type" : "text"
-            },
-            {
-              "code" : "Section",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : "s in a table.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Table(article.authors) {",
-            "    TableColumn(\"Name\", value: \\.name)",
-            "    TableColumn(\"Title\", value: \\.title)",
-            "}",
-            ".tableColumnHeaders(.hidden)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -388,18 +253,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/tableColumnHeaders(_:)": {
   "abstract" : [
-    {
-      "text" : "Controls the visibility of a ",
-      "type" : "text"
-    },
-    {
-      "code" : "Table",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "’s column header views.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

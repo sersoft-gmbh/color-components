@@ -1,8 +1,13 @@
 {
-  "abstract" : [
+  "deprecationSummary" : [
     {
-      "text" : "Overrides the size of the container for the preview.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
@@ -73,28 +78,62 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "13.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "13.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "13.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "10.15",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "13.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "6.0",
+        "message" : "Use #Preview(traits: .sizeThatFitsLayout) or .fixedLayout(width:height:) instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -185,129 +224,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A layout to use for preview.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A preview that uses the given layout.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, previews use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "PreviewLayout\/device",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " layout,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "which places the view inside a visual representation of the chosen",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "device. You can instead tell a preview to use a different layout",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "by choosing one of the ",
-              "type" : "text"
-            },
-            {
-              "code" : "PreviewLayout",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " values, like",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "PreviewLayout\/sizeThatFits",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct CircleImage_Previews: PreviewProvider {",
-            "    static var previews: some View {",
-            "        CircleImage()",
-            "            .previewLayout(.sizeThatFits)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -382,11 +298,9 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/previewLayout(_:)": {
   "abstract" : [
-    {
-      "text" : "Overrides the size of the container for the preview.",
-      "type" : "text"
-    }
+
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

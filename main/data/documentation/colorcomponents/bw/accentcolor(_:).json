@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the accent color for this view and the views it contains.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -88,6 +82,24 @@
         "introducedAt" : "13.0",
         "message" : "Use the asset catalog's accent color or View.tint(_:) instead.",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use the asset catalog's accent color or View.tint(_:) instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use the asset catalog's accent color or View.tint(_:) instead.",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -213,213 +225,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The color to use as an accent color. Set the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "value to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to use the inherited accent color.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "accentColor"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "accentColor(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when you want to apply a broad theme color to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "your app’s user interface. Some styles of controls use the accent color",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "as a default tint color.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "In macOS, SwiftUI applies customization of the accent color",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "only if the user chooses Multicolor under General > Accent color",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "in System Preferences.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, the outer ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " contains two child views. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "first is a button with the default accent color. The second is a ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that contains a button and a slider, both of which adopt the purple",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "accent color of their containing view. Note that the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " element",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "used as a label alongside the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Slider",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " retains its default color.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack(spacing: 20) {",
-            "    Button(action: {}) {",
-            "        Text(\"Regular Button\")",
-            "    }",
-            "    VStack {",
-            "        Button(action: {}) {",
-            "            Text(\"Accented Button\")",
-            "        }",
-            "        HStack {",
-            "            Text(\"Accented Slider\")",
-            "            Slider(value: $sliderValue, in: -100...100, step: 0.1)",
-            "        }",
-            "    }",
-            "    .accentColor(.purple)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -494,10 +299,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/accentColor(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the accent color for this view and the views it contains.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

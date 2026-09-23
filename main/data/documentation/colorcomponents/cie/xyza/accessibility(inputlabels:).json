@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets alternate input labels with which users identify a view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,6 +92,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityInputLabels(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityInputLabels(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityInputLabels(_:)",
         "unavailable" : false
       },
@@ -225,90 +237,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An array of Text elements to use as input labels.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "inputLabels"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Provide labels in descending order of importance. Voice Control",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and Full Keyboard Access use the input labels.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If you don’t specify any input labels, the user can still",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "refer to the view using the accessibility label that you add with the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/accessibility(label:)",
-                  "isActive" : true,
-                  "type" : "reference"
-                },
-                {
-                  "text" : " modifier.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -417,10 +345,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibility(inputLabels:)": {
   "abstract" : [
-    {
-      "text" : "Sets alternate input labels with which users identify a view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [
@@ -490,82 +415,6 @@
   "title" : "accessibility(inputLabels:)",
   "type" : "topic",
   "url" : "\/documentation\/colorcomponents\/cie\/xyza\/accessibility(inputlabels:)"
-},
-"doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibility(label:)": {
-  "abstract" : [
-    {
-      "text" : "Adds a label to the view that describes its contents.",
-      "type" : "text"
-    }
-  ],
-  "deprecated" : true,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "accessibility"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "label"
-    },
-    {
-      "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI4TextV",
-      "text" : "Text"
-    },
-    {
-      "kind" : "text",
-      "text" : ") -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI15ModifiedContentV",
-      "text" : "ModifiedContent"
-    },
-    {
-      "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    },
-    {
-      "kind" : "text",
-      "text" : ", "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:7SwiftUI31AccessibilityAttachmentModifierV",
-      "text" : "AccessibilityAttachmentModifier"
-    },
-    {
-      "kind" : "text",
-      "text" : ">"
-    }
-  ],
-  "identifier" : "doc:\/\/ColorComponents\/documentation\/ColorComponents\/CIE\/XYZA\/accessibility(label:)",
-  "kind" : "symbol",
-  "role" : "symbol",
-  "title" : "accessibility(label:)",
-  "type" : "topic",
-  "url" : "\/documentation\/colorcomponents\/cie\/xyza\/accessibility(label:)"
 }
 }
 }

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Identifies this view as the source of a navigation transition, such",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a zoom transition.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -125,6 +111,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -276,95 +276,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The identifier, often derived from the identifier of",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the data being displayed by the view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "id"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The namespace in which defines the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "id",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ". New",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "namespaces are created by adding an ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Namespace",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " variable",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "View",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " type and reading its value in the view’s body",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "method.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "namespace"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -439,18 +350,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/matchedTransitionSource(id:in:)": {
   "abstract" : [
-    {
-      "text" : "Identifies this view as the source of a navigation transition, such",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a zoom transition.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

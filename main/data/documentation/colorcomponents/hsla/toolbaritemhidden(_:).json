@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Hides an individual view within a control group toolbar item.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -164,116 +158,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the view in a control group toolbar item is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "hidden.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "hidden"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to hide individual views of a ",
-              "type" : "text"
-            },
-            {
-              "code" : "ControlGroup",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " without",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "hiding the entire group. On macOS and iOS, hidden items will be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "displayed during user customization.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example displays a collaboration button in a group when",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "there is an active collaboration session.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView {",
-            "    @State private var inCollaboration = false",
-            "",
-            "    var body: some View {",
-            "        BrowserView()",
-            "            .toolbar(id: \"browserToolbar\") {",
-            "                ToolbarItem(id: \"share\") {",
-            "                    ControlGroup {",
-            "                        ShareButton()",
-            "                        CollaborationButton()",
-            "                            .toolbarItemHidden(!inCollaboration)",
-            "                    }",
-            "                }",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -348,10 +232,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/toolbarItemHidden(_:)": {
   "abstract" : [
-    {
-      "text" : "Hides an individual view within a control group toolbar item.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

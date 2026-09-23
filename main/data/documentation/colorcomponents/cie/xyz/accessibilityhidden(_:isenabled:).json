@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies whether to hide this view from system accessibility features.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -106,6 +100,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -249,47 +257,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether to hide this view from accessibility features.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "hidden"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If true the accessibility hidden state is applied;",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "otherwise the accessibility hidden state is unchanged.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isEnabled"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -398,10 +365,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/accessibilityHidden(_:isEnabled:)": {
   "abstract" : [
-    {
-      "text" : "Specifies whether to hide this view from system accessibility features.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

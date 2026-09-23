@@ -1,34 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Create an Accessibility Rotor with the specified user-visible label",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and entries for each of the specified ranges. The Rotor will be attached",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "to the current Accessibility element, and each entry will go the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "specified range of that element.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -139,6 +109,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "macOS",
         "unavailable" : false
@@ -174,6 +158,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -279,126 +271,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Localized label identifying this Rotor to the user.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An array of ranges that will be used to generate",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the entries of the Rotor.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "textRanges"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "An Accessibility Rotor is a shortcut for Accessibility users to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "quickly navigate to specific elements of the user interface,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and optionally specific ranges of text within those elements.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the following example, a Message application adds a Rotor allowing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the user to navigate through all the ranges of text containing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "email addresses.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "extension Message {",
-            "    \/\/ Ranges of special areas in the `content` text. Calculated",
-            "    \/\/ when `content` is set and then cached so that we don't have",
-            "    \/\/ to re-compute them.",
-            "    var emailAddressRanges: [Range<String.Index>]",
-            "}",
-            "",
-            "struct MessageContentView: View {",
-            "    TextEditor(.constant(message.content))",
-            "        .accessibilityRotor(\"Email Addresses\",",
-            "            textRanges: message.emailAddressRanges)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -473,34 +345,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/accessibilityRotor(_:textRanges:)-3d7tr": {
   "abstract" : [
-    {
-      "text" : "Create an Accessibility Rotor with the specified user-visible label",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and entries for each of the specified ranges. The Rotor will be attached",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "to the current Accessibility element, and each entry will go the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "specified range of that element.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

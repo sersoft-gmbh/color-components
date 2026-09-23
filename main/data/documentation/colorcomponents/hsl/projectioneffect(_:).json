@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies a projection transformation to this view’s rendered output.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,105 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ProjectionTransform",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to apply to the view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "transform"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "projectionEffect(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to apply a 3D transformation to the view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below rotates the text 30˚ around the ",
-              "type" : "text"
-            },
-            {
-              "code" : "z",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " axis, which is the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "axis pointing out of the screen:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "\/\/ This transform represents a 30˚ rotation around the z axis.",
-            "let transform = CATransform3DMakeRotation(",
-            "    -30 * (.pi \/ 180), 0.0, 0.0, 1.0)",
-            "",
-            "Text(\"Projection effects using transforms\")",
-            "    .projectionEffect(.init(transform))",
-            "    .border(Color.gray)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -358,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/projectionEffect(_:)": {
   "abstract" : [
-    {
-      "text" : "Applies a projection transformation to this view’s rendered output.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

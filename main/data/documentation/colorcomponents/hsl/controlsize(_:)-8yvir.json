@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the size for controls within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -192,150 +200,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "One of the control sizes specified in the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ControlSize",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " enumeration.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "controlSize"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "controlSize(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to override the system default size for controls",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in this view. In this example, a view displays several typical controls",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "at ",
-              "type" : "text"
-            },
-            {
-              "code" : ".mini",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", ",
-              "type" : "text"
-            },
-            {
-              "code" : ".small",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and ",
-              "type" : "text"
-            },
-            {
-              "code" : ".regular",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " sizes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ControlSize: View {",
-            "    var body: some View {",
-            "        VStack {",
-            "            MyControls(label: \"Mini\")",
-            "                .controlSize(.mini)",
-            "            MyControls(label: \"Small\")",
-            "                .controlSize(.small)",
-            "            MyControls(label: \"Regular\")",
-            "                .controlSize(.regular)",
-            "        }",
-            "        .padding()",
-            "        .frame(width: 450)",
-            "        .border(Color.gray)",
-            "    }",
-            "}",
-            "",
-            "struct MyControls: View {",
-            "    var label: String",
-            "    @State private var value = 3.0",
-            "    @State private var selected = 1",
-            "    var body: some View {",
-            "        HStack {",
-            "            Text(label + \":\")",
-            "            Picker(\"Selection\", selection: $selected) {",
-            "                Text(\"option 1\").tag(1)",
-            "                Text(\"option 2\").tag(2)",
-            "                Text(\"option 3\").tag(3)",
-            "            }",
-            "            Slider(value: $value, in: 1...10)",
-            "            Button(\"OK\") { }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -410,10 +274,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/controlSize(_:)-8yvir": {
   "abstract" : [
-    {
-      "text" : "Sets the size for controls within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the view’s icon for purposes of navigation.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -192,53 +200,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The system symbol to display.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "systemImage"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In an Assistive Access scene on iOS and iPadOS, the icon is displayed",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "adjacent to the navigation title. Otherwise, the icon is unused.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -313,10 +274,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/assistiveAccessNavigationIcon(systemImage:)": {
   "abstract" : [
-    {
-      "text" : "Configures the view’s icon for purposes of navigation.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

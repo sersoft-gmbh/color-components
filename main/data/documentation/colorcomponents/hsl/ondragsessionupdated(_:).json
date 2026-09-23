@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies an action to perform on each update of an ongoing dragging operation",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "activated by ",
-      "type" : "text"
-    },
-    {
-      "code" : "draggable(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " or anther drag modifiers.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,8 +76,36 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -206,123 +212,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Below is an example of a view that displays a book and supports",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "dragging to copy, move, and delete. If the session ends",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with moving or deleting the item, in the ",
-              "type" : "text"
-            },
-            {
-              "code" : "onUpdate",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the view lets the model layer know that the book should be deleted",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "from the source.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "   struct DraggableBookView: View {",
-            "       var id: UUID",
-            "",
-            "       var body: some View {",
-            "           BookView()",
-            "               .draggable(",
-            "                   configuration: DragConfiguration(",
-            "                       operationsWithinApp: .init(allowMove: true, allowDelete: true),",
-            "                       operationsOutsideApp: .init(allowMove: true, allowDelete: true)",
-            "                   ), Book(id: id))",
-            "               .onDragSessionUpdated { session in",
-            "                   switch session.phase {",
-            "                   case .ended(at: _, with: let operation):",
-            "                       if operation == .move || operation == .delete {",
-            "                           if let id = session.draggedItemIDs(type: UUID.self).first {",
-            "                               removeBook(id: id)",
-            "                           }",
-            "                       }",
-            "                   default:",
-            "                       break",
-            "                   }",
-            "               }",
-            "       }",
-            "   }",
-            "",
-            "   func removeBook(id: UUID) { }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "onUpdate",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure is called when the closest drag session",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in the child view hierarchy becomes active.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -397,26 +286,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/onDragSessionUpdated(_:)": {
   "abstract" : [
-    {
-      "text" : "Specifies an action to perform on each update of an ongoing dragging operation",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "activated by ",
-      "type" : "text"
-    },
-    {
-      "code" : "draggable(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " or anther drag modifiers.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

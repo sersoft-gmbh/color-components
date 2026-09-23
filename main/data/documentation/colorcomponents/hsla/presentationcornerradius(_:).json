@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Requests that the presentation have a specific corner radius.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "16.4",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,105 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The corner radius, or ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to use the system",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "default.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "cornerRadius"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to change the corner radius of a presentation.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State private var showSettings = false",
-            "",
-            "    var body: some View {",
-            "        Button(\"View Settings\") {",
-            "            showSettings = true",
-            "        }",
-            "        .sheet(isPresented: $showSettings) {",
-            "            SettingsView()",
-            "                .presentationDetents([.medium, .large])",
-            "                .presentationCornerRadius(21)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Configuring a corner radius is not supported on watchOS, tvOS,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "or macOS.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -358,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/presentationCornerRadius(_:)": {
   "abstract" : [
-    {
-      "text" : "Requests that the presentation have a specific corner radius.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

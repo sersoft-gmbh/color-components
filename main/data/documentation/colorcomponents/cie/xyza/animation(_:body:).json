@@ -1,22 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies the given animation to all animatable values within the ",
-      "type" : "text"
-    },
-    {
-      "code" : "body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "closure.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -134,6 +116,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -232,8 +228,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -318,101 +314,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Any modifiers applied to the content of ",
-              "type" : "text"
-            },
-            {
-              "code" : "body",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be applied to this",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view, and the ",
-              "type" : "text"
-            },
-            {
-              "code" : "animation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will only be used on the modifiers defined in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the ",
-              "type" : "text"
-            },
-            {
-              "code" : "body",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following code animates the opacity changing with an easeInOut",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "animation, while the contents of MyView are animated with the implicit",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "transaction’s animation:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "MyView(isActive: isActive)",
-            "    .animation(.easeInOut) { content in",
-            "        content.opacity(isActive ? 1.0 : 0.0)",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -521,22 +422,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/animation(_:body:)": {
   "abstract" : [
-    {
-      "text" : "Applies the given animation to all animatable values within the ",
-      "type" : "text"
-    },
-    {
-      "code" : "body",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "closure.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

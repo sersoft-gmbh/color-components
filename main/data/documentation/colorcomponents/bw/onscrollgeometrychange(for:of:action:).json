@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to be performed when a value, created from a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scroll geometry, changes.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -156,6 +142,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -387,346 +387,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The type of value transformed from a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ScrollGeometry",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "type"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that transforms a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ScrollGeometry",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to your type.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "transform"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure to run when the transformed data changes.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The old value that failed the comparison check.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "oldValue"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The new value that failed the comparison check.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "newValue"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The geometry of a scroll view changes frequently while scrolling.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "You should avoid updating large parts of your app whenever",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the scroll geometry changes. To aid in this, you provide two",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "closures to this modifier:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "transform: This converts a value of ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "ScrollGeometry",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " to a",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "your own data type.",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "action: This provides the data type you created in ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "of",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "and is called whenever the data type changes.",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, you can use this modifier to know when the user scrolls",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a scroll view beyond the top of its content. In the following example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the data type you convert to is a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Bool",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and the action is called",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "whenever the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Bool",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " changes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@Binding var isBeyondZero: Bool",
-            "",
-            "ScrollView {",
-            "    \/\/ ...",
-            "}",
-            ".onScrollGeometryChange(for: Bool.self) { geometry in",
-            "    geometry.contentOffset.y < geometry.contentInsets.top",
-            "} action: { wasBeyondZero, isBeyondZero in",
-            "    self.isBeyondZero = isBeyondZero",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If multiple scroll views are found within the view hierarchy,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "only the first one will invoke the closure you provide and a runtime",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "issue will be logged. For example, in the following view, only the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "vertical scroll view will have its geometry changes invoke the provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "closure.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    ScrollView(.vertical) { ... }",
-            "    ScrollView(.horizontal) { ... }",
-            "}",
-            ".onScrollGeometryChange(for: Bool.self) { geometry in",
-            "     ...",
-            "} action: { oldValue, newValue in",
-            "    ...",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For responding to non-scroll geometry changes, see the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/onGeometryChange(for:of:action:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -801,18 +461,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/onScrollGeometryChange(for:of:action:)": {
   "abstract" : [
-    {
-      "text" : "Adds an action to be performed when a value, created from a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "scroll geometry, changes.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

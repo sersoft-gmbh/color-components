@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the Writing Tools behavior for text and text input in the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "environment.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -88,6 +74,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "macOS",
         "unavailable" : false
@@ -118,20 +118,7 @@
           "tokens" : [
             {
               "kind" : "attribute",
-              "text" : "@"
-            },
-            {
-              "kind" : "attribute",
-              "preciseIdentifier" : "s:ScM",
-              "text" : "MainActor"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "attribute",
-              "text" : "@preconcurrency"
+              "text" : "nonisolated"
             },
             {
               "kind" : "text",
@@ -199,109 +186,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The Writing Tools behavior for text and text input in the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "environment.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "behavior"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view preferring the specified Writing Tools behavior.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this view modifier to customize or disable the Writing Tools editing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "experience for ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " (when selectable), ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextField",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextEditor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " views.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -376,18 +260,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/writingToolsBehavior(_:)": {
   "abstract" : [
-    {
-      "text" : "Specifies the Writing Tools behavior for text and text input in the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "environment.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

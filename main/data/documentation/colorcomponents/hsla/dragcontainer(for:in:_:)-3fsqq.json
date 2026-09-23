@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "A container with draggable views where the drag payload is based",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on multiple identifiers of dragged items.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -164,8 +150,36 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -472,251 +486,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A type of the dragged items.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "itemType"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A namespace that identifies the drag container.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "namespace"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure which is called when",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "a drag operation begins. As an argument, the closure receives either the identifiers",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "of all the selected items, if the dragged item is a part of selection",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "or only the identifier of the dragged item, if it is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "not part of the selection. With the passed identifiers, put together the payload to drag,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "and return from the closure.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "Return an empty ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Collection",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to disable the drag.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "payload"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that can be activated as the source of a drag and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drop operation, beginning with user gesture input.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Provide the selected identifiers list to SwiftUI using",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "dragContainerSelection(_:containerNamespace)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "In a case when there’s no selection information available,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "SwiftUI passes the dragged item identifier to the ",
-              "type" : "text"
-            },
-            {
-              "code" : "payload",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In an example below, an app presents a view with ",
-              "type" : "text"
-            },
-            {
-              "code" : "Fruit",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " values.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "When a user starts drag, SwiftUI uses the selection to put together",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the list of item identifiers to drag.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "   var fruits: [Fruit]",
-            "   @State private var selection: [Fruit.ID]",
-            "",
-            "   var body: some View {",
-            "       VStack {",
-            "           ForEach(fruits) { fruit in",
-            "               FruitView(fruit)",
-            "                   .draggable(containerItemID: fruit.id)",
-            "           }",
-            "       }",
-            "       .dragContainer(for: Fruit.self) { ids in",
-            "          fruits(with: ids)",
-            "       }",
-            "       .dragContainerSelection(selection)",
-            "   }",
-            "",
-            "   func fruits(with ids: [UUID]) -> [Fruit] { ... }",
-            "",
-            "   struct Fruit: Transferable, Identifiable { ... }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -791,18 +560,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/dragContainer(for:in:_:)-3fsqq": {
   "abstract" : [
-    {
-      "text" : "A container with draggable views where the drag payload is based",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on multiple identifiers of dragged items.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

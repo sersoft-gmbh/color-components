@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets to a partial range the number of lines that text can occupy",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "in this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -92,6 +78,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -211,108 +211,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The line limit.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "limit"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to specify a partial range of lines that a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view or a vertical ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextField",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " can occupy. When the text of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "such views occupies more space than the provided limit, a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "truncates its content while a ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextField",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " becomes scrollable.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Form {",
-            "    TextField(\"Title\", text: $model.title)",
-            "    TextField(\"Notes\", text: $model.notes, axis: .vertical)",
-            "        .lineLimit(...3)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -387,18 +285,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/lineLimit(_:)-jq2t": {
   "abstract" : [
-    {
-      "text" : "Sets to a partial range the number of lines that text can occupy",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "in this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

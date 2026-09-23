@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a custom bottom bar to the sidebar of a tab view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -95,6 +89,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "macOS",
         "unavailable" : false
@@ -161,8 +169,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -230,82 +238,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The content is pinned at the bottom of the sidebar, so it’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "always visible when the sidebar is visible and doesn’t",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "scroll with the content.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example adds an account button to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the bottom of the sidebar:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TabView {",
-            "    Tab(\"Home\", systemImage: \"house\") {",
-            "        HomeView()",
-            "    }",
-            "",
-            "    Tab(\"Alerts\", systemImage: \"bell\") {",
-            "        AlertsView()",
-            "    }",
-            "",
-            "    Tab(\"Browse\", systemImage: \"list.bullet\") {",
-            "        MyBrowseView()",
-            "    }",
-            "}",
-            ".tabViewStyle(.sidebarAdaptable)",
-            ".tabViewSidebarBottomBar {",
-            "    AccountButton()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -380,10 +312,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/tabViewSidebarBottomBar(content:)": {
   "abstract" : [
-    {
-      "text" : "Adds a custom bottom bar to the sidebar of a tab view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

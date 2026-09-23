@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Scales this view’s rendered output by the given amount in both the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "horizontal and vertical directions, relative to an anchor point.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -100,6 +86,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -227,117 +227,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The amount to scale the view in the view in both the horizontal",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "and vertical directions.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "s"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The anchor point with a default of ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "UnitPoint\/center",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " that",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "indicates the starting position for the scale operation.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "anchor"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "scaleEffect(_:anchor:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to apply a horizontally and vertically",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "scaling transform to a view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Image(systemName: \"envelope.badge.fill\")",
-            "    .resizable()",
-            "    .frame(width: 100, height: 100, alignment: .center)",
-            "    .foregroundColor(Color.red)",
-            "    .scaleEffect(2, anchor: .leading)",
-            "    .border(Color.gray)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -412,18 +301,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/scaleEffect(_:anchor:)-20yvg": {
   "abstract" : [
-    {
-      "text" : "Scales this view’s rendered output by the given amount in both the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "horizontal and vertical directions, relative to an anchor point.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,22 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a text to use as a label for the file name field.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -87,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -183,25 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The optional text to use as the label for the file name field.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -276,22 +253,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/fileExporterFilenameLabel(_:)-1dcy9": {
   "abstract" : [
-    {
-      "text" : "On macOS, configures the ",
-      "type" : "text"
-    },
-    {
-      "code" : "fileExporter",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a text to use as a label for the file name field.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

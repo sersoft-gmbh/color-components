@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies the given animation to all animatable values within this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -88,6 +82,24 @@
         "introducedAt" : "13.0",
         "message" : "Use withAnimation or animation(_:value:) instead.",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "15.0",
+        "introducedAt" : "13.0",
+        "message" : "Use withAnimation or animation(_:value:) instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "15.0",
+        "introducedAt" : "13.0",
+        "message" : "Use withAnimation or animation(_:value:) instead.",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -213,109 +225,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The animation to apply to animatable values",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "within this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "animation"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that wraps this view and applies ",
-              "type" : "text"
-            },
-            {
-              "code" : "animation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to all",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "animatable values used within the view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier on leaf views rather than container views. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "animation applies to all child views within this view; calling",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "animation(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " on a container view can lead to unbounded scope.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -390,10 +299,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/animation(_:)-64que": {
   "abstract" : [
-    {
-      "text" : "Applies the given animation to all animatable values within this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

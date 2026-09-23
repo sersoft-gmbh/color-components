@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets a selection identifier for this view’s accessibility element.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -96,6 +90,20 @@
         "deprecated" : true,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : true,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : true,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -215,34 +223,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Picker uses the value to determine what node to use for the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "accessibility value.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -317,10 +297,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/accessibility(selectionIdentifier:)": {
   "abstract" : [
-    {
-      "text" : "Sets a selection identifier for this view’s accessibility element.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

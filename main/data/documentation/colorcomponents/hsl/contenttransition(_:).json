@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Modifies the view to use a given transition as its method of animating",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "changes to the contents of its views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -88,6 +74,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "macOS",
         "unavailable" : false
@@ -123,6 +123,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -193,404 +201,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The transition to apply when animating the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "content change.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "transition"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This modifier allows you to perform a transition that animates a change",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a single view. The provided ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentTransition",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " can present an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "opacity animation for content changes, an interpolated animation of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the content’s paths as they change, or perform no animation at all.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "contentTransition(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " modifier only has an effect within",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the context of an ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Animation",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Tip",
-          "style" : "tip",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the following example, a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Button",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " changes the color and font size",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. Since both of these properties apply to the paths of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the text, the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentTransition\/interpolate",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " transition can animate a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "gradual change to these properties through the entire transition. By",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "contrast, the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentTransition\/opacity",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " transition would simply fade",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "between the start and end states.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "private static let font1 = Font.system(size: 20)",
-            "private static let font2 = Font.system(size: 45)",
-            "",
-            "@State private var color = Color.red",
-            "@State private var currentFont = font1",
-            "",
-            "var body: some View {",
-            "    VStack {",
-            "        Text(\"Content transition\")",
-            "            .foregroundColor(color)",
-            "            .font(currentFont)",
-            "            .contentTransition(.interpolate)",
-            "        Spacer()",
-            "        Button(\"Change\") {",
-            "            withAnimation(Animation.easeInOut(duration: 5.0)) {",
-            "                color = (color == .red) ? .green : .red",
-            "                currentFont = (currentFont == font1) ? font2 : font1",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example uses an ease-in–ease-out animation with a five-second",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "duration to make it easier to see the effect of the interpolation. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "figure below shows the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " at the beginning of the animation,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "halfway through, and at the end.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "header" : "row",
-          "rows" : [
-            [
-              [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Time",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ],
-              [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Display",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            ],
-            [
-              [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Start",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ],
-              [
-                {
-                  "inlineContent" : [
-
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            ],
-            [
-              [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Middle",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ],
-              [
-                {
-                  "inlineContent" : [
-
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            ],
-            [
-              [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "End",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ],
-              [
-                {
-                  "inlineContent" : [
-
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            ]
-          ],
-          "type" : "table"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To control whether content transitions use GPU-accelerated rendering,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "set the value of the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "EnvironmentValues\/contentTransitionAddsDrawingGroup",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " environment",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "variable.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -665,18 +275,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/contentTransition(_:)": {
   "abstract" : [
-    {
-      "text" : "Modifies the view to use a given transition as its method of animating",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "changes to the contents of its views.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

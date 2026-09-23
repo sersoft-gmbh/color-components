@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Raises or lowers the pitch of spoken text.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,125 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The amount to raise or lower the pitch.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "Values between ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "-1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "0",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " result in a lower pitch while",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "values between ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "0",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " result in a higher pitch.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "The method clamps values to the range ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "-1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "1",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier when you want to change the pitch of spoken text.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "The value indicates how much higher or lower to change the pitch.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -378,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/speechAdjustedPitch(_:)": {
   "abstract" : [
-    {
-      "text" : "Raises or lowers the pitch of spoken text.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

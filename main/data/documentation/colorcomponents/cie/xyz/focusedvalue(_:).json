@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the focused value for the given object type.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -233,82 +241,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This initializer only accepts objects conforming to the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Observable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " protocol. For reading environment objects that conform to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ObservableObject",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "focusedObject(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", instead.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Important",
-          "style" : "important",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To read this value, use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "FocusedValue",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " property wrapper.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -417,10 +349,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/focusedValue(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the focused value for the given object type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

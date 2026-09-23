@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the direction of a selection or cursor relative to a text character.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -192,252 +200,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The text selection affinity strategy to apply.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "affinity"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that uses the specified selection affinity strategy.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier when you need to handle line breaks in a specific way,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "alter cursor movement or deal with bidirectional text (text that",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "contains both LTR and RTL scripts, like English and Arabic combined).",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Selection affinity also determines whether, for example, the insertion",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "point appears after the last character on a line or before the first",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "character on the following line in cases where text wraps across line boundaries.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Given the scenario ",
-              "type" : "text"
-            },
-            {
-              "code" : "hello|مرحبا",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", where ",
-              "type" : "text"
-            },
-            {
-              "code" : "|",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " represents the cursor & ",
-              "type" : "text"
-            },
-            {
-              "code" : "مرحبا",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "represents “hello” in Arabic, the ambiguity arises because:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "If the cursor is associated with the end of the English word, it would be",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "as if you’re continuing to type in English (LTR).",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "If the cursor is associated with the beginning of the Arabic word, it would",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "also be as if you’re continuing to type in Arabic (RTL).",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This modifier helps resolve this ambiguity by determining the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "direction or association of the cursor relative to the surrounding text.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example shows how you would specify a specific selection",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "affinity on the given hierarchy:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct SuggestionTextEditor: View {",
-            "    @State var text: String = \"\"",
-            "    @State var selection: TextSelection? = nil",
-            "",
-            "    var body: some View {",
-            "        VStack {",
-            "            TextEditor(text: $text, selection: $selection)",
-            "            \/\/ A helper view that offers live suggestions based on selection.",
-            "            SuggestionsView(",
-            "                substrings: getSubstrings(text: text, indices: selection?.indices))",
-            "        }",
-            "        .textSelectionAffinity(.upstream)",
-            "    }",
-            "",
-            "    private func getSubstrings(",
-            "        text: String, indices: TextSelection.Indices?",
-            "    ) -> [Substring] {",
-            "        \/\/ Resolve substrings representing the current selection...",
-            "    }",
-            "}",
-            "",
-            "struct SuggestionsView: View { ... }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -512,10 +274,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/textSelectionAffinity(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the direction of a selection or cursor relative to a text character.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

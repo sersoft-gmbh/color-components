@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Layers the given view behind this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -112,6 +106,24 @@
         "introducedAt" : "13.0",
         "message" : "Use `background(alignment:content:)` instead.",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `background(alignment:content:)` instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `background(alignment:content:)` instead.",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -286,200 +298,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The view to draw behind this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "background"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The alignment with a default value of",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Alignment\/center",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " that you use to position the background view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "alignment"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "background(_:alignment:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when you need to place one view behind",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "another, with the background view optionally aligned with a specified",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "edge of the frontmost view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below creates two views: the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Frontmost",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view, and the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "DiamondBackground",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. The ",
-              "type" : "text"
-            },
-            {
-              "code" : "Frontmost",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view uses the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "DiamondBackground",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view for the background of the image element inside",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Frontmost",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view’s ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct DiamondBackground: View {",
-            "    var body: some View {",
-            "        VStack {",
-            "            Rectangle()",
-            "                .fill(.gray)",
-            "                .frame(width: 250, height: 250, alignment: .center)",
-            "                .rotationEffect(.degrees(45.0))",
-            "        }",
-            "    }",
-            "}",
-            "",
-            "struct Frontmost: View {",
-            "    var body: some View {",
-            "        VStack {",
-            "            Image(systemName: \"folder\")",
-            "                .font(.system(size: 128, weight: .ultraLight))",
-            "                .background(DiamondBackground())",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -554,10 +372,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/background(_:alignment:)": {
   "abstract" : [
-    {
-      "text" : "Layers the given view behind this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

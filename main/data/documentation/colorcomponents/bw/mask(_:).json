@@ -1,15 +1,9 @@
 {
-  "abstract" : [
-    {
-      "text" : "Masks this view using the alpha channel of the given view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
         {
-          "text" : "Use overload where mask accepts a @ViewBuilder instead.",
+          "text" : "Use overload where mask accepts a @ContentBuilder instead.",
           "type" : "text"
         }
       ],
@@ -93,7 +87,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "iOS",
         "unavailable" : false
       },
@@ -101,8 +95,26 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "10.15",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "macOS",
         "unavailable" : false
       },
@@ -111,7 +123,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
@@ -119,7 +131,7 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "visionOS",
         "unavailable" : false
       },
@@ -128,7 +140,7 @@
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
         "introducedAt" : "6.0",
-        "message" : "Use overload where mask accepts a @ViewBuilder instead.",
+        "message" : "Use overload where mask accepts a @ContentBuilder instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -251,94 +263,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The view whose alpha the rendering system applies to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the specified view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "mask"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "mask(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when you want to apply the alpha (opacity) value of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "another view to the current view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example shows an image masked by rectangle with a 10% opacity:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Image(systemName: \"envelope.badge.fill\")",
-            "    .foregroundColor(Color.blue)",
-            "    .font(.system(size: 128, weight: .regular))",
-            "    .mask(Rectangle().opacity(0.1))"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -413,10 +337,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/mask(_:)": {
   "abstract" : [
-    {
-      "text" : "Masks this view using the alpha channel of the given view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

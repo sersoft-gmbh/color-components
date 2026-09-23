@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets a value for the given preference.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -115,6 +109,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -348,10 +356,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/preference(key:value:)": {
   "abstract" : [
-    {
-      "text" : "Sets a value for the given preference.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

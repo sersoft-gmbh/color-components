@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a custom large content view to be shown by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the large content viewer.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -95,6 +81,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "12.0",
         "name" : "macOS",
         "unavailable" : false
@@ -168,8 +168,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -245,155 +245,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Rely on the large content viewer only in situations",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "where items must remain small due to unavoidable",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "design constraints. For example, buttons in a tab bar",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "remain small to leave more room for the main app content.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example shows how to add a custom large",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "content view:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    Button(action: newMessage) {",
-            "        Image(systemName: \"plus\")",
-            "    }",
-            "    .accessibilityShowsLargeContentViewer {",
-            "        Label(\"New Message\", systemImage: \"plus\")",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Don’t use the large content viewer as a replacement for proper",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Dynamic Type support. For example, Dynamic Type allows items",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in a list to grow or shrink vertically to accommodate the user’s preferred",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "font size. Rely on the large content viewer only in situations where",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "items must remain small due to unavoidable design constraints.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, views that have their Dynamic Type size constrained",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/dynamicTypeSize(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " may require a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "large content view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -468,18 +319,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/accessibilityShowsLargeContentViewer(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds a custom large content view to be shown by",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the large content viewer.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

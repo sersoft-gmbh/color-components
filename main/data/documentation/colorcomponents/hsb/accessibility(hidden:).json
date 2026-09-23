@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies whether to hide this view from system accessibility features.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -97,6 +91,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityHidden(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityHidden(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityHidden(_:)",
         "unavailable" : false
       },
@@ -298,10 +310,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/accessibility(hidden:)": {
   "abstract" : [
-    {
-      "text" : "Specifies whether to hide this view from system accessibility features.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

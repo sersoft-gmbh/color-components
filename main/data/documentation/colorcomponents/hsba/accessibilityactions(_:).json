@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds multiple accessibility actions to the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -87,6 +81,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "macOS",
         "unavailable" : false
@@ -160,8 +168,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -237,77 +245,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Actions allow assistive technologies,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "such as the VoiceOver, to interact with the view by invoking the action.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "For example, this is how a dynamic number of custom action could",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "be added to a view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var isDraft: Bool",
-            "",
-            "var body: some View {",
-            "    ContentView()",
-            "        .accessibilityActions {",
-            "            ForEach(actions) { action in",
-            "                Button {",
-            "                    action()",
-            "                } label: {",
-            "                    Text(action.title)",
-            "                }",
-            "            }",
-            "",
-            "            if isDraft {",
-            "                Button {",
-            "                    \/\/ Handle Delete",
-            "                } label: {",
-            "                    Text(\"Delete\")",
-            "                }",
-            "            }",
-            "        }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -382,10 +319,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/accessibilityActions(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds multiple accessibility actions to the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

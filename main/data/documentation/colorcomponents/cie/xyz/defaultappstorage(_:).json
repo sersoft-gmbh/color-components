@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The default store used by ",
-      "type" : "text"
-    },
-    {
-      "code" : "AppStorage",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " contained within the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -84,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -194,97 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The user defaults to use as the default",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "store for ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "AppStorage",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "store"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If unspecified, the default store for a view hierarchy is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "UserDefaults.standard",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", but can be set a to a custom one. For example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "sharing defaults between an app and an extension can override the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "default store to one created with ",
-              "type" : "text"
-            },
-            {
-              "code" : "UserDefaults.init(suiteName:_)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -393,18 +302,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/defaultAppStorage(_:)": {
   "abstract" : [
-    {
-      "text" : "The default store used by ",
-      "type" : "text"
-    },
-    {
-      "code" : "AppStorage",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " contained within the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

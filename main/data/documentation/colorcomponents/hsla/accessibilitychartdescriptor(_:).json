@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a descriptor to a View that represents a chart to make",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the chart’s contents accessible to all users.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -90,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -232,232 +232,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "AXChartDescriptorRepresentable",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "used to describe your chart and its data.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "chartDescriptor"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to provide information about your chart view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to allow VoiceOver and other assistive technology users to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "perceive and interact with your chart and its data.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This may be applied to any View that represents a chart,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "including Image and custom-rendered chart views.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "accessibilityChartDescriptor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier can be applied to -any-",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view representing a chart, the simplest case being just an image of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a chart. The implementation details of the view aren’t important,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "only the fact that it represents a chart, and that the provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "chart descriptor accurately describes the content of the chart.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Example usage:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "First define your ",
-              "type" : "text"
-            },
-            {
-              "code" : "AXChartDescriptorRepresentable",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " type.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct MyChartDescriptorRepresentable:",
-            "AXChartDescriptorRepresentable {",
-            "    func makeChartDescriptor() -> AXChartDescriptor {",
-            "        \/\/ Build and return your `AXChartDescriptor` here.",
-            "    }",
-            "",
-            "    func updateChartDescriptor(_ descriptor: AXChartDescriptor) {",
-            "        \/\/ Update your chart descriptor with any new values, or",
-            "        \/\/ don't override if your chart doesn't have changing",
-            "        \/\/ values.",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Then use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "accessibilityChartDescriptor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to provide an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "instance of your ",
-              "type" : "text"
-            },
-            {
-              "code" : "AXChartDescriptorRepresentable",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " type to the view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "representing your chart:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "SomeChartView()",
-            "    .accessibilityChartDescriptor(MyChartDescriptorRepresentable())"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -532,18 +306,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/accessibilityChartDescriptor(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds a descriptor to a View that represents a chart to make",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "the chart’s contents accessible to all users.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

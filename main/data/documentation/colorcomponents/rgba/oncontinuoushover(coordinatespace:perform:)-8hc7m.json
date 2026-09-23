@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the pointer enters, moves within, and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "exits the view’s bounds.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -130,6 +116,24 @@
         "introducedAt" : "16.0",
         "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "16.0",
+        "message" : "use overload that accepts a CoordinateSpaceProtocol instead",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -280,237 +284,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The coordinate space for the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "location values. Defaults to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "CoordinateSpace\/local",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "coordinateSpace"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform whenever the pointer enters,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "moves within, or exits the view’s bounds. The ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "action",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " closure",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "passes the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "HoverPhase\/active(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " phase with the pointer’s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "coordinates if the pointer is in the view’s bounds; otherwise, it",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "passes ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "HoverPhase\/ended",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that calls ",
-              "type" : "text"
-            },
-            {
-              "code" : "action",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the pointer enters,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "moves within, or exits the view’s bounds.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Call this method to define a region for detecting pointer movement with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the size and position of this view.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "The following example updates ",
-              "type" : "text"
-            },
-            {
-              "code" : "hoverLocation",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and ",
-              "type" : "text"
-            },
-            {
-              "code" : "isHovering",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "based on the phase provided to the closure:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var hoverLocation: CGPoint = .zero",
-            "@State private var isHovering = false",
-            "",
-            "var body: some View {",
-            "    VStack {",
-            "        Color.red",
-            "            .frame(width: 400, height: 400)",
-            "            .onContinuousHover { phase in",
-            "                switch phase {",
-            "                case .active(let location):",
-            "                    hoverLocation = location",
-            "                    isHovering = true",
-            "                case .ended:",
-            "                    isHovering = false",
-            "                }",
-            "            }",
-            "            .overlay {",
-            "                Rectangle()",
-            "                    .frame(width: 50, height: 50)",
-            "                    .foregroundColor(isHovering ? .green : .blue)",
-            "                    .offset(x: hoverLocation.x, y: hoverLocation.y)",
-            "            }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -585,18 +358,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/onContinuousHover(coordinateSpace:perform:)-8hc7m": {
   "abstract" : [
-    {
-      "text" : "Adds an action to perform when the pointer enters, moves within, and",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "exits the view’s bounds.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

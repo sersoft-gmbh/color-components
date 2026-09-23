@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Provides multiple item selection support for drag containers.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -123,8 +117,36 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -310,170 +332,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that provides identifiers of selected items.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "selection"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "An optional namespace of the drag container.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "containerNamespace"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A drag container finds the nearest enclosing ",
-              "type" : "text"
-            },
-            {
-              "code" : "dragContainerSelection(_:containerNamespace:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with the same item identifier type and same namespace, if specified.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Drag container uses the provided selected item identifiers to determine what",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the drag payload should be.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If the dragged view is associated with a selected identifier, the payload should contain",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "all the selected items. If the dragged view is not selected, the payload should",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "not contain the whole selection, just the dragged item.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "With ",
-              "type" : "text"
-            },
-            {
-              "code" : "dragContainerSelection(_:containerNamespace:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", you get fine-grained control",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "over what items are included in the drag payload.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "    struct FruitContainer: View {",
-            "         @State private var fruits: [Fruit]",
-            "         @State private var selection: [Fruit.ID]",
-            "",
-            "         var body: some View {",
-            "             VStack {",
-            "                 ForEach(fruits) { fruit in",
-            "                     FruitView(fruit)",
-            "                         .draggable(containerItemID: fruit.id)",
-            "                  }",
-            "              }",
-            "             .dragContainer(for: Fruit.self) { ids in",
-            "                 fruits(with: ids)",
-            "             }",
-            "             .dragContainerSelection(selection)",
-            "         }",
-            "",
-            "       func fruits(with ids: [Fruit.ID]) -> [Fruit] { ... }",
-            "",
-            "       struct Fruit: Transferable, Identifiable {",
-            "           let id: String",
-            "           ...",
-            "       }",
-            "",
-            "       struct FruitView: View {",
-            "           init(_ fruit: Fruit) { ... }",
-            "       }",
-            "   }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -548,10 +406,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/dragContainerSelection(_:containerNamespace:)": {
   "abstract" : [
-    {
-      "text" : "Provides multiple item selection support for drag containers.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds a condition that controls whether users can select this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -80,6 +74,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -115,6 +123,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -185,147 +201,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A Boolean value that determines whether users can",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "select this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isDisabled"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to control the selectability of views in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "selectable containers like ",
-              "type" : "text"
-            },
-            {
-              "code" : "List",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or ",
-              "type" : "text"
-            },
-            {
-              "code" : "Table",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". In the example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "below, the user can’t select the first item in the list.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@Binding var selection: Item.ID?",
-            "@Binding var items: [Item]",
-            "",
-            "var body: some View {",
-            "    List(selection: $selection) {",
-            "        ForEach(items) { item in",
-            "            ItemView(item: item)",
-            "                .selectionDisabled(item.id == items.first?.id)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use this modifier to specify the selectability of views",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". The following example represents a flavor picker",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that disables selection on flavors that are unavailable.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Picker(\"Flavor\", selection: $selectedFlavor) {",
-            "    ForEach(Flavor.allCases) { flavor in",
-            "        Text(flavor.rawValue.capitalized)",
-            "            .selectionDisabled(isSoldOut(flavor))",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -400,10 +275,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/selectionDisabled(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds a condition that controls whether users can select this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

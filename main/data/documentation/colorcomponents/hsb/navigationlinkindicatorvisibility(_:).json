@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures whether navigation links show a disclosure indicator.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -80,6 +74,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -130,6 +138,14 @@
               "kind" : "attribute",
               "preciseIdentifier" : "s:ScM",
               "text" : "MainActor"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
             },
             {
               "kind" : "text",
@@ -205,169 +221,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If you need to detect whether the navigation disclosure indicator",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "should be shown for the current view, read the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "EnvironmentValues\/navigationLinkIndicatorVisibility",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " environment value.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example hides the indicator for all links in the list.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "The indicator can be hidden for a specific link by placing the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "modifier on the ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationLink",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " itself.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct NoIndicatorLink: View {",
-            "    var body: some View {",
-            "        NavigationStack {",
-            "            List {",
-            "                NavigationLink(\"See detail\") {",
-            "                    Text(\"Detail view\")",
-            "                }",
-            "            }",
-            "            .navigationLinkIndicatorVisibility(.hidden)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Current releases support setting the indicator visibility",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".visible",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " regardless of whether the link is within a list.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "On operating systems prior to iOS 26 and aligned releases,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "setting the link indicator visibility to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".visible",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " is only",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "supported for navigation links contained in a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "List",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Important",
-          "style" : "important",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -442,10 +295,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/navigationLinkIndicatorVisibility(_:)": {
   "abstract" : [
-    {
-      "text" : "Configures whether navigation links show a disclosure indicator.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

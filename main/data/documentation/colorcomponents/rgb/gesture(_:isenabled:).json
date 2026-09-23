@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Attaches a gesture to the view with a lower precedence than gestures",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "defined by the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -112,6 +98,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "10.15",
         "name" : "macOS",
         "unavailable" : false
@@ -147,6 +147,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -266,215 +274,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A gesture to attach to the view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "gesture"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the added gesture is enabled.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isEnabled"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method when you need to attach a gesture to a view. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "example below defines a custom gesture that prints a message to the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "console and attaches it to the view’s ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". Inside the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a red heart ",
-              "type" : "text"
-            },
-            {
-              "code" : "Image",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " defines its own ",
-              "type" : "text"
-            },
-            {
-              "code" : "TapGesture",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "handler that also prints a message to the console, and blue rectangle",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with no custom gesture handlers. Tapping or clicking the image",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "prints a message to the console from the tap gesture handler on the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "image, while tapping or clicking  the rectangle inside the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "prints a message in the console from the enclosing vertical stack",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "gesture handler.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "isEnabled",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " parameter to conditionally disable",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the gesture.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct GestureExample: View {",
-            "    @State private var message = \"Message\"",
-            "    var isGestureEnabled: Bool",
-            "    let newGesture = TapGesture().onEnded {",
-            "        print(\"Tap on VStack.\")",
-            "    }",
-            "",
-            "    var body: some View {",
-            "        VStack(spacing:25) {",
-            "            Image(systemName: \"heart.fill\")",
-            "                .resizable()",
-            "                .frame(width: 75, height: 75)",
-            "                .padding()",
-            "                .foregroundColor(.red)",
-            "                .onTapGesture {",
-            "                    print(\"Tap on image.\")",
-            "                }",
-            "            Rectangle()",
-            "                .fill(Color.blue)",
-            "        }",
-            "        .gesture(newGesture, isEnabled: isGestureEnabled)",
-            "        .frame(width: 200, height: 200)",
-            "        .border(Color.purple)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -549,18 +348,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/gesture(_:isEnabled:)": {
   "abstract" : [
-    {
-      "text" : "Attaches a gesture to the view with a lower precedence than gestures",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "defined by the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

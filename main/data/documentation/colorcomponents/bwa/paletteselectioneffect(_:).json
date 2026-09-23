@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the selection effect to apply to a palette item.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -171,190 +179,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The type of effect to apply when a palette item is selected.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "effect"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "code" : "PaletteSelectionEffect\/automatic",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " applies the system’s default",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "appearance when selected. When using un-tinted SF Symbols or template",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "images, the current tint color is applied to the selected items’ image.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "If the provided SF Symbols have custom tints, a stroke is drawn around selected items.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If you wish to provide a specific image (or SF Symbol) to indicate",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "selection, use ",
-              "type" : "text"
-            },
-            {
-              "code" : "PaletteSelectionEffect\/custom",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to forgo the system’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "default selection appearance allowing the provided image to solely",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "indicate selection instead.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example creates a palette picker that disables the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "system selection behavior:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Menu {",
-            "    Picker(\"Palettes\", selection: $selection) {",
-            "        ForEach(palettes) { palette in",
-            "            Label(palette.title, image: selection == palette ?",
-            "                  \"selected-palette\" : \"palette\")",
-            "            .tint(palette.tint)",
-            "            .tag(palette)",
-            "        }",
-            "    }",
-            "    .pickerStyle(.palette)",
-            "    .paletteSelectionEffect(.custom)",
-            "} label: {",
-            "    ...",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If a specific SF Symbol variant is preferable instead, use",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "PaletteSelectionEffect\/symbolVariant(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Menu {",
-            "    ControlGroup {",
-            "        ForEach(ColorTags.allCases) { colorTag in",
-            "            Toggle(isOn: $selectedColorTags[colorTag]) {",
-            "                Label(colorTag.name, systemImage: \"circle\")",
-            "            }",
-            "            .tint(colorTag.color)",
-            "        }",
-            "    }",
-            "    .controlGroupStyle(.palette)",
-            "    .paletteSelectionEffect(.symbolVariant(.fill))",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -429,10 +253,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/paletteSelectionEffect(_:)": {
   "abstract" : [
-    {
-      "text" : "Specifies the selection effect to apply to a palette item.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

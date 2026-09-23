@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Positions this view within an invisible frame.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -83,6 +77,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "10.15",
         "name" : "macOS",
         "unavailable" : false
@@ -99,12 +107,6 @@
         "deprecated" : false,
         "introducedAt" : "6.0",
         "name" : "watchOS",
-        "unavailable" : false
-      },
-      {
-        "beta" : false,
-        "deprecated" : true,
-        "message" : "Please pass one or more parameters.",
         "unavailable" : false
       }
     ],
@@ -169,50 +171,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "SwiftUI\/View\/frame(width:height:alignment:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "SwiftUI\/View\/frame(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:alignment:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "instead.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -321,10 +279,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/frame()": {
   "abstract" : [
-    {
-      "text" : "Positions this view within an invisible frame.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

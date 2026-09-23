@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Controls the visibility of labels of any controls contained within this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -200,221 +200,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier when you want to omit a label from one or more",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "labeled content in your user interface. For example, the first ",
-              "type" : "text"
-            },
-            {
-              "code" : "Toggle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in the following example hides its label:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    Toggle(isOn: $toggle1) {",
-            "        Text(\"Toggle 1\")",
-            "    }",
-            "    .labelsVisibility(.hidden)",
-            "",
-            "    Toggle(isOn: $toggle2) {",
-            "        Text(\"Toggle 2\")",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " in the example above centers the first toggle’s control",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "element in the available space, while it centers the second toggle’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "combined label and control element:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Always provide a label for controls, even when you hide the label,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "because SwiftUI uses labels for other purposes, including accessibility.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "On iOS, a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Menu",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " hides its label by default. You can use",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "this modifier to explicitly show the label in that context:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Menu {",
-            "    Picker(\"Flavor\", selection: $selectedFlavor) {",
-            "        Text(\"Chocolate\").tag(Flavor.chocolate)",
-            "        Text(\"Vanilla\").tag(Flavor.vanilla)",
-            "        Text(\"Strawberry\").tag(Flavor.strawberry)",
-            "    }",
-            "    .labelsVisibility(.visible)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This modifier doesn’t work for all labels. It applies to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "LabeledContent",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " elements, including controls like ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Picker",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " and",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Toggle",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", but not to controls like a bordered button where the label",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "is inside the button’s border.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -489,18 +274,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/labelsVisibility(_:)": {
   "abstract" : [
-    {
-      "text" : "Controls the visibility of labels of any controls contained within this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

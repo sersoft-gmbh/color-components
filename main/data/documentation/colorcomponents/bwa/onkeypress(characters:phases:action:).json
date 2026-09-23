@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Performs an action if the user presses one or more keys on a hardware",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "keyboard while the view has focus.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -152,6 +138,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -316,165 +316,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The set of characters to match against incoming",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "hardware keyboard events.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "characters"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The key-press phases to match (",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".down",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".repeat",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", and",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".up",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : "). The default value is ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "[.down, .repeat]",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "phases"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The action to perform. The action receives a value",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "describing the matched key event. Return ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".handled",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to consume the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "event and prevent further dispatch, or ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".ignored",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to allow dispatch",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to continue.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A modified view that binds hardware keyboard input",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when focused.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -549,18 +390,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/onKeyPress(characters:phases:action:)": {
   "abstract" : [
-    {
-      "text" : "Performs an action if the user presses one or more keys on a hardware",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "keyboard while the view has focus.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

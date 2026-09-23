@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets a fixed tint color for content in a list.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,145 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The color to use to tint the content. Use ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "avoid overriding the inherited tint.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "tint"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The containing list’s style applies the tint as appropriate. For",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "example, watchOS uses the tint color for its background platter",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "appearance. Sidebars on iOS and macOS apply the tint color to their",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "Label",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " icons, which otherwise use the accent color by default.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "This modifier is equivalent to using the version of the modifier",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "that takes a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ListItemTint",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " value and specifying the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "tint",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " color in",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the corresponding ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "ListItemTint\/fixed(_:)",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " input.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -398,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/listItemTint(_:)-1qirm": {
   "abstract" : [
-    {
-      "text" : "Sets a fixed tint color for content in a list.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

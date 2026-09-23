@@ -1,8 +1,13 @@
 {
-  "abstract" : [
+  "deprecationSummary" : [
     {
-      "text" : "Overrides the device for a preview.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Use the device picker in Xcode's canvas.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
@@ -74,28 +79,62 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "13.0",
+        "message" : "Use the device picker in Xcode's canvas.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "13.0",
+        "message" : "Use the device picker in Xcode's canvas.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "13.0",
+        "message" : "Use the device picker in Xcode's canvas.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "10.15",
+        "message" : "Use the device picker in Xcode's canvas.",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "13.0",
+        "message" : "Use the device picker in Xcode's canvas.",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "message" : "Use the device picker in Xcode's canvas.",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "6.0",
+        "message" : "Use the device picker in Xcode's canvas.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -186,217 +225,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A device to use for preview, or ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to let Xcode",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "automatically choose a device based on the run destination.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A preview that uses the given device.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, Xcode automatically chooses a preview device based",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "on your currently selected run destination. If you want to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "choose a device that doesn’t change based on Xcode settings,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "provide a ",
-              "type" : "text"
-            },
-            {
-              "code" : "PreviewDevice",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " instance that you initialize with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the name or model of a specific device:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct CircleImage_Previews: PreviewProvider {",
-            "    static var previews: some View {",
-            "        CircleImage()",
-            "            .previewDevice(PreviewDevice(rawValue: \"iPad Pro (11-inch)\"))",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can get a list of supported preview device names, like “iPhone 11”,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "“iPad Pro (11-inch)”, and “Apple Watch Series 5 - 44mm”, by using the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "xcrun",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " command in the Terminal app:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "% xcrun simctl list devicetypes"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Additionally, you can use the following values for macOS platform",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "development:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "“Mac”",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "“Mac Catalyst”",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -505,11 +333,9 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/previewDevice(_:)": {
   "abstract" : [
-    {
-      "text" : "Overrides the device for a preview.",
-      "type" : "text"
-    }
+
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

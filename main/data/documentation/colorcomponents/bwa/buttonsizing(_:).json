@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The preferred sizing behavior of buttons in the view hierarchy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -192,214 +200,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A button sizing behavior that may be used to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "influence the primary axis size of buttons capable of adapting to it.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "sizing"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Views may use the specified button sizing when determining the size they",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "choose to be in their primary axis within their parent view’s proposed",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "size.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Many built-in controls that display as a button adapt to this view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "modifier. For example, you can make certain styles of ",
-              "type" : "text"
-            },
-            {
-              "code" : "Button",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ",",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", ",
-              "type" : "text"
-            },
-            {
-              "code" : "ControlGroup",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", and ",
-              "type" : "text"
-            },
-            {
-              "code" : "Toggle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " flexible by applying",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "this modifier to them or their container.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This example creates a button that spans the width of its container,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "which you may want to do if the button is placed in a narrow context,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "like the sidebar of a welcome window.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Button(\"Open Document…\", action: openDocument)",
-            "    .buttonSizing(.flexible)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Your own views and styles can adapt to this view modifier by reading the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "EnvironmentValues\/buttonSizing",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " environment value and applying an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "appropriate frame.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct CustomButtonStyle: ButtonStyle {",
-            "    @Environment(\\.buttonSizing) private var buttonSizing",
-            "",
-            "    private var maxWidth: CGFloat {",
-            "        switch buttonSizing {",
-            "        case .flexible: .infinity",
-            "        case .fitted, _: nil",
-            "        }",
-            "    }",
-            "",
-            "    func makeBody(configuration: Configuration) -> some View {",
-            "        configuration.content",
-            "            .frame(maxWidth: maxWidth)",
-            "            .background(.tint, in: Capsule())",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -474,10 +274,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/buttonSizing(_:)": {
   "abstract" : [
-    {
-      "text" : "The preferred sizing behavior of buttons in the view hierarchy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

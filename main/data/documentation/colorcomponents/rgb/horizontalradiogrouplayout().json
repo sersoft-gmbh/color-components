@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the style for radio group style pickers within this view to be",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "horizontally positioned with the radio buttons inside the layout.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -138,144 +124,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "horizontalRadioGroupLayout()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to configure the visual layout of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "radio buttons in a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " so that the radio buttons are arranged",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "horizontally in the view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below shows two ",
-              "type" : "text"
-            },
-            {
-              "code" : "Picker",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " controls configured as radio",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button groups; the first group shows the default vertical layout; the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "second group shows the effect of ",
-              "type" : "text"
-            },
-            {
-              "code" : "horizontalRadioGroupLayout()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " which",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "renders the radio buttons horizontally.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct HorizontalRadioGroupLayout: View {",
-            "    @State private var selected = 1",
-            "    var body: some View {",
-            "        VStack(spacing: 20) {",
-            "            Picker(selection: $selected, label: Text(\"Favorite Color\")) {",
-            "                Text(\"Red\").tag(1)",
-            "                Text(\"Green\").tag(2)",
-            "                Text(\"Blue\").tag(3)",
-            "                Text(\"Other\").tag(4)",
-            "            }",
-            "            .pickerStyle(.radioGroup)",
-            "",
-            "            Picker(selection: $selected, label: Text(\"Favorite Color\")) {",
-            "                Text(\"Red\").tag(1)",
-            "                Text(\"Green\").tag(2)",
-            "                Text(\"Blue\").tag(3)",
-            "                Text(\"Other\").tag(4)",
-            "            }",
-            "            .pickerStyle(.radioGroup)",
-            "            .horizontalRadioGroupLayout()",
-            "        }",
-            "        .padding(20)",
-            "        .border(Color.gray)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -350,18 +198,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/horizontalRadioGroupLayout()": {
   "abstract" : [
-    {
-      "text" : "Sets the style for radio group style pickers within this view to be",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "horizontally positioned with the radio buttons inside the layout.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

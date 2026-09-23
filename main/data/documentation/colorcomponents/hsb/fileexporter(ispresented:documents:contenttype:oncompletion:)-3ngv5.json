@@ -1,16 +1,13 @@
 {
-  "abstract" : [
+  "deprecationSummary" : [
     {
-      "text" : "Presents a system interface for exporting a collection of value type",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "documents to files on disk.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Conform your document type to WritableDocument or Transferable instead.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
@@ -183,15 +180,46 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "14.0",
+        "message" : "Conform your document type to WritableDocument or Transferable instead.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "14.0",
+        "message" : "Conform your document type to WritableDocument or Transferable instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "14.0",
+        "message" : "Conform your document type to WritableDocument or Transferable instead.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "11.0",
+        "message" : "Conform your document type to WritableDocument or Transferable instead.",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "1.0",
+        "message" : "Conform your document type to WritableDocument or Transferable instead.",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -426,254 +454,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to whether the interface should be shown.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresented"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The collection of in-memory documents to export.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "documents"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The content type to use for the exported file.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "contentType"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A callback that will be invoked when the operation has",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "has succeeded or failed.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onCompletion"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Result",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " indicating whether the operation succeeded or",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "failed.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "result"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In order for the interface to appear, both ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " must be ",
-              "type" : "text"
-            },
-            {
-              "code" : "true",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and ",
-              "type" : "text"
-            },
-            {
-              "code" : "documents",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " must not be empty. When the operation is finished,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " before ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is called. If",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the user cancels the operation, ",
-              "type" : "text"
-            },
-            {
-              "code" : "isPresented",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will be set to ",
-              "type" : "text"
-            },
-            {
-              "code" : "false",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "onCompletion",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will not be called.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "contentType",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " provided must be included within the document type’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "writableContentTypes",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", otherwise the first valid writable content type",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "will be used instead.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -748,19 +528,9 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/fileExporter(isPresented:documents:contentType:onCompletion:)-3ngv5": {
   "abstract" : [
-    {
-      "text" : "Presents a system interface for exporting a collection of value type",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "documents to files on disk.",
-      "type" : "text"
-    }
+
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

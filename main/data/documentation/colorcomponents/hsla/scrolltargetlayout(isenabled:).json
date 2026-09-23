@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the outermost layout as a scroll target layout.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,179 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This modifier works together with the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ViewAlignedScrollTargetBehavior",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to ensure that scroll views align",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to view based content.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Apply this modifier to layout containers like ",
-              "type" : "text"
-            },
-            {
-              "code" : "LazyHStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " that contain the main repeating",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "content of your ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ScrollView(.horizontal) {",
-            "    LazyHStack(spacing: 10.0) {",
-            "        ForEach(items) { item in",
-            "            ItemView(item)",
-            "        }",
-            "    }",
-            "    .scrollTargetLayout()",
-            "}",
-            ".scrollTargetBehavior(.viewAligned)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Scroll target layouts act as a convenience for applying a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/scrollTarget(isEnabled:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to each views in",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the layout.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A scroll target layout will ensure that any target layout",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "nested within the primary one will not also become a scroll",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "target layout.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "LazyHStack { \/\/ a scroll target layout",
-            "    VStack { ... } \/\/ not a scroll target layout",
-            "    LazyHStack { ... } \/\/ also not a scroll target layout",
-            "}",
-            ".scrollTargetLayout()"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -432,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/scrollTargetLayout(isEnabled:)": {
   "abstract" : [
-    {
-      "text" : "Configures the outermost layout as a scroll target layout.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the tab bar item associated with this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -101,6 +95,24 @@
         "beta" : false,
         "deprecated" : false,
         "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
         "introducedAt" : "10.15",
         "message" : "Use `Tab(title:image:value:content:)` and related initializers instead",
         "name" : "macOS",
@@ -179,8 +191,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -256,112 +268,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The tab bar item to associate with this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "label"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "tabItem(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to configure a view as a tab bar item in a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". The example below adds two views as tabs in a ",
-              "type" : "text"
-            },
-            {
-              "code" : "TabView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct View1: View {",
-            "    var body: some View {",
-            "        Text(\"View 1\")",
-            "    }",
-            "}",
-            "",
-            "struct View2: View {",
-            "    var body: some View {",
-            "        Text(\"View 2\")",
-            "    }",
-            "}",
-            "",
-            "struct TabItem: View {",
-            "    var body: some View {",
-            "        TabView {",
-            "            View1()",
-            "                .tabItem {",
-            "                    Label(\"Menu\", systemImage: \"list.dash\")",
-            "                }",
-            "",
-            "            View2()",
-            "                .tabItem {",
-            "                    Label(\"Order\", systemImage: \"square.and.pencil\")",
-            "                }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -436,10 +342,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/tabItem(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the tab bar item associated with this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

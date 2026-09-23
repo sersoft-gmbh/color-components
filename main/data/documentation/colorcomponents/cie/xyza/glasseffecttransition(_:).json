@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates a glass effect transition with any",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "glass effects defined within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -84,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -207,115 +207,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You use this modifier with the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/glassEffect(_:in:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view modifier and ",
-              "type" : "text"
-            },
-            {
-              "code" : "GlassEffectContainer",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. When used together,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "SwiftUI will use the provided transition to apply changes to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the glass effect when you add or remove views with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "these effects from the view hierarchy.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, the notepad image will transition into and out",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the pencil image when the isExpanded variable changes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var isExpanded: Bool",
-            "@Namespace private var namespace",
-            "",
-            "var body: some View {",
-            "    GlassEffectContainer(spacing: 10.0) {",
-            "        HStack(spacing: 10.0) {",
-            "            Image(systemName: \"pencil\")",
-            "                .frame(width: 20.0, height: 20.0)",
-            "                .glassEffect()",
-            "                .glassEffectID(\"pencil\", in: namespace)",
-            "",
-            "                if isExpanded {",
-            "                    Image(systemName: \"note\")",
-            "                        .frame(width: 20.0, height: 20.0)",
-            "                        .glassEffect()",
-            "                        .glassEffectID(\"note\", in: namespace)",
-            "                        .glassEffectTransition(.matchedGeometry)",
-            "                }",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -424,18 +315,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/glassEffectTransition(_:)": {
   "abstract" : [
-    {
-      "text" : "Associates a glass effect transition with any",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "glass effects defined within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

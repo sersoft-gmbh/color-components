@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents a sheet using the given item as a data source",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "for the sheet’s content.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -161,6 +147,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "10.15",
         "name" : "macOS",
         "unavailable" : false
@@ -284,8 +284,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -386,362 +386,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to an optional source of truth for the sheet.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "When ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "item",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " is non-",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ", the system passes the item’s content to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the modifier’s closure. You display this content in a sheet that you",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "create that the system displays to the user. If ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "item",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " changes,",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the system dismisses the sheet and replaces it with a new one",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "using the same process.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "item"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The closure to execute when dismissing the sheet.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onDismiss"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure returning the content of the sheet.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "content"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method when you need to present a modal view with content",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "from a custom data source. The example below shows a custom data source",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "InventoryItem",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " that the ",
-              "type" : "text"
-            },
-            {
-              "code" : "content",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure uses to populate the display",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the action sheet shows to the user:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ShowPartDetail: View {",
-            "    @State private var sheetDetail: InventoryItem?",
-            "",
-            "    var body: some View {",
-            "        Button(\"Show Part Details\") {",
-            "            sheetDetail = InventoryItem(",
-            "                id: \"0123456789\",",
-            "                partNumber: \"Z-1234A\",",
-            "                quantity: 100,",
-            "                name: \"Widget\")",
-            "        }",
-            "        .sheet(item: $sheetDetail,",
-            "               onDismiss: didDismiss) { detail in",
-            "            VStack(alignment: .leading, spacing: 20) {",
-            "                Text(\"Part Number: \\(detail.partNumber)\")",
-            "                Text(\"Name: \\(detail.name)\")",
-            "                Text(\"Quantity On-Hand: \\(detail.quantity)\")",
-            "            }",
-            "            .onTapGesture {",
-            "                sheetDetail = nil",
-            "            }",
-            "        }",
-            "    }",
-            "",
-            "    func didDismiss() {",
-            "        \/\/ Handle the dismissing action.",
-            "    }",
-            "}",
-            "",
-            "struct InventoryItem: Identifiable {",
-            "    var id: String",
-            "    let partNumber: String",
-            "    let quantity: Int",
-            "    let name: String",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In vertically compact environments, such as iPhone in landscape",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "orientation, a sheet presentation automatically adapts to appear as a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "full-screen cover. Use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/presentationCompactAdaptation(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/presentationCompactAdaptation(horizontal:vertical:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "override this behavior.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "anchor" : "Breakthrough-effect",
-          "level" : 3,
-          "text" : "Breakthrough effect",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In visionOS, most system presentations appear with a breakthrough effect by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "default. To change how the enclosing presentation breaks through",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "content occluding it, use ",
-              "type" : "text"
-            },
-            {
-              "code" : "presentationBreakthroughEffect(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ",",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "like in the following example:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            ".sheet(item: $sheetDetail,",
-            "       onDismiss: didDismiss) { detail in",
-            "    VStack(alignment: .leading, spacing: 20) {",
-            "        Text(\"Part Number: \\(detail.partNumber)\")",
-            "        Text(\"Name: \\(detail.name)\")",
-            "        Text(\"Quantity On-Hand: \\(detail.quantity)\")",
-            "    }",
-            "    .presentationBreakthroughEffect(.prominent)",
-            "    .onTapGesture {",
-            "        sheetDetail = nil",
-            "    }",
-            "}"
-          ],
-          "syntax" : "swift",
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Passing a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".none",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " value for a sheet has no effect.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -816,18 +460,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/sheet(item:onDismiss:content:)": {
   "abstract" : [
-    {
-      "text" : "Presents a sheet using the given item as a data source",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "for the sheet’s content.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

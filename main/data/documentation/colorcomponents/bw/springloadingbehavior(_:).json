@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the spring loading behavior this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -75,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -185,184 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether spring loading is enabled or not. If",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "unspecified, the default behavior is ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".automatic.",
-                  "type" : "codeVoice"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "behavior"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Spring loading refers to a view being activated during a drag and drop",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "interaction. On iOS this can occur when pausing briefly on top of a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view with dragged content. On macOS this can occur with similar brief",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "pauses or on pressure-sensitive systems by “force clicking” during the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drag. This has no effect on tvOS or watchOS.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This is commonly used with views that have a navigation or presentation",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "effect, allowing the destination to be revealed without pausing the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "drag interaction. For example, a button that reveals a list of folders",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "that a dragged item can be dropped onto.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Button {",
-            "    showFolders = true",
-            "} label: {",
-            "    Label(\"Show Folders\", systemImage: \"folder\")",
-            "}",
-            ".springLoadingBehavior(.enabled)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Unlike ",
-              "type" : "text"
-            },
-            {
-              "code" : "disabled(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", this modifier overrides the value set by an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "ancestor view rather than being unioned with it. For example, the below",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button would allow spring loading:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "HStack {",
-            "    Button {",
-            "        showFolders = true",
-            "    } label: {",
-            "        Label(\"Show Folders\", systemImage: \"folder\")",
-            "    }",
-            "    .springLoadingBehavior(.enabled)",
-            "",
-            "    ...",
-            "}",
-            ".springLoadingBehavior(.disabled)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -437,10 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/springLoadingBehavior(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the spring loading behavior this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

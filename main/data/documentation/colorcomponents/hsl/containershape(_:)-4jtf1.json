@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the container shape to use for any container relative shape or",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "concentric rectangle within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -91,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -216,126 +216,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below defines a view that shows its content with a rounded",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "rectangle background and the same container shape. Any",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContainerRelativeShape",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " within the ",
-              "type" : "text"
-            },
-            {
-              "code" : "content",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " matches the rounded",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "rectangle shape from this container inset as appropriate. Any",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "ConcentricRectangle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " within the ",
-              "type" : "text"
-            },
-            {
-              "code" : "content",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " will match the corners to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "be concentric to the container corners.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct PlatterContainer<Content: View> : View {",
-            "    @ViewBuilder var content: Content",
-            "    var body: some View {",
-            "        content",
-            "            .padding()",
-            "            .containerShape(shape)",
-            "            .background(shape.fill(.background))",
-            "    }",
-            "    var shape: RoundedRectangle { RoundedRectangle(cornerRadius: 20) }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "",
-                  "type" : "text"
-                },
-                {
-                  "code" : "View\/containerShape(_:)-(T)",
-                  "type" : "codeVoice"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "See Also",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -410,18 +290,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/containerShape(_:)-4jtf1": {
   "abstract" : [
-    {
-      "text" : "Sets the container shape to use for any container relative shape or",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "concentric rectangle within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the thumb visibility for ",
-      "type" : "text"
-    },
-    {
-      "code" : "Slider",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "s within this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -84,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -194,102 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The slider thumb visibility to apply.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to override the default slider thumb",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "visibility. For example, the code below creates a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Slider",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " without an",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "indicator:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@State private var speed = 50.0",
-            "@State private var isEditing = false",
-            "",
-            "var body: some View {",
-            "    VStack {",
-            "        Slider(",
-            "            value: $speed,",
-            "            in: 0...100,",
-            "            onEditingChanged: { editing in",
-            "                isEditing = editing",
-            "            }",
-            "        )",
-            "        .sliderThumbVisibility(.hidden)",
-            "",
-            "        Text(\"\\(speed)\")",
-            "            .foregroundColor(isEditing ? .red : .blue)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Note: On watchOS, the slider thumb is always visible.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -398,18 +302,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/sliderThumbVisibility(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the thumb visibility for ",
-      "type" : "text"
-    },
-    {
-      "code" : "Slider",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : "s within this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

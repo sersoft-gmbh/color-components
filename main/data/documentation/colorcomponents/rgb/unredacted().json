@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Removes any reason to apply a redaction to this view hierarchy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -66,6 +60,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -225,10 +233,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/unredacted()": {
   "abstract" : [
-    {
-      "text" : "Removes any reason to apply a redaction to this view hierarchy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

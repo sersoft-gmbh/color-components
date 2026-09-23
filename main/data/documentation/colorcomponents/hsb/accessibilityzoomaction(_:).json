@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an accessibility zoom action to the view. Actions allow",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "assistive technologies, such as VoiceOver, to interact with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view by invoking the action.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -113,6 +91,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -249,62 +241,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, this is how a zoom action is used to transform the scale",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of a shape which has a ",
-              "type" : "text"
-            },
-            {
-              "code" : "MagnificationGesture",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    Circle()",
-            "        .scaleEffect(magnifyBy)",
-            "        .gesture(magnification)",
-            "        .accessibilityLabel(\"Circle Magnifier\")",
-            "        .accessibilityZoomAction { action in",
-            "            switch action.direction {",
-            "            case .zoomIn:",
-            "                magnifyBy += 0.5",
-            "            case .zoomOut:",
-            "                 magnifyBy -= 0.5",
-            "            }",
-            "        }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -379,26 +315,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/accessibilityZoomAction(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds an accessibility zoom action to the view. Actions allow",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "assistive technologies, such as VoiceOver, to interact with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view by invoking the action.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the container background of the enclosing container using a view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -100,6 +94,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -267,154 +275,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example uses a ",
-              "type" : "text"
-            },
-            {
-              "code" : "LinearGradient",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " as a background:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    var body: some View {",
-            "        NavigationStack {",
-            "            List {",
-            "                NavigationLink(\"Blue\") {",
-            "                    Text(\"Blue\")",
-            "                    .containerBackground(.blue.gradient, for: .navigation)",
-            "                }",
-            "                NavigationLink(\"Red\") {",
-            "                    Text(\"Red\")",
-            "                    .containerBackground(.red.gradient, for: .navigation)",
-            "                }",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : ".containerBackground(_:for:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier differs from the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/background(_:ignoresSafeAreaEdges:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier by automatically",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "filling an entire parent container. ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContainerBackgroundPlacement",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "describes the available containers.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "Parameters",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                },
-                {
-                  "items" : [
-                    {
-                      "content" : [
-                        {
-                          "inlineContent" : [
-                            {
-                              "text" : "style: The shape style to use as the container background.",
-                              "type" : "text"
-                            }
-                          ],
-                          "type" : "paragraph"
-                        }
-                      ]
-                    },
-                    {
-                      "content" : [
-                        {
-                          "inlineContent" : [
-                            {
-                              "text" : "container: The container that will use the background.",
-                              "type" : "text"
-                            }
-                          ],
-                          "type" : "paragraph"
-                        }
-                      ]
-                    }
-                  ],
-                  "type" : "unorderedList"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -523,10 +383,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/containerBackground(_:for:)": {
   "abstract" : [
-    {
-      "text" : "Sets the container background of the enclosing container using a view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

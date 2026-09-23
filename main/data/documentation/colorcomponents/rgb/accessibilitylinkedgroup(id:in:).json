@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Links multiple accessibility elements so that the user can quickly",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "navigate from one element to another, even when the elements are not near",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "each other in the accessibility hierarchy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -132,6 +110,20 @@
         "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "14.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -300,151 +292,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A hashable identifier used to separate sets of linked elements",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "within the same namespace. Elements with matching ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "namespace",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " and ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "id",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "will be linked together.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "id"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The namespace to use to organize linked accessibility",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "elements. All elements marked with ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "accessibilityLink",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " in this",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "namespace and with the specified ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "id",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " will be linked together.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "namespace"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This can be useful to allow quickly jumping between content in a list and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the same content shown in a detail view, for example. All elements marked",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with ",
-              "type" : "text"
-            },
-            {
-              "code" : "accessibilityLinkedGroup",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with the same namespace and identifier will be",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "linked together.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -519,26 +366,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/accessibilityLinkedGroup(id:in:)": {
   "abstract" : [
-    {
-      "text" : "Links multiple accessibility elements so that the user can quickly",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "navigate from one element to another, even when the elements are not near",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "each other in the accessibility hierarchy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

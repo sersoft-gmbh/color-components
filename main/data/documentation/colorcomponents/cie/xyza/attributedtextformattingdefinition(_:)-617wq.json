@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Apply a text formatting definition to nested views.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -232,228 +240,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Applying a text formatting definition to a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextEditor",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "created using the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text\/init(_:)-(AttributedString)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "TextEditor\/init(text:selection:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " initializer, respectively, makes",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "sure that any content observable to the user adheres to the constraints",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the formatting definition.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can compose your own definition from an attribute scope and a series",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of ",
-              "type" : "text"
-            },
-            {
-              "code" : "AttributedTextValueConstraint",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : "s:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "\/\/ MyTextFormattingDefinition.swift",
-            "",
-            "struct MyTextFormattingDefinition: AttributedTextFormattingDefinition {",
-            "    var body: some AttributedTextFormattingDefinition<",
-            "        AttributeScopes.SwiftUIAttributes",
-            "    > {",
-            "        ValueConstraint(",
-            "            for: \\.underlineStyle,",
-            "            values: [nil, .single],",
-            "            default: .single)",
-            "        MyAttributedTextValueConstraint()",
-            "    }",
-            "}",
-            "",
-            "\/\/ MyEditorView.swift",
-            "",
-            "TextEditor(text: $text)",
-            "    .attributedTextFormattingDefinition(MyTextFormattingDefinition())"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Binding",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to the text of a view with an",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "AttributedTextFormattingDefinition",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " may still contain values that do",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "not adhere to text formatting definition. E.g., a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "TextEditor",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " may",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "choose to not apply constraints in the text formatting definition to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "parts of a bound attributed string that are not visible on screen.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "To manually enforce constraints, e.g. before serializing text contents,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "AttributedTextFormattingDefinition\/constrain(_:)-(AttributedString)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "method.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -562,10 +348,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/attributedTextFormattingDefinition(_:)-617wq": {
   "abstract" : [
-    {
-      "text" : "Apply a text formatting definition to nested views.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

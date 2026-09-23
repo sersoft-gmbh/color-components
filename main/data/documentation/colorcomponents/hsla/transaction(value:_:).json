@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies the given transaction mutation function to all animations used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "within the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -130,6 +116,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -165,6 +165,14 @@
             "macOS"
           ],
           "tokens" : [
+            {
+              "kind" : "attribute",
+              "text" : "@export(implementation)"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
             {
               "kind" : "attribute",
               "text" : "nonisolated"
@@ -285,289 +293,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value to monitor for changes.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The transformation to apply to transactions",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "within this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "transform"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that wraps this view and applies a transformation to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "all transactions used within the view whenever ",
-              "type" : "text"
-            },
-            {
-              "code" : "value",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " changes.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to change or replace the animation used in a view.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Consider three identical views controlled by a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button that changes all three simultaneously:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "items" : [
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "The first view animates rotating the “Rotation” ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "Text",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " view by 360",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "degrees.",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "The second uses the ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "transaction(_:)",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " modifier to change the",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "animation by adding a delay to the start of the animation",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "by two seconds and then increases the rotational speed of the",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "“Rotation\\nModified” ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "Text",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " view animation by a factor of 2.",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            },
-            {
-              "content" : [
-                {
-                  "inlineContent" : [
-                    {
-                      "text" : "The third uses the ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "transaction(_:)",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " modifier to disable animations",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : " ",
-                      "type" : "text"
-                    },
-                    {
-                      "text" : "affecting the “Animation\\nReplaced” ",
-                      "type" : "text"
-                    },
-                    {
-                      "code" : "Text",
-                      "type" : "codeVoice"
-                    },
-                    {
-                      "text" : " view.",
-                      "type" : "text"
-                    }
-                  ],
-                  "type" : "paragraph"
-                }
-              ]
-            }
-          ],
-          "type" : "unorderedList"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following code implements these animations:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct TransactionExample: View {",
-            "    @State var flag = false",
-            "",
-            "    var body: some View {",
-            "        VStack(spacing: 50) {",
-            "            HStack(spacing: 30) {",
-            "                Text(\"Rotation\")",
-            "                    .rotationEffect(Angle(degrees: flag ? 360 : 0))",
-            "",
-            "                Text(\"Rotation\\nModified\")",
-            "                    .rotationEffect(Angle(degrees: flag ? 360 : 0))",
-            "                    .transaction(value: flag) { t in",
-            "                        t.animation =",
-            "                            t.animation?.delay(2.0).speed(2)",
-            "                    }",
-            "",
-            "                Text(\"Animation\\nReplaced\")",
-            "                    .rotationEffect(Angle(degrees: flag ? 360 : 0))",
-            "                    .transaction(value: flag) { t in",
-            "                        t.disableAnimations = true",
-            "                    }",
-            "            }",
-            "",
-            "            Button(\"Animate\") {",
-            "                withAnimation(.easeIn(duration: 2.0)) {",
-            "                    flag.toggle()",
-            "                }",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -642,18 +367,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/transaction(value:_:)": {
   "abstract" : [
-    {
-      "text" : "Applies the given transaction mutation function to all animations used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "within the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

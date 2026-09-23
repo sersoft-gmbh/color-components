@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an accessibility adjustable action to the view. Actions allow",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "assistive technologies, such as the VoiceOver, to interact with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view by invoking the action.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -113,6 +91,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -249,51 +241,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, this is how an adjustable action to navigate",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "through pages could be added to a view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    PageControl()",
-            "        .accessibilityAdjustableAction { direction in",
-            "            switch direction {",
-            "            case .increment:",
-            "                \/\/ Go to next page",
-            "            case .decrement:",
-            "                \/\/ Go to previous page",
-            "            }",
-            "        }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -368,26 +315,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/accessibilityAdjustableAction(_:)": {
   "abstract" : [
-    {
-      "text" : "Adds an accessibility adjustable action to the view. Actions allow",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "assistive technologies, such as the VoiceOver, to interact with the",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view by invoking the action.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

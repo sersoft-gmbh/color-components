@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Overrides whether lists and tables in this view have alternating row",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "backgrounds.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -173,150 +159,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether alternating row backgrounds are enabled",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "or not.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "behavior"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This can be used in conjunction with an explicit list or table style",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "or used by itself to customize the row backgrounds of the automatic",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "style. The only list style this has no effect on is ",
-              "type" : "text"
-            },
-            {
-              "code" : ".sidebar.",
-              "type" : "codeVoice"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "List(recipe.ingredients) {",
-            "    Text($0.name)",
-            "}",
-            ".listStyle(.bordered)",
-            ".alternatingRowBackgrounds()"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This is able to be combined with ",
-              "type" : "text"
-            },
-            {
-              "code" : "scrollContentBackground(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "applies an alternating row background on top of the overall",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "list or table background.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This can also be combined with ",
-              "type" : "text"
-            },
-            {
-              "code" : "listRowBackground",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", which overrides",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the background for a specific list row, replacing the automatic",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "alternating background for that row.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -425,18 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/alternatingRowBackgrounds(_:)": {
   "abstract" : [
-    {
-      "text" : "Overrides whether lists and tables in this view have alternating row",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "backgrounds.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

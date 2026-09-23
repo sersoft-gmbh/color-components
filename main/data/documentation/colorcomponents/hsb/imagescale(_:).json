@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Scales images within the view according to one of the relative sizes",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "available including small, medium, and large images sizes.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -92,6 +78,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -211,99 +211,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "One of the relative sizes provided by the image scale",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "enumeration.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "scale"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The example below shows the relative scaling effect. The system renders",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the image at a relative size based on the available space and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "configuration options of the image it is scaling.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    HStack {",
-            "        Image(systemName: \"heart.fill\")",
-            "            .imageScale(.small)",
-            "        Text(\"Small\")",
-            "    }",
-            "    HStack {",
-            "        Image(systemName: \"heart.fill\")",
-            "            .imageScale(.medium)",
-            "        Text(\"Medium\")",
-            "    }",
-            "",
-            "    HStack {",
-            "        Image(systemName: \"heart.fill\")",
-            "            .imageScale(.large)",
-            "        Text(\"Large\")",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -378,18 +285,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSB/imageScale(_:)": {
   "abstract" : [
-    {
-      "text" : "Scales images within the view according to one of the relative sizes",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "available including small, medium, and large images sizes.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

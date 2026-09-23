@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Create an Accessibility Rotor with the specified user-visible label,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and entries generated from the content closure.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -107,6 +93,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -210,8 +210,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI32AccessibilityRotorContentBuilderV",
-              "text" : "AccessibilityRotorContentBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -287,142 +287,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Localized label identifying this Rotor to the user.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "labelKey"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Content used to generate Rotor entries. This can",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "include AccessibilityRotorEntry structs, as well as constructs such",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "as if and ForEach.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "entries"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "An Accessibility Rotor is a shortcut for Accessibility users to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "quickly navigate to specific elements of the user interface,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and optionally specific ranges of text within those elements.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the following example, a Message application creates a Rotor",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "allowing users to navigate to specifically the messages originating from",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "VIPs.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "\/\/ `messages` is a list of `Identifiable` `Message`s.",
-            "",
-            "ScrollView {",
-            "    LazyVStack {",
-            "        ForEach(messages) { message in",
-            "            MessageView(message)",
-            "        }",
-            "    }",
-            "}",
-            ".accessibilityElement(children: .contain)",
-            ".accessibilityRotor(\"VIPs\") {",
-            "    \/\/ Not all the MessageViews are generated at once, the model",
-            "    \/\/ knows about all the messages.",
-            "    ForEach(messages) { message in",
-            "        \/\/ If the Message is from a VIP, make a Rotor entry for it.",
-            "        if message.isVIP {",
-            "            AccessibilityRotorEntry(message.subject, id: message.id)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -497,18 +361,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/accessibilityRotor(_:entries:)-4mc0u": {
   "abstract" : [
-    {
-      "text" : "Create an Accessibility Rotor with the specified user-visible label,",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and entries generated from the content closure.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates a fully formed string with the value of this view when used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a text input suggestion",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -172,84 +158,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A string to use as the view’s completion.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "text"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to associate a fully formed string with a view that is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a text input suggestion list context. The system uses this value",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when the view is selected to replace the partial text being currently",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "edited of the associated text field.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "TextField(\"Location\", text: $addressText)",
-            "    .textInputSuggestions(isEnabled: true) {",
-            "        Text(\"The Fillmore\")",
-            "            .textInputCompletion(\"1805 Geary Blvd, San Francisco\")",
-            "        Text(\"The Catalyst\")",
-            "            .textInputCompletion(\"1011 Pacific Ave, Santa Cruz\")",
-            "        Text(\"Rio Theatre\")",
-            "            .textInputCompletion(\"1205 Soquel Ave, Santa Cruz\")",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -324,18 +232,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/textInputCompletion(_:)": {
   "abstract" : [
-    {
-      "text" : "Associates a fully formed string with the value of this view when used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a text input suggestion",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

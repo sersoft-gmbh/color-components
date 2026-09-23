@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Controls whether people can interact with the view behind a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "presentation.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +69,20 @@
         "deprecated" : false,
         "introducedAt" : "16.4",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -193,124 +193,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A specification of how people can interact with the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "view behind a presentation.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "interaction"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "On many platforms, SwiftUI automatically disables the view behind a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "sheet that you present, so that people can’t interact with the backing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "view until they dismiss the sheet. Use this modifier if you want to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "enable interaction.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example enables people to interact with the view behind",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the sheet when the sheet is at the smallest detent, but not at the other",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "detents:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State private var showSettings = false",
-            "",
-            "    var body: some View {",
-            "        Button(\"View Settings\") {",
-            "            showSettings = true",
-            "        }",
-            "        .sheet(isPresented: $showSettings) {",
-            "            SettingsView()",
-            "                .presentationDetents(",
-            "                    [.height(120), .medium, .large])",
-            "                .presentationBackgroundInteraction(",
-            "                    .enabled(upThrough: .height(120)))",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -385,18 +267,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/presentationBackgroundInteraction(_:)": {
   "abstract" : [
-    {
-      "text" : "Controls whether people can interact with the view behind a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "presentation.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

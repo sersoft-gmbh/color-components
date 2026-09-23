@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the view’s horizontal alignment.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -101,6 +95,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -211,8 +219,12 @@
               "text" : "@escaping "
             },
             {
+              "kind" : "attribute",
+              "text" : "@Sendable"
+            },
+            {
               "kind" : "text",
-              "text" : "("
+              "text" : " ("
             },
             {
               "kind" : "typeIdentifier",
@@ -253,218 +265,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "HorizontalAlignment",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " value at which to base the offset.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "g"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that returns the offset value to apply to",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "this view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "computeValue"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view modified with respect to its horizontal alignment",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "according to the computation performed in the method’s closure.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "alignmentGuide(_:computeValue:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to calculate specific offsets",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to reposition views in relationship to one another. You can return a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "constant or can use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ViewDimensions",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " argument to the closure to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "calculate a return value.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, the ",
-              "type" : "text"
-            },
-            {
-              "code" : "HStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is offset by a constant of 50",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "points to the right of center:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    Text(\"Today's Weather\")",
-            "        .font(.title)",
-            "        .border(.gray)",
-            "    HStack {",
-            "        Text(\"🌧\")",
-            "        Text(\"Rain & Thunderstorms\")",
-            "        Text(\"⛈\")",
-            "    }",
-            "    .alignmentGuide(HorizontalAlignment.center) { _ in  50 }",
-            "    .border(.gray)",
-            "}",
-            ".border(.gray)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Changing the alignment of one view may have effects on surrounding",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "views. Here the offset values inside a stack and its contained views is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the difference of their absolute offsets.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -539,10 +339,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/alignmentGuide(_:computeValue:)-6s0a6": {
   "abstract" : [
-    {
-      "text" : "Sets the view’s horizontal alignment.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Presents a sheet when a binding to a Boolean value that you",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "provide is true.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -146,6 +132,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "10.15",
         "name" : "macOS",
         "unavailable" : false
@@ -262,8 +262,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -339,318 +339,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A binding to a Boolean value that determines whether",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to present the sheet that you create in the modifier’s",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "content",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " closure.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isPresented"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The closure to execute when dismissing the sheet.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onDismiss"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that returns the content of the sheet.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "content"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method when you want to present a modal view to the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "user when a Boolean value you provide is true. The example",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "below displays a modal view of the mockup for a software license",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "agreement when the user toggles the ",
-              "type" : "text"
-            },
-            {
-              "code" : "isShowingSheet",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " variable by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "clicking or tapping on the “Show License Agreement” button:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ShowLicenseAgreement: View {",
-            "    @State private var isShowingSheet = false",
-            "    var body: some View {",
-            "        Button(action: {",
-            "            isShowingSheet.toggle()",
-            "        }) {",
-            "            Text(\"Show License Agreement\")",
-            "        }",
-            "        .sheet(isPresented: $isShowingSheet,",
-            "               onDismiss: didDismiss) {",
-            "            VStack {",
-            "                Text(\"License Agreement\")",
-            "                    .font(.title)",
-            "                    .padding(50)",
-            "                Text(\"\"\"",
-            "                        Terms and conditions go here.",
-            "                    \"\"\")",
-            "                    .padding(50)",
-            "                Button(\"Dismiss\",",
-            "                       action: { isShowingSheet.toggle() })",
-            "            }",
-            "        }",
-            "    }",
-            "",
-            "    func didDismiss() {",
-            "        \/\/ Handle the dismissing action.",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In vertically compact environments, such as iPhone in landscape",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "orientation, a sheet presentation automatically adapts to appear as a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "full-screen cover. Use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/presentationCompactAdaptation(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/presentationCompactAdaptation(horizontal:vertical:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "override this behavior.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "anchor" : "Breakthrough-effect",
-          "level" : 3,
-          "text" : "Breakthrough effect",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In visionOS, most system presentations appear with a breakthrough effect by",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "default. To change how the enclosing presentation breaks through",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "content occluding it, use ",
-              "type" : "text"
-            },
-            {
-              "code" : "presentationBreakthroughEffect(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ",",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "like in the following example:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            ".sheet(isPresented: $isShowingSheet,",
-            "       onDismiss: didDismiss) {",
-            "    VStack {",
-            "        Text(\"License Agreement\")",
-            "            .font(.title)",
-            "            .padding(50)",
-            "        Text(\"\"\"",
-            "                Terms and conditions go here.",
-            "            \"\"\")",
-            "            .padding(50)",
-            "        Button(\"Dismiss\",",
-            "               action: { isShowingSheet.toggle() })",
-            "    }",
-            "    .presentationBreakthroughEffect(.prominent)",
-            "}"
-          ],
-          "syntax" : "swift",
-          "type" : "codeListing"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Passing a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : ".none",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " value for a sheet has no effect.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -725,18 +413,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/sheet(isPresented:onDismiss:content:)": {
   "abstract" : [
-    {
-      "text" : "Presents a sheet when a binding to a Boolean value that you",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "provide is true.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

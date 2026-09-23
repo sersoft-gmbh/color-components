@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Associates a search token with the value of this view when used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a search suggestion.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -90,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -218,99 +218,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Data to use as the view’s completion.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "token"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method to associate a search token with a view that is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a search suggestion list context. The system uses this value",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when the view is selected to replace the partial text being currently",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "edited of the associated search field.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "enum FruitToken: Hashable, Identifiable, CaseIterable {",
-            "    case apple",
-            "    case pear",
-            "    case banana",
-            "",
-            "    var id: Self { self }",
-            "}",
-            "",
-            "@State private var text = \"\"",
-            "@State private var tokens: [FruitToken] = []",
-            "",
-            "SearchPlaceholderView()",
-            "    .searchable(text: $text, tokens: $tokens) { token in",
-            "        switch token {",
-            "        case .apple: Text(\"Apple\")",
-            "        case .pear: Text(\"Pear\")",
-            "        case .banana: Text(\"Banana\")",
-            "        }",
-            "    }",
-            "    .searchSuggestions {",
-            "        Text(\"🍎\").searchCompletion(FruitToken.apple)",
-            "        Text(\"🍐\").searchCompletion(FruitToken.pear)",
-            "        Text(\"🍌\").searchCompletion(FruitToken.banana)",
-            "    }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -385,18 +292,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BW/searchCompletion(_:)-5ydjg": {
   "abstract" : [
-    {
-      "text" : "Associates a search token with the value of this view when used",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "as a search suggestion.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies if the view is focusable and, if so, adds an action to perform",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "when the view comes into focus.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -263,115 +249,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A Boolean value that indicates whether this view is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "focusable.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isFocusable"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that’s called whenever this view either",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "gains or loses focus. The Boolean parameter to ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "onFocusChange",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "true",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " when the view is in focus; otherwise, it’s ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "false",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "onFocusChange"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view that sets whether a view is focusable, and triggers",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "onFocusChange",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " when the view gains or loses focus.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -446,18 +323,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/focusable(_:onFocusChange:)": {
   "abstract" : [
-    {
-      "text" : "Specifies if the view is focusable and, if so, adds an action to perform",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "when the view comes into focus.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

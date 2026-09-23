@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies an action to perform on each update of an ongoing drop operation",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "activated by ",
-      "type" : "text"
-    },
-    {
-      "code" : "dropDestination(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " or other drop modifiers.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,8 +76,36 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "macOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "27.0",
+        "name" : "visionOS",
         "unavailable" : false
       }
     ],
@@ -206,42 +212,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "onUpdate",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure is called when the closest drop session",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "in the child view hierarchy becomes active.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -316,26 +286,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/onDropSessionUpdated(_:)": {
   "abstract" : [
-    {
-      "text" : "Specifies an action to perform on each update of an ongoing drop operation",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "activated by ",
-      "type" : "text"
-    },
-    {
-      "code" : "dropDestination(_:)",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " or other drop modifiers.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

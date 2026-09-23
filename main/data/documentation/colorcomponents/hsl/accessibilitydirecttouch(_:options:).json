@@ -1,46 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Explicitly set whether this accessibility element is a direct touch",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "area. Direct touch areas passthrough touch events to the app rather",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "than being handled through an assistive technology, such as VoiceOver.",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "The modifier accepts an optional ",
-      "type" : "text"
-    },
-    {
-      "code" : "AccessibilityDirectTouchOptions",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "option set to customize the functionality of the direct touch area.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -141,6 +99,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -277,75 +249,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, this is how a direct touch area would allow a VoiceOver",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "user to interact with a view with a ",
-              "type" : "text"
-            },
-            {
-              "code" : "rotationEffect",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " controlled by a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "RotationGesture",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". The direct touch area would require a user to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "activate the area before using the direct touch area.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    Rectangle()",
-            "        .frame(width: 200, height: 200, alignment: .center)",
-            "        .rotationEffect(angle)",
-            "        .gesture(rotation)",
-            "        .accessibilityDirectTouch(options: .requiresActivation)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -420,46 +323,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/accessibilityDirectTouch(_:options:)": {
   "abstract" : [
-    {
-      "text" : "Explicitly set whether this accessibility element is a direct touch",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "area. Direct touch areas passthrough touch events to the app rather",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "than being handled through an assistive technology, such as VoiceOver.",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "The modifier accepts an optional ",
-      "type" : "text"
-    },
-    {
-      "code" : "AccessibilityDirectTouchOptions",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "option set to customize the functionality of the direct touch area.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

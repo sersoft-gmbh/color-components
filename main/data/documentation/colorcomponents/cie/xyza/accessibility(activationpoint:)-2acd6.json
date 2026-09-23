@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the point where activations occur in the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,6 +92,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityActivationPoint(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityActivationPoint(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityActivationPoint(_:)",
         "unavailable" : false
       },
@@ -333,10 +345,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibility(activationPoint:)-2acd6": {
   "abstract" : [
-    {
-      "text" : "Specifies the point where activations occur in the view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

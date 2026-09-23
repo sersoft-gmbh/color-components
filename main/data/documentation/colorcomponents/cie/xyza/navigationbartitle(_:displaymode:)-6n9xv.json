@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the title and display mode in the navigation bar for this view.",
-      "type" : "text"
-    }
-  ],
   "deprecationSummary" : [
     {
       "inlineContent" : [
@@ -115,6 +109,24 @@
         "introducedAt" : "13.0",
         "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "message" : "Use navigationTitle(_:) with navigationBarTitleDisplayMode(_:)",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -239,186 +251,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A title for this view to display in the navigation bar.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "title"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The style to use for displaying the navigation bar title.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "displayMode"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use ",
-              "type" : "text"
-            },
-            {
-              "code" : "navigationBarTitle(_:displayMode:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " to set the title of the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "navigation bar for this view and specify a display mode for the title",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "from one of the ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationBarItem\/TitleDisplayMode",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " styles. This",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "modifier only takes effect when this view is inside of and visible",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "In the example below, text for the navigation bar title is provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "using a ",
-              "type" : "text"
-            },
-            {
-              "code" : "Text",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " view. The navigation bar title’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationBarItem\/TitleDisplayMode",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is set to ",
-              "type" : "text"
-            },
-            {
-              "code" : ".inline",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " which places",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the navigation bar title in the bounds of the navigation bar.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct FlavorView: View {",
-            "   let items = [\"Chocolate\", \"Vanilla\", \"Strawberry\", \"Mint Chip\",",
-            "                \"Pistachio\"]",
-            "   var body: some View {",
-            "        NavigationView {",
-            "            List(items, id: \\.self) {",
-            "                Text($0)",
-            "            }",
-            "            .navigationBarTitle(Text(\"Today's Flavors\", displayMode: .inline)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -527,10 +359,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/navigationBarTitle(_:displayMode:)-6n9xv": {
   "abstract" : [
-    {
-      "text" : "Sets the title and display mode in the navigation bar for this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

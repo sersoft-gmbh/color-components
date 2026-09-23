@@ -1,50 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Plays the specified ",
-      "type" : "text"
-    },
-    {
-      "code" : "feedback",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " when the provided ",
-      "type" : "text"
-    },
-    {
-      "code" : "trigger",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value changes",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and the ",
-      "type" : "text"
-    },
-    {
-      "code" : "condition",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " closure returns ",
-      "type" : "text"
-    },
-    {
-      "code" : "true",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -172,6 +126,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -379,133 +347,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Which type of feedback to play.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "feedback"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A value to monitor for changes to determine when to play.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "trigger"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure to determine whether to play the feedback when",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "trigger",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " changes.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "condition"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "For example, you could play feedback for certain state transitions:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct MyView: View {",
-            "    @State private var phase = Phase.inactive",
-            "",
-            "    var body: some View {",
-            "        ContentView(phase: $phase)",
-            "            .sensoryFeedback(.selection, trigger: phase) { old, new in",
-            "                old == .inactive || new == .expanded",
-            "            }",
-            "    }",
-            "",
-            "    enum Phase {",
-            "        case inactive",
-            "        case preparing",
-            "        case active",
-            "        case expanded",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "When the value changes, the new version of the closure will be called,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "so any captured values will have their values from the time that the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "observed value has its new value.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -580,50 +421,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/sensoryFeedback(_:trigger:condition:)": {
   "abstract" : [
-    {
-      "text" : "Plays the specified ",
-      "type" : "text"
-    },
-    {
-      "code" : "feedback",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " when the provided ",
-      "type" : "text"
-    },
-    {
-      "code" : "trigger",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " value changes",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "and the ",
-      "type" : "text"
-    },
-    {
-      "code" : "condition",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : " closure returns ",
-      "type" : "text"
-    },
-    {
-      "code" : "true",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ".",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

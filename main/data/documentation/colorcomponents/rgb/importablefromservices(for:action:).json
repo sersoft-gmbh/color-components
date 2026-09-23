@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Enables importing items from services, such as Continuity Camera",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on macOS.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -277,89 +263,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The expected type of the imported models.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "payloadType"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that will be called with the imported service",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "item. Return ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "false",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to indicate that there was a failure to receive",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "the items.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "code" : [
-            "@State private var title: String",
-            "var body: some View {",
-            "    Color.pink",
-            "        .frame(width: 400, height: 400)",
-            "        .importableFromServices(for: String.self) { titles",
-            "            title = titles.first ?? title",
-            "            return !titles.isEmpty",
-            "        }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -434,18 +337,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/importableFromServices(for:action:)": {
   "abstract" : [
-    {
-      "text" : "Enables importing items from services, such as Continuity Camera",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "on macOS.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

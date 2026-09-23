@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the navigation transition style for this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -208,70 +216,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Add this modifier to a view that appears within a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " or a sheet, outside of any containers such as",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @Namespace private var namespace",
-            "    var body: some View {",
-            "        NavigationStack {",
-            "            NavigationLink {",
-            "                DetailView()",
-            "                    .navigationTransition(.zoom(sourceID: \"world\", in: namespace))",
-            "            } label: {",
-            "                Image(systemName: \"globe\")",
-            "                    .matchedTransitionSource(id: \"world\", in: namespace)",
-            "            }",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -346,10 +290,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/navigationTransition(_:)": {
   "abstract" : [
-    {
-      "text" : "Sets the navigation transition style for this view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

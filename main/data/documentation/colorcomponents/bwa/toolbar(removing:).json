@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Remove a toolbar item present by default",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -83,6 +77,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -193,89 +201,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The kind of default item to remove",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "defaultItemKind"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to remove toolbar items other ",
-              "type" : "text"
-            },
-            {
-              "code" : "View",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : "s add",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "by default. For example, to remove the sidebar toggle toolbar",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "item provided by ",
-              "type" : "text"
-            },
-            {
-              "code" : "NavigationSplitView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ":",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "NavigationSplitView {",
-            "    SidebarView()",
-            "        .toolbar(removing: .sidebarToggle)",
-            "} detail: {",
-            "    DetailView()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -350,10 +275,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/toolbar(removing:)": {
   "abstract" : [
-    {
-      "text" : "Remove a toolbar item present by default",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

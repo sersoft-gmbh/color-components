@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies the preferred foreground style of bars managed by SwiftUI.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -246,46 +240,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This examples shows a view that renders the navigation bar",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with a blue foreground color.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "NavigationStack {",
-            "    ContentView()",
-            "        .navigationTitle(\"Blue\")",
-            "        .toolbarForegroundStyle(",
-            "            .blue, for: .navigationBar)",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -394,10 +348,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/toolbarForegroundStyle(_:for:)": {
   "abstract" : [
-    {
-      "text" : "Specifies the preferred foreground style of bars managed by SwiftUI.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

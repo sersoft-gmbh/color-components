@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the available detents for the enclosing sheet, giving you",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "programmatic control of the currently selected detent.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -118,6 +104,20 @@
         "deprecated" : false,
         "introducedAt" : "16.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -263,138 +263,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A set of supported detents for the sheet.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "If you provide more that one detent, people can drag the sheet",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "to resize it.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "detents"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "Binding",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " to the currently selected detent.",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "Ensure that the value matches one of the detents that you",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "provide for the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "detents",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " parameter.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "selection"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, sheets support the ",
-              "type" : "text"
-            },
-            {
-              "code" : "PresentationDetent\/large",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " detent.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State private var showSettings = false",
-            "    @State private var settingsDetent = PresentationDetent.medium",
-            "",
-            "    var body: some View {",
-            "        Button(\"View Settings\") {",
-            "            showSettings = true",
-            "        }",
-            "        .sheet(isPresented: $showSettings) {",
-            "            SettingsView()",
-            "                .presentationDetents(",
-            "                    [.medium, .large],",
-            "                    selection: $settingsDetent",
-            "                 )",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -469,18 +337,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/presentationDetents(_:selection:)": {
   "abstract" : [
-    {
-      "text" : "Sets the available detents for the enclosing sheet, giving you",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "programmatic control of the currently selected detent.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

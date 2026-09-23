@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Modifies the fonts of all child views to use fixed-width digits, if",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "possible, while leaving other characters proportionally spaced.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -74,6 +60,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -159,240 +159,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view whose child views’ fonts use fixed-width numeric",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "characters, while leaving other characters proportionally spaced.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Using fixed-width digits allows you to easily align numbers of the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "same size in a table-like arrangement. This feature is also known as",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "“tabular figures” or “tabular numbers.”",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "This modifier only affects numeric characters, and leaves all other",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "characters unchanged.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example shows the effect of ",
-              "type" : "text"
-            },
-            {
-              "code" : "monospacedDigit()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " on",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "multiple child views. The example consists of two ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " views",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "inside an ",
-              "type" : "text"
-            },
-            {
-              "code" : "HStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". Each ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " contains two ",
-              "type" : "text"
-            },
-            {
-              "code" : "Button",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " views, with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the second ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " applying the ",
-              "type" : "text"
-            },
-            {
-              "code" : "monospacedDigit()",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier to its",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "contents. As a result, the digits in the buttons in the trailing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " are the same width, which in turn gives the buttons equal widths.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "var body: some View {",
-            "    HStack(alignment: .top) {",
-            "        VStack(alignment: .leading) {",
-            "            Button(\"Delete 111 messages\") {}",
-            "            Button(\"Delete 222 messages\") {}",
-            "        }",
-            "        VStack(alignment: .leading) {",
-            "            Button(\"Delete 111 messages\") {}",
-            "            Button(\"Delete 222 messages\") {}",
-            "        }",
-            "        .monospacedDigit()",
-            "    }",
-            "    .padding()",
-            "    .navigationTitle(\"monospacedDigit() Child Views\")",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If a child view’s base font doesn’t support fixed-width digits, the font",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "remains unchanged.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -467,18 +233,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/BWA/monospacedDigit()": {
   "abstract" : [
-    {
-      "text" : "Modifies the fonts of all child views to use fixed-width digits, if",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "possible, while leaving other characters proportionally spaced.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

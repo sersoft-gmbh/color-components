@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Sets the style for buttons within this view to a button style with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "custom appearance and standard interaction behavior.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -90,6 +76,20 @@
         "deprecated" : false,
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -232,169 +232,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to set a specific style for all button instances",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "within a view:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "HStack {",
-            "    Button(\"Sign In\", action: signIn)",
-            "    Button(\"Register\", action: register)",
-            "}",
-            ".buttonStyle(.bordered)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use this modifier to set the style for controls that",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "acquire a button style through composition, like the ",
-              "type" : "text"
-            },
-            {
-              "code" : "Menu",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "Toggle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " views in the following example:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    Menu(\"Terms and Conditions\") {",
-            "        Button(\"Open in Preview\", action: openInPreview)",
-            "        Button(\"Save as PDF\", action: saveAsPDF)",
-            "    }",
-            "    Toggle(\"Remember Password\", isOn: $isToggleOn)",
-            "    Toggle(\"Flag\", isOn: $flagged)",
-            "    Button(\"Sign In\", action: signIn)",
-            "}",
-            ".menuStyle(.button)",
-            ".toggleStyle(.button)",
-            ".buttonStyle(.bordered)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/menuStyle(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier causes the Terms",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and Conditions menu to render as a button. Similarly, the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/toggleStyle(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier causes the two toggles to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "render as buttons. The button style modifier then causes not only",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the explicit Sign In ",
-              "type" : "text"
-            },
-            {
-              "code" : "Button",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ", but also the menu and toggles with",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "button styling, to render with the bordered button style.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -469,18 +306,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/buttonStyle(_:)-8sem9": {
   "abstract" : [
-    {
-      "text" : "Sets the style for buttons within this view to a button style with a",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "custom appearance and standard interaction behavior.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Prevents submission triggers originating from this view to invoke",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "a submission action configured by a submission modifier higher up",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "in the view hierarchy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -92,6 +70,20 @@
         "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "15.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -202,110 +194,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A Boolean that indicates whether this scope is",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "actively blocking submission triggers from reaching higher submission",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "actions.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isBlocking"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier when you want to avoid specific views from initiating",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a submission action configured by the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/onSubmit(of:_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " modifier.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "In the example below, the tag field doesn’t trigger the submission of",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the form:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "Form {",
-            "    TextField(\"Username\", text: $viewModel.userName)",
-            "    SecureField(\"Password\", text: $viewModel.password)",
-            "",
-            "    TextField(\"Tags\", text: $viewModel.tags)",
-            "        .submitScope()",
-            "}",
-            ".onSubmit {",
-            "    guard viewModel.validate() else { return }",
-            "    viewModel.login()",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -414,26 +302,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZ/submitScope(_:)": {
   "abstract" : [
-    {
-      "text" : "Prevents submission triggers originating from this view to invoke",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "a submission action configured by a submission modifier higher up",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "in the view hierarchy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

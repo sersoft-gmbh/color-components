@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds an action to perform when the scroll phase of the first scroll",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view in the hierarchy changes.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -110,6 +96,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -262,321 +262,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure to run when the scroll phase changes.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "action"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The old scroll phase.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "oldPhase"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The new scroll phase.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "newPhase"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The phase context at the time of the scroll",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "phase change.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "context"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this modifier to be informed of changes to a scroll view’s",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "phase. A scroll view may be in a variety of different phases like",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "interacting or decelerating. See ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollPhase",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " for more information",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "on the phases of a scroll view.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "When the phase of a scroll view changes, the system invokes the action",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "you provide. In the following example, a selection binding is updated",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when the scroll view transitions to the ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollPhase\/decelerating",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "or ",
-              "type" : "text"
-            },
-            {
-              "code" : "ScrollPhase\/idle",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " phase.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@Binding var selection: SelectionValue?",
-            "",
-            "ScrollView {",
-            "    \/\/ ...",
-            "}",
-            ".onScrollPhaseChange { _, newPhase in",
-            "    if newPhase == .decelerating || newPhase == .idle {",
-            "        selection = updateSelection()",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The system can also provide you with a context containing",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the geometry of the scroll view at the time of the phase change.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "You can use the geometry to understand where the scroll view",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "has come or gone between the phase changes and update",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "dependent state on that information. In the following example,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "whether toolbar content is hidden is determined based on",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the direction of the last user initiated scroll.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "@Binding var hidesToolbarContent: Bool",
-            "@State private var lastOffset: CGFloat = 0.0",
-            "",
-            "ScrollView {",
-            "    \/\/ ...",
-            "}",
-            ".onScrollPhaseChange { oldPhase, newPhase, context in",
-            "    if newPhase == .interacting {",
-            "        lastOffset = context.geometry.contentOffset.y",
-            "    }",
-            "    if oldPhase == .interacting, newPhase != .animating,",
-            "        context.geometry.contentOffset.y - lastOffset < 0.0",
-            "    {",
-            "        hidesToolbarContent = true",
-            "    } else {",
-            "        hidesToolbarContent = false",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If multiple scroll views are found within the view hierarchy,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "only the first one will invoke the closure you provide and a runtime",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "issue will be logged. For example, in the following view, only the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "vertical scroll view will have its phase changes invoke the provided",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "closure.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "VStack {",
-            "    ScrollView(.vertical) { ... }",
-            "    ScrollView(.horizontal) { ... }",
-            "}",
-            ".onScrollPhaseChange { ... }"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -651,18 +336,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGB/onScrollPhaseChange(_:)-72yqt": {
   "abstract" : [
-    {
-      "text" : "Adds an action to perform when the scroll phase of the first scroll",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "view in the hierarchy changes.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

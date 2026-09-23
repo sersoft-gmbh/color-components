@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Adds custom actions to a section.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -95,6 +89,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "15.0",
         "name" : "macOS",
         "unavailable" : false
@@ -161,8 +169,8 @@
             },
             {
               "kind" : "attribute",
-              "preciseIdentifier" : "s:7SwiftUI11ViewBuilderV",
-              "text" : "ViewBuilder"
+              "preciseIdentifier" : "s:7SwiftUI14ContentBuildera",
+              "text" : "ContentBuilder"
             },
             {
               "kind" : "text",
@@ -230,77 +238,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "On iOS, the actions are displayed as items after the content",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "of the section. On macOS, the actions are displayed",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "when a user hovers over the section.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example adds an ‘Add’ button to",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the ‘Categories’ section.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "List {",
-            "    Label(\"Home\", systemImage: \"house\")",
-            "    Label(\"Alerts\", systemImage: \"bell\")",
-            "",
-            "    Section(\"Categories\") {",
-            "        Label(\"Climate\", systemImage: \"fan\")",
-            "        Label(\"Lights\", systemImage: \"lightbulb\")",
-            "    }",
-            "    .sectionActions {",
-            "        Button(\"Add Category\", systemImage: \"plus\") { }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -375,10 +312,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSL/sectionActions(content:)": {
   "abstract" : [
-    {
-      "text" : "Adds custom actions to a section.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

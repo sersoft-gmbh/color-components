@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Specifies how to adapt a presentation to horizontally and vertically",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "compact size classes.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -108,6 +94,20 @@
         "deprecated" : false,
         "introducedAt" : "16.4",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "16.4",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -243,161 +243,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The adaptation to use in a horizontally",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "compact size class.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "horizontalAdaptation"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The adaptation to use in a vertically compact",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "size class. In a size class that is both horizontally and vertically",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "compact, SwiftUI uses the ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "verticalAdaptation",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : " value.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "verticalAdaptation"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Some presentations adapt their appearance depending on the context. For",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "example, a popover presentation over a horizontally-compact view uses a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "sheet appearance by default. Use this modifier to indicate a custom",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "adaptation preference.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ContentView: View {",
-            "    @State private var showInfo = false",
-            "",
-            "    var body: some View {",
-            "        Button(\"View Info\") {",
-            "            showInfo = true",
-            "        }",
-            "        .popover(isPresented: $showInfo) {",
-            "            InfoView()",
-            "                .presentationCompactAdaptation(",
-            "                    horizontal: .popover,",
-            "                    vertical: .sheet)",
-            "        }",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "If you want to specify the same adaptation for both dimensions,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "View\/presentationCompactAdaptation(_:)",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " method instead.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -472,18 +317,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/presentationCompactAdaptation(horizontal:vertical:)": {
   "abstract" : [
-    {
-      "text" : "Specifies how to adapt a presentation to horizontally and vertically",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "compact size classes.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

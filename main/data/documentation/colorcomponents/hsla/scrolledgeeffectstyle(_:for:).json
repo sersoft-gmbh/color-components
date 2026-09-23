@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Configures the scroll edge effect style for scroll views within this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "hierarchy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -109,6 +95,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -253,48 +253,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "By default, a scroll view renders an automatic edge effect.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Use this modifier to change the scroll edge effect style.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ScrollView {",
-            "    LazyVStack {",
-            "        ForEach(data) { item in",
-            "            RowView(item)",
-            "        }",
-            "    }",
-            "}",
-            ".scrollEdgeEffectStyle(.hard, for: .all)"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -369,18 +327,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/scrollEdgeEffectStyle(_:for:)": {
   "abstract" : [
-    {
-      "text" : "Configures the scroll edge effect style for scroll views within this",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "hierarchy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

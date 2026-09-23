@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Removes the given traits from this view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -97,6 +91,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityRemoveTraits(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityRemoveTraits(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityRemoveTraits(_:)",
         "unavailable" : false
       },
@@ -306,10 +318,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/accessibility(removeTraits:)": {
   "abstract" : [
-    {
-      "text" : "Removes the given traits from this view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [

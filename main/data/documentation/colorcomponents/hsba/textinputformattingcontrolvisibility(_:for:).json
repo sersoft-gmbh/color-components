@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Define which system text formatting controls are available.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -101,6 +95,20 @@
         "deprecated" : false,
         "introducedAt" : "26.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "26.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -252,39 +260,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the control may become visible to the user",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "visibility"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The onscreen control to modify",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "placement"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -359,10 +334,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/textInputFormattingControlVisibility(_:for:)": {
   "abstract" : [
-    {
-      "text" : "Define which system text formatting controls are available.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

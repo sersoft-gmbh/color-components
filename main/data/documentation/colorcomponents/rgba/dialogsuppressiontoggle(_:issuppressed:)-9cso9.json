@@ -1,26 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Enables user suppression of dialogs and alerts presented within ",
-      "type" : "text"
-    },
-    {
-      "code" : "self",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom suppression message on macOS. Unused on other platforms.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -124,6 +102,20 @@
         "deprecated" : false,
         "introducedAt" : "17.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -292,188 +284,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The title of the suppression toggle in the dialog. This",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "parameter can be elided to use the default suppression title.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "title"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the suppression toggle is on or off in the",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "dialog.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isSuppressed"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Applying dialog suppression adds a toggle to dialogs on macOS,",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "which allows the user to request the alert not be displayed again.",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "Typically whether a dialog is suppressed is stored in ",
-              "type" : "text"
-            },
-            {
-              "code" : "AppStorage",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "and used to decide whether to present the dialog in the future.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "The following example configures a ",
-              "type" : "text"
-            },
-            {
-              "code" : "confirmationDialog",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " with a",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "suppression toggle. The toggle’s state is stored in ",
-              "type" : "text"
-            },
-            {
-              "code" : "AppStorage",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " and",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "used to determine whether or not to show the dialog when the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "“Delete Items” button is pressed.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct ConfirmEraseItems: View {",
-            "    @State private var isShowingDialog = false",
-            "",
-            "    @AppStorage(\"suppressEraseItemAlert\")",
-            "    private var suppressAlert = false",
-            "",
-            "    var body: some View {",
-            "        Button(\"Delete Items\") {",
-            "            if !suppressAlert {",
-            "                isShowingDialog = true",
-            "            } else {",
-            "                \/\/ Handle item deletion.",
-            "            }",
-            "        }",
-            "        .confirmationDialog(",
-            "            \"Are you sure you want to erase these items?\",",
-            "            isPresented: $isShowingDialog",
-            "        ) {",
-            "            Button(\"Erase\", role: .destructive) {",
-            "                \/\/ Handle item deletion.",
-            "            }",
-            "            Button(\"Cancel\", role: .cancel) {",
-            "                isShowingDialog = false",
-            "            }",
-            "        }",
-            "        .dialogSuppressionToggle(",
-            "            \"Do not ask about erasing items again\",",
-            "            isSuppressed: $suppressAlert)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -548,26 +358,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/RGBA/dialogSuppressionToggle(_:isSuppressed:)-9cso9": {
   "abstract" : [
-    {
-      "text" : "Enables user suppression of dialogs and alerts presented within ",
-      "type" : "text"
-    },
-    {
-      "code" : "self",
-      "type" : "codeVoice"
-    },
-    {
-      "text" : ",",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "with a custom suppression message on macOS. Unused on other platforms.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

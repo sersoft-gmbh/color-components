@@ -1,8 +1,13 @@
 {
-  "abstract" : [
+  "deprecationSummary" : [
     {
-      "text" : "Declares a context for the preview.",
-      "type" : "text"
+      "inlineContent" : [
+        {
+          "text" : "Use #Preview with a Widget timeline provider or entries instead.",
+          "type" : "text"
+        }
+      ],
+      "type" : "paragraph"
     }
   ],
   "hierarchy" : {
@@ -80,28 +85,62 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "14.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
         "name" : "iOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "14.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "introducedAt" : "14.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "11.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
         "name" : "macOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "14.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
         "name" : "tvOS",
         "unavailable" : false
       },
       {
         "beta" : false,
         "deprecated" : false,
+        "deprecatedAt" : "27.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
+        "name" : "visionOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "27.0",
         "introducedAt" : "7.0",
+        "message" : "Use #Preview with a Widget timeline provider or entries instead.",
         "name" : "watchOS",
         "unavailable" : false
       }
@@ -224,33 +263,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The context for the preview; the default is ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "nil",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "value"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -325,11 +337,9 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/previewContext(_:)": {
   "abstract" : [
-    {
-      "text" : "Declares a context for the preview.",
-      "type" : "text"
-    }
+
   ],
+  "deprecated" : true,
   "fragments" : [
     {
       "kind" : "keyword",

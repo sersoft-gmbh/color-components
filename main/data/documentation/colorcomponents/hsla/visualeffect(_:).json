@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Applies effects to this view, while providing access to layout",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "information through a geometry proxy.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -114,6 +100,20 @@
       {
         "beta" : false,
         "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "17.0",
+        "name" : "Mac Catalyst",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
         "introducedAt" : "14.0",
         "name" : "macOS",
         "unavailable" : false
@@ -194,8 +194,12 @@
               "text" : "@escaping "
             },
             {
+              "kind" : "attribute",
+              "text" : "@Sendable"
+            },
+            {
               "kind" : "text",
-              "text" : "("
+              "text" : " ("
             },
             {
               "kind" : "typeIdentifier",
@@ -253,139 +257,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A closure that returns the effect to be applied. The first",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "argument provided to the closure is a placeholder representing",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "this view. The second argument is a ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "GeometryProxy",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "effect"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "return-value",
-          "level" : 2,
-          "text" : "Return Value",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "A view with the effect applied.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You return new effects by calling functions on the first argument",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "provided to the ",
-              "type" : "text"
-            },
-            {
-              "code" : "effect",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " closure. In this example, ",
-              "type" : "text"
-            },
-            {
-              "code" : "ContentView",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " is",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "offset by its own size, causing its top left corner to appear where the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "bottom right corner was originally located:",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "ContentView()",
-            "    .visualEffect { content, geometryProxy in",
-            "        content.offset(geometryProxy.size)",
-            "    }"
-          ],
-          "syntax" : "swift",
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -460,18 +331,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSLA/visualEffect(_:)": {
   "abstract" : [
-    {
-      "text" : "Applies effects to this view, while providing access to layout",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "information through a geometry proxy.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

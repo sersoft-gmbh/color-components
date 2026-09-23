@@ -1,18 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Attaches a gesture to the view with a higher precedence than gestures",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "defined by the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -124,6 +110,20 @@
         "deprecated" : false,
         "introducedAt" : "18.0",
         "name" : "iOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "iPadOS",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "introducedAt" : "18.0",
+        "name" : "Mac Catalyst",
         "unavailable" : false
       },
       {
@@ -307,262 +307,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A gesture to attach to the view.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "gesture"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "A string that identifies the gesture. In iOS, the name can be",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "used to set up failure relationships between UIKit gesture",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "recognizers and this gesture.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "name"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "Whether the added gesture is enabled. The default value",
-                  "type" : "text"
-                },
-                {
-                  "text" : " ",
-                  "type" : "text"
-                },
-                {
-                  "text" : "is ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "true",
-                  "type" : "codeVoice"
-                },
-                {
-                  "text" : ".",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "isEnabled"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this method when you need to define a high priority gesture",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "to take precedence over the view’s existing gestures. The",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "example below defines a custom gesture that prints a message to the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "console and attaches it to the view’s ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ". Inside the ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "a red heart ",
-              "type" : "text"
-            },
-            {
-              "code" : "Image",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " defines its own ",
-              "type" : "text"
-            },
-            {
-              "code" : "TapGesture",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " handler that",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "also prints a message to the console, and a blue rectangle",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "with no custom gesture handlers. Tapping or clicking any of the",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "views results in a console message from the high priority gesture",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "attached to the enclosing ",
-              "type" : "text"
-            },
-            {
-              "code" : "VStack",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : ".",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "You can also use the ",
-              "type" : "text"
-            },
-            {
-              "code" : "isEnabled",
-              "type" : "codeVoice"
-            },
-            {
-              "text" : " parameter to conditionally disable",
-              "type" : "text"
-            },
-            {
-              "text" : " ",
-              "type" : "text"
-            },
-            {
-              "text" : "the gesture.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        },
-        {
-          "code" : [
-            "struct HighPriorityGestureExample: View {",
-            "    @State private var message = \"Message\"",
-            "    var isGestureEnabled: Bool",
-            "    let newGesture = TapGesture().onEnded {",
-            "        print(\"Tap on VStack.\")",
-            "    }",
-            "",
-            "    var body: some View {",
-            "        VStack(spacing:25) {",
-            "            Image(systemName: \"heart.fill\")",
-            "                .resizable()",
-            "                .frame(width: 75, height: 75)",
-            "                .padding()",
-            "                .foregroundColor(.red)",
-            "                .onTapGesture {",
-            "                    print(\"Tap on image.\")",
-            "                }",
-            "            Rectangle()",
-            "                .fill(Color.blue)",
-            "        }",
-            "        .highPriorityGesture(",
-            "            newGesture, isEnabled: isGestureEnabled)",
-            "        .frame(width: 200, height: 200)",
-            "        .border(Color.purple)",
-            "    }",
-            "}"
-          ],
-          "syntax" : null,
-          "type" : "codeListing"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -637,18 +381,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/HSBA/highPriorityGesture(_:name:isEnabled:)": {
   "abstract" : [
-    {
-      "text" : "Attaches a gesture to the view with a higher precedence than gestures",
-      "type" : "text"
-    },
-    {
-      "text" : " ",
-      "type" : "text"
-    },
-    {
-      "text" : "defined by the view.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

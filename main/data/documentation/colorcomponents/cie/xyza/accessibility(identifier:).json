@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Uses the specified string to identify the view.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -98,6 +92,24 @@
         "deprecatedAt" : "100000.0",
         "introducedAt" : "13.0",
         "name" : "iOS",
+        "renamed" : "accessibilityIdentifier(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "iPadOS",
+        "renamed" : "accessibilityIdentifier(_:)",
+        "unavailable" : false
+      },
+      {
+        "beta" : false,
+        "deprecated" : false,
+        "deprecatedAt" : "100000.0",
+        "introducedAt" : "13.0",
+        "name" : "Mac Catalyst",
         "renamed" : "accessibilityIdentifier(_:)",
         "unavailable" : false
       },
@@ -225,26 +237,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "text" : "Use this value for testing. It isn’t visible to the user.",
-              "type" : "text"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -353,10 +345,7 @@
 },
 "doc://ColorComponents/documentation/ColorComponents/CIE/XYZA/accessibility(identifier:)": {
   "abstract" : [
-    {
-      "text" : "Uses the specified string to identify the view.",
-      "type" : "text"
-    }
+
   ],
   "deprecated" : true,
   "fragments" : [
